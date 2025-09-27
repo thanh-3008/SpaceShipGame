@@ -7,7 +7,7 @@ public class Tenlua : MonoBehaviour
     public GameObject tenlua;
     public float speed;
     private Rigidbody2D rb;
-    public Animator anim;
+    //public Animator anim;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,7 +32,7 @@ public class Tenlua : MonoBehaviour
             
                 other.GetComponent<thienthachdichuyen>().TakeDame(player.damehientai*100);
             
-            anim.SetTrigger("hit");
+            //anim.SetTrigger("hit");
             Destroy(gameObject, 0.5f);
         }
     }
