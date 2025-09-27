@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public float thanhmauToiDa = 100f;
     public TextMeshProUGUI textScore;
     public GameObject danprefap;
-    public float damebonus = 1f;
+    public float damebonus = 2f;
     public float damehientai;
     public TextMeshProUGUI soTenLuaText;
     public GameObject[] spawndan;

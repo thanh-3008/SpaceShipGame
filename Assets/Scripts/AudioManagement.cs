@@ -13,6 +13,7 @@ public class AudioManagement : MonoBehaviour
     public AudioClip tiengancoin;
     public AudioClip tiengvacham;
     public AudioClip tiengdanpro;
+    public AudioClip tiengcanhbao;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
