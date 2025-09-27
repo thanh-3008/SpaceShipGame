@@ -31,7 +31,6 @@ public class PlayerController : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         thanhmauhientai = thanhmauToiDa;
         damehientai = 5f;
-        thanhNoHienTai = 0f;
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 

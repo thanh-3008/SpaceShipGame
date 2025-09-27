@@ -16,6 +16,7 @@ public class thienthachdichuyen : MonoBehaviour
     private GameObject Audio;
     private bool biphahuykhicombat = false;
     private GameObject player;
+    private GameObject taume;
 
     // SỬA: Biến này không cần thiết, đã xóa "public GameObject thienthach;"
     // SỬA: Biến này cũng không cần thiết, chúng ta sẽ dùng Singleton
@@ -27,6 +28,7 @@ public class thienthachdichuyen : MonoBehaviour
         thanhMau.capnhatthanhmau(thanhmauHienTai, thanhmauToiDa);
         Audio = GameObject.FindWithTag("Audio");
         player = GameObject.FindWithTag("Player");
+        taume = GameObject.FindWithTag("TauMe");
     }
 
     void Update()
@@ -74,6 +76,28 @@ public class thienthachdichuyen : MonoBehaviour
                 player1.TakeDame(dame);
                 player1.StartFlashRed();
             }       
+            // Hủy thiên thạch
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("TauMe"))
+        {
+            // Tạo hiệu ứng nổ
+            Instantiate(boom, transform.position, Quaternion.identity);
+
+            PlayerController playerScript = player.GetComponent<PlayerController>();
+            if (playerScript.thanhNoHienTai <= playerScript.thanhNoToiDa)
+            {
+                playerScript.thanhNoHienTai += 5f;
+                playerScript.thanhno.capnhatthanhno(playerScript.thanhNoHienTai, playerScript.thanhNoToiDa);
+            }
+
+            // Gây sát thương cho người chơi
+            PlayerController player1 = collision.gameObject.GetComponent<PlayerController>();
+            if (player1 != null)
+            {
+                player1.TakeDame(999999f);
+                player1.StartFlashRed();
+            }
             // Hủy thiên thạch
             Destroy(gameObject);
         }

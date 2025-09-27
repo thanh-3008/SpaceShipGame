@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 104619577}
   - component: {fileID: 104619576}
   - component: {fileID: 104619575}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerShip
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -394,7 +394,7 @@ MonoBehaviour:
   - {fileID: 1175459002}
   Audio: {fileID: 1302982573}
   thanhno: {fileID: 608181518}
-  thanhNoToiDa: 100
+  thanhNoToiDa: 120
   thanhNoHienTai: 0
   timeFlash: 1
 --- !u!60 &104619576
@@ -587,7 +587,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: c4f8a01fad80ab74f8e250b688d74a55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2308,7 +2308,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnTauMe
   tauMePrefab: {fileID: 1976238172201581567, guid: 8c27db97f2edf8c4084d8afdd9a5600d, type: 3}
-  player: {fileID: 104619574}
+  player: {fileID: 104619575}
+  canhBaoUI: {fileID: 2074963939}
 --- !u!1 &715483494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2576,7 +2577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758394224}
   - component: {fileID: 758394225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spawndanpro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2752,7 +2753,7 @@ GameObject:
   m_Component:
   - component: {fileID: 812465497}
   - component: {fileID: 812465498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spawndan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2932,7 +2933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 962656976}
   - component: {fileID: 962656977}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spawntenlua
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3493,7 +3494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1175459003}
   - component: {fileID: 1175459004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spawndanpro (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5418,7 +5419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2031295833}
   - component: {fileID: 2031295834}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spawndan2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5507,7 +5508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72e8b65908563c1498a495a7c5fce369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanhBao
-  panelCanhBao: {fileID: 2074963940}
 --- !u!225 &2074963940
 CanvasGroup:
   m_ObjectHideFlags: 0
