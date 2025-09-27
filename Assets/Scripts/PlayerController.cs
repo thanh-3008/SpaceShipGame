@@ -1,6 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,13 +18,21 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI soTenLuaText;
     public GameObject[] spawndan;
     public GameObject Audio;
+    public ThanhNo thanhno;
+    public float thanhNoToiDa = 100f;
+    public float thanhNoHienTai;
+    private SpriteRenderer spriteRenderer;
+    public float timeFlash;
+    private float timer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         thanhmauhientai = thanhmauToiDa;
-        damehientai = 5f;       
+        damehientai = 5f;
+        thanhNoHienTai = 0f;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -35,22 +43,17 @@ public class PlayerController : MonoBehaviour
 
         lenxuong = Input.GetAxis("Vertical");
         Rigidbody2D.linearVelocity = new Vector2(Rigidbody2D.linearVelocity.x, lenxuong * speed);
-
-        //if(Mathf.Abs(traiphai) > 0.1f || Mathf.Abs(lenxuong) > 0.1f)
-        //{
-        //    explosionEffect.Play();
-        //}
-        //if(Mathf.Abs(traiphai) == 0f && Mathf.Abs(lenxuong) == 0f)
-        //{
-        //    explosionEffect.Stop();
-        //}
-
+        if (thanhNoHienTai <= thanhNoToiDa)
+        {
+            thanhNoHienTai += 1f * Time.deltaTime;
+            thanhno.capnhatthanhno(thanhNoHienTai, thanhNoToiDa);
+        }
     }
     public void TakeDame(float dame)
     {
         Debug.Log("Player take dame: " + dame);
         thanhmauhientai -= dame;
-        thanhmau.capnhatthanhmau(thanhmauhientai,thanhmauToiDa);
+        thanhmau.capnhatthanhmau(thanhmauhientai, thanhmauToiDa);
         AudioManagement audioManager = Audio.GetComponent<AudioManagement>();
         audioManager.PlaySfxto(audioManager.tiengvacham);
         if (thanhmauhientai <= 0)
@@ -68,12 +71,12 @@ public class PlayerController : MonoBehaviour
             score += 1;
             textScore.text = score.ToString();
             Dan dan = danprefap.GetComponent<Dan>();
-            damehientai += damebonus;         
+            damehientai += damebonus;
             AudioManagement audioManager = Audio.GetComponent<AudioManagement>();
             audioManager.PlaySfxto(audioManager.tiengancoin); // Phát âm thanh khi nhận sao
-            Destroy(collision.gameObject);     
+            Destroy(collision.gameObject);
         }
-        if(collision.CompareTag("bufftenlua")&& sotenlua<=10)
+        if (collision.CompareTag("bufftenlua") && sotenlua <= 10)
         {
             sotenlua += 1;
             soTenLuaText.text = sotenlua.ToString();
@@ -84,18 +87,36 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("buffdanpro"))
         {
             // Gọi hàm ActivateBuff trong script spawndanpro và đặt thời gian là 10 giây
-            for(int i=0;i<spawndan.Length;i++)
+            for (int i = 0; i < spawndan.Length; i++)
             {
                 GameObject spawner = spawndan[i];
                 spawndanpro danproSpawner = spawner.GetComponent<spawndanpro>();
                 danproSpawner.ActivateBuff(10f);
                 AudioManagement audioManager = Audio.GetComponent<AudioManagement>();
                 audioManager.PlaySfxto(audioManager.tiengancoin);
-            }          
+            }
 
             // Hủy vật phẩm buff
             Destroy(collision.gameObject);
-        }      
+        }
+    }
+    public void StartFlashRed()
+    {
+        StopCoroutine(FlashRed(timeFlash)); // Dừng coroutine nếu nó đang chạy
+        StartCoroutine(FlashRed(timeFlash)); // Bắt đầu coroutine mới
+    }
+    private IEnumerator FlashRed(float thoigianduytri)
+    {
+        Color originalColor = spriteRenderer.color;
+        while (timer < thoigianduytri)
+        {          
+            spriteRenderer.color = Color.red; // Đổi màu thành đỏ
+            yield return new WaitForSeconds(0.2f); 
+            spriteRenderer.color = Color.white; // Trả về màu ban đầu}
+            yield return new WaitForSeconds(0.2f);
+            timer += 0.2f;
+        }
+        timer = 0f; // Reset timer sau khi hoàn thành
     }
     void LateUpdate()
     {
