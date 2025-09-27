@@ -60,14 +60,19 @@ public class thienthachdichuyen : MonoBehaviour
             // Tạo hiệu ứng nổ
             Instantiate(boom, transform.position, Quaternion.identity);
 
-            
+            PlayerController playerScript = player.GetComponent<PlayerController>();
+            if (playerScript.thanhNoHienTai <= playerScript.thanhNoToiDa)
+            {
+                playerScript.thanhNoHienTai += 5f;
+                playerScript.thanhno.capnhatthanhno(playerScript.thanhNoHienTai, playerScript.thanhNoToiDa);
+            }
 
             // Gây sát thương cho người chơi
-            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-            if (player != null)
+            PlayerController player1 = collision.gameObject.GetComponent<PlayerController>();
+            if (player1 != null)
             {
-                player.TakeDame(dame);
-                player.StartFlashRed();
+                player1.TakeDame(dame);
+                player1.StartFlashRed();
             }       
             // Hủy thiên thạch
             Destroy(gameObject);

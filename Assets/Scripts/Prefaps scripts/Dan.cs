@@ -36,7 +36,7 @@ public class Dan : MonoBehaviour
                 other.GetComponent<thienthachdichuyen>().TakeDame(player.damehientai*2);
             }
             anim.SetTrigger("hit");
-            Destroy(gameObject,0.4f);
+            Destroy(gameObject,0.3f);
         }
     }
 }
