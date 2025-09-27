@@ -1,38 +1,49 @@
+﻿// File: CanhBao.cs
 using UnityEngine;
 using System.Collections;
-using System.Threading;
 
 public class CanhBao : MonoBehaviour
 {
-    public CanvasGroup panelCanhBao;
-    private float bodem = 0f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-   
-    private void Update()
+    private CanvasGroup panelCanhBao;
+    private bool dangChay = false; // Biến cờ để chống lỗi
+
+    void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        panelCanhBao = GetComponent<CanvasGroup>();
+        if (panelCanhBao != null)
         {
-            PlayerController player = FindAnyObjectByType<PlayerController>();
-            if (player.thanhNoHienTai >= player.thanhNoToiDa)
-            {
-                StartCoroutine(StartCanhBao());
-            }
+            panelCanhBao.alpha = 0; // Ẩn panel khi bắt đầu
         }
     }
-    
-    IEnumerator StartCanhBao()
-    {
 
-        while (bodem<=3)
+    // Hàm này được gọi từ script SpawnTauMe
+    public void ActiveStartCanhBao()
+    {
+        // Phải dùng StartCoroutine để gọi một IEnumerator
+        // và kiểm tra xem nó có đang chạy không
+        if (!dangChay)
+        {
+            StartCoroutine(ThucHienNhay());
+        }
+    }
+
+    private IEnumerator ThucHienNhay()
+    {
+        dangChay = true;
+
+        float tongThoiGian = 3f;
+        float tocDoNhay = 0.5f;
+
+        // Dùng biến cục bộ 'timer' thay cho 'bodem' để an toàn hơn
+        for (float timer = 0; timer < tongThoiGian; timer += tocDoNhay)
         {
             panelCanhBao.alpha = 1;
-            yield return new WaitForSeconds(0.25f);
-            bodem += 0.25f;
+            yield return new WaitForSeconds(tocDoNhay / 2);
             panelCanhBao.alpha = 0;
-            yield return new WaitForSeconds(0.25f);
-            bodem += 0.25f;
+            yield return new WaitForSeconds(tocDoNhay / 2);
         }
+
         panelCanhBao.alpha = 0;
-        bodem = 0f;
+        dangChay = false;
     }
 }

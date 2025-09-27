@@ -26,6 +26,12 @@ public class TauMe : MonoBehaviour
             transform.Translate(Vector2.down * speed * Time.deltaTime);
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        thienthachdichuyen thienthachscript = FindAnyObjectByType<thienthachdichuyen>();
+        thienthachscript.TakeDame(99999f);
+        
+    }
     private void LateUpdate()
     {
         Vector3 currentPosition = transform.position;

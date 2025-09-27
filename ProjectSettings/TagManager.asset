@@ -10,6 +10,7 @@ TagManager:
   - bufftenlua
   - buffdanpro
   - Audio
+  - TauMe
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - Water
   - UI
   - thienthach
-  - 
-  - 
+  - taume
+  - player
   - 
   - 
   - 
