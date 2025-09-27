@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MenuGame.unity
+    guid: 1e0c5fd423d51d94e94bfd5ff613894d
+  - enabled: 1
+    path: Assets/Scenes/GamePlay.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/HuongDan.unity
+    guid: ad367a7cf0f373841b754650946deba4
+  - enabled: 1
+    path: Assets/Scenes/Jumscare.unity
+    guid: 8cfa63c79bb758d4eaa0a75fd1ab8b0f
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_UseUCBPForAssetBundles: 0

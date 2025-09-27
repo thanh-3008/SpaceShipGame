@@ -1,0 +1,34 @@
+using JetBrains.Annotations;
+using UnityEngine;
+
+public class AudioManagement : MonoBehaviour
+{
+    public AudioSource backgroundMusic;
+    public AudioSource soundEffect;
+    public AudioSource sfxto;
+    public AudioClip newBackgroundMusic;
+    public AudioClip thienthachno;
+    public AudioClip tiengdan;
+    public AudioClip tiengtenlua;
+    public AudioClip tiengancoin;
+    public AudioClip tiengvacham;
+    public AudioClip tiengdanpro;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        backgroundMusic.clip = newBackgroundMusic;
+        backgroundMusic.Play();
+    }
+
+    public void PlaySfx(AudioClip sfxClip)
+    {
+        soundEffect.clip = sfxClip;
+        soundEffect.PlayOneShot(sfxClip);
+    }
+    public void PlaySfxto(AudioClip sfxClip)
+    {
+        sfxto.clip = sfxClip;
+        sfxto.PlayOneShot(sfxClip);
+    }
+
+}
