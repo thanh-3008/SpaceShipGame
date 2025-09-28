@@ -32,8 +32,6 @@ public class Tenlua : MonoBehaviour
             
                 other.GetComponent<thienthachdichuyen>().TakeDame(player.damehientai*100);
             
-            //anim.SetTrigger("hit");
-            Destroy(gameObject, 0.5f);
         }
     }
 }
