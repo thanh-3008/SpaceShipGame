@@ -11,9 +11,6 @@ public class spawnthienthach : MonoBehaviour
     private float i;
 
     [Header("thiết lập độ khó")]
-    public float tocdocoban;
-    public float mautoida;
-    public float damethienthach;
     public float thoigiantangdokho = 30f; // Interval to increase difficulty
     private float thoigiandaqua; // Sẽ đếm tổng thời gian chơi
 
@@ -32,21 +29,21 @@ public class spawnthienthach : MonoBehaviour
         // Kiểm tra để tạo thiên thạch
         if (timer >= spawnInterval && timestop == false)
         {
+            
             int randomIndex = Random.Range(0, gameObjects.Length);
             Vector2 spawnPosition = new Vector2(Random.Range(-6f, 6f), transform.position.y);
             // Dòng dưới đây không cần thiết nếu spawner đứng yên, nhưng tôi giữ lại theo code của bạn
             transform.position = spawnPosition;
             GameObject newobject = Instantiate(gameObjects[randomIndex], transform.position, Quaternion.identity);
-
+            thienthachdichuyen thienthachScript = newobject.GetComponent<thienthachdichuyen>();
             // --- LOGIC TĂNG ĐỘ KHÓ NÊN ĐƯỢC ĐẶT Ở ĐÂY ---
 
             float tangdokho = 1f + (thoigiandaqua / thoigiantangdokho);
 
-            float tocdohientai = tocdocoban * tangdokho;
-            float mautoidahientai = mautoida * tangdokho;
-            float damethienthachhientai = damethienthach * tangdokho;
-
-            thienthachdichuyen thienthachScript = newobject.GetComponent<thienthachdichuyen>();
+            float tocdohientai = thienthachScript.speed * tangdokho/4;
+            float mautoidahientai = thienthachScript.thanhmauToiDa * tangdokho;
+            float damethienthachhientai = thienthachScript.dame * tangdokho / 4;
+          
             if (thienthachScript != null)
             {
 
@@ -66,7 +63,9 @@ public class spawnthienthach : MonoBehaviour
                 thienthachdichuyen thienthachScriptBoss = BossObject.GetComponent<thienthachdichuyen>();
                 if (thienthachScriptBoss != null)
                 {
-                    thienthachScriptBoss.thanhmauToiDa = mautoidahientai * (thoigiantangdokho / 4); // Boss có nhiều máu hơn
+                    float tangdokho1 = Mathf.Pow(1.5f, (thoigiandaqua / thoigiantangdokho));
+                    thienthachScriptBoss.thanhmauToiDa *= tangdokho1;
+                    ; // Boss có nhiều máu hơn
                     thienthachScriptBoss.dame = damethienthachhientai * 2; // Boss
                     timestop = true;
                     i = 0;

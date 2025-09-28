@@ -283,7 +283,7 @@ Transform:
   m_GameObject: {fileID: 6747026704579016348}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.94273, y: -0.26904, z: 0}
+  m_LocalPosition: {x: -0.77475, y: -1.67678, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -360,12 +360,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da7072194facb947974dc1f9ae3bd0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::thienthachdichuyen
-  thienthach: {fileID: 6747026704579016348}
   speed: 5
   thanhMau: {fileID: 6675030727909192024}
-  thanhmauhientai: 0
+  thanhmauHienTai: 0
   thanhmauToiDa: 50
-  dame: 10
+  dame: 5
   boom: {fileID: 4794043405585894027, guid: 37138c0c33167b04fa1fb90b7f5a794f, type: 3}
   tilerotdo: 25
   buffPrefab:
