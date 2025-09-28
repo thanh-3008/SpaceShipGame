@@ -346,11 +346,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da7072194facb947974dc1f9ae3bd0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::thienthachdichuyen
-  thienthach: {fileID: 5802402177142667955}
   speed: 0.5
   thanhMau: {fileID: 2547926220523854016}
-  thanhmauhientai: 0
-  thanhmauToiDa: 1000
+  thanhmauHienTai: 0
+  thanhmauToiDa: 3000
   dame: 100
   boom: {fileID: 6192724089161036655, guid: e17d9a3f04750764c8c0a7a0461e4c3b, type: 3}
   tilerotdo: 100
