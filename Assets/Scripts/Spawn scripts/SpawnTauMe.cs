@@ -26,10 +26,10 @@ public class SpawnTauMe : MonoBehaviour
         }
 
         // LỖI LOGIC Ở ĐÂY: Phải so sánh Nộ với Nộ, không phải Nộ với Máu
-        if (player.thanhNoHienTai >= player.thanhNoToiDa)
+        if (player.thanhNoHienTai >= player.thanhNoToiDa*3)
         {
             // Tạo tàu mẹ
-            Vector3 spawnPosition = new Vector3(transform.position.x, transform.position.y, 0);
+            Vector3 spawnPosition = new Vector3(0f, -11f, 0);
             Instantiate(tauMePrefab, spawnPosition, Quaternion.identity);
 
             // Reset thanh nộ

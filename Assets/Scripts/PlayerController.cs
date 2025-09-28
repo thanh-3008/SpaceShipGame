@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public GameObject Audio;
     public ThanhNo thanhno;
     public float thanhNoToiDa = 100f;
-    public float thanhNoHienTai;
+    public float thanhNoHienTai ;
     private SpriteRenderer spriteRenderer;
     public float timeFlash;
     private float timer;
@@ -42,9 +42,9 @@ public class PlayerController : MonoBehaviour
 
         lenxuong = Input.GetAxis("Vertical");
         Rigidbody2D.linearVelocity = new Vector2(Rigidbody2D.linearVelocity.x, lenxuong * speed);
-        if (thanhNoHienTai <= thanhNoToiDa)
+        if (thanhNoHienTai <= thanhNoToiDa*3)
         {
-            thanhNoHienTai += 1f * Time.deltaTime;
+            thanhNoHienTai += 2f * Time.deltaTime;
             thanhno.capnhatthanhno(thanhNoHienTai, thanhNoToiDa);
         }
     }
