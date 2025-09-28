@@ -63,9 +63,9 @@ public class thienthachdichuyen : MonoBehaviour
             Instantiate(boom, transform.position, Quaternion.identity);
 
             PlayerController playerScript = player.GetComponent<PlayerController>();
-            if (playerScript.thanhNoHienTai <= playerScript.thanhNoToiDa)
+            if (playerScript.thanhNoHienTai <= playerScript.thanhNoToiDa * 3)
             {
-                playerScript.thanhNoHienTai += 5f;
+                playerScript.thanhNoHienTai += 10f;
                 playerScript.thanhno.capnhatthanhno(playerScript.thanhNoHienTai, playerScript.thanhNoToiDa);
             }
 
@@ -85,7 +85,7 @@ public class thienthachdichuyen : MonoBehaviour
             Instantiate(boom, transform.position, Quaternion.identity);
 
             PlayerController playerScript = player.GetComponent<PlayerController>();
-            if (playerScript.thanhNoHienTai <= playerScript.thanhNoToiDa)
+            if (playerScript.thanhNoHienTai <= playerScript.thanhNoToiDa * 3)
             {
                 playerScript.thanhNoHienTai += 5f;
                 playerScript.thanhno.capnhatthanhno(playerScript.thanhNoHienTai, playerScript.thanhNoToiDa);
