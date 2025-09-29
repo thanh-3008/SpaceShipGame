@@ -5394,6 +5394,10 @@ PrefabInstance:
       propertyPath: soTenLuaText
       value: 
       objectReference: {fileID: 551277698}
+    - target: {fileID: 4506174151676979813, guid: bde1f22cbfcaf6142a4f93e96125ea86, type: 3}
+      propertyPath: thanhNoHienTai
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 5448250735923507288, guid: bde1f22cbfcaf6142a4f93e96125ea86, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.13
