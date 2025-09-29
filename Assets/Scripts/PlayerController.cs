@@ -13,14 +13,14 @@ public class PlayerController : MonoBehaviour
     public float thanhmauToiDa = 100f;
     public TextMeshProUGUI textScore;
     public GameObject danprefap;
-    public float damebonus = 1f;
+    public float damebonus = 2f;
     public float damehientai;
     public TextMeshProUGUI soTenLuaText;
     public GameObject[] spawndan;
     public GameObject Audio;
     public ThanhNo thanhno;
     public float thanhNoToiDa = 100f;
-    public float thanhNoHienTai ;
+    public float thanhNoHienTai;
     private SpriteRenderer spriteRenderer;
     public float timeFlash;
     private float timer;
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
         lenxuong = Input.GetAxis("Vertical");
         Rigidbody2D.linearVelocity = new Vector2(Rigidbody2D.linearVelocity.x, lenxuong * speed);
-        if (thanhNoHienTai <= thanhNoToiDa*3)
+        if (thanhNoHienTai <= thanhNoToiDa * 3)
         {
             thanhNoHienTai += 2f * Time.deltaTime;
             thanhno.capnhatthanhno(thanhNoHienTai, thanhNoToiDa);
@@ -97,6 +97,17 @@ public class PlayerController : MonoBehaviour
 
             // Hủy vật phẩm buff
             Destroy(collision.gameObject);
+        }      
+}
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("TauMe"))
+        {
+            if (thanhmauhientai < thanhmauToiDa)
+            {
+                thanhmauhientai += 3f * Time.deltaTime;
+                thanhmau.capnhatthanhmau(thanhmauhientai, thanhmauToiDa);
+            }
         }
     }
     public void StartFlashRed()

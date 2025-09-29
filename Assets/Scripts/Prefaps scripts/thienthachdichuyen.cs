@@ -78,27 +78,20 @@ public class thienthachdichuyen : MonoBehaviour
             }       
             // Hủy thiên thạch
             Destroy(gameObject);
-        }
+        }      
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {       
         if (collision.gameObject.CompareTag("TauMe"))
         {
-            // Tạo hiệu ứng nổ
-            Instantiate(boom, transform.position, Quaternion.identity);
-
             PlayerController playerScript = player.GetComponent<PlayerController>();
             if (playerScript.thanhNoHienTai <= playerScript.thanhNoToiDa * 3)
             {
                 playerScript.thanhNoHienTai += 5f;
                 playerScript.thanhno.capnhatthanhno(playerScript.thanhNoHienTai, playerScript.thanhNoToiDa);
             }
-
-            // Gây sát thương cho người chơi
-            PlayerController player1 = collision.gameObject.GetComponent<PlayerController>();
-            if (player1 != null)
-            {
-                player1.TakeDame(999999f);
-                player1.StartFlashRed();
-            }
-            // Hủy thiên thạch
+            Instantiate(boom, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
@@ -135,6 +128,6 @@ public class thienthachdichuyen : MonoBehaviour
                 playerScript.thanhNoHienTai += 5f;
                 playerScript.thanhno.capnhatthanhno(playerScript.thanhNoHienTai, playerScript.thanhNoToiDa);
             }
-        }
+        }       
     }
 }

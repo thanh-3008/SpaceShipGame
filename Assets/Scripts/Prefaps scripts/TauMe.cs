@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem.Controls;
 
 public class TauMe : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class TauMe : MonoBehaviour
     {
         bodemthoigian = 0f;
         AudioManagement audioscript = FindAnyObjectByType<AudioManagement>();
-        audioscript.PlaySfxto(audioscript.tiengcanhbao);
+        audioscript.PlaySfxto(audioscript.tiengcanhbao);       
     }
 
     // Update is called once per frame
@@ -36,4 +37,5 @@ public class TauMe : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
 }
