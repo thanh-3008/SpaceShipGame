@@ -24,7 +24,11 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public float timeFlash;
     private float timer;
+    // Góc nghiêng tối đa khi di chuyển (tính bằng độ)
+    public float gocNghiengToiDa = 15f;
 
+    // Tốc độ tàu nghiêng và quay trở lại
+    public float tocDoNghieng = 20f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -47,7 +51,16 @@ public class PlayerController : MonoBehaviour
             thanhNoHienTai += 2f * Time.deltaTime;
             thanhno.capnhatthanhno(thanhNoHienTai, thanhNoToiDa);
         }
-    }
+        float gocMucTieu = -traiphai * gocNghiengToiDa;
+        // Lấy góc xoay hiện tại của tàu
+        Quaternion gocXoayHienTai = transform.rotation;
+
+        // Tạo ra góc xoay mục tiêu quanh trục Z
+        Quaternion gocXoayMucTieu = Quaternion.Euler(0, 0, gocMucTieu);
+
+        // Dùng Quaternion.Lerp để xoay tàu một cách mượt mà từ góc hiện tại đến góc mục tiêu
+        transform.rotation = Quaternion.Lerp(gocXoayHienTai, gocXoayMucTieu, tocDoNghieng * Time.deltaTime);
+}
     public void TakeDame(float dame)
     {
         Debug.Log("Player take dame: " + dame);
