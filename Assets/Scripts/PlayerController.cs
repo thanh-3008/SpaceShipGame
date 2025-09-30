@@ -1,13 +1,15 @@
 ﻿using TMPro;
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D Rigidbody2D;
+    private Rigidbody2D rigidbody2D;
     private float traiphai;
     public float speed = 5f;
     private float lenxuong;
+    public bool khoadichuyen = false;
 
     // Các tham chiếu sẽ được tự động tìm
     public ThanhMau thanhmau;
@@ -28,15 +30,16 @@ public class PlayerController : MonoBehaviour
     public float thanhNoToiDa = 100f;
     public float thanhNoHienTai;
     private SpriteRenderer spriteRenderer;
-    public float timeFlash=2f;
+    public float timeFlash=0.8f;
     private float timer=0f;
 
     public float gocNghiengToiDa = 15f;   // Góc nghiêng tối đa
     public float tocDoNghieng = 20f;      // Tốc độ nghiêng
 
+    public Boolean kimcangbathoai = false;
     void Start()
     {
-        Rigidbody2D = GetComponent<Rigidbody2D>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
         thanhmauhientai = thanhmauToiDa;
         damehientai = 5f;
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -193,10 +196,18 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        traiphai = Input.GetAxis("Horizontal");
-        lenxuong = Input.GetAxis("Vertical");
+        if (khoadichuyen==false)
+        {
+            traiphai = Input.GetAxis("Horizontal");
+            lenxuong = Input.GetAxis("Vertical");
+        }
+        else
+        {
+            rigidbody2D.linearVelocity = Vector2.zero;
+            traiphai = 0; lenxuong = 0;
+        }
 
-        Rigidbody2D.linearVelocity = new Vector2(traiphai * speed, lenxuong * speed);
+            rigidbody2D.linearVelocity = new Vector2(traiphai * speed, lenxuong * speed);
 
         // Hồi thanh nộ
         if (thanhNoHienTai <= thanhNoToiDa * 3)
@@ -213,7 +224,15 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDame(float dame)
     {
-        thanhmauhientai -= dame;
+        if (kimcangbathoai==true)
+        {
+            Debug.Log("kim cang bat hoai giam dame:" + dame / 2);
+            thanhmauhientai -= dame / 10;
+        }
+        else
+        {
+            thanhmauhientai -= dame;
+        }
         thanhmau.capnhatthanhmau(thanhmauhientai, thanhmauToiDa);
         audioManager.PlaySfxto(audioManager.tiengvacham);
         StartFlashRed();
@@ -274,7 +293,7 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
             spriteRenderer.color = Color.white;
             yield return new WaitForSeconds(0.2f);
-            timer += 0.2f;
+            timer += 0.4f;
         }
         timer = 0f;
     }
