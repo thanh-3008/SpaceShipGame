@@ -99,6 +99,18 @@ public class thienthachdichuyen : MonoBehaviour
             Instantiate(boom, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+        if (collision.gameObject.CompareTag("KhienNangLuong"))
+        {
+            PlayerController playerScript = player.GetComponent<PlayerController>();
+            playerScript.TakeDame(dame/10);
+            if (playerScript.thanhNoHienTai <= playerScript.thanhNoToiDa * 3)
+            {
+                playerScript.thanhNoHienTai += 5f;
+                playerScript.thanhno.capnhatthanhno(playerScript.thanhNoHienTai, playerScript.thanhNoToiDa);
+            }
+            Instantiate(boom, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
 
     public void TakeDame(float damageAmount)
