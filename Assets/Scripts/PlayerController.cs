@@ -8,149 +8,282 @@ public class PlayerController : MonoBehaviour
     private float traiphai;
     public float speed = 5f;
     private float lenxuong;
+
+    // Các tham chiếu sẽ được tự động tìm
     public ThanhMau thanhmau;
     public float thanhmauhientai;
     public float thanhmauToiDa = 100f;
+
     public TextMeshProUGUI textScore;
     public GameObject danprefap;
-    public float damebonus = 2f;
+    public float damebonus = 1f;
     public float damehientai;
+
     public TextMeshProUGUI soTenLuaText;
     public GameObject[] spawndan;
-    public GameObject Audio;
+    public GameObject[] spawndanpro;
+    public AudioManagement audioManager;
     public ThanhNo thanhno;
+
     public float thanhNoToiDa = 100f;
     public float thanhNoHienTai;
     private SpriteRenderer spriteRenderer;
-    public float timeFlash;
-    private float timer;
-    // Góc nghiêng tối đa khi di chuyển (tính bằng độ)
-    public float gocNghiengToiDa = 15f;
+    public float timeFlash=2f;
+    private float timer=0f;
 
-    // Tốc độ tàu nghiêng và quay trở lại
-    public float tocDoNghieng = 20f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float gocNghiengToiDa = 15f;   // Góc nghiêng tối đa
+    public float tocDoNghieng = 20f;      // Tốc độ nghiêng
+
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         thanhmauhientai = thanhmauToiDa;
         damehientai = 5f;
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // 🔎 Tự động tìm các object trong Scene
+        // Sử dụng Debug.Log để theo dõi quá trình khởi tạo các biến
+
+        // --- Tìm ThanhMau ---
+        if (thanhmau == null)
+        {
+            Debug.Log("Searching for 'ThanhMau' component...");
+            GameObject obj = GameObject.Find("ThanhMau");
+            if (obj != null)
+            {
+                thanhmau = obj.GetComponent<ThanhMau>();
+                if (thanhmau == null)
+                {
+                    Debug.LogError("GameObject 'ThanhMau' was found, but it's missing the 'ThanhMau' component.");
+                }
+                else
+                {
+                    Debug.Log("'ThanhMau' assigned successfully!");
+                }
+            }
+            else
+            {
+                Debug.LogError("Could not find GameObject named 'ThanhMau' in the scene.");
+            }
+        }
+
+        // --- Tìm TextMeshPro cho Score ---
+        if (textScore == null)
+        {
+            Debug.Log("Searching for 'Score' component...");
+            GameObject obj = GameObject.Find("Score");
+            if (obj != null)
+            {
+                textScore = obj.GetComponent<TextMeshProUGUI>();
+                if (textScore == null)
+                {
+                    Debug.LogError("GameObject 'Score' was found, but it's missing the 'TextMeshProUGUI' component.");
+                }
+                else
+                {
+                    Debug.Log("'Score' text assigned successfully!");
+                }
+            }
+            else
+            {
+                Debug.LogError("Could not find GameObject named 'Score' in the scene.");
+            }
+        }
+
+        // --- Tìm TextMeshPro cho SoTenLua ---
+        if (soTenLuaText == null)
+        {
+            Debug.Log("Searching for 'SoTenLua' component...");
+            GameObject obj = GameObject.Find("SoTenLua");
+            if (obj != null)
+            {
+                soTenLuaText = obj.GetComponent<TextMeshProUGUI>();
+                if (soTenLuaText == null)
+                {
+                    Debug.LogError("GameObject 'SoTenLua' was found, but it's missing the 'TextMeshProUGUI' component.");
+                }
+                else
+                {
+                    Debug.Log("'SoTenLua' text assigned successfully!");
+                }
+            }
+            else
+            {
+                Debug.LogError("Could not find GameObject named 'SoTenLua' in the scene.");
+            }
+        }
+
+        // --- Tìm các Spawner ---
+        if (spawndan == null || spawndan.Length == 0)
+        {
+            Debug.Log("Searching for GameObjects with tag 'Spawner'...");
+            spawndan = GameObject.FindGameObjectsWithTag("spawndan");
+            if (spawndan != null && spawndan.Length > 0)
+            {
+                Debug.Log($"Found and assigned {spawndan.Length} spawner(s).");
+            }
+            else
+            {
+                // Sử dụng LogWarning vì có thể trong một số màn chơi không có spawner
+                Debug.LogWarning("No GameObjects with the tag 'Spawner' were found in the scene.");
+            }
+        }
+
+        if (spawndanpro == null || spawndanpro.Length == 0)
+        {
+            Debug.Log("Searching for GameObjects with tag 'spawndanpro'...");
+            spawndanpro = GameObject.FindGameObjectsWithTag("spawndanpro");
+            if (spawndanpro != null && spawndanpro.Length > 0)
+            {
+                Debug.Log($"Found and assigned {spawndanpro.Length} spawner(s).");
+            }
+            else
+            {
+                // Sử dụng LogWarning vì có thể trong một số màn chơi không có spawner
+                Debug.LogWarning("No GameObjects with the tag 'Spawner' were found in the scene.");
+            }
+        }
+
+        // --- Tìm AudioManagement ---
+        if (audioManager == null)
+        {
+            Debug.Log("Searching for 'AudioManagement' component...");
+            GameObject obj = GameObject.Find("AudioManagement");
+            if (obj != null)
+            {
+                audioManager = obj.GetComponent<AudioManagement>();
+                if (audioManager == null)
+                {
+                    Debug.LogError("GameObject 'AudioManagement' was found, but it's missing the 'AudioManagement' component.");
+                }
+                else
+                {
+                    Debug.Log("'AudioManagement' assigned successfully!");
+                }
+            }
+            else
+            {
+                Debug.LogError("Could not find GameObject named 'AudioManagement' in the scene.");
+            }
+        }
+
+        // --- Tìm ThanhNo ---
+        if (thanhno == null)
+        {
+            Debug.Log("Searching for 'ThanhNo' component...");
+            GameObject obj = GameObject.Find("ThanhNo");
+            if (obj != null)
+            {
+                thanhno = obj.GetComponent<ThanhNo>();
+                if (thanhno == null)
+                {
+                    Debug.LogError("GameObject 'ThanhNo' was found, but it's missing the 'ThanhNo' component.");
+                }
+                else
+                {
+                    Debug.Log("'ThanhNo' assigned successfully!");
+                }
+            }
+            else
+            {
+                Debug.LogError("Could not find GameObject named 'ThanhNo' in the scene.");
+            }
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         traiphai = Input.GetAxis("Horizontal");
-        Rigidbody2D.linearVelocity = new Vector2(traiphai * speed, Rigidbody2D.linearVelocity.y);
-
         lenxuong = Input.GetAxis("Vertical");
-        Rigidbody2D.linearVelocity = new Vector2(Rigidbody2D.linearVelocity.x, lenxuong * speed);
+
+        Rigidbody2D.linearVelocity = new Vector2(traiphai * speed, lenxuong * speed);
+
+        // Hồi thanh nộ
         if (thanhNoHienTai <= thanhNoToiDa * 3)
         {
             thanhNoHienTai += 2f * Time.deltaTime;
             thanhno.capnhatthanhno(thanhNoHienTai, thanhNoToiDa);
         }
+
+        // Xử lý nghiêng tàu khi di chuyển
         float gocMucTieu = -traiphai * gocNghiengToiDa;
-        // Lấy góc xoay hiện tại của tàu
-        Quaternion gocXoayHienTai = transform.rotation;
-
-        // Tạo ra góc xoay mục tiêu quanh trục Z
         Quaternion gocXoayMucTieu = Quaternion.Euler(0, 0, gocMucTieu);
+        transform.rotation = Quaternion.Lerp(transform.rotation, gocXoayMucTieu, tocDoNghieng * Time.deltaTime);
+    }
 
-        // Dùng Quaternion.Lerp để xoay tàu một cách mượt mà từ góc hiện tại đến góc mục tiêu
-        transform.rotation = Quaternion.Lerp(gocXoayHienTai, gocXoayMucTieu, tocDoNghieng * Time.deltaTime);
-}
     public void TakeDame(float dame)
     {
-        Debug.Log("Player take dame: " + dame);
         thanhmauhientai -= dame;
         thanhmau.capnhatthanhmau(thanhmauhientai, thanhmauToiDa);
-        AudioManagement audioManager = Audio.GetComponent<AudioManagement>();
         audioManager.PlaySfxto(audioManager.tiengvacham);
+        StartFlashRed();
         if (thanhmauhientai <= 0)
         {
             Destroy(gameObject);
             FindObjectOfType<GameOverMenu>().showGameOverScreen(int.Parse(textScore.text));
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         int sotenlua = int.Parse(soTenLuaText.text);
+
         if (collision.CompareTag("star"))
         {
             int score = int.Parse(textScore.text);
             score += 1;
             textScore.text = score.ToString();
-            Dan dan = danprefap.GetComponent<Dan>();
+
             damehientai += damebonus;
-            AudioManagement audioManager = Audio.GetComponent<AudioManagement>();
-            audioManager.PlaySfxto(audioManager.tiengancoin); // Phát âm thanh khi nhận sao
+            audioManager.PlaySfxto(audioManager.tiengancoin);
             Destroy(collision.gameObject);
         }
+
         if (collision.CompareTag("bufftenlua") && sotenlua <= 10)
         {
             sotenlua += 1;
             soTenLuaText.text = sotenlua.ToString();
-            AudioManagement audioManager = Audio.GetComponent<AudioManagement>();
             audioManager.PlaySfxto(audioManager.tiengancoin);
             Destroy(collision.gameObject);
         }
+
         if (collision.CompareTag("buffdanpro"))
         {
-            // Gọi hàm ActivateBuff trong script spawndanpro và đặt thời gian là 10 giây
-            for (int i = 0; i < spawndan.Length; i++)
+            foreach (GameObject spawner in spawndanpro)
             {
-                GameObject spawner = spawndan[i];
                 spawndanpro danproSpawner = spawner.GetComponent<spawndanpro>();
                 danproSpawner.ActivateBuff(10f);
-                AudioManagement audioManager = Audio.GetComponent<AudioManagement>();
-                audioManager.PlaySfxto(audioManager.tiengancoin);
             }
-
-            // Hủy vật phẩm buff
+            audioManager.PlaySfxto(audioManager.tiengancoin);
             Destroy(collision.gameObject);
-        }      
-}
-    public void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("TauMe"))
-        {
-            if (thanhmauhientai < thanhmauToiDa)
-            {
-                thanhmauhientai += 3f * Time.deltaTime;
-                thanhmau.capnhatthanhmau(thanhmauhientai, thanhmauToiDa);
-            }
         }
     }
+
     public void StartFlashRed()
     {
-        StopCoroutine(FlashRed(timeFlash)); // Dừng coroutine nếu nó đang chạy
-        StartCoroutine(FlashRed(timeFlash)); // Bắt đầu coroutine mới
+        StopCoroutine(FlashRed(timeFlash));
+        StartCoroutine(FlashRed(timeFlash));
     }
+
     private IEnumerator FlashRed(float thoigianduytri)
     {
-        Color originalColor = spriteRenderer.color;
-        while (timer < thoigianduytri)
-        {          
-            spriteRenderer.color = Color.red; // Đổi màu thành đỏ
-            yield return new WaitForSeconds(0.2f); 
-            spriteRenderer.color = Color.white; // Trả về màu ban đầu}
+               
+        while (timer <= thoigianduytri)
+        {
+            spriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(0.2f);
+            spriteRenderer.color = Color.white;
             yield return new WaitForSeconds(0.2f);
             timer += 0.2f;
         }
-        timer = 0f; // Reset timer sau khi hoàn thành
+        timer = 0f;
     }
+
     void LateUpdate()
     {
-        // Lấy vị trí hiện tại
         Vector3 currentPosition = transform.position;
-
-        // Kẹp tọa độ X và Y
         float clampedX = Mathf.Clamp(currentPosition.x, -7.5f, 7.5f);
         float clampedY = Mathf.Clamp(currentPosition.y, -4.5f, 4.5f);
-
-        // Cập nhật lại vị trí, giữ nguyên trục Z
         transform.position = new Vector3(clampedX, clampedY, currentPosition.z);
     }
 }

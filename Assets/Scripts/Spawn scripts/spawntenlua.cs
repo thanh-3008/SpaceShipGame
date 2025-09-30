@@ -10,13 +10,16 @@ public class spawntenlua : MonoBehaviour
 
     public TextMeshProUGUI soTenLuaText;
 
-    public GameObject Audio;
+    public AudioManagement Audio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Start()
 
     {
-
+        GameObject obj = GameObject.Find("SoTenLua");
+        soTenLuaText = obj.GetComponent<TextMeshProUGUI>();
+        GameObject objAudio = GameObject.Find("AudioManagement");
+        Audio = objAudio.GetComponent<AudioManagement>();
     }
 
 
