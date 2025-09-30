@@ -6,6 +6,13 @@ public class SpawnDanIon : MonoBehaviour
     public GameObject DanIon;
     public PlayerController player;
 
+
+    public void Start()
+    {
+        GameObject playergoj = GameObject.FindGameObjectWithTag("Player");
+        player = playergoj.GetComponent<PlayerController>();
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))

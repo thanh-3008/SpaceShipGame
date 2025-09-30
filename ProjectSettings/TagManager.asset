@@ -11,6 +11,10 @@ TagManager:
   - buffdanpro
   - Audio
   - TauMe
+  - spawndan
+  - spawndanpro
+  - SpawnDanIon
+  - SpawnTauMe
   layers:
   - Default
   - TransparentFX

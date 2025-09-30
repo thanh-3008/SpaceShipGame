@@ -49,6 +49,12 @@ public class thienthachdichuyen : MonoBehaviour
             // Tạo hiệu ứng nổ tại vị trí hiện tại
             Instantiate(boom, transform.position, Quaternion.identity);
             biphahuykhicombat = true;
+            PlayerController playerScript = player.GetComponent<PlayerController>();
+            if (playerScript.thanhNoHienTai <= playerScript.thanhNoToiDa * 3)
+            {
+                playerScript.thanhNoHienTai += 5f;
+                playerScript.thanhno.capnhatthanhno(playerScript.thanhNoHienTai, playerScript.thanhNoToiDa);
+            }
             // Hủy GameObject thiên thạch
             // Hàm OnDestroy() sẽ được tự động gọi để rơi đồ
             Destroy(gameObject);
@@ -73,8 +79,7 @@ public class thienthachdichuyen : MonoBehaviour
             PlayerController player1 = collision.gameObject.GetComponent<PlayerController>();
             if (player1 != null)
             {
-                player1.TakeDame(dame);
-                player1.StartFlashRed();
+                player1.TakeDame(dame);                
             }       
             // Hủy thiên thạch
             Destroy(gameObject);

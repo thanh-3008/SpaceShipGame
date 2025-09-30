@@ -41,7 +41,7 @@ public class spawnthienthach : MonoBehaviour
             float tangdokho = 1f + (thoigiandaqua / thoigiantangdokho);
 
             float tocdohientai = thienthachScript.speed * tangdokho/4;
-            float mautoidahientai = thienthachScript.thanhmauToiDa * tangdokho;
+            float mautoidahientai =+ thienthachScript.thanhmauToiDa * tangdokho;
             float damethienthachhientai = thienthachScript.dame * tangdokho / 4;
           
             if (thienthachScript != null)
@@ -63,7 +63,7 @@ public class spawnthienthach : MonoBehaviour
                 thienthachdichuyen thienthachScriptBoss = BossObject.GetComponent<thienthachdichuyen>();
                 if (thienthachScriptBoss != null)
                 {
-                    float tangdokho1 = Mathf.Pow(1.5f, (thoigiandaqua / thoigiantangdokho));
+                    float tangdokho1 = Mathf.Pow(1.4f, (thoigiandaqua / thoigiantangdokho));
                     thienthachScriptBoss.thanhmauToiDa *= tangdokho1;
                     ; // Boss có nhiều máu hơn
                     thienthachScriptBoss.dame += damethienthachhientai * 2; // Boss

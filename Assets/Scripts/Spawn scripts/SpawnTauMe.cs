@@ -8,6 +8,13 @@ public class SpawnTauMe : MonoBehaviour
     public PlayerController player;
     public CanhBao canhBaoUI; // Thay thế CanvasGroup bằng CanhBao
 
+    public void Start()
+    {
+        GameObject playerobj = GameObject.FindGameObjectWithTag("Player");
+        player = playerobj.GetComponent<PlayerController>();
+        GameObject canhbaoobj = GameObject.Find("CanhBao");
+        canhBaoUI = canhbaoobj.GetComponent<CanhBao>();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))

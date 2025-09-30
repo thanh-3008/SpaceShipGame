@@ -7,8 +7,13 @@ public class spawndanpro : MonoBehaviour
     public float spawnInterval = 0.1f; // Khoảng cách giữa mỗi lần bắn
 
     private Coroutine spawningCoroutine; // Để theo dõi coroutine đang chạy
-    public GameObject Audio;
+    public AudioManagement audioManager;
 
+    public void Start()
+    {
+        GameObject obj = GameObject.Find("AudioManagement");
+        audioManager = obj.GetComponent<AudioManagement>();
+    }
     // Hàm này sẽ được PlayerController gọi để bắt đầu hiệu ứng
     public void ActivateBuff(float duration)
     {
@@ -29,8 +34,7 @@ public class spawndanpro : MonoBehaviour
 
         // Vòng lặp bắn đạn cho đến khi hết thời gian (duration)
         while (timer < duration)
-        {
-            AudioManagement audioManager = Audio.GetComponent<AudioManagement>();
+        {          
             audioManager.PlaySfx(audioManager.tiengdanpro); // Phát âm thanh bắn đạn
             // Tạo ra viên đạn tại vị trí của player
             Instantiate(danPrefab, transform.position, danPrefab.transform.rotation);

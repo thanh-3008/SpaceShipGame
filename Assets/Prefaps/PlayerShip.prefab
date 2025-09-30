@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &585737037234919519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3312041891391325345}
+  - component: {fileID: 7970633589089645352}
+  m_Layer: 0
+  m_Name: SpawnDanIon
+  m_TagString: SpawnDanIon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3312041891391325345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585737037234919519}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.010000001, y: 0.0800001, z: 0}
+  m_LocalScale: {x: 2.100575, y: 1.5941428, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5448250735923507288}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7970633589089645352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585737037234919519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e398b5beb1d4da8469b02c3a96d5f9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnDanIon
+  DanIon: {fileID: 6321979865517477719, guid: a6e9cc43054266c47827a08bcf063e4b, type: 3}
+  player: {fileID: 0}
 --- !u!1 &701914074940076248
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,9 +58,10 @@ GameObject:
   - component: {fileID: 4988787710462468914}
   - component: {fileID: 494631639496577449}
   - component: {fileID: 7395044575326121097}
-  - component: {fileID: 4506174151676979813}
+  - component: {fileID: 1808319485379316604}
+  - component: {fileID: 8114469778672583796}
   m_Layer: 8
-  m_Name: "V\u1EC7 Binh Aegis"
+  m_Name: PlayerShip
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +76,7 @@ Transform:
   m_GameObject: {fileID: 701914074940076248}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0442, y: -3.218, z: 0}
+  m_LocalPosition: {x: -1.04323, y: -0.8985, z: 0}
   m_LocalScale: {x: 0.47606015, y: 0.6272964, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39,6 +86,7 @@ Transform:
   - {fileID: 6636411143419401740}
   - {fileID: 8903980803345283191}
   - {fileID: 5003167065082698085}
+  - {fileID: 3312041891391325345}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4988787710462468914
@@ -243,7 +291,21 @@ PolygonCollider2D:
       - {x: -0.06, y: -0.755}
       - {x: 0.11, y: -0.865}
   m_UseDelaunayMesh: 0
---- !u!114 &4506174151676979813
+--- !u!114 &1808319485379316604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701914074940076248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64ce5847bb0dd5847bf61046df5c273d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillAegis
+  SpawnDanIon: {fileID: 0}
+  SpawnTauMe: {fileID: 0}
+--- !u!114 &8114469778672583796
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,17 +323,18 @@ MonoBehaviour:
   thanhmauToiDa: 100
   textScore: {fileID: 0}
   danprefap: {fileID: 5226248612336612084, guid: 7977319879cdb5a47988b2db92704d9e, type: 3}
-  damebonus: 1
+  damebonus: 2
   damehientai: 0
   soTenLuaText: {fileID: 0}
-  spawndan:
-  - {fileID: 3875614446198011449}
-  - {fileID: 8023671117843984591}
-  Audio: {fileID: 0}
+  spawndan: []
+  spawndanpro: []
+  audioManager: {fileID: 0}
   thanhno: {fileID: 0}
   thanhNoToiDa: 100
-  thanhNoHienTai: 100
-  timeFlash: 1
+  thanhNoHienTai: 0
+  timeFlash: 0
+  gocNghiengToiDa: 15
+  tocDoNghieng: 20
 --- !u!1 &852618403202871088
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,9 +379,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1c22a6a9b32b249b98a4d055f325dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::spawndan
-  dan: {fileID: 5226248612336612084, guid: 7977319879cdb5a47988b2db92704d9e, type: 3}
   timespawn: 0.2
-  Audio: {fileID: 0}
+  audioManager: {fileID: 0}
+  danprefap: {fileID: 5226248612336612084, guid: 7977319879cdb5a47988b2db92704d9e, type: 3}
 --- !u!1 &3762794046983040655
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +394,7 @@ GameObject:
   - component: {fileID: 7490880107742129442}
   m_Layer: 0
   m_Name: SpawnTauMe
-  m_TagString: Untagged
+  m_TagString: SpawnTauMe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -364,7 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnTauMe
   tauMePrefab: {fileID: 1976238172201581567, guid: 8c27db97f2edf8c4084d8afdd9a5600d, type: 3}
-  player: {fileID: 4506174151676979813}
+  player: {fileID: 0}
   canhBaoUI: {fileID: 0}
 --- !u!1 &3875614446198011449
 GameObject:
@@ -378,7 +441,7 @@ GameObject:
   - component: {fileID: 6978829130799286978}
   m_Layer: 8
   m_Name: spawndanpro
-  m_TagString: Untagged
+  m_TagString: spawndanpro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -412,7 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::spawndanpro
   danPrefab: {fileID: 5095441156599058502, guid: 7a5e2724cac65654182b6714720e31ee, type: 3}
   spawnInterval: 0.1
-  Audio: {fileID: 0}
+  audioManager: {fileID: 0}
 --- !u!1 &4885026777521614700
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,9 +567,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1c22a6a9b32b249b98a4d055f325dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::spawndan
-  dan: {fileID: 5226248612336612084, guid: 7977319879cdb5a47988b2db92704d9e, type: 3}
   timespawn: 0.2
-  Audio: {fileID: 0}
+  audioManager: {fileID: 0}
+  danprefap: {fileID: 5226248612336612084, guid: 7977319879cdb5a47988b2db92704d9e, type: 3}
 --- !u!1 &8023671117843984591
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,7 +582,7 @@ GameObject:
   - component: {fileID: 2864568496237465953}
   m_Layer: 8
   m_Name: spawndanpro (1)
-  m_TagString: Untagged
+  m_TagString: spawndanpro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -553,4 +616,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::spawndanpro
   danPrefab: {fileID: 5095441156599058502, guid: 7a5e2724cac65654182b6714720e31ee, type: 3}
   spawnInterval: 0.1
-  Audio: {fileID: 0}
+  audioManager: {fileID: 0}
