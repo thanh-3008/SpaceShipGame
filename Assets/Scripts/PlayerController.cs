@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
     public float tocDoNghieng = 20f;      // Tốc độ nghiêng
 
     public Boolean kimcangbathoai = false;
+
+    public thienthachdichuyen thienthachdichuyens;
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -232,10 +234,10 @@ public class PlayerController : MonoBehaviour
         else
         {
             thanhmauhientai -= dame;
+            StartFlashRed();
         }
         thanhmau.capnhatthanhmau(thanhmauhientai, thanhmauToiDa);
         audioManager.PlaySfxto(audioManager.tiengvacham);
-        StartFlashRed();
         if (thanhmauhientai <= 0)
         {
             Destroy(gameObject);

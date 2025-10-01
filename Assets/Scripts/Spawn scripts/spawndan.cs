@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class spawndan : MonoBehaviour
@@ -6,6 +7,7 @@ public class spawndan : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public AudioManagement audioManager;
     public GameObject danprefap;
+    public Boolean isshot = true;
    
     void Start()
     {
@@ -17,7 +19,7 @@ public class spawndan : MonoBehaviour
     void Update()
     {
         timespawn += Time.deltaTime; // Increment timer by the time elapsed since last frame
-        if (timespawn >= 0.2) 
+        if (timespawn >= 0.2 && isshot==true) 
         { 
         Vector2 spawnPosition = new Vector2(transform.position.x, transform.position.y); // Position above the spawner
             audioManager.PlaySfx(audioManager.tiengdan); // Play the sound effect
