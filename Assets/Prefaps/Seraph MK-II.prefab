@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5854679551103727701}
   - component: {fileID: 722377279066839581}
   - component: {fileID: 6442246873991027131}
-  - component: {fileID: 2212177090798061226}
   m_Layer: 8
   m_Name: Seraph MK-II
   m_TagString: Player
@@ -108,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 5
+  khoadichuyen: 0
   thanhmau: {fileID: 0}
   thanhmauhientai: 87.90856
   thanhmauToiDa: 100
@@ -125,6 +125,8 @@ MonoBehaviour:
   timeFlash: 0.8
   gocNghiengToiDa: 15
   tocDoNghieng: 20
+  kimcangbathoai: 0
+  thienthachdichuyens: {fileID: 0}
 --- !u!50 &5854679551103727701
 Rigidbody2D:
   serializedVersion: 5
@@ -640,17 +642,4 @@ MonoBehaviour:
   doitau: {fileID: 1178729729106424875, guid: f71689e934582124ab83e8a68503d0cd, type: 3}
   playerController: {fileID: 0}
   playerControllerTauChuyenDoi: {fileID: 0}
-  thienthachdichuyens: []
---- !u!114 &2212177090798061226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3034535743428535646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08ad02aa6d7b4c04e8673805757df232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Huythienthachkhixuathien
-  thienthachdichuyens: {fileID: 0}
+  chuyenDoi: {fileID: 0}

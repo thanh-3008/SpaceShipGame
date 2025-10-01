@@ -1,4 +1,4 @@
-using Unity.Mathematics;
+﻿using System.Collections;
 using UnityEngine;
 
 public class Cochechuyendoi : MonoBehaviour
@@ -6,6 +6,7 @@ public class Cochechuyendoi : MonoBehaviour
     public GameObject doitau;
     public PlayerController playerController;
     public PlayerController playerControllerTauChuyenDoi;
+    public GameObject chuyenDoi;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,19 +20,29 @@ public class Cochechuyendoi : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G) && playerController.thanhNoHienTai>=playerController.thanhNoToiDa*3)
         {
-            ChuyenDoiTau(doitau);
+            StartAnim();
         }
     }
 
-    public void ChuyenDoiTau(GameObject Tauchuyendoi)
+    public void StartAnim()
+    {
+        StopCoroutine(ChuyenDoiTau(doitau));
+        StartCoroutine(ChuyenDoiTau(doitau));
+    }
+
+    public IEnumerator ChuyenDoiTau(GameObject Tauchuyendoi)
     {
         Vector3 vitrihientai = transform.position;
         Quaternion gocnghienhientai = transform.rotation;
-
-        Destroy(gameObject);        
+        chuyenDoi.SetActive(true);
+        ChuyenDoi bienhinh = chuyenDoi.GetComponent<ChuyenDoi>();
+        bienhinh.BienDoi();
+        yield return new WaitForSeconds(0.5f);      
         Instantiate(Tauchuyendoi, vitrihientai, gocnghienhientai);
         playerControllerTauChuyenDoi.thanhmauhientai = playerController.thanhmauhientai;
         playerControllerTauChuyenDoi.thanhNoHienTai = 0f;
+        chuyenDoi.SetActive(false);
+        Destroy(gameObject);
 
     }
 

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1625761738456762810}
   - component: {fileID: 8359764195524362262}
   - component: {fileID: 1785827973362888046}
-  - component: {fileID: 7513351697514954651}
   m_Layer: 8
   m_Name: Seraph Archangel
   m_TagString: Player
@@ -697,6 +696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 5
+  khoadichuyen: 0
   thanhmau: {fileID: 0}
   thanhmauhientai: 0
   thanhmauToiDa: 100
@@ -714,16 +714,5 @@ MonoBehaviour:
   timeFlash: 0.8
   gocNghiengToiDa: 15
   tocDoNghieng: 20
---- !u!114 &7513351697514954651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178729729106424875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08ad02aa6d7b4c04e8673805757df232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Huythienthachkhixuathien
+  kimcangbathoai: 0
   thienthachdichuyens: {fileID: 0}

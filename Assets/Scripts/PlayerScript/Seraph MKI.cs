@@ -9,11 +9,14 @@ public class SeraphMKI : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public GameObject khienNangLuong;
     public float thoigiankhien=8f;
+    public spawndan[] dan;
+    public GameObject tialaser;
+    public GameObject hapthu;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GetComponent<PlayerController>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();       
     }
 
     // Update is called once per frame
@@ -23,7 +26,7 @@ public class SeraphMKI : MonoBehaviour
         {
             StartSkill();
         }
-        if(Input.GetKeyUp(KeyCode.Space) && player.thanhNoHienTai >= player.thanhmauToiDa * 3 && khienNangLuong != null)
+        if(Input.GetKeyUp(KeyCode.Space) && player.thanhNoHienTai >= player.thanhmauToiDa * 3 && khienNangLuong != null )
         {
             StartUlti();
             player.thanhNoHienTai = 0;
@@ -59,16 +62,27 @@ public class SeraphMKI : MonoBehaviour
         StartCoroutine(KhienNangLuongQuatai(thoigiankhien));
     }
     public IEnumerator KhienNangLuongQuatai(float thoigianduytri)
-    {     
+    {
+        spawndan sdan = dan[0];
+        spawndan sdan2 = dan[1];
         float timer = 0f;
         while (timer < thoigianduytri)
         {
+            hapthu.SetActive(true);
+            sdan.isshot = false;
+            sdan2.isshot = false;
             player.khoadichuyen = true;
             khienNangLuong.SetActive(true);
             yield return new WaitForSeconds(0.2f);
             timer += 0.2f;
         }
-        player.khoadichuyen = false;
+        hapthu.SetActive(false);
         khienNangLuong.SetActive(false);
+        tialaser.SetActive(true);
+        yield return new WaitForSeconds(4f);
+        sdan.isshot = true;
+        sdan2.isshot= true;
+        tialaser.SetActive(false);
+        player.khoadichuyen = false;
     }
 }

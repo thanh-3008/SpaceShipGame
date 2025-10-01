@@ -59,7 +59,13 @@ public class thienthachdichuyen : MonoBehaviour
             // Hàm OnDestroy() sẽ được tự động gọi để rơi đồ
             Destroy(gameObject);
         }
+        if (player.IsDestroyed()) 
+        {
+            Instantiate(boom, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
