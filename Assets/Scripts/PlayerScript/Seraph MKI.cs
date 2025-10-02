@@ -12,11 +12,15 @@ public class SeraphMKI : MonoBehaviour
     public spawndan[] dan;
     public GameObject tialaser;
     public GameObject hapthu;
+    public AudioManagement Audio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         player = GetComponent<PlayerController>();
-        spriteRenderer = GetComponent<SpriteRenderer>();       
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        GameObject objAudio = GameObject.Find("AudioManagement");
+        Audio = objAudio.GetComponent<AudioManagement>();
+
     }
 
     // Update is called once per frame
@@ -43,6 +47,7 @@ public class SeraphMKI : MonoBehaviour
     {
         player.thanhNoHienTai -= 100f;
         float timer = 0f;
+        Audio.PlaySfxto(Audio.amthanhbatkimcangbathoai);
         while (timer<=thoigianhieuluc) 
         {
         player.kimcangbathoai = true;
@@ -68,6 +73,7 @@ public class SeraphMKI : MonoBehaviour
         float timer = 0f;
         while (timer < thoigianduytri)
         {
+            Audio.PlaySfxto(Audio.amthanhtuluc);
             hapthu.SetActive(true);
             sdan.isshot = false;
             sdan2.isshot = false;
@@ -79,6 +85,7 @@ public class SeraphMKI : MonoBehaviour
         hapthu.SetActive(false);
         khienNangLuong.SetActive(false);
         tialaser.SetActive(true);
+        Audio.PlaySfxto(Audio.amthanhbanlaser);
         yield return new WaitForSeconds(4f);
         sdan.isshot = true;
         sdan2.isshot= true;

@@ -7,11 +7,14 @@ public class Cochechuyendoi : MonoBehaviour
     public PlayerController playerController;
     public PlayerController playerControllerTauChuyenDoi;
     public GameObject chuyenDoi;
+    public AudioManagement audioManagement;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerController= GetComponent<PlayerController>();
         playerControllerTauChuyenDoi = doitau.GetComponent<PlayerController>();
+        GameObject objaudio = GameObject.Find("AudioManagement");
+        audioManagement=objaudio.AddComponent<AudioManagement>();
             
     }
 
@@ -32,6 +35,7 @@ public class Cochechuyendoi : MonoBehaviour
 
     public IEnumerator ChuyenDoiTau(GameObject Tauchuyendoi)
     {
+        audioManagement.PlaySfxto(audioManagement.amthanhbiendoi);
         Vector3 vitrihientai = transform.position;
         Quaternion gocnghienhientai = transform.rotation;
         chuyenDoi.SetActive(true);
