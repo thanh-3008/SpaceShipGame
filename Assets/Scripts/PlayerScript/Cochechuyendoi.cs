@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Marmamusic.EpicAdventureMusic;
+using System.Collections;
 using UnityEngine;
 
 public class Cochechuyendoi : MonoBehaviour
@@ -7,15 +8,15 @@ public class Cochechuyendoi : MonoBehaviour
     public PlayerController playerController;
     public PlayerController playerControllerTauChuyenDoi;
     public GameObject chuyenDoi;
-    public AudioManagement audioManagement;
+    public AudioManagement Audio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerController= GetComponent<PlayerController>();
         playerControllerTauChuyenDoi = doitau.GetComponent<PlayerController>();
-        GameObject objaudio = GameObject.Find("AudioManagement");
-        audioManagement=objaudio.AddComponent<AudioManagement>();
-            
+        GameObject objAudio = GameObject.Find("AudioManagement");
+        Audio = objAudio.GetComponent<AudioManagement>();
+
     }
 
     // Update is called once per frame
@@ -23,6 +24,8 @@ public class Cochechuyendoi : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G) && playerController.thanhNoHienTai>=playerController.thanhNoToiDa*3)
         {
+            Audio.PlaySfxto(Audio.amthanhbiendoi);
+            Debug.Log("bat dau chuyen doi");
             StartAnim();
         }
     }
@@ -35,7 +38,7 @@ public class Cochechuyendoi : MonoBehaviour
 
     public IEnumerator ChuyenDoiTau(GameObject Tauchuyendoi)
     {
-        audioManagement.PlaySfxto(audioManagement.amthanhbiendoi);
+        
         Vector3 vitrihientai = transform.position;
         Quaternion gocnghienhientai = transform.rotation;
         chuyenDoi.SetActive(true);

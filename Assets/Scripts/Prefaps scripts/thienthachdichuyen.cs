@@ -16,7 +16,7 @@ public class thienthachdichuyen : MonoBehaviour
     private GameObject Audio;
     private bool biphahuykhicombat = false;
     private GameObject player;
-    private GameObject taume;
+    public SeraphMKII skillMKII;
 
     // SỬA: Biến này không cần thiết, đã xóa "public GameObject thienthach;"
     // SỬA: Biến này cũng không cần thiết, chúng ta sẽ dùng Singleton
@@ -28,13 +28,28 @@ public class thienthachdichuyen : MonoBehaviour
         thanhMau.capnhatthanhmau(thanhmauHienTai, thanhmauToiDa);
         Audio = GameObject.FindWithTag("Audio");
         player = GameObject.FindWithTag("Player");
-        taume = GameObject.FindWithTag("TauMe");
+        GameObject objskill = GameObject.FindWithTag("Player");
+        skillMKII = objskill.GetComponent<SeraphMKII>();
     }
 
     void Update()
     {
-        // SỬA: Dùng "transform" trực tiếp, không cần "thienthach.transform"
-        transform.Translate(Vector2.down * speed * Time.deltaTime);
+        if (skillMKII != null)
+        {
+            if (skillMKII.lamchamthoigian == false)
+            {
+                // SỬA: Dùng "transform" trực tiếp, không cần "thienthach.transform"
+                transform.Translate(Vector2.down * speed / 2 * Time.deltaTime);
+            }
+            else
+            {
+                transform.Translate(Vector2.down * speed / 5 * Time.deltaTime);
+            }
+        }
+        else 
+        {
+            transform.Translate(Vector2.down * speed * Time.deltaTime);
+        }
 
         // Nếu thiên thạch bay ra khỏi màn hình
         if (transform.position.y < -6f)
@@ -61,8 +76,10 @@ public class thienthachdichuyen : MonoBehaviour
         }
         if (player.IsDestroyed()) 
         {
+            AudioManagement audioManager = Audio.GetComponent<AudioManagement>();
+            audioManager.PlaySfxto(audioManager.thienthachno);
             Instantiate(boom, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Destroy(gameObject,0.5f);
         }
     }
 
