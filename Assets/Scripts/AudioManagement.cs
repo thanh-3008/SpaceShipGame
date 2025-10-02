@@ -14,7 +14,6 @@ public class AudioManagement : MonoBehaviour
     public AudioClip tiengvacham;
     public AudioClip tiengdanpro;
     public AudioClip tiengcanhbao;
-    public AudioClip amthanhbanlaser;
     public AudioClip amthanhtuluc;
     public AudioClip amthanhbatkimcangbathoai;
     public AudioClip amthanhbiendoi;

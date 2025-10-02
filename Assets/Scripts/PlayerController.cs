@@ -38,7 +38,6 @@ public class PlayerController : MonoBehaviour
 
     public Boolean kimcangbathoai = false;
 
-    public thienthachdichuyen thienthachdichuyens;
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -229,7 +228,7 @@ public class PlayerController : MonoBehaviour
         if (kimcangbathoai==true)
         {
             Debug.Log("kim cang bat hoai giam dame:" + dame / 2);
-            thanhmauhientai -= dame / 10;
+            thanhmauhientai -= dame / 2;
         }
         else
         {

@@ -16,6 +16,7 @@ TagManager:
   - SpawnDanIon
   - SpawnTauMe
   - KhienNangLuong
+  - DongBang
   layers:
   - Default
   - TransparentFX
