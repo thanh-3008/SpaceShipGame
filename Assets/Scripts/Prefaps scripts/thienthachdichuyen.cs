@@ -39,7 +39,7 @@ public class thienthachdichuyen : MonoBehaviour
             if (skillMKII.lamchamthoigian == false)
             {
                 // SỬA: Dùng "transform" trực tiếp, không cần "thienthach.transform"
-                transform.Translate(Vector2.down * speed / 2 * Time.deltaTime);
+                transform.Translate(Vector2.down * speed  * Time.deltaTime);
             }
             else
             {

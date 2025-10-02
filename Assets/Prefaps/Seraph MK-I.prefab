@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1c22a6a9b32b249b98a4d055f325dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::spawndan
-  timespawn: 0.2
-  audioManager: {fileID: 0}
   danprefap: {fileID: 5226248612336612084, guid: 7977319879cdb5a47988b2db92704d9e, type: 3}
   isshot: 1
+  audioManager: {fileID: 0}
+  skillMKII: {fileID: 0}
 --- !u!1 &2022877942712704894
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,10 +615,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1c22a6a9b32b249b98a4d055f325dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::spawndan
-  timespawn: 0.2
-  audioManager: {fileID: 0}
   danprefap: {fileID: 5226248612336612084, guid: 7977319879cdb5a47988b2db92704d9e, type: 3}
   isshot: 1
+  audioManager: {fileID: 0}
+  skillMKII: {fileID: 0}
 --- !u!1 &5438266588634195348
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +650,7 @@ Transform:
   m_GameObject: {fileID: 5438266588634195348}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6395222, y: -1.8639361, z: 0}
+  m_LocalPosition: {x: -1.0503712, y: -2.723715, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

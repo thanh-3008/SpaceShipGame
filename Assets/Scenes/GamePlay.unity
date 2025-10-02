@@ -194,6 +194,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21490565}
   m_CullTransparentMesh: 1
+--- !u!1001 &41673704
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3034535743428535646, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
+      propertyPath: m_Name
+      value: Seraph MK-II
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167751994811376795, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.44725037
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167751994811376795, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.7253006
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167751994811376795, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167751994811376795, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167751994811376795, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167751994811376795, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167751994811376795, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167751994811376795, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167751994811376795, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167751994811376795, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
 --- !u!1 &54926029
 GameObject:
   m_ObjectHideFlags: 0
@@ -3033,63 +3090,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1302982574}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1196975892
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5438266588634195348, guid: 8dca6e469cd58ae4db0d29669688ffb9, type: 3}
-      propertyPath: m_Name
-      value: Seraph MK-I
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303395494482738892, guid: 8dca6e469cd58ae4db0d29669688ffb9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.0503712
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303395494482738892, guid: 8dca6e469cd58ae4db0d29669688ffb9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.723715
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303395494482738892, guid: 8dca6e469cd58ae4db0d29669688ffb9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303395494482738892, guid: 8dca6e469cd58ae4db0d29669688ffb9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303395494482738892, guid: 8dca6e469cd58ae4db0d29669688ffb9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303395494482738892, guid: 8dca6e469cd58ae4db0d29669688ffb9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303395494482738892, guid: 8dca6e469cd58ae4db0d29669688ffb9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303395494482738892, guid: 8dca6e469cd58ae4db0d29669688ffb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303395494482738892, guid: 8dca6e469cd58ae4db0d29669688ffb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303395494482738892, guid: 8dca6e469cd58ae4db0d29669688ffb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8dca6e469cd58ae4db0d29669688ffb9, type: 3}
 --- !u!1 &1250512664
 GameObject:
   m_ObjectHideFlags: 0
@@ -3420,6 +3420,7 @@ MonoBehaviour:
   amthanhtuluc: {fileID: 8300000, guid: 77f1934947f0acf4b9a137a599688cf0, type: 3}
   amthanhbatkimcangbathoai: {fileID: 8300000, guid: e3bdfd6a5f201fa4ca7f807c0dcf3994, type: 3}
   amthanhbiendoi: {fileID: 8300000, guid: 4729401953af7704ca6ea9642ff8c477, type: 3}
+  amthanhngungdong: {fileID: 8300000, guid: ec667cf945af6bf4187b363f8586b547, type: 3}
 --- !u!1 &1323318915
 GameObject:
   m_ObjectHideFlags: 0
@@ -5308,4 +5309,4 @@ SceneRoots:
   - {fileID: 5636803494904914145}
   - {fileID: 8590992914829659334}
   - {fileID: 1302982574}
-  - {fileID: 1196975892}
+  - {fileID: 41673704}
