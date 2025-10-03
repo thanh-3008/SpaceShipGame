@@ -239,7 +239,6 @@ public class PlayerController : MonoBehaviour
         audioManager.PlaySfxto(audioManager.tiengvacham);
         if (thanhmauhientai <= 0)
         {
-            Destroy(gameObject);
             FindObjectOfType<GameOverMenu>().showGameOverScreen(int.Parse(textScore.text));
         }
     }

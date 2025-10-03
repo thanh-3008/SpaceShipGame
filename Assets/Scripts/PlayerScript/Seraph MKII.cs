@@ -8,6 +8,9 @@ public class SeraphMKII : MonoBehaviour
     public bool lamchamthoigian = false;
     public DongBangImage dongbang;
     public AudioManagement audioManagement;
+    public GameObject laserden;
+    public bool isturnonlaser = false;
+    public spawndan[] dan;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,6 +28,11 @@ public class SeraphMKII : MonoBehaviour
         {
             StartSkillBanNang();
         }
+        if(Input.GetKeyDown(KeyCode.F)&& (player.thanhNoHienTai>= player.thanhmauToiDa) && isturnonlaser==false)
+        {
+            isturnonlaser=true;
+            startskillBlackLaser();
+        }
     }
     public void StartSkillBanNang()
     {
@@ -41,5 +49,28 @@ public class SeraphMKII : MonoBehaviour
         yield return new WaitForSeconds(20f);
         lamchamthoigian = false;
         dongbang.tathieuung();
+    }
+
+    public void startskillBlackLaser()
+    {
+            StopCoroutine(BlackLaser());
+        StartCoroutine(BlackLaser());
+    }
+    public IEnumerator BlackLaser()
+    {
+        audioManagement.PlaySfxto(audioManagement.amthanhlaserden); 
+        player.thanhNoHienTai -= 100f;
+        spawndan sdan = dan[0];
+        spawndan sdan2 = dan[1];
+        sdan.isshot = false;
+        sdan2.isshot = false;
+        player.khoadichuyen = true;
+        laserden.SetActive(true);
+        yield return new WaitForSeconds(1.8f);
+        sdan.isshot = true;
+        sdan2.isshot = true;
+        laserden.SetActive(false);
+        isturnonlaser = false;
+        player.khoadichuyen = false;
     }
 }

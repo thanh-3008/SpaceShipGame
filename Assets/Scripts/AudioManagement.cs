@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class AudioManagement : MonoBehaviour
@@ -18,6 +17,8 @@ public class AudioManagement : MonoBehaviour
     public AudioClip amthanhbatkimcangbathoai;
     public AudioClip amthanhbiendoi;
     public AudioClip amthanhngungdong;
+    public AudioClip amthanhlaserden;
+    public AudioClip amthanhSkill;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
