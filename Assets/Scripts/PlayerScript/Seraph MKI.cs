@@ -79,7 +79,8 @@ public class SeraphMKI : MonoBehaviour
         spawndan sdan = dan[0];
         spawndan sdan2 = dan[1];
         float timer = 0f;
-        while (timer < thoigianduytri)
+        
+        while (timer < thoigianduytri )
         {           
             hapthu.SetActive(true);
             sdan.isshot = false;
