@@ -19,6 +19,8 @@ public class AudioManagement : MonoBehaviour
     public AudioClip amthanhngungdong;
     public AudioClip amthanhlaserden;
     public AudioClip amthanhSkill;
+    public AudioClip amthanhfireball;
+    public AudioClip vachamfireball;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

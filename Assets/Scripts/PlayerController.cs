@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     // Các tham chiếu sẽ được tự động tìm
     public ThanhMau thanhmau;
-    public float thanhmauhientai;
+    public float thanhmauhientai =100f;
     public float thanhmauToiDa = 100f;
 
     public TextMeshProUGUI textScore;
@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
-        thanhmauhientai = thanhmauToiDa;
         damehientai = 5f;
         spriteRenderer = GetComponent<SpriteRenderer>();
 

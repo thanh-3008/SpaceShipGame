@@ -1184,7 +1184,7 @@ MonoBehaviour:
   speed: 5
   khoadichuyen: 0
   thanhmau: {fileID: 0}
-  thanhmauhientai: 0
+  thanhmauhientai: 100
   thanhmauToiDa: 100
   textScore: {fileID: 0}
   danprefap: {fileID: 0}
@@ -1214,8 +1214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cochechuyendoi
   doitau: {fileID: 3034535743428535646, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
-  playerController: {fileID: 0}
-  playerControllerTauChuyenDoi: {fileID: 0}
+  playerController: {fileID: 643745646695298061}
   chuyenDoi: {fileID: 2022877942712704894}
   Audio: {fileID: 0}
 --- !u!114 &5878989947781391796

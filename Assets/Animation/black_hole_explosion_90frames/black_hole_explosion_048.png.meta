@@ -1,0 +1,1404 @@
+fileFormatVersion: 2
+guid: 4fcb759002ad4014ea7258099cf385f7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4394219215588916051
+    second: black_hole_explosion_048_0
+  - first:
+      213: 2935705065239714603
+    second: black_hole_explosion_048_1
+  - first:
+      213: -6798563628658602963
+    second: black_hole_explosion_048_2
+  - first:
+      213: 3562639100977023450
+    second: black_hole_explosion_048_3
+  - first:
+      213: -5791699824540642326
+    second: black_hole_explosion_048_4
+  - first:
+      213: -2643567306312336866
+    second: black_hole_explosion_048_5
+  - first:
+      213: -2624024993202364450
+    second: black_hole_explosion_048_6
+  - first:
+      213: -5613295497422959188
+    second: black_hole_explosion_048_7
+  - first:
+      213: 7409985246902699594
+    second: black_hole_explosion_048_8
+  - first:
+      213: -6345334079397086374
+    second: black_hole_explosion_048_9
+  - first:
+      213: -8461112331838497006
+    second: black_hole_explosion_048_10
+  - first:
+      213: 6236357197958995647
+    second: black_hole_explosion_048_11
+  - first:
+      213: -1176702391537043908
+    second: black_hole_explosion_048_12
+  - first:
+      213: 1472876892293294505
+    second: black_hole_explosion_048_13
+  - first:
+      213: -8355250205286001293
+    second: black_hole_explosion_048_14
+  - first:
+      213: 5852468195930611349
+    second: black_hole_explosion_048_15
+  - first:
+      213: -7673538397835466896
+    second: black_hole_explosion_048_16
+  - first:
+      213: -3823902569651576439
+    second: black_hole_explosion_048_17
+  - first:
+      213: 1769540229141625700
+    second: black_hole_explosion_048_18
+  - first:
+      213: -4612818945032469311
+    second: black_hole_explosion_048_19
+  - first:
+      213: 5717672862557455057
+    second: black_hole_explosion_048_20
+  - first:
+      213: 5281952484004722280
+    second: black_hole_explosion_048_21
+  - first:
+      213: -2090870886339146332
+    second: black_hole_explosion_048_22
+  - first:
+      213: -5994320589699422098
+    second: black_hole_explosion_048_23
+  - first:
+      213: 4943973240533424602
+    second: black_hole_explosion_048_24
+  - first:
+      213: -5825798200175502679
+    second: black_hole_explosion_048_25
+  - first:
+      213: 3884323372092507866
+    second: black_hole_explosion_048_26
+  - first:
+      213: -2194378852482233173
+    second: black_hole_explosion_048_27
+  - first:
+      213: -1957316875341282827
+    second: black_hole_explosion_048_28
+  - first:
+      213: 86479126529901998
+    second: black_hole_explosion_048_29
+  - first:
+      213: 4892701569723793770
+    second: black_hole_explosion_048_30
+  - first:
+      213: -578092917747821306
+    second: black_hole_explosion_048_31
+  - first:
+      213: -7698211417487872279
+    second: black_hole_explosion_048_32
+  - first:
+      213: 3714818133359709521
+    second: black_hole_explosion_048_33
+  - first:
+      213: 5445360698241685239
+    second: black_hole_explosion_048_34
+  - first:
+      213: -8393073113284424762
+    second: black_hole_explosion_048_35
+  - first:
+      213: -1511640554240385187
+    second: black_hole_explosion_048_36
+  - first:
+      213: 355102025379715591
+    second: black_hole_explosion_048_37
+  - first:
+      213: -8762389279094019385
+    second: black_hole_explosion_048_38
+  - first:
+      213: 9153740027841586336
+    second: black_hole_explosion_048_39
+  - first:
+      213: -2365694554782043822
+    second: black_hole_explosion_048_40
+  - first:
+      213: -1333020883806180081
+    second: black_hole_explosion_048_41
+  - first:
+      213: 5960231414858397886
+    second: black_hole_explosion_048_42
+  - first:
+      213: -4690549573786737889
+    second: black_hole_explosion_048_43
+  - first:
+      213: -5078540474839700699
+    second: black_hole_explosion_048_44
+  - first:
+      213: -5724278173890654664
+    second: black_hole_explosion_048_45
+  - first:
+      213: -7602465806648388508
+    second: black_hole_explosion_048_46
+  - first:
+      213: 1095254648445531169
+    second: black_hole_explosion_048_47
+  - first:
+      213: 2839907375963092828
+    second: black_hole_explosion_048_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: black_hole_explosion_048_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 377
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b7f5258176bfc30800000000000000
+      internalID: 4394219215588916051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 366
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b9deae338bdb820800000000000000
+      internalID: 2935705065239714603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_2
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 359
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2cc9ea6666a6a1a0800000000000000
+      internalID: -6798563628658602963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_3
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 366
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad907acf269017130800000000000000
+      internalID: 3562639100977023450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_4
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 346
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae3109002bfbf9fa0800000000000000
+      internalID: -5791699824540642326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_5
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 334
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1aba678a89205bd0800000000000000
+      internalID: -2643567306312336866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 319
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edf1d6edb27959bd0800000000000000
+      internalID: -2624024993202364450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_7
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 331
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad0ec05c719912b0800000000000000
+      internalID: -5613295497422959188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_8
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 327
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a464580825e85d660800000000000000
+      internalID: 7409985246902699594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_9
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 333
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b3b581648d0f7a0800000000000000
+      internalID: -6345334079397086374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_10
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 314
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21fd610c927149a80800000000000000
+      internalID: -8461112331838497006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_11
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 309
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbedbc474ddfb8650800000000000000
+      internalID: 6236357197958995647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_12
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 303
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c36f41ac8638bafe0800000000000000
+      internalID: -1176702391537043908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_13
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 310
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9e50bdab5b07410800000000000000
+      internalID: 1472876892293294505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_14
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 307
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3751b60d4303c0c80800000000000000
+      internalID: -8355250205286001293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_15
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 297
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e17b501d4283150800000000000000
+      internalID: 5852468195930611349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_16
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 291
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07762babb7d128590800000000000000
+      internalID: -7673538397835466896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_17
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 294
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 981e6307fd4ceeac0800000000000000
+      internalID: -3823902569651576439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_18
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 272
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46bffb5867bae8810800000000000000
+      internalID: 1769540229141625700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_19
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 209
+        width: 27
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c4c528fb99fbffb0800000000000000
+      internalID: -4612818945032469311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_20
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 263
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d2c0aacc21495f40800000000000000
+      internalID: 5717672862557455057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_21
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 256
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 866f7999cc34d4940800000000000000
+      internalID: 5281952484004722280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_22
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 224
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ad8c8cb10cbbf2e0800000000000000
+      internalID: -2090870886339146332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_23
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 246
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e68e725de25efcca0800000000000000
+      internalID: -5994320589699422098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_24
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 85
+        width: 195
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9180dc7758c9440800000000000000
+      internalID: 4943973240533424602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aadd61476b962fa0800000000000000
+      internalID: -5825798200175502679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_26
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 186
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad64252e683e7e530800000000000000
+      internalID: 3884323372092507866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_27
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 189
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bacca2b5f000c81e0800000000000000
+      internalID: -2194378852482233173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_28
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 168
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f1c7641ca636d4e0800000000000000
+      internalID: -1957316875341282827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_29
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 177
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea50d41be4c333100800000000000000
+      internalID: 86479126529901998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_30
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 207
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61026fa72e56e340800000000000000
+      internalID: 4892701569723793770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_31
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 183
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 605d87edd833af7f0800000000000000
+      internalID: -578092917747821306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_32
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 152
+        width: 49
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ee67cea0857a2590800000000000000
+      internalID: -7698211417487872279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_33
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 119
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15dc51c096fad8330800000000000000
+      internalID: 3714818133359709521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_34
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 122
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f6919c44bec19b40800000000000000
+      internalID: 5445360698241685239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_35
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 51
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cbccccc870d58b80800000000000000
+      internalID: -8393073113284424762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_36
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 59
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5f5d68cce2950be0800000000000000
+      internalID: -1511640554240385187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_37
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 56
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a97c129639de400800000000000000
+      internalID: 355102025379715591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_38
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 55
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cae8e3306db56680800000000000000
+      internalID: -8762389279094019385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_39
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 53
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a4a5c58e0e980f70800000000000000
+      internalID: 9153740027841586336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_40
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 50
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 251f32f165d5b2fd0800000000000000
+      internalID: -2365694554782043822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_41
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 44
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d2e8e9198208de0800000000000000
+      internalID: -1333020883806180081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_42
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 30
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb832c5a4eef6b250800000000000000
+      internalID: 5960231414858397886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_43
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 37
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13e415a302d7eeb0800000000000000
+      internalID: -4690549573786737889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_44
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 38
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52b6cbb68566589b0800000000000000
+      internalID: -5078540474839700699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_45
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 30
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ec9b154574f80b0800000000000000
+      internalID: -5724278173890654664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_46
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 23
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4645ba1e0ad9e7690800000000000000
+      internalID: -7602465806648388508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_47
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124f033cc40233f00800000000000000
+      internalID: 1095254648445531169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black_hole_explosion_048_48
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 0
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c57ba4346b0696720800000000000000
+      internalID: 2839907375963092828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      black_hole_explosion_048_0: 4394219215588916051
+      black_hole_explosion_048_1: 2935705065239714603
+      black_hole_explosion_048_10: -8461112331838497006
+      black_hole_explosion_048_11: 6236357197958995647
+      black_hole_explosion_048_12: -1176702391537043908
+      black_hole_explosion_048_13: 1472876892293294505
+      black_hole_explosion_048_14: -8355250205286001293
+      black_hole_explosion_048_15: 5852468195930611349
+      black_hole_explosion_048_16: -7673538397835466896
+      black_hole_explosion_048_17: -3823902569651576439
+      black_hole_explosion_048_18: 1769540229141625700
+      black_hole_explosion_048_19: -4612818945032469311
+      black_hole_explosion_048_2: -6798563628658602963
+      black_hole_explosion_048_20: 5717672862557455057
+      black_hole_explosion_048_21: 5281952484004722280
+      black_hole_explosion_048_22: -2090870886339146332
+      black_hole_explosion_048_23: -5994320589699422098
+      black_hole_explosion_048_24: 4943973240533424602
+      black_hole_explosion_048_25: -5825798200175502679
+      black_hole_explosion_048_26: 3884323372092507866
+      black_hole_explosion_048_27: -2194378852482233173
+      black_hole_explosion_048_28: -1957316875341282827
+      black_hole_explosion_048_29: 86479126529901998
+      black_hole_explosion_048_3: 3562639100977023450
+      black_hole_explosion_048_30: 4892701569723793770
+      black_hole_explosion_048_31: -578092917747821306
+      black_hole_explosion_048_32: -7698211417487872279
+      black_hole_explosion_048_33: 3714818133359709521
+      black_hole_explosion_048_34: 5445360698241685239
+      black_hole_explosion_048_35: -8393073113284424762
+      black_hole_explosion_048_36: -1511640554240385187
+      black_hole_explosion_048_37: 355102025379715591
+      black_hole_explosion_048_38: -8762389279094019385
+      black_hole_explosion_048_39: 9153740027841586336
+      black_hole_explosion_048_4: -5791699824540642326
+      black_hole_explosion_048_40: -2365694554782043822
+      black_hole_explosion_048_41: -1333020883806180081
+      black_hole_explosion_048_42: 5960231414858397886
+      black_hole_explosion_048_43: -4690549573786737889
+      black_hole_explosion_048_44: -5078540474839700699
+      black_hole_explosion_048_45: -5724278173890654664
+      black_hole_explosion_048_46: -7602465806648388508
+      black_hole_explosion_048_47: 1095254648445531169
+      black_hole_explosion_048_48: 2839907375963092828
+      black_hole_explosion_048_5: -2643567306312336866
+      black_hole_explosion_048_6: -2624024993202364450
+      black_hole_explosion_048_7: -5613295497422959188
+      black_hole_explosion_048_8: 7409985246902699594
+      black_hole_explosion_048_9: -6345334079397086374
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

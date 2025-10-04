@@ -6,14 +6,12 @@ public class Cochechuyendoi : MonoBehaviour
 {
     public GameObject doitau;
     public PlayerController playerController;
-    public PlayerController playerControllerTauChuyenDoi;
     public GameObject chuyenDoi;
     public AudioManagement Audio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerController= GetComponent<PlayerController>();
-        playerControllerTauChuyenDoi = doitau.GetComponent<PlayerController>();
         GameObject objAudio = GameObject.Find("AudioManagement");
         Audio = objAudio.GetComponent<AudioManagement>();
 
@@ -38,19 +36,28 @@ public class Cochechuyendoi : MonoBehaviour
 
     public IEnumerator ChuyenDoiTau(GameObject Tauchuyendoi)
     {
-        
         Vector3 vitrihientai = transform.position;
         Quaternion gocnghienhientai = transform.rotation;
         chuyenDoi.SetActive(true);
         ChuyenDoi bienhinh = chuyenDoi.GetComponent<ChuyenDoi>();
         bienhinh.BienDoi();
-        yield return new WaitForSeconds(0.5f);      
-        Instantiate(Tauchuyendoi, vitrihientai, gocnghienhientai);
-        playerControllerTauChuyenDoi.thanhmauhientai = playerController.thanhmauhientai;
-        playerControllerTauChuyenDoi.thanhNoHienTai = 0f;
+        yield return new WaitForSeconds(0.5f);
+
+        // BƯỚC 1: Tạo tàu mới và LƯU LẠI tham chiếu vào một biến
+        GameObject tauMoi = Instantiate(Tauchuyendoi, vitrihientai, gocnghienhientai);
+
+        // BƯỚC 2: Lấy component PlayerController từ chính con tàu MỚI đó
+        PlayerController controllerTauMoi = tauMoi.GetComponent<PlayerController>();
+
+        // BƯỚC 3: Gán giá trị máu và nộ từ tàu cũ sang tàu mới
+        if (controllerTauMoi != null && playerController != null)
+        {
+            controllerTauMoi.thanhmauhientai = playerController.thanhmauhientai;
+            controllerTauMoi.thanhNoHienTai = 0f;
+        }
+
         chuyenDoi.SetActive(false);
         Destroy(gameObject);
-
     }
 
 }

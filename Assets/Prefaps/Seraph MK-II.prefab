@@ -772,8 +772,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cochechuyendoi
   doitau: {fileID: 3175878105493373125, guid: 0ae1f1a7af0949a4ba5bdea90437c9f9, type: 3}
-  playerController: {fileID: 0}
-  playerControllerTauChuyenDoi: {fileID: 0}
+  playerController: {fileID: 1552405603047097917}
+  playerControllerTauChuyenDoi: {fileID: 5029265865495637784, guid: 0ae1f1a7af0949a4ba5bdea90437c9f9, type: 3}
   chuyenDoi: {fileID: 678142488798036230}
   Audio: {fileID: 0}
 --- !u!114 &5074718671254783515

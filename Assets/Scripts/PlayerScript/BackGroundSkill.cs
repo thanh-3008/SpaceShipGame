@@ -13,13 +13,12 @@ public class BackGroundSKill : MonoBehaviour
     {
         GameObject audioObj = GameObject.Find("AudioManagement");
         audioManagement = audioObj.GetComponent<AudioManagement>();
+        GameObject backgroundobj = GameObject.Find("BackGround");
+        backgroundRenderer = backgroundobj.GetComponent<SpriteRenderer>();
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && (playerController.thanhNoHienTai >= playerController.thanhNoToiDa * 3))
-        {
-            StartSkill();
-        }
+        
     }
     public void StartSkill()
     {
