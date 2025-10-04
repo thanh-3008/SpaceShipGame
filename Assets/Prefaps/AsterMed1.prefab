@@ -336,7 +336,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300014, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -370,6 +370,7 @@ MonoBehaviour:
   buffPrefab:
   - {fileID: 4096885662708627092, guid: 0af9420703655954f9bb5631c8a04dcc, type: 3}
   - {fileID: 8783218961599399289, guid: 3072e456976551e4da6e6628cb88ae55, type: 3}
+  skillMKII: {fileID: 0}
 --- !u!50 &4526932666305836052
 Rigidbody2D:
   serializedVersion: 5
