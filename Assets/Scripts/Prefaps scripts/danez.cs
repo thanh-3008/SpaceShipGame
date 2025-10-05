@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class Dan : MonoBehaviour
+public class danez : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float speed = 5f;
-    public Animator anim;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Start()
@@ -25,11 +25,11 @@ public class Dan : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            PlayerController player = FindObjectOfType<PlayerController>();            
-                other.GetComponent<thienthachdichuyen>().TakeDame(player.damehientai);              
+            PlayerController player = FindObjectOfType<PlayerController>();
             
-            anim.SetTrigger("hit");
-            Destroy(gameObject,0.3f);
+            
+            other.GetComponent<thienthachdichuyen>().TakeDame((player.damehientai+player.damebonus) * 4);
+            
         }
     }
 }

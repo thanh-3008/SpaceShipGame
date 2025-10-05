@@ -37,8 +37,17 @@ public class ChonTau : MonoBehaviour
         selectionPanel.SetActive(true);
         upgradePanel.SetActive(false);
         currentShipIndex = 0;
-        HienThiChonTau();
+
+        if (ThongTinTau != null && ThongTinTau.Length > 0)
+        {
+            HienThiChonTau();
+        }
+        else
+        {
+            Debug.LogWarning("Chưa gán dữ liệu cho ThongTinTau!");
+        }
     }
+
 
     // Update is called once per frame
     void Update()
@@ -68,21 +77,42 @@ public class ChonTau : MonoBehaviour
     public void HienThiChonTau()
     {
         ThongTinTau tauhientai = ThongTinTau[currentShipIndex];
-        HinhAnhTau.sprite = tauhientai.Sprite;
+
+        if (tauhientai.Sprite != null)
+            HinhAnhTau.sprite = tauhientai.Sprite;
+        else
+            Debug.LogWarning("Chưa gán Sprite cho tàu index: " + currentShipIndex);
+
         NameTau.text = tauhientai.Name;
         MoTaSkill1.text = tauhientai.DescriptionSkill1;
         MoTaSkill2.text = tauhientai.DescriptionSkill2;
-        HinhAnhSkill1.sprite = tauhientai.spiteskill1;
-        HinhAnhSkill2.sprite = tauhientai.spiteskill2;
+
+        if (tauhientai.spiteskill1 != null)
+            HinhAnhSkill1.sprite = tauhientai.spiteskill1;
+
+        if (tauhientai.spiteskill2 != null)
+            HinhAnhSkill2.sprite = tauhientai.spiteskill2;
+
         DescriptionTau.text = tauhientai.Description;
         NameSkill1.text = tauhientai.NameSkill1;
         NameSkill2.text = tauhientai.NameSkill2;
     }
+
 
     public void BackMenu()
     {
         SceneManager.LoadScene(0);
     }
 
+    public void SelectShip()
+    {
+        // Lưu lại index con tàu đã chọn
+        PlayerPrefs.SetInt("SelectedShipIndex", currentShipIndex);
+        PlayerPrefs.Save();
 
+        Debug.Log("Selected ship: " + ThongTinTau[currentShipIndex].Name);
+
+        // Nếu muốn load sang màn chơi chính thì thêm:
+         SceneManager.LoadScene(1);
+    }
 }

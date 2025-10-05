@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI textScore;
     public GameObject danprefap;
     public float damebonus = 1f;
-    public float damehientai;
+    public float damehientai=5f;
 
     public TextMeshProUGUI soTenLuaText;
     public GameObject[] spawndan;
@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
-        damehientai = 5f;
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         // 🔎 Tự động tìm các object trong Scene
@@ -257,7 +256,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if (collision.CompareTag("bufftenlua") && sotenlua <= 10)
+        if (collision.CompareTag("bufftenlua") && sotenlua <= 9)
         {
             sotenlua += 1;
             soTenLuaText.text = sotenlua.ToString();
@@ -267,6 +266,7 @@ public class PlayerController : MonoBehaviour
 
         if (collision.CompareTag("buffdanpro"))
         {
+            Debug.Log("an buff dan pro");
             foreach (GameObject spawner in spawndanpro)
             {
                 spawndanpro danproSpawner = spawner.GetComponent<spawndanpro>();

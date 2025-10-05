@@ -7,7 +7,7 @@ public class MenuGame : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
 
     public void HuongDan()

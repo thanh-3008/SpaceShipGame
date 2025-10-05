@@ -488,7 +488,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 980528157}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.34450263
+  m_Size: 0.34450266
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -786,7 +786,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1639681254}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.17925632
+  m_Size: 0.17925633
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -912,7 +912,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1363269561}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.9999998
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1037,8 +1037,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 74634187}
   m_HandleRect: {fileID: 74634186}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 0.9999998
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2227,7 +2227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChonTau
   ThongTinTau:
-  - Tau: {fileID: 701914074940076248, guid: bde1f22cbfcaf6142a4f93e96125ea86, type: 3}
+  - Tau: {fileID: 701914074940076248, guid: 79a80104d0ea4874a90eb2787cdcf696, type: 3}
     Sprite: {fileID: 21300000, guid: c4f8a01fad80ab74f8e250b688d74a55, type: 3}
     Name: "V\u1EC7 Binh Aegis"
     Description: "L\xE0 Ch\u1EC9 huy Eva Rostova, ni\u1EC1m t\u1EF1 h\xE0o c\u1EE7a
@@ -2261,6 +2261,54 @@ MonoBehaviour:
     DescriptionSkill2: "M\u1EDF c\u1ED5ng kh\xF4ng gian tri\u1EC7u h\u1ED3i si\xEAu
       chi\u1EBFn h\u1EA1m \u0111\u1ED3ng minh t\u1EF1 \u0111\u1ED9ng chi\u1EBFn \u0111\u1EA5u
       y\u1EC3m tr\u1EE3."
+    damecoban: 10
+    maucoban: 120
+    damenangcap: 0
+    maunangcap: 0
+    coinnangcapmau: 0
+    coinnangcapdame: 0
+  - Tau: {fileID: 5438266588634195348, guid: 8dca6e469cd58ae4db0d29669688ffb9, type: 3}
+    Sprite: {fileID: -3448297516148707748, guid: 88990fbba6fe10d498f32bde44dbbd57, type: 3}
+    Name: Seraph MK-I
+    Description: 
+    spiteskill1: {fileID: 0}
+    spiteskill2: {fileID: 0}
+    NameSkill1: 
+    NameSkill2: 
+    DescriptionSkill1: 
+    DescriptionSkill2: 
+    damecoban: 10
+    maucoban: 120
+    damenangcap: 0
+    maunangcap: 0
+    coinnangcapmau: 0
+    coinnangcapdame: 0
+  - Tau: {fileID: 3034535743428535646, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
+    Sprite: {fileID: 6181945978334474012, guid: dd55e81d1ed48e74bbc573be6ae9e4b4, type: 3}
+    Name: Seraph MK-II
+    Description: 
+    spiteskill1: {fileID: 0}
+    spiteskill2: {fileID: 0}
+    NameSkill1: 
+    NameSkill2: 
+    DescriptionSkill1: 
+    DescriptionSkill2: 
+    damecoban: 10
+    maucoban: 120
+    damenangcap: 0
+    maunangcap: 0
+    coinnangcapmau: 0
+    coinnangcapdame: 0
+  - Tau: {fileID: 3175878105493373125, guid: 0ae1f1a7af0949a4ba5bdea90437c9f9, type: 3}
+    Sprite: {fileID: -4878985281297243967, guid: ed0bd76b49eab90459c8e0130d3dc35a, type: 3}
+    Name: Seraph MK-III
+    Description: 
+    spiteskill1: {fileID: 0}
+    spiteskill2: {fileID: 0}
+    NameSkill1: 
+    NameSkill2: 
+    DescriptionSkill1: 
+    DescriptionSkill2: 
     damecoban: 10
     maucoban: 120
     damenangcap: 0
@@ -2360,7 +2408,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 768328241}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 760710781}
+        m_TargetAssemblyTypeName: ChonTau, Assembly-CSharp
+        m_MethodName: SelectShip
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &768328241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4234,7 +4294,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1917172939}
   m_HandleRect: {fileID: 1917172938}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4744,7 +4804,7 @@ GameObject:
   - component: {fileID: 2033441654}
   - component: {fileID: 2033441653}
   m_Layer: 0
-  m_Name: e206d92d97c1a988ed6de26b9ebdf8c4_t_0
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

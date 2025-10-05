@@ -17,9 +17,16 @@ public class SunMove : MonoBehaviour
     }
 
     // Update is called once per frame
+    // Trong file SunMove.cs
+
     void Update()
     {
-        transform.Translate(transform.up*speed*Time.deltaTime);
+        // Code cũ: Di chuyển theo hướng nghiêng của object
+        // transform.Translate(transform.up * speed * Time.deltaTime);
+
+        // ✅ Code mới: Luôn di chuyển thẳng đứng lên trên theo trục Y của thế giới game
+        transform.Translate(Vector2.up * speed * Time.deltaTime);
+
         if (transform.position.y > 15f)
         {
             Destroy(gameObject);
@@ -44,7 +51,7 @@ public class SunMove : MonoBehaviour
                     if (thienthach != null)
                     {
                         // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
-                        thienthach.TakeDame(playerController.damehientai * 300f);
+                        thienthach.TakeDame(playerController.damehientai * 200f);
                     }
                 }
 
