@@ -79,7 +79,7 @@ public class thienthachdichuyen : MonoBehaviour
             AudioManagement audioManager = Audio.GetComponent<AudioManagement>();
             audioManager.PlaySfxto(audioManager.thienthachno);
             Instantiate(boom, transform.position, Quaternion.identity);
-            Destroy(gameObject,0.5f);
+            Destroy(gameObject);
         }
     }
 
