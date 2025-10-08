@@ -295,7 +295,7 @@ MonoBehaviour:
   thanhmauToiDa: 100
   textScore: {fileID: 0}
   danprefap: {fileID: 0}
-  damebonus: 3
+  damebonus: 2
   damehientai: 7
   soTenLuaText: {fileID: 0}
   spawndan: []

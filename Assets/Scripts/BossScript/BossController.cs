@@ -29,7 +29,7 @@ public class BossController : MonoBehaviour
 
     [Header("DashAttack")]
     public float dashSpeed = 10f;
-    public float dashWarningTime = 2f;
+    public float dashWarningTime = 1.5f;
     public float dashPauseTime = 0.5f;
 
     // Tham chiếu
@@ -38,7 +38,7 @@ public class BossController : MonoBehaviour
     private Rigidbody2D playerRb;
     public SeraphMKII skillMKII;
     public AudioManagement audioManagement;
-    GameObject objspawnthienthach;
+    public GameObject Spawn;
     void Start()
     {
         currentHealth = maxHealth;
@@ -51,8 +51,7 @@ public class BossController : MonoBehaviour
             playerRb = playerObject.GetComponent<Rigidbody2D>();
         }
         GameObject objaudio = GameObject.Find("AudioManagement");
-        audioManagement = objaudio.GetComponent<AudioManagement>();
-
+        audioManagement = objaudio.GetComponent<AudioManagement>();      
         StartCoroutine(BossAI_Pattern());
     }
 
@@ -158,7 +157,7 @@ public class BossController : MonoBehaviour
         int skill = Random.Range(0, skillban.Count);
 
         Debug.Log("AI: Bắn đạn xen kẽ (Dự đoán & Thường)");
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 13; i++)
         {
             skillban[skill].Invoke();
             yield return GetSlowedWait(0.6f);
@@ -328,7 +327,15 @@ public class BossController : MonoBehaviour
     }
     public void OnDestroy()
     {
-        objspawnthienthach = GameObject.Find("thienthachxuathien");
-        objspawnthienthach.SetActive(true);
+        Spawn = GameObject.Find("Spawn");
+        if (Spawn != null)
+        {
+            Transform spawnthienthach = Spawn.transform.Find("thienthachxuathien");
+            if(spawnthienthach != null)
+            {
+                GameObject obj = spawnthienthach.gameObject;
+                obj.SetActive(true);
+            }
+        }
     }
 }
