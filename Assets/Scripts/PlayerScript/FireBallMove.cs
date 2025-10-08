@@ -40,6 +40,18 @@ public class FireBallMove : MonoBehaviour
                 }
                 Destroy(gameObject);
             }
+            if (other.CompareTag("Boss"))
+            {
+                audioManagement.PlaySfx(audioManagement.vachamfireball);
+                other.GetComponent<BossController>().TakeDame(playerController.damehientai * 50f);
+                Debug.Log("gay dame len boss" + playerController.damehientai * 50);
+                if (explosionEffectPrefab != null)
+                {
+                    GameObject no = Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
+                    Destroy(no, 0.15f);
+                }
+                Destroy(gameObject);
+            }
         }
      
     }

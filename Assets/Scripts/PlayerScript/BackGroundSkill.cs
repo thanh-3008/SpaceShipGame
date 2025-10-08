@@ -13,8 +13,8 @@ public class BackGroundSKill : MonoBehaviour
     {
         GameObject audioObj = GameObject.Find("AudioManagement");
         audioManagement = audioObj.GetComponent<AudioManagement>();
-        GameObject backgroundobj = GameObject.Find("BackGround");
-        backgroundRenderer = backgroundobj.GetComponent<SpriteRenderer>();
+        //GameObject backgroundobj = GameObject.Find("BackGround");
+        //backgroundRenderer = backgroundobj.GetComponent<SpriteRenderer>();
     }
     void Update()
     {
@@ -26,6 +26,7 @@ public class BackGroundSKill : MonoBehaviour
     }
     public IEnumerator DoiBackGround()
     {
+        backgroundRenderer.enabled = true;
         tiaSang.SetActive(true);
         audioManagement.PlaySfxto(audioManagement.amthanhSkill);    
         Time.timeScale = 0f;
@@ -33,6 +34,7 @@ public class BackGroundSKill : MonoBehaviour
         yield return new WaitForSecondsRealtime(1);
         tiaSang.SetActive(false);
         Time.timeScale = 1f;
+        backgroundRenderer.enabled = false;
         backgroundRenderer.sprite = backGroundDefault;
 
     }

@@ -31,5 +31,13 @@ public class danez : MonoBehaviour
             other.GetComponent<thienthachdichuyen>().TakeDame((player.damehientai+player.damebonus) * 4);
             
         }
+        if (other.CompareTag("Boss"))
+        {
+            PlayerController player = FindObjectOfType<PlayerController>();
+
+
+            other.GetComponent<BossController>().TakeDame((player.damehientai + player.damebonus) * 4);
+
+        }
     }
 }
