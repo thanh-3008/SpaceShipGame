@@ -13,7 +13,8 @@ public class spawnthienthach : MonoBehaviour
     [Header("thiết lập độ khó")]
     public float thoigiantangdokho = 30f; // Interval to increase difficulty
     private float thoigiandaqua; // Sẽ đếm tổng thời gian chơi
-
+    public SpawnBoss spawnBoss;
+    private int dem =0;
     void Awake()
     {
         timer = spawnInterval; // Initialize timer to spawn immediately
@@ -74,9 +75,18 @@ public class spawnthienthach : MonoBehaviour
           
         }
     }
-
-    public void Resumetime()
+    public void TaoBoss()
     {
-        timestop = false;
+        spawnBoss.spawnBoss();
+    }
+
+    public void Resumetime(int solan)
+    {
+        timestop = false;     
+        dem += solan;
+        if (dem % 2 == 0)
+        {
+            TaoBoss();
+        }
     }
 }

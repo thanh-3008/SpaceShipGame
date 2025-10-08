@@ -13,8 +13,8 @@ public class BackGroundSKill : MonoBehaviour
     {
         GameObject audioObj = GameObject.Find("AudioManagement");
         audioManagement = audioObj.GetComponent<AudioManagement>();
-        //GameObject backgroundobj = GameObject.Find("BackGround");
-        //backgroundRenderer = backgroundobj.GetComponent<SpriteRenderer>();
+        GameObject backgroundobj = GameObject.Find("BackGroundSkillNo");
+        backgroundRenderer = backgroundobj.GetComponent<SpriteRenderer>();  
     }
     void Update()
     {

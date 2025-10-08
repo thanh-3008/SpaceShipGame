@@ -225,8 +225,8 @@ public class PlayerController : MonoBehaviour
     {
         if (kimcangbathoai==true)
         {
-            Debug.Log("kim cang bat hoai giam dame:" + dame / 2);
-            thanhmauhientai -= dame / 2;
+            Debug.Log("kim cang bat hoai giam dame:" + dame / 4);
+            thanhmauhientai -= dame / 4;
         }
         else
         {

@@ -495,7 +495,7 @@ MonoBehaviour:
   thanhmauToiDa: 100
   textScore: {fileID: 0}
   danprefap: {fileID: 0}
-  damebonus: 1
+  damebonus: 2
   damehientai: 5
   soTenLuaText: {fileID: 0}
   spawndan: []
@@ -505,7 +505,7 @@ MonoBehaviour:
   audioManager: {fileID: 0}
   thanhno: {fileID: 0}
   thanhNoToiDa: 100
-  thanhNoHienTai: 250
+  thanhNoHienTai: 0
   timeFlash: 0.8
   gocNghiengToiDa: 15
   tocDoNghieng: 20

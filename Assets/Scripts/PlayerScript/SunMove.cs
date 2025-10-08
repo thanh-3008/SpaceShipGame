@@ -71,7 +71,7 @@ public class SunMove : MonoBehaviour
                     if (boss != null)
                     {
                         // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
-                        boss.TakeDame(playerController.damehientai * 200f);
+                        boss.TakeDame(playerController.damehientai * 75f);
                     }
                 }
 

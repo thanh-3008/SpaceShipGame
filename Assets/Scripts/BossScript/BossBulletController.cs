@@ -8,6 +8,7 @@ public class BossBulletController : MonoBehaviour
 
     private Rigidbody2D rb;
     private SeraphMKII skillMKII;
+    private PlayerController player;
 
     void Start()
     {
@@ -16,6 +17,8 @@ public class BossBulletController : MonoBehaviour
         // Tìm đối tượng Player và lấy script skill của nó
         // FindObjectOfType an toàn hơn trong trường hợp chỉ có 1 Player
         skillMKII = FindObjectOfType<SeraphMKII>();
+        GameObject playerobj = GameObject.FindGameObjectWithTag("Player");
+        player = playerobj.GetComponent<PlayerController>();
     }
 
     void Update()
@@ -30,5 +33,18 @@ public class BossBulletController : MonoBehaviour
         // 2. Cập nhật lại vận tốc của viên đạn
         // Luôn giữ hướng bay cũ (rb.velocity.normalized) và chỉ thay đổi độ lớn (tốc độ)
         rb.linearVelocity = rb.linearVelocity.normalized * currentSpeed;
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            player.TakeDame(20f);
+            Destroy(gameObject);
+        }
+        if(collision.CompareTag("TauMe"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class SeraphMKI : MonoBehaviour
 {
     public PlayerController player;
-    private float thoigian=6f;
+    private float thoigian=10f;
     public SpriteRenderer spriteRenderer;
     public GameObject khienNangLuong;
     public float thoigiankhien=8f;
@@ -94,10 +94,10 @@ public class SeraphMKI : MonoBehaviour
                 Audio.PlaySfxto(Audio.amthanhtuluc);
             }
         }
-        hapthu.SetActive(false);
-        khienNangLuong.SetActive(false);
+        hapthu.SetActive(false);      
         tialaser.SetActive(true);
         yield return new WaitForSeconds(4f);
+        khienNangLuong.SetActive(false);
         sdan.isshot = true;
         sdan2.isshot= true;
         tialaser.SetActive(false);

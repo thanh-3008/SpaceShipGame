@@ -76,7 +76,7 @@ Transform:
   m_GameObject: {fileID: 701914074940076248}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.04323, y: -0.8985, z: 0}
+  m_LocalPosition: {x: 0.9165898, y: -2.7445278, z: 0}
   m_LocalScale: {x: 0.47606015, y: 0.6272964, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -323,7 +323,7 @@ MonoBehaviour:
   textScore: {fileID: 0}
   danprefap: {fileID: 5226248612336612084, guid: 7977319879cdb5a47988b2db92704d9e, type: 3}
   damebonus: 2
-  damehientai: 5
+  damehientai: 7
   soTenLuaText: {fileID: 0}
   spawndan: []
   spawndanpro: []

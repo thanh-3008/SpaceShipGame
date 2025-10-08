@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5381694235022223781}
   - component: {fileID: 2738889708204395124}
   - component: {fileID: 2203946462965905047}
-  - component: {fileID: 4059253505358683226}
   - component: {fileID: 6476277467172303534}
-  - component: {fileID: -2299353854311657442}
+  - component: {fileID: 4622146545776364640}
+  - component: {fileID: 7530618073940834578}
   m_Layer: 0
   m_Name: DanPro
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 1bafe9d8b38ab4bf9ba9db099e4d7156, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,8 +121,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &4059253505358683226
-PolygonCollider2D:
+--- !u!95 &6476277467172303534
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18791008400791561}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b7a2537c76d70714e980cd01b4c2eb2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!58 &4622146545776364640
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -156,57 +178,8 @@ PolygonCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.02, y: 0}
-      - {x: -0.01, y: 0.01}
-      - {x: 0.06, y: 0}
-      - {x: 0.11, y: 0}
-      - {x: 0.16, y: 0.049999997}
-      - {x: 0.16, y: 0.099999994}
-      - {x: 0.14999999, y: 0.13}
-      - {x: 0.12, y: 0.16}
-      - {x: -0.089999996, y: 0.16}
-      - {x: -0.14999999, y: 0.099999994}
-      - {x: -0.16, y: 0.08}
-      - {x: -0.16, y: -0.12}
-      - {x: -0.13, y: -0.16}
-      - {x: 0.16, y: -0.16}
-      - {x: 0.16, y: -0.04}
-      - {x: 0.11, y: 0}
-  m_UseDelaunayMesh: 0
---- !u!95 &6476277467172303534
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18791008400791561}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b7a2537c76d70714e980cd01b4c2eb2a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-2299353854311657442
+  m_Radius: 0.15999998
+--- !u!114 &7530618073940834578
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,9 +188,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 18791008400791561}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1351b586ceed5f64a85f4fafaf457b9d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4901bc947d3277243947d09c6d1375d7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Dan
-  speed: 5
-  x2dame: 0
-  anim: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::BossBulletController
+  normalSpeed: 5
+  slowDownFactor: 5
