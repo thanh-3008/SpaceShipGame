@@ -21,7 +21,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         // Di chuyển ngang
         float x = Input.GetAxisRaw("Horizontal"); // -1..1
-        rb.velocity = new Vector2(x * moveSpeed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(x * moveSpeed, rb.linearVelocity.y);
 
         // Lật hướng sprite nếu cần (nếu dùng sprite Renderer)
         if (x > 0.01f && !facingRight) Flip();
@@ -31,7 +31,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         bool isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
     }
 
