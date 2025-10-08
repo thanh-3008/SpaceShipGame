@@ -2,11 +2,7 @@
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
-    using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMovement2D : MonoBehaviour
-{
     public float moveSpeed = 6f;
     public float jumpForce = 12f;
     public LayerMask groundLayer;
@@ -56,4 +52,3 @@ public class PlayerMovement2D : MonoBehaviour
     }
 }
 
-}
