@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class BossController : MonoBehaviour
+public class BossDPS : MonoBehaviour
 {
     [Header("Skill Settings")]
     public GameObject skillPrefab; // Prefab đạn hoặc skill
