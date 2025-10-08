@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossController
   thanhMau: {fileID: 3646206414640395392}
-  maxHealth: 50000
+  maxHealth: 70000
   currentHealth: 0
   moveSpeed: 2
   leftPoint: -5.5
@@ -321,7 +321,7 @@ MonoBehaviour:
   spreadBulletSpeed: 5
   slowDownFactor: 5
   dashSpeed: 15
-  dashWarningTime: 2
+  dashWarningTime: 1.5
   dashPauseTime: 0.5
   player: {fileID: 0}
   playerController: {fileID: 0}

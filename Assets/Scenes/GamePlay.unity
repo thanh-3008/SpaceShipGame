@@ -835,6 +835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnBoss
   bossPrefap: {fileID: 4215093629566889110, guid: 9da9f465dff6f504e910953597ab2871, type: 3}
+  audio: {fileID: 0}
 --- !u!1 &414605087
 GameObject:
   m_ObjectHideFlags: 0
