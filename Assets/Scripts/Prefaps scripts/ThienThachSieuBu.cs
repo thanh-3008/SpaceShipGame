@@ -16,7 +16,7 @@ public class ThienThachSieuBu : MonoBehaviour
         // Kiểm tra để chắc chắn là đã tìm thấy trước khi gọi
         if (spawn != null)
         {
-            spawn.Resumetime();
+            spawn.Resumetime(1);
            
         }
     }
