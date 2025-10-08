@@ -32,4 +32,6 @@ public class BossAttack : MonoBehaviour
     void Start()
     {
         // Tự động tìm người chơi nếu chưa được gán
-        if (playerTarget == null)
+        if (playerTarget == null) { }
+    }
+}
