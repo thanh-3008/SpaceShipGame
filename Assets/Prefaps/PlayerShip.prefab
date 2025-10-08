@@ -303,8 +303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ce5847bb0dd5847bf61046df5c273d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillAegis
-  SpawnDanIon: {fileID: 0}
-  SpawnTauMe: {fileID: 0}
 --- !u!114 &8114469778672583796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,13 +316,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 5
+  khoadichuyen: 0
   thanhmau: {fileID: 0}
-  thanhmauhientai: 0
+  thanhmauhientai: 100
   thanhmauToiDa: 100
   textScore: {fileID: 0}
   danprefap: {fileID: 5226248612336612084, guid: 7977319879cdb5a47988b2db92704d9e, type: 3}
   damebonus: 2
-  damehientai: 0
+  damehientai: 5
   soTenLuaText: {fileID: 0}
   spawndan: []
   spawndanpro: []
@@ -335,6 +334,7 @@ MonoBehaviour:
   timeFlash: 0
   gocNghiengToiDa: 15
   tocDoNghieng: 20
+  kimcangbathoai: 0
 --- !u!1 &852618403202871088
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,9 +379,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1c22a6a9b32b249b98a4d055f325dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::spawndan
-  timespawn: 0.2
-  audioManager: {fileID: 0}
   danprefap: {fileID: 5226248612336612084, guid: 7977319879cdb5a47988b2db92704d9e, type: 3}
+  isshot: 1
+  audioManager: {fileID: 0}
+  skillMKII: {fileID: 0}
 --- !u!1 &3762794046983040655
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,9 +568,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d1c22a6a9b32b249b98a4d055f325dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::spawndan
-  timespawn: 0.2
-  audioManager: {fileID: 0}
   danprefap: {fileID: 5226248612336612084, guid: 7977319879cdb5a47988b2db92704d9e, type: 3}
+  isshot: 1
+  audioManager: {fileID: 0}
+  skillMKII: {fileID: 0}
 --- !u!1 &8023671117843984591
 GameObject:
   m_ObjectHideFlags: 0

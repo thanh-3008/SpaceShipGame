@@ -5,7 +5,7 @@ using UnityEngine;
 public class SeraphMKI : MonoBehaviour
 {
     public PlayerController player;
-    public float thoigian;
+    private float thoigian=6f;
     public SpriteRenderer spriteRenderer;
     public GameObject khienNangLuong;
     public float thoigiankhien=8f;
@@ -53,8 +53,16 @@ public class SeraphMKI : MonoBehaviour
         player.kimcangbathoai = true;
         spriteRenderer.color = Color.orange;
         yield return new WaitForSeconds(0.5f);
+        timer += 0.5f;
+        }
+        while (timer <= thoigianhieuluc + 2)
+        {
+            spriteRenderer.color = Color.white;
+            yield return new WaitForSeconds(0.25f);
+            spriteRenderer.color = Color.orange;
+            yield return new WaitForSeconds(0.25f);
             timer += 0.5f;
-            
+
         }
         player.kimcangbathoai = false;
         spriteRenderer.color = Color.white;
@@ -63,17 +71,17 @@ public class SeraphMKI : MonoBehaviour
     }
     public void StartUlti() 
     { 
-        StopCoroutine(KhienNangLuongQuatai(thoigiankhien));
-        StartCoroutine(KhienNangLuongQuatai(thoigiankhien));
+        StopCoroutine(KhienNangLuongQuatai(8f));
+        StartCoroutine(KhienNangLuongQuatai(8f));
     }
     public IEnumerator KhienNangLuongQuatai(float thoigianduytri)
     {
         spawndan sdan = dan[0];
         spawndan sdan2 = dan[1];
         float timer = 0f;
-        while (timer < thoigianduytri)
-        {
-            Audio.PlaySfxto(Audio.amthanhtuluc);
+        
+        while (timer < thoigianduytri )
+        {           
             hapthu.SetActive(true);
             sdan.isshot = false;
             sdan2.isshot = false;
@@ -81,11 +89,14 @@ public class SeraphMKI : MonoBehaviour
             khienNangLuong.SetActive(true);
             yield return new WaitForSeconds(0.2f);
             timer += 0.2f;
+            if (timer == 1f)
+            {
+                Audio.PlaySfxto(Audio.amthanhtuluc);
+            }
         }
         hapthu.SetActive(false);
         khienNangLuong.SetActive(false);
         tialaser.SetActive(true);
-        Audio.PlaySfxto(Audio.amthanhbanlaser);
         yield return new WaitForSeconds(4f);
         sdan.isshot = true;
         sdan2.isshot= true;
