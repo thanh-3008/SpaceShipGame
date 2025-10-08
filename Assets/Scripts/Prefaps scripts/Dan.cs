@@ -26,10 +26,18 @@ public class Dan : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();            
-                other.GetComponent<thienthachdichuyen>().TakeDame(player.damehientai);              
+                other.GetComponent<thienthachdichuyen>().TakeDame(player.damehientai);       
             
             anim.SetTrigger("hit");
             Destroy(gameObject,0.3f);
+        }
+        if (other.CompareTag("Boss"))
+        {
+            PlayerController player = FindObjectOfType<PlayerController>();
+            other.GetComponent<BossController>().TakeDame(player.damehientai);
+
+            anim.SetTrigger("hit");
+            Destroy(gameObject, 0.3f);
         }
     }
 }

@@ -56,6 +56,26 @@ public class SunMove : MonoBehaviour
                 }
 
             }
+            if (other.CompareTag("Boss"))
+            {
+                // Chỉ gây sát thương nếu thời gian hiện tại đã vượt qua thời điểm cho phép
+                if (Time.time >= nextDamageTime)
+                {
+                    Debug.Log("Laser deals damage to " + other.name);
+
+                    // Cập nhật thời điểm gây sát thương tiếp theo
+                    nextDamageTime = Time.time + 1f / damageRate;
+
+                    // Lấy component và gây sát thương
+                    BossController boss = other.GetComponent<BossController>();
+                    if (boss != null)
+                    {
+                        // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
+                        boss.TakeDame(playerController.damehientai * 200f);
+                    }
+                }
+
+            }
         }
     }
 }
