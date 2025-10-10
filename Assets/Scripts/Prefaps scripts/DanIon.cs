@@ -27,13 +27,14 @@ public class DanIon : MonoBehaviour
             PlayerController player = FindObjectOfType<PlayerController>();
             
                 other.GetComponent<thienthachdichuyen>().TakeDame(player.damehientai*500);
-           
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, (player.damehientai*500).ToString());
         }
         if (other.CompareTag("Boss"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();
 
             other.GetComponent<BossController>().TakeDame(player.damehientai * 500);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, (player.damehientai * 500).ToString());
 
         }
     }

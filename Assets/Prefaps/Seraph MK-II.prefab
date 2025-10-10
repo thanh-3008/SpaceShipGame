@@ -941,6 +941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LaserDamage
   damageRate: 2
   playerController: {fileID: 1552405603047097917}
+  hesonhan: 50
 --- !u!1 &5324741796519044007
 GameObject:
   m_ObjectHideFlags: 0

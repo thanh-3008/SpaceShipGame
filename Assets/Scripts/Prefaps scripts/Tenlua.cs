@@ -31,13 +31,15 @@ public class Tenlua : MonoBehaviour
             PlayerController player = FindObjectOfType<PlayerController>();
             
                 other.GetComponent<thienthachdichuyen>().TakeDame(player.damehientai*100);
-            
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, (player.damehientai * 100).ToString());
+
         }
         if (other.CompareTag("Boss"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();
 
             other.GetComponent<BossController>().TakeDame(player.damehientai * 100);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, (player.damehientai * 100).ToString());
 
         }
     }

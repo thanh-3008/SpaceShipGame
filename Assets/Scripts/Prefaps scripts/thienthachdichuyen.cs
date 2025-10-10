@@ -102,8 +102,10 @@ public class thienthachdichuyen : MonoBehaviour
             PlayerController player1 = collision.gameObject.GetComponent<PlayerController>();
             if (player1 != null)
             {
-                player1.TakeDame(dame);                
-            }       
+                player1.TakeDame(dame);
+                DamePopUpGenerator.Instance.CreatePopUp(transform.position, dame.ToString());
+
+            }
             // Hủy thiên thạch
             Destroy(gameObject);
         }      
