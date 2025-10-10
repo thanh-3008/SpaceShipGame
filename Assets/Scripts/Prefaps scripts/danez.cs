@@ -29,13 +29,13 @@ public class danez : MonoBehaviour
             
             
             other.GetComponent<thienthachdichuyen>().TakeDame((player.damehientai+player.damebonus) * 4);
-            
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, ((player.damehientai + player.damebonus) * 4).ToString());
         }
         if (other.CompareTag("Boss"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();
 
-
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, ((player.damehientai + player.damebonus) * 4).ToString());
             other.GetComponent<BossController>().TakeDame((player.damehientai + player.damebonus) * 4);
 
         }

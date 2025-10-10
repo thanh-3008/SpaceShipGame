@@ -4,7 +4,7 @@ public class LaserDamage : MonoBehaviour
 {
     public float damageRate = 4f; // Số lần gây sát thương mỗi giây (2f = 2 lần/giây)
     public PlayerController playerController;
-
+    public float hesonhan;
     private float nextDamageTime = 0f; // Thời điểm được phép gây sát thương tiếp theo
 
     private void OnTriggerStay2D(Collider2D other)
@@ -24,7 +24,9 @@ public class LaserDamage : MonoBehaviour
                 if (thienthach != null)
                 {
                     // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
-                    thienthach.TakeDame(playerController.damehientai*300f);
+                    thienthach.TakeDame(playerController.damehientai*hesonhan);
+                    DamePopUpGenerator.Instance.CreatePopUp(transform.position, (playerController.damehientai * hesonhan).ToString());
+
                 }
             }
         }
@@ -43,7 +45,9 @@ public class LaserDamage : MonoBehaviour
                 if (boss != null)
                 {
                     // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
-                    boss.TakeDame(playerController.damehientai * 300f);
+                    boss.TakeDame(playerController.damehientai * hesonhan);
+                    DamePopUpGenerator.Instance.CreatePopUp(transform.position, (playerController.damehientai * hesonhan).ToString());
+
                 }
             }
         }

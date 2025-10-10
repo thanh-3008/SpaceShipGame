@@ -1280,8 +1280,8 @@ MonoBehaviour:
   speed: 5
   khoadichuyen: 0
   thanhmau: {fileID: 0}
-  thanhmauhientai: 100
-  thanhmauToiDa: 100
+  thanhmauhientai: 160
+  thanhmauToiDa: 160
   textScore: {fileID: 0}
   danprefap: {fileID: 0}
   damebonus: 1.5
@@ -1507,3 +1507,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LaserDamage
   damageRate: 2
   playerController: {fileID: 643745646695298061}
+  hesonhan: 100
