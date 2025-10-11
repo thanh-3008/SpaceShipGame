@@ -26,17 +26,17 @@ public class danez : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();
-            
-            
-            other.GetComponent<thienthachdichuyen>().TakeDame((player.damehientai+player.damebonus) * 4);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, ((player.damehientai + player.damebonus) * 4));
+
+            var dameResult = player.CalculateDamage();
+            other.GetComponent<thienthachdichuyen>().TakeDame((dameResult.damage+player.damebonus) * 4);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, ((dameResult.damage + player.damebonus) * 4),dameResult.isCrit);
         }
         if (other.CompareTag("Boss"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();
-
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, (player.damehientai + player.damebonus) * 4);
-            other.GetComponent<BossController>().TakeDame((player.damehientai + player.damebonus) * 4);
+            var dameResult = player.CalculateDamage();
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, (dameResult.damage + player.damebonus) * 4,dameResult.isCrit);
+            other.GetComponent<BossController>().TakeDame((dameResult.damage + player.damebonus) * 4);
 
         }
     }

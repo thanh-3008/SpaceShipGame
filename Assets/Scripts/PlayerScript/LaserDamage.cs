@@ -23,9 +23,10 @@ public class LaserDamage : MonoBehaviour
                 thienthachdichuyen thienthach = other.GetComponent<thienthachdichuyen>();
                 if (thienthach != null)
                 {
+                    var damageResult = playerController.CalculateDamage();
                     // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
-                    thienthach.TakeDame(playerController.damehientai*hesonhan);
-                    DamePopUpGenerator.Instance.CreatePopUp(transform.position, playerController.damehientai * hesonhan);
+                    thienthach.TakeDame(damageResult.damage*hesonhan);
+                    DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage * hesonhan, damageResult.isCrit);
 
                 }
             }
@@ -44,9 +45,10 @@ public class LaserDamage : MonoBehaviour
                 BossController boss = other.GetComponent<BossController>();
                 if (boss != null)
                 {
+                    var damageResult = playerController.CalculateDamage();
                     // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
-                    boss.TakeDame(playerController.damehientai * hesonhan);
-                    DamePopUpGenerator.Instance.CreatePopUp(transform.position, playerController.damehientai * hesonhan);
+                    boss.TakeDame(damageResult.damage * hesonhan);
+                    DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage * hesonhan, damageResult.isCrit);
 
                 }
             }

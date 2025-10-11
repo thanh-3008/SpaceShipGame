@@ -1430,6 +1430,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8114469778672583796, guid: 79a80104d0ea4874a90eb2787cdcf696, type: 3}
+      propertyPath: Giap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114469778672583796, guid: 79a80104d0ea4874a90eb2787cdcf696, type: 3}
+      propertyPath: critDame
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114469778672583796, guid: 79a80104d0ea4874a90eb2787cdcf696, type: 3}
+      propertyPath: critRate
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

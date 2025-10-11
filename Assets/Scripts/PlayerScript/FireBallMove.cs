@@ -31,7 +31,9 @@ public class FireBallMove : MonoBehaviour
             if (other.CompareTag("Enemy"))
             {
                 audioManagement.PlaySfx(audioManagement.vachamfireball);
-                other.GetComponent<thienthachdichuyen>().TakeDame(playerController.damehientai * 50f);
+                var resultDamaged = playerController.CalculateDamage();
+                other.GetComponent<thienthachdichuyen>().TakeDame(resultDamaged.damage * 50f);
+                DamePopUpGenerator.Instance.CreatePopUp(transform.position, resultDamaged.damage, resultDamaged.isCrit);
                 Debug.Log("gay dame len thien thach"+playerController.damehientai*50);
                 if (explosionEffectPrefab != null)
                 {
@@ -43,7 +45,9 @@ public class FireBallMove : MonoBehaviour
             if (other.CompareTag("Boss"))
             {
                 audioManagement.PlaySfx(audioManagement.vachamfireball);
-                other.GetComponent<BossController>().TakeDame(playerController.damehientai * 50f);
+                var resultDamaged = playerController.CalculateDamage();
+                other.GetComponent<BossController>().TakeDame(resultDamaged.damage * 50f);
+                DamePopUpGenerator.Instance.CreatePopUp(transform.position, resultDamaged.damage, resultDamaged.isCrit);
                 Debug.Log("gay dame len boss" + playerController.damehientai * 50);
                 if (explosionEffectPrefab != null)
                 {

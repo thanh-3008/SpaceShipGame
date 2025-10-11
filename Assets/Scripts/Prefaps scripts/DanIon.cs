@@ -5,7 +5,6 @@ public class DanIon : MonoBehaviour
     private Rigidbody2D rb;
     public float speed = 10f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,16 +24,16 @@ public class DanIon : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();
-            
-                other.GetComponent<thienthachdichuyen>().TakeDame(player.damehientai*320);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, player.damehientai*320);
+            var damageResult = player.CalculateDamage();
+                other.GetComponent<thienthachdichuyen>().TakeDame(damageResult.damage * 320);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage * 320,damageResult.isCrit);
         }
         if (other.CompareTag("Boss"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();
-
-            other.GetComponent<BossController>().TakeDame(player.damehientai * 320);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, player.damehientai * 320);
+            var damageResult = player.CalculateDamage();
+            other.GetComponent<BossController>().TakeDame(damageResult.damage * 320);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage * 320, damageResult.isCrit);
 
         }
     }
