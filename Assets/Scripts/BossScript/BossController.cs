@@ -317,10 +317,9 @@ public class BossController : MonoBehaviour
         }
         transform.position = startposition;
     }
-
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             playerController.TakeDame(100f);
         }

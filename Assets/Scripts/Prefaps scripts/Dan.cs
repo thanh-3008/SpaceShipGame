@@ -4,6 +4,7 @@ public class Dan : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float speed = 5f;
+    public float damex = 0; 
     public Animator anim;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -26,16 +27,16 @@ public class Dan : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();            
-                other.GetComponent<thienthachdichuyen>().TakeDame(player.damehientai);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, player.damehientai.ToString());
+                other.GetComponent<thienthachdichuyen>().TakeDame(player.damehientai+damex);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, player.damehientai + damex);
             anim.SetTrigger("hit");
             Destroy(gameObject,0.3f);
         }
         if (other.CompareTag("Boss"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();
-            other.GetComponent<BossController>().TakeDame(player.damehientai);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, player.damehientai.ToString());
+            other.GetComponent<BossController>().TakeDame(player.damehientai + damex);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, player.damehientai + damex);
             anim.SetTrigger("hit");
             Destroy(gameObject, 0.3f);
         }
