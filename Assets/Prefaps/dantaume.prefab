@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dan
   speed: 5
+  damex: 100
   anim: {fileID: 7099437546187023160}
 --- !u!61 &3621726413587346696
 BoxCollider2D:

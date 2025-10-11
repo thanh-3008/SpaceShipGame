@@ -1,68 +1,55 @@
-﻿using TMPro;
+﻿// File: DamagePopUpAnimation.cs
+using TMPro;
 using UnityEngine;
 
 public class DamagePopUpAnimation : MonoBehaviour
 {
-    // Các đường cong để điều khiển hoạt ảnh
-    public AnimationCurve opacityCurve; // Điều khiển độ mờ
-    public AnimationCurve scaleCurve;   // Điều khiển kích thước
-    public AnimationCurve heightCurve;  // Điều khiển độ cao bay lên
-
+    public AnimationCurve opacityCurve;
+    public AnimationCurve scaleCurve;
+    public AnimationCurve heightCurve;
     public TextMeshProUGUI tmp;
-    private float time = 0;
-    private Vector3 origin; // Vị trí ban đầu
+    public float duration = 1f;
 
-    // Thời gian tồn tại của popup
-    public float duration = 1.5f;
+    private float time = 0;
+    private Vector3 originPosition;
+    private Vector3 originScale; // Biến này sẽ được gán từ bên ngoài
 
     void Awake()
     {
-        // Lấy component TextMeshPro từ chính đối tượng này
-        
-        origin = transform.position;
+        originPosition = transform.position;
+        // XÓA DÒNG NÀY ĐI: originScale = DamePopUpGenerator.Instance.originScaleDame;
+
+        if (tmp == null)
+        {
+            tmp = GetComponentInChildren<TextMeshProUGUI>();
+        }
     }
 
-    // Hàm này sẽ được gọi từ script khác để khởi tạo popup
-    public void Setup(int damageAmount, bool isCriticalHit)
+    // ---- HÀM MỚI ĐỂ NHẬN GIÁ TRỊ TỪ BÊN NGOÀI ----
+    public void Initialize(Vector3 startScale)
     {
-        // 1. Hiển thị số sát thương
-        tmp.text = damageAmount.ToString();
-
-        // 2. Thiết lập màu sắc dựa trên loại sát thương
-        if (isCriticalHit)
-        {
-            tmp.color = Color.red; // Hoặc một màu cam/vàng đậm
-            tmp.fontSize *= 1.2f; // Tăng cỡ chữ cho crit
-        }
-        else
-        {
-            tmp.color = Color.white;
-        }
+        this.originScale = startScale;
+        // Áp dụng kích thước ban đầu ngay lập tức để tránh bị giật
+        transform.localScale = startScale;
     }
 
     void Update()
     {
-        // Tăng biến thời gian
         time += Time.deltaTime;
+        float progress = time / duration;
 
-        // --- ÁP DỤNG CÁC HIỆU ỨNG ---
-
-        // 1. Hiệu ứng độ mờ (Opacity)
-        float opacity = opacityCurve.Evaluate(time );
+        float opacity = opacityCurve.Evaluate(progress);
         tmp.color = new Color(tmp.color.r, tmp.color.g, tmp.color.b, opacity);
 
-        // 2. Hiệu ứng kích thước (Scale)
-        float scale = scaleCurve.Evaluate(time);
-        transform.localScale = Vector3.one * scale;
+        // Logic này bây giờ sẽ hoạt động đúng vì originScale đã chính xác
+        float scaleMultiplier = scaleCurve.Evaluate(progress);
+        transform.localScale = originScale * scaleMultiplier;
 
-        // 3. Hiệu ứng bay lên (Height)
-        float height = heightCurve.Evaluate(time );
-        transform.position = origin + new Vector3(0, height, 0);
+        float height = heightCurve.Evaluate(progress);
+        transform.position = originPosition + new Vector3(0, height, 0);
 
-        // --- TỰ HỦY ĐỐI TƯỢNG ---
-        if (time > duration)
+        if (time >= duration)
         {
-            // Sau khi hết thời gian, hủy đối tượng popup
             Destroy(gameObject);
         }
     }

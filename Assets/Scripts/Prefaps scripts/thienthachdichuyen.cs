@@ -103,7 +103,7 @@ public class thienthachdichuyen : MonoBehaviour
             if (player1 != null)
             {
                 player1.TakeDame(dame);
-                DamePopUpGenerator.Instance.CreatePopUp(transform.position, dame.ToString());
+                DamePopUpGenerator.Instance.CreateHealthLossPopUp(transform.position, dame);
 
             }
             // Hủy thiên thạch

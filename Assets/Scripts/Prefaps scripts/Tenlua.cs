@@ -31,7 +31,7 @@ public class Tenlua : MonoBehaviour
             PlayerController player = FindObjectOfType<PlayerController>();
             
                 other.GetComponent<thienthachdichuyen>().TakeDame(player.damehientai*100);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, (player.damehientai * 100).ToString());
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, player.damehientai * 100);
 
         }
         if (other.CompareTag("Boss"))
@@ -39,7 +39,7 @@ public class Tenlua : MonoBehaviour
             PlayerController player = FindObjectOfType<PlayerController>();
 
             other.GetComponent<BossController>().TakeDame(player.damehientai * 100);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, (player.damehientai * 100).ToString());
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, player.damehientai * 100);
 
         }
     }

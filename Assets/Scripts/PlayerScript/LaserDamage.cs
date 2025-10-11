@@ -25,7 +25,7 @@ public class LaserDamage : MonoBehaviour
                 {
                     // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
                     thienthach.TakeDame(playerController.damehientai*hesonhan);
-                    DamePopUpGenerator.Instance.CreatePopUp(transform.position, (playerController.damehientai * hesonhan).ToString());
+                    DamePopUpGenerator.Instance.CreatePopUp(transform.position, playerController.damehientai * hesonhan);
 
                 }
             }
@@ -46,7 +46,7 @@ public class LaserDamage : MonoBehaviour
                 {
                     // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
                     boss.TakeDame(playerController.damehientai * hesonhan);
-                    DamePopUpGenerator.Instance.CreatePopUp(transform.position, (playerController.damehientai * hesonhan).ToString());
+                    DamePopUpGenerator.Instance.CreatePopUp(transform.position, playerController.damehientai * hesonhan);
 
                 }
             }

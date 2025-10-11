@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 579769757532307827}
   - component: {fileID: 8366545747836700140}
   - component: {fileID: 8542624376011327968}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy_1_C_Large
   m_TagString: Boss
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: c2e5154a3e65acc4ca197c4260cc07c0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -153,7 +153,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -327,6 +327,7 @@ MonoBehaviour:
   playerController: {fileID: 0}
   skillMKII: {fileID: 0}
   audioManagement: {fileID: 0}
+  Spawn: {fileID: 0}
 --- !u!1 &5289630052769351511
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2126566063495242645}
   - component: {fileID: 6609409960819099016}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +427,7 @@ GameObject:
   - component: {fileID: 5383848277901345326}
   - component: {fileID: 8321958379792308662}
   - component: {fileID: 8644405170390310289}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +504,7 @@ GameObject:
   - component: {fileID: 6794431329736024771}
   - component: {fileID: 5696372180271630818}
   - component: {fileID: 3646206414640395392}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Canvas (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -615,7 +616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6681095486464125864}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -651,7 +652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 530304603034844344}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: bulletshoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -683,7 +684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1518349254382828604}
   - component: {fileID: 3339586598895106155}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
