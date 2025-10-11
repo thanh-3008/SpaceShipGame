@@ -9,7 +9,7 @@ public class SunMove : MonoBehaviour
     public float damageRate = 4f; // Số lần gây sát thương mỗi giây (2f = 2 lần/giây)
     public PlayerController playerController;
     public SpawnSun SpawnSun;
-
+    public float satthuong = 0f;
     private float nextDamageTime = 0f; // Thời điểm được phép gây sát thương tiếp theo
     void Start()
     {
@@ -50,8 +50,10 @@ public class SunMove : MonoBehaviour
                     thienthachdichuyen thienthach = other.GetComponent<thienthachdichuyen>();
                     if (thienthach != null)
                     {
+                        var damageResult = playerController.CalculateDamage();
                         // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
-                        thienthach.TakeDame(playerController.damehientai * 200f);
+                        thienthach.TakeDame(damageResult.damage* 75f);
+                        DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage,damageResult.isCrit);
                     }
                 }
 
@@ -70,8 +72,10 @@ public class SunMove : MonoBehaviour
                     BossController boss = other.GetComponent<BossController>();
                     if (boss != null)
                     {
+                        var damageResult = playerController.CalculateDamage();
                         // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
-                        boss.TakeDame(playerController.damehientai * 75f);
+                        boss.TakeDame(damageResult.damage * 75f);
+                        DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage, damageResult.isCrit);
                     }
                 }
 

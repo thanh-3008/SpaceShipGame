@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9307797919b514db9bfeeb6c9bc14d, type: 3}
+  m_Name: +1 speed
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
+  upgradeName: +1 speed
+  description: "t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n c\u1EE7a t\xE0u s\u1EBD \u0111\u01B0\u1EE3c
+    +1"
+  icon: {fileID: -5661450617779616458, guid: 28250d5b867ba0c4a83620653d804c7a, type: 3}

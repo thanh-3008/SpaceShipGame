@@ -29,17 +29,17 @@ public class Tenlua : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();
-            
-                other.GetComponent<thienthachdichuyen>().TakeDame(player.damehientai*100);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, player.damehientai * 100);
+            var damageResult = player.CalculateDamage();
+                other.GetComponent<thienthachdichuyen>().TakeDame(damageResult.damage*100);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage * 100,damageResult.isCrit);
 
         }
         if (other.CompareTag("Boss"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();
-
-            other.GetComponent<BossController>().TakeDame(player.damehientai * 100);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, player.damehientai * 100);
+            var damageResult = player.CalculateDamage();
+            other.GetComponent<BossController>().TakeDame(damageResult.damage * 100);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage * 100, damageResult.isCrit);
 
         }
     }

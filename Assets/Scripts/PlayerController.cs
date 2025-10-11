@@ -5,6 +5,7 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
+    // ... (các biến của bạn giữ nguyên) ...
     private Rigidbody2D rigidbody2D;
     private float traiphai;
     public float speed = 5f;
@@ -13,13 +14,15 @@ public class PlayerController : MonoBehaviour
 
     // Các tham chiếu sẽ được tự động tìm
     public ThanhMau thanhmau;
-    public float thanhmauhientai =100f;
+    public float thanhmauhientai = 100f;
     public float thanhmauToiDa = 100f;
 
     public TextMeshProUGUI textScore;
     public GameObject danprefap;
+
+    [Header("Chỉ số Tấn Công")]
+    public float damehientai = 5f;
     public float damebonus = 1f;
-    public float damehientai=5f;
 
     public TextMeshProUGUI soTenLuaText;
     public GameObject[] spawndan;
@@ -30,24 +33,31 @@ public class PlayerController : MonoBehaviour
     public float thanhNoToiDa = 100f;
     public float thanhNoHienTai;
     private SpriteRenderer spriteRenderer;
-    public float timeFlash=0.8f;
-    private float timer=0f;
+    public float timeFlash = 0.8f;
 
-    public float gocNghiengToiDa = 15f;   // Góc nghiêng tối đa
+    public float gocNghiengToiDa = 15f;    // Góc nghiêng tối đa
     public float tocDoNghieng = 20f;      // Tốc độ nghiêng
 
     public Boolean kimcangbathoai = false;
 
-    void Start()
+    [Header("Update chi so khac")]
+    [Tooltip("Tỉ lệ ra đòn chí mạng. Ví dụ: 0.2 là 20%")]
+    public float critRate;
+    [Tooltip("Hệ số nhân sát thương khi chí mạng. Ví dụ: 1.5 là 150% sát thương")]
+    public float critDame;
+    [Tooltip("Chỉ số giáp giúp giảm sát thương nhận vào")]
+    public float Giap;
+
+    // ... (Hàm Start() và các hàm khác giữ nguyên) ...
+    #region Auto-Find and Lifecycle Methods
+    public void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // 🔎 Tự động tìm các object trong Scene
-        // Sử dụng Debug.Log để theo dõi quá trình khởi tạo các biến
-
-        // --- Tìm ThanhMau ---
-        if (thanhmau == null)
+        #region Auto-Find Components
+        // --- Tìm ThanhMau ---
+        if (thanhmau == null)
         {
             Debug.Log("Searching for 'ThanhMau' component...");
             GameObject obj = GameObject.Find("ThanhMau");
@@ -69,8 +79,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // --- Tìm TextMeshPro cho Score ---
-        if (textScore == null)
+        // --- Tìm TextMeshPro cho Score ---
+        if (textScore == null)
         {
             Debug.Log("Searching for 'Score' component...");
             GameObject obj = GameObject.Find("Score");
@@ -92,8 +102,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // --- Tìm TextMeshPro cho SoTenLua ---
-        if (soTenLuaText == null)
+        // --- Tìm TextMeshPro cho SoTenLua ---
+        if (soTenLuaText == null)
         {
             Debug.Log("Searching for 'SoTenLua' component...");
             GameObject obj = GameObject.Find("SoTenLua");
@@ -115,10 +125,10 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // --- Tìm các Spawner ---
-        if (spawndan == null || spawndan.Length == 0)
+        // --- Tìm các Spawner ---
+        if (spawndan == null || spawndan.Length == 0)
         {
-            Debug.Log("Searching for GameObjects with tag 'Spawner'...");
+            Debug.Log("Searching for GameObjects with tag 'spawndan'...");
             spawndan = GameObject.FindGameObjectsWithTag("spawndan");
             if (spawndan != null && spawndan.Length > 0)
             {
@@ -126,8 +136,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                // Sử dụng LogWarning vì có thể trong một số màn chơi không có spawner
-                Debug.LogWarning("No GameObjects with the tag 'Spawner' were found in the scene.");
+                Debug.LogWarning("No GameObjects with the tag 'spawndan' were found in the scene.");
             }
         }
 
@@ -141,13 +150,12 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                // Sử dụng LogWarning vì có thể trong một số màn chơi không có spawner
-                Debug.LogWarning("No GameObjects with the tag 'Spawner' were found in the scene.");
+                Debug.LogWarning("No GameObjects with the tag 'spawndanpro' were found in the scene.");
             }
         }
 
-        // --- Tìm AudioManagement ---
-        if (audioManager == null)
+        // --- Tìm AudioManagement ---
+        if (audioManager == null)
         {
             Debug.Log("Searching for 'AudioManagement' component...");
             GameObject obj = GameObject.Find("AudioManagement");
@@ -169,8 +177,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // --- Tìm ThanhNo ---
-        if (thanhno == null)
+        // --- Tìm ThanhNo ---
+        if (thanhno == null)
         {
             Debug.Log("Searching for 'ThanhNo' component...");
             GameObject obj = GameObject.Find("ThanhNo");
@@ -191,11 +199,12 @@ public class PlayerController : MonoBehaviour
                 Debug.LogError("Could not find GameObject named 'ThanhNo' in the scene.");
             }
         }
-    }
+        #endregion
+    }
 
     void Update()
     {
-        if (khoadichuyen==false)
+        if (khoadichuyen == false)
         {
             traiphai = Input.GetAxis("Horizontal");
             lenxuong = Input.GetAxis("Vertical");
@@ -206,42 +215,78 @@ public class PlayerController : MonoBehaviour
             traiphai = 0; lenxuong = 0;
         }
 
-            rigidbody2D.linearVelocity = new Vector2(traiphai * speed, lenxuong * speed);
+        rigidbody2D.linearVelocity = new Vector2(traiphai * speed, lenxuong * speed);
 
-        // Hồi thanh nộ
-        if (thanhNoHienTai <= thanhNoToiDa * 3)
+        // Hồi thanh nộ
+        if (thanhNoHienTai <= thanhNoToiDa * 3)
         {
             thanhNoHienTai += 2f * Time.deltaTime;
             thanhno.capnhatthanhno(thanhNoHienTai, thanhNoToiDa);
         }
 
-        // Xử lý nghiêng tàu khi di chuyển
-        float gocMucTieu = -traiphai * gocNghiengToiDa;
+        // Xử lý nghiêng tàu khi di chuyển
+        float gocMucTieu = -traiphai * gocNghiengToiDa;
         Quaternion gocXoayMucTieu = Quaternion.Euler(0, 0, gocMucTieu);
         transform.rotation = Quaternion.Lerp(transform.rotation, gocXoayMucTieu, tocDoNghieng * Time.deltaTime);
+    }
+    #endregion
+
+    /// <summary>
+    /// Tính toán sát thương gây ra. Trả về một bộ đôi gồm (sát thương cuối cùng, bool có phải chí mạng không).
+    /// </summary>
+    // << THAY ĐỔI 1: Kiểu trả về của hàm
+    public (float damage, bool isCrit) CalculateDamage()
+    {
+        float randomValue = UnityEngine.Random.value;
+
+        if (randomValue <= critRate)
+        {
+            // Là đòn chí mạng
+            float finalDamage = damehientai * critDame;
+            Debug.Log($"<color=orange>CHÍ MẠNG!</color> Sát thương: {finalDamage}");
+            // << THAY ĐỔI 2: Trả về cả sát thương VÀ true
+            return (finalDamage, true);
+        }
+        else
+        {
+            // Là đòn đánh thường
+            // << THAY ĐỔI 3: Trả về cả sát thương VÀ false
+            return (damehientai, false);
+        }
     }
 
     public void TakeDame(float dame)
     {
-        if (kimcangbathoai==true)
+        // Tính toán sát thương giảm bởi giáp
+        float damageSauKhiGiamTru = dame * (100f / (100f + Giap));
+        // Làm tròn để sát thương trông đẹp hơn (tùy chọn)
+        damageSauKhiGiamTru = Mathf.Round(damageSauKhiGiamTru);
+
+        if (kimcangbathoai == true)
         {
-            Debug.Log("kim cang bat hoai giam dame:" + dame / 4);
-            thanhmauhientai -= dame / 4;
+            float reducedDamage = damageSauKhiGiamTru / 4;
+            Debug.Log("Kim cang bất hoại giảm dame: " + reducedDamage);
+            thanhmauhientai -= reducedDamage;
         }
         else
         {
-            thanhmauhientai -= dame;
+            Debug.Log($"Sát thương gốc: {dame}, Giáp: {Giap}, Sát thương nhận vào: {damageSauKhiGiamTru}");
+            thanhmauhientai -= damageSauKhiGiamTru;
             StartFlashRed();
         }
+
         thanhmau.capnhatthanhmau(thanhmauhientai, thanhmauToiDa);
         audioManager.PlaySfxto(audioManager.tiengvacham);
+
         if (thanhmauhientai <= 0)
         {
             FindObjectOfType<GameOverMenu>().showGameOverScreen(int.Parse(textScore.text));
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    // ... (Các hàm còn lại giữ nguyên) ...
+    #region Other Methods
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         int sotenlua = int.Parse(soTenLuaText.text);
 
@@ -279,23 +324,23 @@ public class PlayerController : MonoBehaviour
 
     public void StartFlashRed()
     {
-        StopCoroutine(FlashRed(timeFlash));
-        StartCoroutine(FlashRed(timeFlash));
+        StopCoroutine("FlashRed"); // Dừng coroutine cũ nếu đang chạy
+        StartCoroutine(FlashRedCoroutine(timeFlash));
     }
 
-    private IEnumerator FlashRed(float thoigianduytri)
+    private IEnumerator FlashRedCoroutine(float thoigianduytri)
     {
-               
-        while (timer <= thoigianduytri)
+        float elapsedTime = 0f;
+        while (elapsedTime < thoigianduytri)
         {
             spriteRenderer.color = Color.red;
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.1f);
             spriteRenderer.color = Color.white;
-            yield return new WaitForSeconds(0.2f);
-            timer += 0.4f;
+            yield return new WaitForSeconds(0.1f);
+            elapsedTime += 0.2f;
         }
-        timer = 0f;
-    }
+        spriteRenderer.color = Color.white; // Đảm bảo màu trở lại bình thường
+    }
 
     void LateUpdate()
     {
@@ -304,4 +349,5 @@ public class PlayerController : MonoBehaviour
         float clampedY = Mathf.Clamp(currentPosition.y, -4.5f, 4.5f);
         transform.position = new Vector3(clampedX, clampedY, currentPosition.z);
     }
+    #endregion
 }
