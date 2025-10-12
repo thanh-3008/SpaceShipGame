@@ -39,9 +39,7 @@ public class BossBulletController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            player.TakeDame(20f);
-            DamePopUpGenerator.Instance.CreateHealthLossPopUp(transform.position, 20f);
-
+            player.TakeDame(20f);          
             Destroy(gameObject);
         }
         if(collision.CompareTag("TauMe"))

@@ -21,7 +21,9 @@ public class PlayerController : MonoBehaviour
     public GameObject danprefap;
 
     [Header("Chỉ số Tấn Công")]
-    public float damehientai = 5f;
+    public float damehientai => damegoc*damecongthem;
+    public float damegoc;
+    public float damecongthem = 1f;
     public float damebonus = 1f;
 
     public TextMeshProUGUI soTenLuaText;
@@ -267,12 +269,14 @@ public class PlayerController : MonoBehaviour
             float reducedDamage = damageSauKhiGiamTru / 4;
             Debug.Log("Kim cang bất hoại giảm dame: " + reducedDamage);
             thanhmauhientai -= reducedDamage;
+            DamePopUpGenerator.Instance.CreateHealthLossPopUp(transform.position,reducedDamage);
         }
         else
         {
             Debug.Log($"Sát thương gốc: {dame}, Giáp: {Giap}, Sát thương nhận vào: {damageSauKhiGiamTru}");
             thanhmauhientai -= damageSauKhiGiamTru;
             StartFlashRed();
+            DamePopUpGenerator.Instance.CreateHealthLossPopUp(transform.position, damageSauKhiGiamTru);
         }
 
         thanhmau.capnhatthanhmau(thanhmauhientai, thanhmauToiDa);
@@ -296,7 +300,7 @@ public class PlayerController : MonoBehaviour
             score += 1;
             textScore.text = score.ToString();
 
-            damehientai += damebonus;
+            damegoc += damebonus;
             audioManager.PlaySfxto(audioManager.tiengancoin);
             Destroy(collision.gameObject);
         }

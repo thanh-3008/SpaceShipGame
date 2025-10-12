@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 5029265865495637784}
   - component: {fileID: 1007944717086261626}
   - component: {fileID: 147621324175992189}
+  - component: {fileID: 4865838827915281887}
   m_Layer: 8
   m_Name: Seraph III
   m_TagString: Player
@@ -405,7 +406,7 @@ Transform:
   m_GameObject: {fileID: 3175878105493373125}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: -2.4, z: 0}
+  m_LocalPosition: {x: -2.6676574, y: -2.7480774, z: 0}
   m_LocalScale: {x: 0.18, y: 0.18, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -491,12 +492,13 @@ MonoBehaviour:
   speed: 5
   khoadichuyen: 0
   thanhmau: {fileID: 0}
-  thanhmauhientai: 100
-  thanhmauToiDa: 100
+  thanhmauhientai: 110
+  thanhmauToiDa: 110
   textScore: {fileID: 0}
   danprefap: {fileID: 0}
-  damebonus: 1.5
-  damehientai: 5
+  damegoc: 5
+  damecongthem: 1
+  damebonus: 1.2
   soTenLuaText: {fileID: 0}
   spawndan: []
   spawndanpro:
@@ -510,6 +512,9 @@ MonoBehaviour:
   gocNghiengToiDa: 15
   tocDoNghieng: 20
   kimcangbathoai: 0
+  critRate: 0
+  critDame: 1
+  Giap: 0
 --- !u!50 &1007944717086261626
 Rigidbody2D:
   serializedVersion: 5
@@ -819,6 +824,25 @@ PolygonCollider2D:
       - {x: -2.495, y: -3.28}
       - {x: -2.5149999, y: -3.07}
   m_UseDelaunayMesh: 0
+--- !u!114 &4865838827915281887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3175878105493373125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c153bc3da08bb924589f23213fdab5d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerLevel
+  currentLevel: 1
+  currentXP: 0
+  xpToNextLevel: 100
+  xpBar: {fileID: 0}
+  onLevelUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3732435613412831531
 GameObject:
   m_ObjectHideFlags: 0

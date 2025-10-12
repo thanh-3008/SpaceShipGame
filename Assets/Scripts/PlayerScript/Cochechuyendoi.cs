@@ -54,7 +54,7 @@ public class Cochechuyendoi : MonoBehaviour
         {
             controllerTauMoi.thanhmauhientai = playerController.thanhmauhientai;
             controllerTauMoi.thanhNoHienTai = 0f;
-            controllerTauMoi.damehientai = playerController.damehientai;
+            controllerTauMoi.damegoc = playerController.damegoc;
         }
 
         chuyenDoi.SetActive(false);
