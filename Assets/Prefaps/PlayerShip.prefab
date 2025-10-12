@@ -339,7 +339,7 @@ MonoBehaviour:
   tocDoNghieng: 20
   kimcangbathoai: 0
   critRate: 0
-  critDame: 1
+  critDame: 1.2
   Giap: 10
 --- !u!114 &2378951959366339806
 MonoBehaviour:

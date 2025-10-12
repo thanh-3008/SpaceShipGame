@@ -53,7 +53,7 @@ public class SunMove : MonoBehaviour
                         var damageResult = playerController.CalculateDamage();
                         // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
                         thienthach.TakeDame(damageResult.damage* 75f);
-                        DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage,damageResult.isCrit);
+                        DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage*75f,damageResult.isCrit);
                     }
                 }
 
@@ -75,7 +75,7 @@ public class SunMove : MonoBehaviour
                         var damageResult = playerController.CalculateDamage();
                         // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
                         boss.TakeDame(damageResult.damage * 75f);
-                        DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage, damageResult.isCrit);
+                        DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage*75f, damageResult.isCrit);
                     }
                 }
 

@@ -513,7 +513,7 @@ MonoBehaviour:
   tocDoNghieng: 20
   kimcangbathoai: 0
   critRate: 0
-  critDame: 1
+  critDame: 1.2
   Giap: 0
 --- !u!50 &1007944717086261626
 Rigidbody2D:
