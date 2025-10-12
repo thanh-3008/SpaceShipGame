@@ -1,22 +1,38 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerControllerDroneso2 : MonoBehaviour
 {
-    void Start()
+    private GameObject dronePrefab;
+    private Transform leftSpawn;
+    private Transform rightSpawn;
+
+    private bool hasDroneItem = false; // chỉ có sau khi nhặt
+    private bool droneActive = false;
+
+    void Update()
     {
-        // Spawn 2 drone quay quanh 2 ph�a
-        SpawnDrones();
+        if (hasDroneItem && Input.GetKeyDown(KeyCode.Q) && !droneActive)
+        {
+            ActivateDrones();
+        }
     }
 
-    void SpawnDrones()
+    private void ActivateDrones()
     {
-        //leftDrone = Instantiate(dronePrefab, transform.position + new Vector3(-1.5f, 0, 0), Quaternion.identity);
-        //rightDrone = Instantiate(dronePrefab, transform.position + new Vector3(1.5f, 0, 0), Quaternion.identity);
+        Instantiate(dronePrefab, leftSpawn.position, Quaternion.identity);
+        Instantiate(dronePrefab, rightSpawn.position, Quaternion.identity);
+        droneActive = true;
+        Invoke(nameof(ResetDroneSkill), 30f); // hết 30s thì có thể dùng lại
+    }
 
-        //DroneController leftCtrl = leftDrone.GetComponent<DroneController>();
-        //DroneController rightCtrl = rightDrone.GetComponent<DroneController>();
+    private void ResetDroneSkill()
+    {
+        droneActive = false;
+    }
 
-        //leftCtrl.player = transform;
-        //rightCtrl.player = transform;
+    void PickupDroneItem()
+    {
+        hasDroneItem = true;
+        Debug.Log("Drone skill unlocked!");
     }
 }
