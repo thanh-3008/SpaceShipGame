@@ -30,7 +30,7 @@ public class SeraphMKI : MonoBehaviour
         {
             StartSkill();
         }
-        if(Input.GetKeyUp(KeyCode.Space) && player.thanhNoHienTai >= player.thanhmauToiDa * 3 && khienNangLuong != null )
+        if(Input.GetKeyUp(KeyCode.Space) && player.thanhNoHienTai >= player.thanhNoToiDa * 3 && khienNangLuong != null )
         {
             StartUlti();
             player.thanhNoHienTai = 0;

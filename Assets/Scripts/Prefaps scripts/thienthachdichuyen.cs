@@ -17,7 +17,7 @@ public class thienthachdichuyen : MonoBehaviour
     private bool biphahuykhicombat = false;
     private GameObject player;
     public SeraphMKII skillMKII;
-
+    public PlayerLevel playerLevel;
     // SỬA: Biến này không cần thiết, đã xóa "public GameObject thienthach;"
     // SỬA: Biến này cũng không cần thiết, chúng ta sẽ dùng Singleton
     // public GameObject Audio;
@@ -30,6 +30,7 @@ public class thienthachdichuyen : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         GameObject objskill = GameObject.FindWithTag("Player");
         skillMKII = objskill.GetComponent<SeraphMKII>();
+        playerLevel=player.GetComponent<PlayerLevel>();
     }
 
     void Update()
@@ -88,6 +89,7 @@ public class thienthachdichuyen : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            biphahuykhicombat = true;
             // Tạo hiệu ứng nổ
             Instantiate(boom, transform.position, Quaternion.identity);
 
@@ -102,8 +104,7 @@ public class thienthachdichuyen : MonoBehaviour
             PlayerController player1 = collision.gameObject.GetComponent<PlayerController>();
             if (player1 != null)
             {
-                player1.TakeDame(dame);
-                DamePopUpGenerator.Instance.CreateHealthLossPopUp(transform.position, dame);
+                player1.TakeDame(dame);                
 
             }
             // Hủy thiên thạch
@@ -115,6 +116,7 @@ public class thienthachdichuyen : MonoBehaviour
     {       
         if (collision.gameObject.CompareTag("TauMe"))
         {
+            biphahuykhicombat = true;
             PlayerController playerScript = player.GetComponent<PlayerController>();
             if (playerScript.thanhNoHienTai <= playerScript.thanhNoToiDa * 3)
             {
@@ -126,6 +128,7 @@ public class thienthachdichuyen : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("KhienNangLuong"))
         {
+            biphahuykhicombat = true;
             PlayerController playerScript = player.GetComponent<PlayerController>();
             playerScript.TakeDame(dame/10);
             if (playerScript.thanhNoHienTai <= playerScript.thanhNoToiDa * 3)
@@ -165,7 +168,8 @@ public class thienthachdichuyen : MonoBehaviour
             audioManager.PlaySfxto(audioManager.thienthachno);
             Rotdokhibiphahuy();
             PlayerController playerScript = player.GetComponent<PlayerController>();
-            if(playerScript.thanhNoHienTai<=playerScript.thanhNoToiDa)
+            playerLevel.AddXP(20);
+            if (playerScript.thanhNoHienTai<=playerScript.thanhNoToiDa)
             {
                 playerScript.thanhNoHienTai += 5f;
                 playerScript.thanhno.capnhatthanhno(playerScript.thanhNoHienTai, playerScript.thanhNoToiDa);
