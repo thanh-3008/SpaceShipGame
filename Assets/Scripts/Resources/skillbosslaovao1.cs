@@ -34,7 +34,7 @@ public class skillbosslaovao1 : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.velocity = direction * bulletSpeed;
+            rb.linearVelocity = direction * bulletSpeed;
         }
 
         // Xoay đạn theo hướng bắn (tùy vào sprite)
