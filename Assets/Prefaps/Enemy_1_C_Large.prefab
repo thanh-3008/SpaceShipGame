@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossController
   thanhMau: {fileID: 3646206414640395392}
-  maxHealth: 70000
+  maxHealth: 20000
   currentHealth: 0
   moveSpeed: 2
   leftPoint: -5.5

@@ -3,43 +3,53 @@ using UnityEngine;
 
 public class spawndan : MonoBehaviour
 {
-    // --- Các biến public được giữ lại theo yêu cầu ---
-    public GameObject danprefap;
+    [Header("Cài đặt cơ bản")]
+    public GameObject danprefap;       // Kéo Prefab của viên đạn vào đây
+    public Transform diemBan;          // Vị trí đầu nòng súng (QUAN TRỌNG)
     public bool isshot = true;
     public AudioManagement audioManager;
     public SeraphMKII skillMKII;
+    public float thoiGianChoGoc = 0.6f; // Đổi tên để rõ ràng hơn, đây là thời gian chờ gốc
 
-    // Biến timer nên là private vì chỉ script này cần dùng đến nó
+    [Header("Thông số vũ khí thông minh")]
+    [Range(1, 50)]
+    public int soDan = 1;
+
+    [Tooltip("Tổng góc tỏa ra tối đa của loạt đạn")]
+    public float gocToaToiDa = 45f;
+
+    [Tooltip("Mỗi viên đạn (sau viên đầu tiên) sẽ cộng thêm bao nhiêu độ vào tổng góc bắn")]
+    public float gocTangMoiVienDan = 5f;
+
+    [Tooltip("Khoảng cách giữa 2 viên đạn khi bắn song song (trường hợp 2 đạn)")]
+    public float doLechKhiBanSongSong = 0.5f;
+
+    public float lucBan = 20f;
+
+    // Biến private để xử lý nội bộ
     private float timer;
 
     void Start()
     {
-        // Vẫn giữ lại phần tìm kiếm an toàn này để tránh lỗi khi bắt đầu
-        // Nếu các biến này đã được kéo thả trong Inspector, code này sẽ không chạy
+        // Nếu không gán điểm bắn, mặc định lấy vị trí của chính spawner này
+        if (diemBan == null)
+        {
+            diemBan = this.transform;
+        }
+
+        // --- Phần tìm kiếm an toàn vẫn được giữ lại ---
         if (audioManager == null)
         {
             GameObject audioObj = GameObject.FindWithTag("Audio");
-            if (audioObj != null)
-            {
-                audioManager = audioObj.GetComponent<AudioManagement>();
-            }
-            else
-            {
-                Debug.LogWarning("Spawner không tìm thấy AudioManagement.", this.gameObject);
-            }
+            if (audioObj != null) audioManager = audioObj.GetComponent<AudioManagement>();
+            else Debug.LogWarning("Spawner không tìm thấy AudioManagement.", this.gameObject);
         }
 
         if (skillMKII == null)
         {
             GameObject playerObj = GameObject.FindWithTag("Player");
-            if (playerObj != null)
-            {
-                skillMKII = playerObj.GetComponent<SeraphMKII>();
-            }
-            else
-            {
-                Debug.LogWarning("Spawner không tìm thấy Player.", this.gameObject);
-            }
+            if (playerObj != null) skillMKII = playerObj.GetComponent<SeraphMKII>();
+            else Debug.LogWarning("Spawner không tìm thấy Player.", this.gameObject);
         }
     }
 
@@ -47,14 +57,14 @@ public class spawndan : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        // Xác định thời gian chờ bắn
-        float thoiGianChoHienTai = 0.2f; // Mặc định là 0.2 giây
+        // Xác định thời gian chờ bắn thực tế
+        float thoiGianChoHienTai = thoiGianChoGoc;
 
-        // Kiểm tra an toàn trước khi truy cập skillMKII
+        // Kiểm tra an toàn và áp dụng hiệu ứng từ skill
         if (skillMKII != null && skillMKII.lamchamthoigian == true)
         {
-            // Khi skill được kích hoạt, tốc độ bắn nhanh hơn
-            thoiGianChoHienTai = 0.15f;
+            // Khi skill được kích hoạt, tốc độ bắn nhanh hơn (thời gian chờ giảm đi)
+            thoiGianChoHienTai /= 2f;
         }
 
         // Nếu đủ thời gian và được phép bắn
@@ -66,25 +76,80 @@ public class spawndan : MonoBehaviour
     }
 
     /// <summary>
-    /// Logic bắn đạn đã được tách ra một hàm riêng cho gọn gàng.
+    /// Logic bắn đạn thông minh, được tích hợp từ script BanDanThongMinh.
     /// </summary>
     private void Fire()
     {
-        // Kiểm tra null cho prefab đạn
+        // --- CÁC BƯỚC KIỂM TRA VÀ CHUẨN BỊ ---
         if (danprefap == null)
         {
             Debug.LogError("Chưa gán Prefab đạn (danprefap) cho Spawner!", this.gameObject);
             return;
         }
 
-        // Kiểm tra null cho audio manager
         if (audioManager != null)
         {
-            // Giả sử hàm PlaySfx tồn tại, nếu không hãy đổi thành PlaySfxto
             audioManager.PlaySfx(audioManager.tiengdan);
         }
 
-        // Tạo đạn - đây là cách làm hiệu quả nhất
-        Instantiate(danprefap, transform.position, danprefap.transform.rotation);
+        // Tính toán hướng bắn cơ bản về phía chuột
+        Vector2 viTriChuot = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 huongCoBan = (viTriChuot - (Vector2)diemBan.position).normalized;
+        float gocCoBan = Mathf.Atan2(huongCoBan.y, huongCoBan.x) * Mathf.Rad2Deg;
+
+        // --- XỬ LÝ TỪNG TRƯỜNG HỢP THEO SỐ LƯỢNG ĐẠN ---
+
+        // TRƯỜNG HỢP 1: BẮN 1 VIÊN
+        if (soDan == 1)
+        {
+            TaoRaDan(diemBan.position, huongCoBan, gocCoBan);
+            return;
+        }
+
+        // TRƯỜNG HỢP 2: BẮN 2 VIÊN SONG SONG
+        if (soDan == 2)
+        {
+            Vector2 vectorVuongGoc = new Vector2(-huongCoBan.y, huongCoBan.x) * doLechKhiBanSongSong;
+            TaoRaDan(diemBan.position + (Vector3)vectorVuongGoc, huongCoBan, gocCoBan);
+            TaoRaDan(diemBan.position - (Vector3)vectorVuongGoc, huongCoBan, gocCoBan);
+            return;
+        }
+
+        // TRƯỜNG HỢP 3: BẮN TỎA RA (CHO 3 VIÊN TRỞ LÊN)
+        if (soDan >= 3)
+        {
+            float tongGocHienTai = Mathf.Min(gocToaToiDa, (soDan - 1) * gocTangMoiVienDan);
+            float buocNhayGoc = tongGocHienTai / (soDan - 1);
+            float gocBatDau = -tongGocHienTai / 2;
+
+            for (int i = 0; i < soDan; i++)
+            {
+                float gocHienTai = gocBatDau + i * buocNhayGoc;
+                Vector2 huongDaXoay = Quaternion.Euler(0, 0, gocHienTai) * huongCoBan;
+                float gocXoayDan = Mathf.Atan2(huongDaXoay.y, huongDaXoay.x) * Mathf.Rad2Deg;
+                TaoRaDan(diemBan.position, huongDaXoay, gocXoayDan);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Hàm phụ trợ, chỉ có một nhiệm vụ là tạo ra một viên đạn, gán tốc độ và xoay nó đúng hướng.
+    /// </summary>
+    void TaoRaDan(Vector3 viTriSpawn, Vector2 huong, float gocXoay)
+    {
+        // Tạo viên đạn và xoay hình ảnh của nó cho đúng hướng
+        // Thường phải trừ 90 độ nếu hình ảnh viên đạn của bạn có chiều mặc định là hướng lên trên
+        GameObject dan = Instantiate(danprefap, viTriSpawn, Quaternion.Euler(0, 0, gocXoay ));
+
+        // Lấy Rigidbody2D và tác dụng lực để bắn đi
+        Rigidbody2D rb = dan.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.AddForce(huong * lucBan, ForceMode2D.Impulse);
+        }
+        else
+        {
+            Debug.LogWarning("Prefab đạn không có Rigidbody2D!", dan);
+        }
     }
 }

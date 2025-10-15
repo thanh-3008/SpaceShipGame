@@ -7,22 +7,33 @@ using UnityEngine.UI;
 public class UpgradeManagement : MonoBehaviour
 {
     public GameObject panelUpgrade;
-    public List<UpgradeData> allUpgrades;
+    public List<UpgradeData> statsUpgrades;
+    public List<UpgradeData> proUpgrades;
+    public List<UpgradeData> skillUpgrades;
 
     public TextMeshProUGUI textName1, textName2, textName3;
     public TextMeshProUGUI textMoTa1, textMoTa2, textMoTa3;
     public Image img1, img2, img3;
     public Button btn1, btn2, btn3;
 
+
+
+
     private PlayerLevel playerLevel;
     private List<UpgradeData> selectUpgrade;
     private PlayerController playerController;
+    private SpawnSuriken spawnSuriken;
+    private int soLanChonStat = 0;
+    private int soLanChonSkill = 0;
+    private int bodemmax = 5;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerLevel = FindObjectOfType<PlayerLevel>();
         playerLevel.onLevelUp.AddListener(ShowUpgradePanel);
         playerController = FindObjectOfType<PlayerController>();
+        spawnSuriken = FindObjectOfType<SpawnSuriken>();
     }
 
     // Update is called once per frame
@@ -72,18 +83,61 @@ public class UpgradeManagement : MonoBehaviour
 
     public List<UpgradeData> getRandomUpgrade(int count)
     {
-        List<UpgradeData> upgradeAvailable = new List<UpgradeData>(allUpgrades);
+        
+        List<UpgradeData> upgradeStatsAvailable = new List<UpgradeData>(statsUpgrades);
+        List<UpgradeData> upgradeSkillAvailable = new List<UpgradeData>(skillUpgrades);
         List<UpgradeData> selectedUpgrades = new List<UpgradeData>();
         for (int i = 0;i < count ; i++)
         {
-            if(upgradeAvailable.Count == 0)
+            if(upgradeStatsAvailable.Count == 0 && upgradeSkillAvailable.Count==0)
             {
                 break;
             }
-            int randomIndex = Random.Range(0, upgradeAvailable.Count);
-            selectedUpgrades.Add(upgradeAvailable[randomIndex]);
-            upgradeAvailable.RemoveAt(randomIndex);
+            int randomIndex = Random.Range(0, 2);
+            if (randomIndex == 0 && soLanChonStat < 2)
+            {
+
+                if (upgradeSkillAvailable.Count != 0)
+                {
+                    int randomStatIndex = Random.Range(0, upgradeStatsAvailable.Count);
+                    selectedUpgrades.Add(upgradeStatsAvailable[randomStatIndex]);
+                    upgradeStatsAvailable.RemoveAt(randomStatIndex);
+                    soLanChonStat++;
+                }
+                
+            }else if(randomIndex == 0 && soLanChonStat >=2)
+            {
+                if (upgradeSkillAvailable.Count != 0)
+                {
+                    int randomSkillIndex = Random.Range(0, upgradeSkillAvailable.Count);
+                    selectedUpgrades.Add(upgradeSkillAvailable[randomSkillIndex]);
+                    upgradeSkillAvailable.RemoveAt(randomSkillIndex);
+                    soLanChonSkill++;
+                }
+            }
+            if (randomIndex == 1 && soLanChonSkill < 2)
+            {
+                if (upgradeSkillAvailable.Count != 0)
+                {
+                    int randomSkillIndex = Random.Range(0, upgradeSkillAvailable.Count);
+                    selectedUpgrades.Add(upgradeSkillAvailable[randomSkillIndex]);
+                    upgradeSkillAvailable.RemoveAt(randomSkillIndex);
+                    soLanChonSkill++;
+                }
+            }
+            else if(randomIndex == 1 && soLanChonSkill >= 2)
+            {
+                if (upgradeStatsAvailable.Count != 0)
+                {
+                    int randomStatIndex = Random.Range(0, upgradeStatsAvailable.Count);
+                    selectedUpgrades.Add(upgradeStatsAvailable[randomStatIndex]);
+                    upgradeStatsAvailable.RemoveAt(randomStatIndex);
+                    soLanChonStat++;
+                }
+            }
         }
+        soLanChonStat = 0;
+        soLanChonSkill = 0;
         return selectedUpgrades;
     }
 
@@ -120,9 +174,12 @@ public class UpgradeManagement : MonoBehaviour
             else if (selectedUpgrade.upgradeName == "+20 Giáp")
             {
                 playerController.Giap += 20f;
+            }else if (selectedUpgrade.upgradeName == "+1 Shuriken")
+            {
+                spawnSuriken.ThemSuriken();
             }
 
-            panelUpgrade.SetActive(false);
+                panelUpgrade.SetActive(false);
             Time.timeScale = 1f;
         }
     }
