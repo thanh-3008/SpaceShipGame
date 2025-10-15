@@ -15,8 +15,8 @@ public class danez : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
-        if (transform.position.y > 6f)
+        
+        if (transform.position.y > 6f || transform.position.y < -6f || transform.position.x > 10 || transform.position.x < -10)
         {
             Destroy(gameObject);
         }
@@ -28,16 +28,24 @@ public class danez : MonoBehaviour
             PlayerController player = FindObjectOfType<PlayerController>();
 
             var dameResult = player.CalculateDamage();
-            other.GetComponent<thienthachdichuyen>().TakeDame((dameResult.damage+player.damebonus) * 4);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, ((dameResult.damage + player.damebonus) * 4),dameResult.isCrit);
+            other.GetComponent<thienthachdichuyen>().TakeDame((dameResult.damage+player.damebonus) * 3);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, ((dameResult.damage + player.damebonus) * 3),dameResult.isCrit);
         }
         if (other.CompareTag("Boss"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();
             var dameResult = player.CalculateDamage();
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, (dameResult.damage + player.damebonus) * 4,dameResult.isCrit);
-            other.GetComponent<BossController>().TakeDame((dameResult.damage + player.damebonus) * 4);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, (dameResult.damage + player.damebonus) * 3,dameResult.isCrit);
+            other.GetComponent<BossController>().TakeDame((dameResult.damage + player.damebonus) * 3);
 
+        }
+
+        if(other.CompareTag("Monster"))
+        {
+            PlayerController player = FindObjectOfType<PlayerController>();
+            var dameResult = player.CalculateDamage();
+            other.GetComponent<RatMonster>().TakeDame((dameResult.damage + player.damebonus) * 3);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, (dameResult.damage + player.damebonus) * 3,dameResult.isCrit);
         }
     }
 }

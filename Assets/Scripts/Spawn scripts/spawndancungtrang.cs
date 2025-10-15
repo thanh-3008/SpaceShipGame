@@ -5,6 +5,9 @@ public class spawndancungtrang : MonoBehaviour
     // --- Các biến public được giữ lại theo yêu cầu ---
     public GameObject danprefap;
     public AudioManagement audioManager;
+    public Transform diemBan;
+    public float lucBan = 5f;
+    public float tocdobangoc;
     // Biến timer nên là private vì chỉ script này cần dùng đến nó
     private float timer;
 
@@ -31,11 +34,10 @@ public class spawndancungtrang : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        // Xác định thời gian chờ bắn
-        float thoiGianChoHienTai = 0.3f; // Mặc định là 0.2 giây
-    
+        float tocdobanhientai = tocdobangoc;
+
         // Nếu đủ thời gian và được phép bắn
-        if (timer >= thoiGianChoHienTai)
+        if (timer >= tocdobanhientai)
         {
             Fire();
             timer = 0f;
@@ -60,8 +62,13 @@ public class spawndancungtrang : MonoBehaviour
             // Giả sử hàm PlaySfx tồn tại, nếu không hãy đổi thành PlaySfxto
             audioManager.PlaySfxto(audioManager.amthanhdanez);
         }
-
+        // Tính toán hướng bắn cơ bản về phía chuột
+        Vector2 viTriChuot = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 huongCoBan = (viTriChuot - (Vector2)diemBan.position).normalized;
+        float gocCoBan = Mathf.Atan2(huongCoBan.y, huongCoBan.x) * Mathf.Rad2Deg;
         // Tạo đạn - đây là cách làm hiệu quả nhất
-        Instantiate(danprefap, transform.position, danprefap.transform.rotation);
+        GameObject danez=Instantiate(danprefap, diemBan.position, Quaternion.Euler(0,0,gocCoBan));
+        Rigidbody2D rb = danez.GetComponent<Rigidbody2D>();
+        rb.AddForce(huongCoBan * lucBan, ForceMode2D.Impulse);
     }
 }
