@@ -293,7 +293,8 @@ public class UpgradeManagement : MonoBehaviour
             }
             else if (selectedUpgrade.upgradeName == "+10 Star")
             {
-                playerController.score += 10;
+                playerController.CongDiem(10);
+
                 playerController.damegoc += 10;
             }
             else { Debug.LogWarning("Upgrade not recognized: " + selectedUpgrade.upgradeName); }
