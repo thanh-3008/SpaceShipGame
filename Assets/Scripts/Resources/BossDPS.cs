@@ -6,8 +6,8 @@ public class BossDPS : MonoBehaviour
     public GameObject skillPrefab;       // Prefab skill thường
     public GameObject specialSkillPrefab; // Prefab skill đặc biệt (nếu có)
     public Transform firePoint;          // Vị trí bắn ra
-    public float skillCooldown = 5f;     // thời gian hồi
-    public float specialCooldown = 12f;  // thời gian hồi skill đặc biệt
+    public float skillCooldown = 5f;     
+    public float specialCooldown = 12f;  
     public float skillForce = 10f;
 
     [Header("Boss Settings")]
