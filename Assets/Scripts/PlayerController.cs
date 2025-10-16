@@ -296,10 +296,7 @@ public class PlayerController : MonoBehaviour
 
         if (collision.CompareTag("star"))
         {
-            score = int.Parse(textScore.text);
-            score += 1;
-            textScore.text = score.ToString();
-
+            CongDiem(1);
             damegoc += damebonus;
             audioManager.PlaySfxto(audioManager.tiengancoin);
             Destroy(collision.gameObject);
@@ -325,7 +322,34 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+    private void UpdateScoreUI()
+    {
+        if (textScore != null)
+        {
+            // Cập nhật text
+            textScore.text = score.ToString();
 
+            // Gợi ý: Tương lai bạn có thể thêm hiệu ứng nảy chữ hoặc đổi màu ở đây
+            // Ví dụ: textScore.transform.localScale = Vector3.one * 1.2f;
+        }
+    }
+    public void CongDiem(int diem)
+    {
+        // Kiểm tra an toàn, không cộng điểm âm
+        if (diem <= 0) return;
+
+        // 1. Cộng điểm vào biến dữ liệu
+        score += diem;
+
+        // 2. Gọi hàm để cập nhật giao diện
+        UpdateScoreUI();
+
+        // 3. Tạo phản hồi cho người chơi (âm thanh)
+        if (audioManager != null)
+        {
+            audioManager.PlaySfxto(audioManager.tiengancoin);
+        }
+    }
     public void StartFlashRed()
     {
         StopCoroutine("FlashRed"); // Dừng coroutine cũ nếu đang chạy

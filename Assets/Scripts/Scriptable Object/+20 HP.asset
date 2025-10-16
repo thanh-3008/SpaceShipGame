@@ -17,5 +17,5 @@ MonoBehaviour:
   icon: {fileID: 1800537290381752602, guid: 0f483ea4888654c44812387716d53058, type: 3}
   type: 0
   maxChosse: 9999
-  color: {r: 0.5021049, g: 0.9529412, b: 0.45882353, a: 1}
+  color: {r: 0.6297401, g: 0.90943396, b: 0.63377017, a: 1}
   upgradePro: {fileID: 0}
