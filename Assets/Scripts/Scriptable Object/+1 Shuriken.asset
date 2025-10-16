@@ -16,3 +16,7 @@ MonoBehaviour:
   description: "Th\xEAm 1 shuriken quay quanh t\xE0u,g\xE2y s\xE1t th\u01B0\u01A1ng
     l\xEAn nh\u1EEFng v\u1EADt th\u1EC3 va ch\u1EA1m"
   icon: {fileID: 5060074427235893469, guid: 8992cedfa6ea8104a992fb268bfdb8a5, type: 3}
+  type: 0
+  maxChosse: 5
+  color: {r: 1, g: 0.8392157, b: 0, a: 1}
+  upgradePro: {fileID: 11400000, guid: cf6938a024c8448408821646135fdf5d, type: 2}
