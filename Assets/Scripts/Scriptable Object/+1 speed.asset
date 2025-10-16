@@ -16,3 +16,7 @@ MonoBehaviour:
   description: "t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n c\u1EE7a t\xE0u s\u1EBD \u0111\u01B0\u1EE3c
     +1."
   icon: {fileID: -5661450617779616458, guid: 28250d5b867ba0c4a83620653d804c7a, type: 3}
+  type: 0
+  maxChosse: 5
+  color: {r: 0.4593449, g: 0.56424725, b: 0.9547169, a: 1}
+  upgradePro: {fileID: 0}

@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
     public float gocNghiengToiDa = 15f;    // Góc nghiêng tối đa
     public float tocDoNghieng = 20f;      // Tốc độ nghiêng
-
+    public int score;
     public Boolean kimcangbathoai = false;
 
     [Header("Update chi so khac")]
@@ -296,7 +296,7 @@ public class PlayerController : MonoBehaviour
 
         if (collision.CompareTag("star"))
         {
-            int score = int.Parse(textScore.text);
+            score = int.Parse(textScore.text);
             score += 1;
             textScore.text = score.ToString();
 
