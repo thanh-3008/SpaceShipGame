@@ -3,7 +3,8 @@
 public enum UpgradeType
 {
     Normal,
-    Pro
+    Pro,
+    VinhVien
 }
 
 [CreateAssetMenu(fileName = "New Upgrade", menuName = "Upgrades/Upgrade Data")]

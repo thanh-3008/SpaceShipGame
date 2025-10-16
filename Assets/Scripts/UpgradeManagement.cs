@@ -17,8 +17,6 @@ public class UpgradeManagement : MonoBehaviour
     public Image imgPanel1, imgPanel2, imgPanel3;
     public Button btn1, btn2, btn3;
 
-    public TextMeshProUGUI currentNumbersUpgrades1,currentNumbersUpgrades2, currentNumbersUpgrades3;
-
     private Dictionary<UpgradeData,int> soUpgradesDangCo = new Dictionary<UpgradeData, int>();
 
     private PlayerLevel playerLevel;
@@ -29,6 +27,8 @@ public class UpgradeManagement : MonoBehaviour
     private int soLanChonSkill = 0;  
     private GameObject tauTuanTra;
     private SpawnTauTuanTra spawnTauTuanTra;
+    public GameObject StarManagement1, StarManagement2, StarManagement3;
+    public GameObject StarPro1, StarPro2, StarPro3;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -77,31 +77,61 @@ public class UpgradeManagement : MonoBehaviour
         switch(cardIndex)
         {
             case 0:
+                StarManagement1.SetActive(false);
+                StarPro1.SetActive(false);
                 textName1.text = upgradeData.upgradeName;
                 textMoTa1.text = upgradeData.description;
                 img1.sprite = upgradeData.icon;
                 imgPanel1.color = upgradeData.color;
-                currentNumbersUpgrades1.text = soUpgradesDangCo.ContainsKey(upgradeData) ? soUpgradesDangCo[upgradeData].ToString() : "0";
                 btn1.onClick.RemoveAllListeners();
                 btn1.onClick.AddListener(() => SelectUpgrade(0));
+                if(upgradeData.type == UpgradeType.Normal)
+                {
+                    StarManagement1.SetActive(true);
+                    StarManagement1.GetComponent<StarManagement>().HienThiStar(soUpgradesDangCo.ContainsKey(upgradeData) ? soUpgradesDangCo[upgradeData] : 0);
+                }
+                if(upgradeData.type == UpgradeType.Pro)
+                {
+                    StarPro1.SetActive(true);
+                }
                 break;
             case 1:
+                StarManagement2.SetActive(false);
+                StarPro2.SetActive(false);
                 textName2.text = upgradeData.upgradeName;
                 textMoTa2.text = upgradeData.description;
                 img2.sprite = upgradeData.icon;
                 imgPanel2.color = upgradeData.color;
-                currentNumbersUpgrades2.text = soUpgradesDangCo.ContainsKey(upgradeData) ? soUpgradesDangCo[upgradeData].ToString() : "0";
                 btn2.onClick.RemoveAllListeners();
                 btn2.onClick.AddListener(() => SelectUpgrade(1));
+                if (upgradeData.type == UpgradeType.Normal)
+                {
+                    StarManagement2.SetActive(true);
+                    StarManagement2.GetComponent<StarManagement>().HienThiStar(soUpgradesDangCo.ContainsKey(upgradeData) ? soUpgradesDangCo[upgradeData] : 0);
+                }
+                if (upgradeData.type == UpgradeType.Pro)
+                {
+                    StarPro2.SetActive(true);
+                }
                 break;
             case 2:
+                StarManagement3.SetActive(false);
+                StarPro3.SetActive(false);
                 textName3.text = upgradeData.upgradeName;
                 textMoTa3.text = upgradeData.description;
                 img3.sprite = upgradeData.icon;
                 imgPanel3.color = upgradeData.color;
-                currentNumbersUpgrades3.text = soUpgradesDangCo.ContainsKey(upgradeData) ? soUpgradesDangCo[upgradeData].ToString() : "0";
                 btn3.onClick.RemoveAllListeners();
                 btn3.onClick.AddListener(() => SelectUpgrade(2));
+                if (upgradeData.type == UpgradeType.Normal)
+                {
+                    StarManagement3.SetActive(true);
+                    StarManagement3.GetComponent<StarManagement>().HienThiStar(soUpgradesDangCo.ContainsKey(upgradeData) ? soUpgradesDangCo[upgradeData]:0);
+                }
+                if (upgradeData.type == UpgradeType.Pro)
+                {
+                    StarPro3.SetActive(true);
+                }
                 break;
         }
     }
