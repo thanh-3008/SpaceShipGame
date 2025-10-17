@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9307797919b514db9bfeeb6c9bc14d, type: 3}
+  m_Name: AuraPro
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
+  upgradeName: "H\xE0o Quang Ni\u1EBFt B\xE0n"
+  description: "G\u1EE1 b\u1ECF phong \u1EA5n, cho h\u1ECD th\u1EA5y s\u1EE9c m\u1EA1nh
+    t\u1ED1i th\u01B0\u1EE3ng c\u1EE7a b\u1EA1n"
+  icon: {fileID: -8040120268066826105, guid: d2c6f20ffb18389408c8dc3bea0080e3, type: 3}
+  type: 1
+  maxChosse: 1
+  color: {r: 0.7411765, g: 0.22745098, b: 0.8509804, a: 1}
+  upgradePro: {fileID: 0}
