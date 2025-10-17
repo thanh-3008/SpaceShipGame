@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeName: +10 Star
   description: "L\u1EADp t\u1EE9c c\u1ED9ng 10 \u0111i\u1EC3m"
   icon: {fileID: 241071387738521031, guid: a323dc56f35bd7d43b2b2c4be14dc0ff, type: 3}
-  type: 0
+  type: 2
   maxChosse: 9999
   color: {r: 0.6313726, g: 0.9098039, b: 0.63529414, a: 1}
   upgradePro: {fileID: 0}
