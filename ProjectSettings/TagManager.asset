@@ -18,6 +18,7 @@ TagManager:
   - KhienNangLuong
   - DongBang
   - Boss
+  - Monster
   layers:
   - Default
   - TransparentFX

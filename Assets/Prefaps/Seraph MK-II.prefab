@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &37948734843199198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8853093267312228080}
+  - component: {fileID: 8587673305200106634}
+  m_Layer: 8
+  m_Name: SpawnSuriken
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8853093267312228080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37948734843199198}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.2, y: 0.2, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5167751994811376795}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8587673305200106634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37948734843199198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee4f824b6612fd4595518f2c63908b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpawnSuriken
+  surikenPrefab: {fileID: 8552735586181264078, guid: f54a3c911cf55ca4dafd01b6b3af46f9, type: 3}
+  shurikenContainer: {fileID: 8853093267312228080}
+  maxSuriken: 5
+  banKinh: 5
+  tocDoQuay: 300
 --- !u!1 &678142488798036230
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,17 +255,17 @@ Transform:
   m_GameObject: {fileID: 3034535743428535646}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9526093, y: -2.7480774, z: 0}
-  m_LocalScale: {x: 0.13, y: 0.13, z: 1}
+  m_LocalPosition: {x: -4, y: -0.06, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1279368881673597329}
-  - {fileID: 2340574837190055979}
   - {fileID: 4723461766557717627}
   - {fileID: 6491044933760129791}
   - {fileID: 3380079817045601771}
   - {fileID: 3569092620162473375}
   - {fileID: 2220624712947103314}
+  - {fileID: 8853093267312228080}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9110053426143642004
@@ -851,7 +900,7 @@ MonoBehaviour:
   laserden: {fileID: 5867658132668469803}
   isturnonlaser: 0
   dan:
-  - {fileID: 4551790216763561228}
+  - {fileID: 0}
   - {fileID: 5293395577053487500}
 --- !u!114 &6142044441656597110
 MonoBehaviour:
@@ -966,54 +1015,6 @@ MonoBehaviour:
   damageRate: 2
   playerController: {fileID: 1552405603047097917}
   hesonhan: 50
---- !u!1 &5324741796519044007
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2340574837190055979}
-  - component: {fileID: 4551790216763561228}
-  m_Layer: 8
-  m_Name: spawndan2 (2)
-  m_TagString: spawndan
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2340574837190055979
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5324741796519044007}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 1.1, z: 0}
-  m_LocalScale: {x: 2.3803008, y: 3.136482, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5167751994811376795}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4551790216763561228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5324741796519044007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d1c22a6a9b32b249b98a4d055f325dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::spawndan
-  danprefap: {fileID: 5226248612336612084, guid: 7977319879cdb5a47988b2db92704d9e, type: 3}
-  isshot: 1
-  audioManager: {fileID: 0}
-  skillMKII: {fileID: 5074718671254783515}
 --- !u!1 &5867658132668469803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,7 +1169,7 @@ Transform:
   m_GameObject: {fileID: 6819857172778077122}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6, y: 1.1, z: 0}
+  m_LocalPosition: {x: 0.1, y: 0.5, z: 0}
   m_LocalScale: {x: 2.3803008, y: 3.136482, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1187,9 +1188,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::spawndan
   danprefap: {fileID: 5226248612336612084, guid: 7977319879cdb5a47988b2db92704d9e, type: 3}
+  diemBan: {fileID: 1279368881673597329}
   isshot: 1
   audioManager: {fileID: 0}
   skillMKII: {fileID: 5074718671254783515}
+  thoiGianChoGoc: 0.6
+  soDan: 1
+  gocToaToiDa: 45
+  gocTangMoiVienDan: 5
+  doLechKhiBanSongSong: 0.5
+  lucBan: 20
 --- !u!1 &8000582342494913370
 GameObject:
   m_ObjectHideFlags: 0
