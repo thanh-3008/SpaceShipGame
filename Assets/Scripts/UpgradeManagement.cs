@@ -327,10 +327,46 @@ public class UpgradeManagement : MonoBehaviour
 
                 playerController.damegoc += 10;
             }
-            else { Debug.LogWarning("Upgrade not recognized: " + selectedUpgrade.upgradeName); }
-                
+            else if (selectedUpgrade.upgradeName == "Aura Farming")
+            {
+               if(soUpgradesDangCo[selectedUpgrade] > 1)
+                {
+                    GameObject auraManagementObj = GameObject.FindGameObjectWithTag("AuraManagement");
+                    AuraManagement auraManagement = auraManagementObj.GetComponent<AuraManagement>();
+                    auraManagement.GetComponentInChildren<Aura>().NangCapAura();
 
-                panelUpgrade.SetActive(false);
+                }
+                else
+                {
+                    GameObject auraManagementObj = GameObject.FindGameObjectWithTag("AuraManagement");
+                    AuraManagement auraManagement = auraManagementObj.GetComponent<AuraManagement>();
+                    auraManagement.KichHoatAura();
+                }
+            }
+            else if (selectedUpgrade.upgradeName == "Hào Quang Niết Bàn")
+            {
+                GameObject auraManagementObj = GameObject.FindGameObjectWithTag("AuraManagement");
+                AuraManagement auraManagement = auraManagementObj.GetComponent<AuraManagement>();
+                auraManagement.GetComponentInChildren<Aura>().NangCapCuoiAura();
+            }
+            else if (selectedUpgrade.upgradeName == "Hỏa Lực Tăng Cường")
+            {
+                spawndan spawnDan = playerController.GetComponentInChildren<spawndan>();
+                spawnDan.NangCapThemDan();
+            }
+            else if (selectedUpgrade.upgradeName == "Phán Quyết Cuối Cùng")
+            {
+                spawndan spawnDan = playerController.GetComponentInChildren<spawndan>();
+                spawnDan.NangCapCuoi();
+            }
+
+            else
+            {
+                Debug.LogWarning("Upgrade not recognized: " + selectedUpgrade.upgradeName);
+            }
+
+
+            panelUpgrade.SetActive(false);
                 Time.timeScale = 1f;
             
         }
