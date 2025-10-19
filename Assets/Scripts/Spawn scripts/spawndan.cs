@@ -21,9 +21,7 @@ public class spawndan : MonoBehaviour
 
     [Tooltip("Mỗi viên đạn (sau viên đầu tiên) sẽ cộng thêm bao nhiêu độ vào tổng góc bắn")]
     public float gocTangMoiVienDan = 5f;
-
-    [Tooltip("Khoảng cách giữa 2 viên đạn khi bắn song song (trường hợp 2 đạn)")]
-    public float doLechKhiBanSongSong = 0.5f;
+   
 
     public float lucBan = 20f;
 

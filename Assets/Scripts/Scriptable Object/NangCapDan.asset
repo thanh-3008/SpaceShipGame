@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9307797919b514db9bfeeb6c9bc14d, type: 3}
   m_Name: NangCapDan
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
-  upgradeName: 
-  description: 
-  icon: {fileID: 0}
+  upgradeName: "H\u1ECFa L\u1EF1c T\u0103ng C\u01B0\u1EDDng"
+  description: "T\u0103ng c\u01B0\u1EDDng h\u1ECFa l\u1EF1c c\u1EE7a b\u1EA1n l\xEAn
+    1 b\u1EADc"
+  icon: {fileID: 829270664604573990, guid: 320c4623760e6ac47b86a5e4c3deab77, type: 3}
   type: 0
   maxChosse: 5
-  color: {r: 0, g: 0, b: 0, a: 0}
-  upgradePro: {fileID: 0}
+  color: {r: 1, g: 0.8392157, b: 0, a: 1}
+  upgradePro: {fileID: 11400000, guid: 51f7be3de64f3014095010e895bc2880, type: 2}
