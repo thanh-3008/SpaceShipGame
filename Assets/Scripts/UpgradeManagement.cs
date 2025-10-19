@@ -359,6 +359,26 @@ public class UpgradeManagement : MonoBehaviour
                 spawndan spawnDan = playerController.GetComponentInChildren<spawndan>();
                 spawnDan.NangCapCuoi();
             }
+            else if(selectedUpgrade.upgradeName == "Thiên Phạt")
+            {
+                if (soUpgradesDangCo[selectedUpgrade] > 1)
+                {                   
+                    SpawnKyNangThienThach spawnKyNangThienThach = playerController.GetComponentInChildren<SpawnKyNangThienThach>();
+                    spawnKyNangThienThach.NangCap();
+
+                }
+                else
+                {
+                    GameObject spawn = GameObject.FindGameObjectWithTag("SpawnThienThachManagement");
+                    SpawnThienThachManagement spawnThienThachManagement = spawn.GetComponent<SpawnThienThachManagement>();
+                    spawnThienThachManagement.BatSkill();
+                }
+            }
+            else if (selectedUpgrade.upgradeName == "Vũ Điệu Hủy Diệt")
+            {
+                SpawnKyNangThienThach spawnKyNangThienThach = playerController.GetComponentInChildren<SpawnKyNangThienThach>();
+                spawnKyNangThienThach.NangCapCuoi();
+            }
 
             else
             {

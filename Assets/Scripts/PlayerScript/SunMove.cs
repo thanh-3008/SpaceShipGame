@@ -52,8 +52,8 @@ public class SunMove : MonoBehaviour
                     {
                         var damageResult = playerController.CalculateDamage();
                         // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
-                        thienthach.TakeDame(damageResult.damage* 75f);
-                        DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage*75f,damageResult.isCrit);
+                        thienthach.TakeDame(damageResult.damage);
+                        DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage,damageResult.isCrit);
                     }
                 }
 
@@ -74,11 +74,21 @@ public class SunMove : MonoBehaviour
                     {
                         var damageResult = playerController.CalculateDamage();
                         // Gợi ý: Tên hàm nên là "TakeDamage" để dễ đọc hơn
-                        boss.TakeDame(damageResult.damage * 75f);
-                        DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage*75f, damageResult.isCrit);
+                        boss.TakeDame(damageResult.damage );
+                        DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage, damageResult.isCrit);
                     }
                 }
-
+            }
+            if (other.CompareTag("Monster"))
+            {
+                if (Time.time >= nextDamageTime)
+                {
+                    nextDamageTime = Time.time + 1f / damageRate;
+                    PlayerController player = FindObjectOfType<PlayerController>();
+                    var dameResult = player.CalculateDamage();
+                    other.GetComponent<RatMonster>().TakeDame((dameResult.damage + player.damebonus));
+                    DamePopUpGenerator.Instance.CreatePopUp(transform.position, (dameResult.damage + player.damebonus), dameResult.isCrit);
+                }
             }
         }
     }

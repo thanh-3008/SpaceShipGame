@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa9307797919b514db9bfeeb6c9bc14d, type: 3}
-  m_Name: ProNangCapDan
+  m_Name: ThienThach
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
-  upgradeName: "Ph\xE1n Quy\u1EBFt Cu\u1ED1i C\xF9ng"
-  description: "N\xE2ng c\u1EA5p s\u1EE9c m\u1EA1nh \u0111\u1EA1n d\u01B0\u1EE3c
-    c\u1EE7a b\u1EA1n l\xEAn 1 t\u1EA7m cao m\u1EDBi"
-  icon: {fileID: -7399606007261260812, guid: 6f37fc9d9e4c33743b2c9f0e01cf0994, type: 3}
-  type: 1
-  maxChosse: 1
-  color: {r: 0.7411765, g: 0.22745098, b: 0.8509804, a: 1}
+  upgradeName: 
+  description: 
+  icon: {fileID: 0}
+  type: 0
+  maxChosse: 5
+  color: {r: 0, g: 0, b: 0, a: 0}
   upgradePro: {fileID: 0}
