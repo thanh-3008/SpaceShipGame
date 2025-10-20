@@ -1,6 +1,4 @@
-﻿
-using UnityEngine;
-using System.Collections;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
 [System.Serializable]
@@ -11,38 +9,26 @@ public struct SoundEffect
 
     [Tooltip("File âm thanh")]
     public AudioClip clip;
+    [Range(0f, 1f)] public float volume;
+    [Range(0.5f, 1.5f)] public float pitch;
+    public bool loop;
 }
 
 public class SoundEffectManager : MonoBehaviour
 {
     public static SoundEffectManager instance;
 
-    [Header("Master Audio Control")]
-    [Range(0f, 1f)]
-    [Tooltip("Âm lượng tổng của game")]
-    public float masterVolume = 1.0f;
+    [Header("Audio Source")]
+    public AudioSource sfxSource;
 
-    [Header("Music Channel")]
-    [Range(0f, 1f)]
-    [Tooltip("Âm lượng của kênh nhạc nền")]
-    public float musicVolume = 0.7f;
-    public AudioSource musicSource;
-
-    [Header("SFX Channel")]
-    [Range(0f, 1f)]
-    [Tooltip("Âm lượng của kênh hiệu ứng âm thanh")]
-    public float sfxVolume = 1.0f;
-
-    [Header("SFX Library")]
-    [Tooltip("Danh sách tất cả các hiệu ứng âm thanh trong game")]
+    [Header("Sound Effects List")]
     public List<SoundEffect> soundEffects;
 
-    private Dictionary<string, AudioClip> sfxDictionary;
-    private List<AudioSource> sfxSourcePool;
-    private int sfxPoolSize = 15; // Số lượng AudioSource tối đa cho SFX cùng lúc
+    private Dictionary<string, SoundEffect> soundEffectDictionary;
 
     void Awake()
     {
+        // Đảm bảo singleton
         if (instance == null)
         {
             instance = this;
@@ -54,24 +40,20 @@ public class SoundEffectManager : MonoBehaviour
             return;
         }
 
-        InitializeManager();
-    }
-
-    private void InitializeManager()
-    {
-        if (musicSource == null)
+        // Nếu chưa có AudioSource thì tự thêm
+        if (sfxSource == null)
         {
-            musicSource = gameObject.AddComponent<AudioSource>();
-            musicSource.loop = true; // Nhạc nền thường lặp lại
-            musicSource.playOnAwake = false;
+            sfxSource = gameObject.AddComponent<AudioSource>();
+            sfxSource.playOnAwake = false;
         }
 
-        sfxDictionary = new Dictionary<string, AudioClip>();
+        // Tạo dictionary để tra nhanh tên sound
+        soundEffectDictionary = new Dictionary<string, SoundEffect>();
         foreach (var sfx in soundEffects)
         {
             if (!string.IsNullOrEmpty(sfx.name) && !sfxDictionary.ContainsKey(sfx.name))
             {
-                sfxDictionary.Add(sfx.name, sfx.clip);
+                soundEffectDictionary.Add(sfx.name, sfx);
             }
         }
 
@@ -84,29 +66,22 @@ public class SoundEffectManager : MonoBehaviour
         }
     }
 
-    public void PlayMusic(AudioClip musicClip, float fadeDuration = 1.0f)
+    /// <summary>
+    /// Phát âm thanh theo tên
+    /// </summary>
+    public void Play(string name)
     {
-        if (musicClip == null || (musicSource.isPlaying && musicSource.clip == musicClip)) return;
-
-        StartCoroutine(FadeMusic(musicClip, fadeDuration));
-    }
-
-    public void StopMusic(float fadeDuration = 1.0f)
-    {
-        StartCoroutine(FadeOutMusic(fadeDuration));
-    }
-
-    public void PlaySFX(string name)
-    {
-        if (sfxDictionary.TryGetValue(name, out AudioClip clip))
+        if (soundEffectDictionary.TryGetValue(name, out SoundEffect sfx))
         {
-            AudioSource source = GetAvailableSfxSource();
-            if (source != null)
+            if (sfx.clip == null)
             {
-                source.clip = clip;
-                source.volume = masterVolume * sfxVolume;
-                source.Play();
+                Debug.LogWarning($"SoundEffectManager: Clip for '{name}' is missing!");
+                return;
             }
+
+            sfxSource.pitch = sfx.pitch;
+            sfxSource.loop = sfx.loop;
+            sfxSource.PlayOneShot(sfx.clip, sfx.volume);
         }
         else
         {
@@ -178,5 +153,58 @@ public class SoundEffectManager : MonoBehaviour
         }
 
         musicSource.volume = targetVolume;
+    }
+
+    /// <summary>
+    /// Dừng tất cả âm thanh hiện tại
+    /// </summary>
+    public void StopAll()
+    {
+        sfxSource.Stop();
+    }
+
+    /// <summary>
+    /// Phát ngẫu nhiên 1 sound trong danh sách
+    /// </summary>
+    public void PlayRandom()
+    {
+        if (soundEffects.Count == 0) return;
+
+        int randomIndex = Random.Range(0, soundEffects.Count);
+        var sfx = soundEffects[randomIndex];
+
+        if (sfx.clip == null)
+        {
+            Debug.LogWarning($"SoundEffectManager: Random sound missing clip at index {randomIndex}");
+            return;
+        }
+
+        sfxSource.pitch = sfx.pitch;
+        sfxSource.loop = sfx.loop;
+        sfxSource.PlayOneShot(sfx.clip, sfx.volume);
+    }
+
+    /// <summary>
+    /// Làm mờ âm thanh hiện tại dần dần (fade out)
+    /// </summary>
+    public void FadeOut(float duration = 1f)
+    {
+        StartCoroutine(FadeOutCoroutine(duration));
+    }
+
+    private System.Collections.IEnumerator FadeOutCoroutine(float duration)
+    {
+        float startVolume = sfxSource.volume;
+        float t = 0f;
+
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            sfxSource.volume = Mathf.Lerp(startVolume, 0f, t / duration);
+            yield return null;
+        }
+
+        sfxSource.Stop();
+        sfxSource.volume = startVolume;
     }
 }

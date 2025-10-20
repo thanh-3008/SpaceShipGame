@@ -18,6 +18,8 @@ TagManager:
   - KhienNangLuong
   - DongBang
   - Boss
+  - Monster
+  - AuraManagement
   layers:
   - Default
   - TransparentFX
