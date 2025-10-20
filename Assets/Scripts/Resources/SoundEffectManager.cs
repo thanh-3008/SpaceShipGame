@@ -4,7 +4,10 @@ using System.Collections.Generic;
 [System.Serializable]
 public struct SoundEffect
 {
+    [Tooltip("Tên để gọi âm thanh từ code, ví dụ: 'Player_Shoot'")]
     public string name;
+
+    [Tooltip("File âm thanh")]
     public AudioClip clip;
     [Range(0f, 1f)] public float volume;
     [Range(0.5f, 1.5f)] public float pitch;
@@ -29,11 +32,11 @@ public class SoundEffectManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); // Giữ Manager này tồn tại khi chuyển scene
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(gameObject); // Nếu đã có, hủy bản sao này
             return;
         }
 
@@ -48,10 +51,18 @@ public class SoundEffectManager : MonoBehaviour
         soundEffectDictionary = new Dictionary<string, SoundEffect>();
         foreach (var sfx in soundEffects)
         {
-            if (!soundEffectDictionary.ContainsKey(sfx.name))
+            if (!string.IsNullOrEmpty(sfx.name) && !sfxDictionary.ContainsKey(sfx.name))
             {
                 soundEffectDictionary.Add(sfx.name, sfx);
             }
+        }
+
+        sfxSourcePool = new List<AudioSource>();
+        for (int i = 0; i < sfxPoolSize; i++)
+        {
+            AudioSource source = gameObject.AddComponent<AudioSource>();
+            source.playOnAwake = false;
+            sfxSourcePool.Add(source);
         }
     }
 
@@ -74,8 +85,74 @@ public class SoundEffectManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("SoundEffectManager: Sound not found: " + name);
+            Debug.LogWarning("SoundEffectManager: Không tìm thấy SFX với tên: " + name);
         }
+    }
+
+
+    public void SetMasterVolume(float volume) { masterVolume = Mathf.Clamp01(volume); UpdateAllVolumes(); }
+    public void SetMusicVolume(float volume) { musicVolume = Mathf.Clamp01(volume); UpdateAllVolumes(); }
+    public void SetSfxVolume(float volume) { sfxVolume = Mathf.Clamp01(volume); }
+
+    private void UpdateAllVolumes()
+    {
+        musicSource.volume = masterVolume * musicVolume;
+    }
+
+
+    private AudioSource GetAvailableSfxSource()
+    {
+        foreach (var source in sfxSourcePool)
+        {
+            if (!source.isPlaying)
+            {
+                return source;
+            }
+        }
+        Debug.LogWarning("SoundEffectManager: Hết AudioSource trong pool!");
+        return null;
+    }
+
+
+    private IEnumerator FadeMusic(AudioClip newClip, float duration)
+    {
+        yield return StartCoroutine(FadeOutMusic(duration / 2));
+
+        musicSource.clip = newClip;
+        musicSource.Play();
+
+        yield return StartCoroutine(FadeInMusic(duration / 2));
+    }
+
+    private IEnumerator FadeOutMusic(float duration)
+    {
+        float startVolume = musicSource.volume;
+        float timer = 0f;
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            musicSource.volume = Mathf.Lerp(startVolume, 0, timer / duration);
+            yield return null;
+        }
+
+        musicSource.Stop();
+        musicSource.volume = startVolume; // Reset volume for next play
+    }
+
+    private IEnumerator FadeInMusic(float duration)
+    {
+        float targetVolume = masterVolume * musicVolume;
+        float timer = 0f;
+
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            musicSource.volume = Mathf.Lerp(0, targetVolume, timer / duration);
+            yield return null;
+        }
+
+        musicSource.volume = targetVolume;
     }
 
     /// <summary>
