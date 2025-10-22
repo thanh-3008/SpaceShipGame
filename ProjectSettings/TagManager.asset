@@ -19,6 +19,7 @@ TagManager:
   - DongBang
   - Boss
   - Monster
+  - AuraManagement
   layers:
   - Default
   - TransparentFX

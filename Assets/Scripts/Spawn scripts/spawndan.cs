@@ -10,7 +10,8 @@ public class spawndan : MonoBehaviour
     public AudioManagement audioManager;
     public SeraphMKII skillMKII;
     public float thoiGianChoGoc = 0.6f; // Đổi tên để rõ ràng hơn, đây là thời gian chờ gốc
-
+    public bool isLastUpgrade = false;
+    public int soLanChonNangCap = 0;
     [Header("Thông số vũ khí thông minh")]
     [Range(1, 50)]
     public int soDan = 1;
@@ -20,9 +21,7 @@ public class spawndan : MonoBehaviour
 
     [Tooltip("Mỗi viên đạn (sau viên đầu tiên) sẽ cộng thêm bao nhiêu độ vào tổng góc bắn")]
     public float gocTangMoiVienDan = 5f;
-
-    [Tooltip("Khoảng cách giữa 2 viên đạn khi bắn song song (trường hợp 2 đạn)")]
-    public float doLechKhiBanSongSong = 0.5f;
+   
 
     public float lucBan = 20f;
 
@@ -106,17 +105,10 @@ public class spawndan : MonoBehaviour
             return;
         }
 
-        // TRƯỜNG HỢP 2: BẮN 2 VIÊN SONG SONG
-        if (soDan == 2)
-        {
-            Vector2 vectorVuongGoc = new Vector2(-huongCoBan.y, huongCoBan.x) * doLechKhiBanSongSong;
-            TaoRaDan(diemBan.position + (Vector3)vectorVuongGoc, huongCoBan, gocCoBan);
-            TaoRaDan(diemBan.position - (Vector3)vectorVuongGoc, huongCoBan, gocCoBan);
-            return;
-        }
+        
 
         // TRƯỜNG HỢP 3: BẮN TỎA RA (CHO 3 VIÊN TRỞ LÊN)
-        if (soDan >= 3)
+        if (soDan >= 2)
         {
             float tongGocHienTai = Mathf.Min(gocToaToiDa, (soDan - 1) * gocTangMoiVienDan);
             float buocNhayGoc = tongGocHienTai / (soDan - 1);
@@ -141,6 +133,14 @@ public class spawndan : MonoBehaviour
         // Thường phải trừ 90 độ nếu hình ảnh viên đạn của bạn có chiều mặc định là hướng lên trên
         GameObject dan = Instantiate(danprefap, viTriSpawn, Quaternion.Euler(0, 0, gocXoay ));
 
+        if (isLastUpgrade)
+        {
+            SpriteRenderer renderer = dan.GetComponent<SpriteRenderer>();
+            if (renderer != null)
+            {
+                renderer.color = Color.red;
+            }
+        }
         // Lấy Rigidbody2D và tác dụng lực để bắn đi
         Rigidbody2D rb = dan.GetComponent<Rigidbody2D>();
         if (rb != null)
@@ -151,5 +151,20 @@ public class spawndan : MonoBehaviour
         {
             Debug.LogWarning("Prefab đạn không có Rigidbody2D!", dan);
         }
+    }
+
+    public void NangCapThemDan()
+    {
+        thoiGianChoGoc -= 0.05f;
+        soLanChonNangCap++;
+        if(soLanChonNangCap % 2 == 0)
+        {
+            soDan++;
+        }
+    }
+    public void NangCapCuoi()
+    {
+        isLastUpgrade = true;
+        soDan = 5;
     }
 }
