@@ -18,13 +18,26 @@ public class SoundEffectManager : MonoBehaviour
 {
     public static SoundEffectManager instance;
 
-    [Header("Audio Source")]
+    [Header("Audio Sources")]
     public AudioSource sfxSource;
+    public AudioSource musicSource; // <-- FIX 1: Thêm biến musicSource bị thiếu
 
     [Header("Sound Effects List")]
     public List<SoundEffect> soundEffects;
 
     private Dictionary<string, SoundEffect> soundEffectDictionary;
+
+    // --- FIX 1: Thêm các biến bị thiếu ---
+    [Header("Volume Control")]
+    [Range(0f, 1f)] private float masterVolume = 1f;
+    [Range(0f, 1f)] private float musicVolume = 1f;
+    [Range(0f, 1f)] private float sfxVolume = 1f;
+
+    [Header("SFX Object Pooling")]
+    [Tooltip("Số lượng AudioSource tạo sẵn để phát SFX")]
+    public int sfxPoolSize = 10;
+    private List<AudioSource> sfxSourcePool;
+    // ------------------------------------
 
     void Awake()
     {
@@ -47,11 +60,21 @@ public class SoundEffectManager : MonoBehaviour
             sfxSource.playOnAwake = false;
         }
 
+        // (Giả sử musicSource cũng cần được thêm nếu thiếu)
+        if (musicSource == null)
+        {
+            musicSource = gameObject.AddComponent<AudioSource>();
+            musicSource.playOnAwake = false;
+            musicSource.loop = true; // Nhạc nền thường lặp lại
+        }
+
+
         // Tạo dictionary để tra nhanh tên sound
         soundEffectDictionary = new Dictionary<string, SoundEffect>();
         foreach (var sfx in soundEffects)
         {
-            if (!string.IsNullOrEmpty(sfx.name) && !sfxDictionary.ContainsKey(sfx.name))
+            // FIX 2: Sửa lỗi gõ sai tên (sfxDictionary -> soundEffectDictionary)
+            if (!string.IsNullOrEmpty(sfx.name) && !soundEffectDictionary.ContainsKey(sfx.name))
             {
                 soundEffectDictionary.Add(sfx.name, sfx);
             }
@@ -79,9 +102,13 @@ public class SoundEffectManager : MonoBehaviour
                 return;
             }
 
+            // LƯU Ý: Code này đang dùng sfxSource chính, không dùng pool.
+            // Cân nhắc dùng GetAvailableSfxSource() để phát nhiều âm thanh cùng lúc.
             sfxSource.pitch = sfx.pitch;
             sfxSource.loop = sfx.loop;
-            sfxSource.PlayOneShot(sfx.clip, sfx.volume);
+
+            // Áp dụng volume tổng
+            sfxSource.PlayOneShot(sfx.clip, sfx.volume * sfxVolume * masterVolume);
         }
         else
         {
@@ -92,11 +119,17 @@ public class SoundEffectManager : MonoBehaviour
 
     public void SetMasterVolume(float volume) { masterVolume = Mathf.Clamp01(volume); UpdateAllVolumes(); }
     public void SetMusicVolume(float volume) { musicVolume = Mathf.Clamp01(volume); UpdateAllVolumes(); }
-    public void SetSfxVolume(float volume) { sfxVolume = Mathf.Clamp01(volume); }
+    public void SetSfxVolume(float volume)
+    {
+        sfxVolume = Mathf.Clamp01(volume);
+        // LƯU Ý: Cần cập nhật cả volume của sfxSource và các source trong pool ở đây
+        sfxSource.volume = sfxVolume * masterVolume;
+    }
 
     private void UpdateAllVolumes()
     {
         musicSource.volume = masterVolume * musicVolume;
+        sfxSource.volume = sfxVolume * masterVolume;
     }
 
 
@@ -110,11 +143,12 @@ public class SoundEffectManager : MonoBehaviour
             }
         }
         Debug.LogWarning("SoundEffectManager: Hết AudioSource trong pool!");
-        return null;
+        return null; // Trả về null nếu hết pool
     }
 
 
-    private IEnumerator FadeMusic(AudioClip newClip, float duration)
+    // FIX 3: Chỉ định rõ System.Collections.IEnumerator cho Coroutine
+    private System.Collections.IEnumerator FadeMusic(AudioClip newClip, float duration)
     {
         yield return StartCoroutine(FadeOutMusic(duration / 2));
 
@@ -124,7 +158,8 @@ public class SoundEffectManager : MonoBehaviour
         yield return StartCoroutine(FadeInMusic(duration / 2));
     }
 
-    private IEnumerator FadeOutMusic(float duration)
+    // FIX 3: Chỉ định rõ System.Collections.IEnumerator cho Coroutine
+    private System.Collections.IEnumerator FadeOutMusic(float duration)
     {
         float startVolume = musicSource.volume;
         float timer = 0f;
@@ -140,10 +175,13 @@ public class SoundEffectManager : MonoBehaviour
         musicSource.volume = startVolume; // Reset volume for next play
     }
 
-    private IEnumerator FadeInMusic(float duration)
+    // FIX 3: Chỉ định rõ System.Collections.IEnumerator cho Coroutine
+    private System.Collections.IEnumerator FadeInMusic(float duration)
     {
         float targetVolume = masterVolume * musicVolume;
         float timer = 0f;
+        musicSource.volume = 0; // Bắt đầu từ 0
+        musicSource.Play(); // Đảm bảo nó đang Play (nếu bị Stop ở FadeOut)
 
         while (timer < duration)
         {
@@ -156,11 +194,16 @@ public class SoundEffectManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Dừng tất cả âm thanh hiện tại
+    /// Dừng tất cả âm thanh hiệu ứng (SFX)
     /// </summary>
     public void StopAll()
     {
         sfxSource.Stop();
+        // Bạn cũng nên dừng tất cả các source trong pool
+        foreach (var source in sfxSourcePool)
+        {
+            source.Stop();
+        }
     }
 
     /// <summary>
@@ -181,7 +224,7 @@ public class SoundEffectManager : MonoBehaviour
 
         sfxSource.pitch = sfx.pitch;
         sfxSource.loop = sfx.loop;
-        sfxSource.PlayOneShot(sfx.clip, sfx.volume);
+        sfxSource.PlayOneShot(sfx.clip, sfx.volume * sfxVolume * masterVolume);
     }
 
     /// <summary>
@@ -192,6 +235,7 @@ public class SoundEffectManager : MonoBehaviour
         StartCoroutine(FadeOutCoroutine(duration));
     }
 
+    // Hàm này đã đúng (dùng System.Collections.IEnumerator)
     private System.Collections.IEnumerator FadeOutCoroutine(float duration)
     {
         float startVolume = sfxSource.volume;
