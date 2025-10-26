@@ -1,8 +1,8 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq; // <-- ADDED: Cần thiết cho việc lọc danh sách
 
 public class UpgradeManagement : MonoBehaviour
 {
@@ -17,18 +17,25 @@ public class UpgradeManagement : MonoBehaviour
     public Image imgPanel1, imgPanel2, imgPanel3;
     public Button btn1, btn2, btn3;
 
-    private Dictionary<UpgradeData,int> soUpgradesDangCo = new Dictionary<UpgradeData, int>();
+    private Dictionary<UpgradeData, int> soUpgradesDangCo = new Dictionary<UpgradeData, int>();
 
     private PlayerLevel playerLevel;
     private List<UpgradeData> selectUpgrade;
     private PlayerController playerController;
     private SpawnSuriken spawnSuriken;
     private int soLanChonStat = 0;
-    private int soLanChonSkill = 0;  
+    private int soLanChonSkill = 0;
     private GameObject tauTuanTra;
     private SpawnTauTuanTra spawnTauTuanTra;
     public GameObject StarManagement1, StarManagement2, StarManagement3;
     public GameObject StarPro1, StarPro2, StarPro3;
+
+    // --- ADDED: Biến điều chỉnh tỉ lệ ưu tiên ---
+    [Tooltip("Tỉ lệ (0.0 - 1.0) ưu tiên chọn kỹ năng đã sở hữu.")]
+    [Range(0f, 1f)]
+    public float ownedSkillBiasChance = 0.6f; // 70% cơ hội
+    // ------------------------------------------
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -43,7 +50,7 @@ public class UpgradeManagement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void CheckUpgrade(UpgradeData selectCurrentUpgarade)
     {
@@ -74,7 +81,7 @@ public class UpgradeManagement : MonoBehaviour
 
     public void UpgradeCardUI(int cardIndex, UpgradeData upgradeData)
     {
-        switch(cardIndex)
+        switch (cardIndex)
         {
             case 0:
                 StarManagement1.SetActive(false);
@@ -85,12 +92,12 @@ public class UpgradeManagement : MonoBehaviour
                 imgPanel1.color = upgradeData.color;
                 btn1.onClick.RemoveAllListeners();
                 btn1.onClick.AddListener(() => SelectUpgrade(0));
-                if(upgradeData.type == UpgradeType.Normal)
+                if (upgradeData.type == UpgradeType.Normal)
                 {
                     StarManagement1.SetActive(true);
                     StarManagement1.GetComponent<StarManagement>().HienThiStar(soUpgradesDangCo.ContainsKey(upgradeData) ? soUpgradesDangCo[upgradeData] : 0);
                 }
-                if(upgradeData.type == UpgradeType.Pro)
+                if (upgradeData.type == UpgradeType.Pro)
                 {
                     StarPro1.SetActive(true);
                 }
@@ -126,7 +133,7 @@ public class UpgradeManagement : MonoBehaviour
                 if (upgradeData.type == UpgradeType.Normal)
                 {
                     StarManagement3.SetActive(true);
-                    StarManagement3.GetComponent<StarManagement>().HienThiStar(soUpgradesDangCo.ContainsKey(upgradeData) ? soUpgradesDangCo[upgradeData]:0);
+                    StarManagement3.GetComponent<StarManagement>().HienThiStar(soUpgradesDangCo.ContainsKey(upgradeData) ? soUpgradesDangCo[upgradeData] : 0);
                 }
                 if (upgradeData.type == UpgradeType.Pro)
                 {
@@ -136,6 +143,40 @@ public class UpgradeManagement : MonoBehaviour
         }
     }
 
+    // --- ADDED: Hàm trợ giúp để chọn kỹ năng có ưu tiên ---
+    private UpgradeData GetBiasedSkill(List<UpgradeData> availableSkills)
+    {
+        // 1. Tìm các kỹ năng vừa có sẵn VÀ người chơi đã sở hữu
+        List<UpgradeData> ownedAvailableSkills = availableSkills
+            .Where(skill => soUpgradesDangCo.ContainsKey(skill))
+            .ToList();
+
+        // 2. Quyết định xem có chọn từ danh sách ưu tiên hay không
+        bool pickFromOwned = false;
+        if (ownedAvailableSkills.Count > 0 && Random.value < ownedSkillBiasChance)
+        {
+            // Random.value trả về một số float từ 0.0 đến 1.0
+            pickFromOwned = true;
+        }
+
+        // 3. Chọn kỹ năng
+        if (pickFromOwned)
+        {
+            // Lấy ngẫu nhiên từ danh sách ĐÃ SỞ HỮU
+            int randomIndex = Random.Range(0, ownedAvailableSkills.Count);
+            return ownedAvailableSkills[randomIndex];
+        }
+        else
+        {
+            // Lấy ngẫu nhiên từ danh sách ĐẦY ĐỦ
+            // (Cũng xử lý trường hợp ownedAvailableSkills.Count == 0)
+            int randomIndex = Random.Range(0, availableSkills.Count);
+            return availableSkills[randomIndex];
+        }
+    }
+    // ----------------------------------------------------
+
+
     public List<UpgradeData> getRandomUpgrade(int count)
     {
 
@@ -143,9 +184,9 @@ public class UpgradeManagement : MonoBehaviour
         List<UpgradeData> upgradeSkillAvailable = new List<UpgradeData>(skillUpgrades);
         List<UpgradeData> upgradeNormalAvailable = new List<UpgradeData>(this.normalUpgrades);
         List<UpgradeData> selectedUpgrades = new List<UpgradeData>();
-        for (int i = 0;i < count ; i++)
+        for (int i = 0; i < count; i++)
         {
-            if(upgradeStatsAvailable.Count == 0 && upgradeSkillAvailable.Count==0)
+            if (upgradeStatsAvailable.Count == 0 && upgradeSkillAvailable.Count == 0)
             {
                 break;
             }
@@ -173,13 +214,15 @@ public class UpgradeManagement : MonoBehaviour
                 }
 
             }
-            else if(randomIndex == 0 && soLanChonStat >=2)
+            else if (randomIndex == 0 && soLanChonStat >= 2)
             {
                 if (upgradeSkillAvailable.Count != 0)
                 {
-                    int randomSkillIndex = Random.Range(0, upgradeSkillAvailable.Count);
-                    selectedUpgrades.Add(upgradeSkillAvailable[randomSkillIndex]);
-                    upgradeSkillAvailable.RemoveAt(randomSkillIndex);
+                    // --- MODIFIED: Sử dụng logic ưu tiên ---
+                    UpgradeData chosenSkill = GetBiasedSkill(upgradeSkillAvailable);
+                    selectedUpgrades.Add(chosenSkill);
+                    upgradeSkillAvailable.Remove(chosenSkill); // Xóa theo đối tượng
+                    // ------------------------------------
                     soLanChonSkill++;
                 }
                 else
@@ -193,9 +236,11 @@ public class UpgradeManagement : MonoBehaviour
             {
                 if (upgradeSkillAvailable.Count != 0)
                 {
-                    int randomSkillIndex = Random.Range(0, upgradeSkillAvailable.Count);
-                    selectedUpgrades.Add(upgradeSkillAvailable[randomSkillIndex]);
-                    upgradeSkillAvailable.RemoveAt(randomSkillIndex);
+                    // --- MODIFIED: Sử dụng logic ưu tiên ---
+                    UpgradeData chosenSkill = GetBiasedSkill(upgradeSkillAvailable);
+                    selectedUpgrades.Add(chosenSkill);
+                    upgradeSkillAvailable.Remove(chosenSkill); // Xóa theo đối tượng
+                    // ------------------------------------
                     soLanChonSkill++;
                 }
                 else
@@ -205,7 +250,7 @@ public class UpgradeManagement : MonoBehaviour
                     upgradeNormalAvailable.RemoveAt(RandomNormalUpgrade);
                 }
             }
-            else if(randomIndex == 1 && soLanChonSkill >= 2)
+            else if (randomIndex == 1 && soLanChonSkill >= 2)
             {
                 if (upgradeStatsAvailable.Count != 0)
                 {
@@ -229,9 +274,9 @@ public class UpgradeManagement : MonoBehaviour
 
     public void OnClickSelectUpgrades(UpgradeData selectUpgrade)
     {
-       int currenCount = soUpgradesDangCo.ContainsKey(selectUpgrade) ? soUpgradesDangCo[selectUpgrade] : 0;
+        int currenCount = soUpgradesDangCo.ContainsKey(selectUpgrade) ? soUpgradesDangCo[selectUpgrade] : 0;
 
-        if (currenCount == selectUpgrade.maxChosse )
+        if (currenCount == selectUpgrade.maxChosse)
         {
             if (skillUpgrades.Contains(selectUpgrade))
             {
@@ -249,7 +294,7 @@ public class UpgradeManagement : MonoBehaviour
                     statsUpgrades.Add(selectUpgrade.upgradePro);
                 }
             }
-        }    
+        }
     }
     public void SelectUpgrade(int index)
     {
@@ -329,7 +374,7 @@ public class UpgradeManagement : MonoBehaviour
             }
             else if (selectedUpgrade.upgradeName == "Aura Farming")
             {
-               if(soUpgradesDangCo[selectedUpgrade] > 1)
+                if (soUpgradesDangCo[selectedUpgrade] > 1)
                 {
                     GameObject auraManagementObj = GameObject.FindGameObjectWithTag("AuraManagement");
                     AuraManagement auraManagement = auraManagementObj.GetComponent<AuraManagement>();
@@ -359,10 +404,10 @@ public class UpgradeManagement : MonoBehaviour
                 spawndan spawnDan = playerController.GetComponentInChildren<spawndan>();
                 spawnDan.NangCapCuoi();
             }
-            else if(selectedUpgrade.upgradeName == "Thiên Phạt")
+            else if (selectedUpgrade.upgradeName == "Thiên Phạt")
             {
                 if (soUpgradesDangCo[selectedUpgrade] > 1)
-                {                   
+                {
                     SpawnKyNangThienThach spawnKyNangThienThach = playerController.GetComponentInChildren<SpawnKyNangThienThach>();
                     spawnKyNangThienThach.NangCap();
 
@@ -379,6 +424,23 @@ public class UpgradeManagement : MonoBehaviour
                 SpawnKyNangThienThach spawnKyNangThienThach = playerController.GetComponentInChildren<SpawnKyNangThienThach>();
                 spawnKyNangThienThach.NangCapCuoi();
             }
+            else if (selectedUpgrade.upgradeName == "Trợ Thủ Tinh Anh") // Tên bạn đặt cho skill
+            {
+                if (soUpgradesDangCo[selectedUpgrade] > 1)
+                {
+                    // Nâng cấp các lần sau
+                    playerController.NangCapTroThu();
+                }
+                else
+                {
+                    // Lần đầu tiên chọn
+                    playerController.KichHoatTroThu();
+                }
+            }
+            else if (selectedUpgrade.upgradeName == "Song Sinh Sát Thủ") // Tên nâng cấp Pro
+            {
+                playerController.KichHoatTroThuCuoi();
+            }
 
             else
             {
@@ -387,8 +449,8 @@ public class UpgradeManagement : MonoBehaviour
 
 
             panelUpgrade.SetActive(false);
-                Time.timeScale = 1f;
-            
+            Time.timeScale = 1f;
+
         }
     }
 }

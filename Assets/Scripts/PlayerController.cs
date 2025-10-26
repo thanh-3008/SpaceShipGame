@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public GameObject danprefap;
 
     [Header("Chỉ số Tấn Công")]
-    public float damehientai => damegoc*damecongthem;
+    public float damehientai => damegoc * damecongthem;
     public float damegoc;
     public float damecongthem = 1f;
     public float damebonus = 1f;
@@ -50,16 +50,26 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Chỉ số giáp giúp giảm sát thương nhận vào")]
     public float Giap;
 
+    // --- ADDED: Code cho Trợ thủ ---
+    [Header("Quan Ly Tro Thu")]
+    public GameObject troThu_1; // Kéo object TroThu_1 vào đây
+    public GameObject troThu_2; // Kéo object TroThu_2 vào đây
+
+    private TroThuController controller1;
+    private TroThuController controller2;
+    // -------------------------------
+
+
     // ... (Hàm Start() và các hàm khác giữ nguyên) ...
     #region Auto-Find and Lifecycle Methods
-    public void Start()
+    public void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        #region Auto-Find Components
-        // --- Tìm ThanhMau ---
-        if (thanhmau == null)
+        #region Auto-Find Components
+        // --- Tìm ThanhMau ---
+        if (thanhmau == null)
         {
             Debug.Log("Searching for 'ThanhMau' component...");
             GameObject obj = GameObject.Find("ThanhMau");
@@ -81,8 +91,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // --- Tìm TextMeshPro cho Score ---
-        if (textScore == null)
+        // --- Tìm TextMeshPro cho Score ---
+        if (textScore == null)
         {
             Debug.Log("Searching for 'Score' component...");
             GameObject obj = GameObject.Find("Score");
@@ -104,8 +114,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // --- Tìm TextMeshPro cho SoTenLua ---
-        if (soTenLuaText == null)
+        // --- Tìm TextMeshPro cho SoTenLua ---
+        if (soTenLuaText == null)
         {
             Debug.Log("Searching for 'SoTenLua' component...");
             GameObject obj = GameObject.Find("SoTenLua");
@@ -127,8 +137,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // --- Tìm các Spawner ---
-        if (spawndan == null || spawndan.Length == 0)
+        // --- Tìm các Spawner ---
+        if (spawndan == null || spawndan.Length == 0)
         {
             Debug.Log("Searching for GameObjects with tag 'spawndan'...");
             spawndan = GameObject.FindGameObjectsWithTag("spawndan");
@@ -156,8 +166,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // --- Tìm AudioManagement ---
-        if (audioManager == null)
+        // --- Tìm AudioManagement ---
+        if (audioManager == null)
         {
             Debug.Log("Searching for 'AudioManagement' component...");
             GameObject obj = GameObject.Find("AudioManagement");
@@ -179,8 +189,8 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // --- Tìm ThanhNo ---
-        if (thanhno == null)
+        // --- Tìm ThanhNo ---
+        if (thanhno == null)
         {
             Debug.Log("Searching for 'ThanhNo' component...");
             GameObject obj = GameObject.Find("ThanhNo");
@@ -201,8 +211,30 @@ public class PlayerController : MonoBehaviour
                 Debug.LogError("Could not find GameObject named 'ThanhNo' in the scene.");
             }
         }
-        #endregion
-    }
+        #endregion
+
+        // --- ADDED: Logic khởi tạo Trợ thủ ---
+        if (troThu_1 != null)
+        {
+            controller1 = troThu_1.GetComponent<TroThuController>();
+            troThu_1.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("Chưa gán 'TroThu_1' vào PlayerController!");
+        }
+
+        if (troThu_2 != null)
+        {
+            controller2 = troThu_2.GetComponent<TroThuController>();
+            troThu_2.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("Chưa gán 'TroThu_2' vào PlayerController!");
+        }
+        // ------------------------------------
+    }
 
     void Update()
     {
@@ -219,15 +251,15 @@ public class PlayerController : MonoBehaviour
 
         rigidbody2D.linearVelocity = new Vector2(traiphai * speed, lenxuong * speed);
 
-        // Hồi thanh nộ
-        if (thanhNoHienTai <= thanhNoToiDa * 3)
+        // Hồi thanh nộ
+        if (thanhNoHienTai <= thanhNoToiDa * 3)
         {
             thanhNoHienTai += 2f * Time.deltaTime;
             thanhno.capnhatthanhno(thanhNoHienTai, thanhNoToiDa);
         }
 
-        // Xử lý nghiêng tàu khi di chuyển
-        float gocMucTieu = -traiphai * gocNghiengToiDa;
+        // Xử lý nghiêng tàu khi di chuyển
+        float gocMucTieu = -traiphai * gocNghiengToiDa;
         Quaternion gocXoayMucTieu = Quaternion.Euler(0, 0, gocMucTieu);
         transform.rotation = Quaternion.Lerp(transform.rotation, gocXoayMucTieu, tocDoNghieng * Time.deltaTime);
     }
@@ -269,7 +301,7 @@ public class PlayerController : MonoBehaviour
             float reducedDamage = damageSauKhiGiamTru / 4;
             Debug.Log("Kim cang bất hoại giảm dame: " + reducedDamage);
             thanhmauhientai -= reducedDamage;
-            DamePopUpGenerator.Instance.CreateHealthLossPopUp(transform.position,reducedDamage);
+            DamePopUpGenerator.Instance.CreateHealthLossPopUp(transform.position, reducedDamage);
         }
         else
         {
@@ -290,7 +322,7 @@ public class PlayerController : MonoBehaviour
 
     // ... (Các hàm còn lại giữ nguyên) ...
     #region Other Methods
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         int sotenlua = int.Parse(soTenLuaText.text);
 
@@ -353,7 +385,7 @@ public class PlayerController : MonoBehaviour
     public void StartFlashRed()
     {
         StopCoroutine("FlashRed"); // Dừng coroutine cũ nếu đang chạy
-        StartCoroutine(FlashRedCoroutine(timeFlash));
+        StartCoroutine(FlashRedCoroutine(timeFlash));
     }
 
     private IEnumerator FlashRedCoroutine(float thoigianduytri)
@@ -368,7 +400,7 @@ public class PlayerController : MonoBehaviour
             elapsedTime += 0.2f;
         }
         spriteRenderer.color = Color.white; // Đảm bảo màu trở lại bình thường
-    }
+    }
 
     void LateUpdate()
     {
@@ -377,5 +409,42 @@ public class PlayerController : MonoBehaviour
         float clampedY = Mathf.Clamp(currentPosition.y, -4.5f, 4.5f);
         transform.position = new Vector3(clampedX, clampedY, currentPosition.z);
     }
+
+    // --- ADDED: BA HAM MOI DE UPGRADEMANAGEMENT GOI ---
+
+    // Lần đầu chọn skill: Bật con trợ thủ 1 lên
+    public void KichHoatTroThu()
+    {
+        if (troThu_1 != null)
+        {
+            troThu_1.SetActive(true);
+        }
+    }
+
+    // Những lần sau: Nâng cấp cả 2 con nếu chúng đang bật
+    public void NangCapTroThu()
+    {
+        if (controller1 != null && troThu_1.activeSelf)
+        {
+            controller1.NangCapTroThu();
+        }
+        if (controller2 != null && troThu_2.activeSelf)
+        {
+            controller2.NangCapTroThu();
+        }
+    }
+
+    // Nâng cấp cuối: Bật con trợ thủ 2 và cho nó level = con 1
+    public void KichHoatTroThuCuoi()
+    {
+        if (troThu_2 != null && controller1 != null && controller2 != null)
+        {
+            troThu_2.SetActive(true);
+            // Copy level của con 1 cho con 2
+            controller2.SetLevel(controller1.GetCurrentLevel());
+        }
+    }
+    // ---------------------------------------------------
+
     #endregion
 }

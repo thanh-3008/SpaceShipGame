@@ -20,6 +20,7 @@ TagManager:
   - Boss
   - Monster
   - AuraManagement
+  - SpawnThienThachManagement
   layers:
   - Default
   - TransparentFX

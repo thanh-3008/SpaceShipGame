@@ -57,6 +57,10 @@ public class RatMonster : MonoBehaviour
         {
             playerInRange = true;
         }
+        if (collision.CompareTag("TauMe"))
+        {
+            Die();
+        }
     }
 
     // Khi người chơi THOÁT KHỎI vùng trigger
