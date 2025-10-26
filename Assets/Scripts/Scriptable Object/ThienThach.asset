@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9307797919b514db9bfeeb6c9bc14d, type: 3}
   m_Name: ThienThach
   m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
-  upgradeName: 
-  description: 
-  icon: {fileID: 0}
+  upgradeName: "Thi\xEAn Ph\u1EA1t"
+  description: "B\u1EAFn ra thi\xEAn th\u1EA1ch \u0111\u1EBFn k\u1EBB \u0111\u1ECBch
+    g\u1EA7n nh\u1EA5t"
+  icon: {fileID: -4485901871609500772, guid: c9fa5e96f90baa547b862a7f7480a3e8, type: 3}
   type: 0
   maxChosse: 5
-  color: {r: 0, g: 0, b: 0, a: 0}
-  upgradePro: {fileID: 0}
+  color: {r: 1, g: 0.8392157, b: 0, a: 1}
+  upgradePro: {fileID: 11400000, guid: 5d26d514300c6b840ba2ae00e5e27c37, type: 2}

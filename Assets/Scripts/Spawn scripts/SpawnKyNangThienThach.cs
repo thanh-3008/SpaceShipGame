@@ -26,7 +26,7 @@ public class SpawnKyNangThienThach : MonoBehaviour
     private bool isUpgradedCuoi = false;
 
     // Tham chiếu đến Player
-    private PlayerController playerController;
+    public PlayerController playerController;
 
     void Awake()
     { // <-- ĐÃ XÓA CHỮ 'D' BỊ LỖI

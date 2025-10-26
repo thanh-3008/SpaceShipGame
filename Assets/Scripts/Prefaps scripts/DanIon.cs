@@ -13,11 +13,7 @@ public class DanIon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.up * speed * Time.deltaTime);
-        if (transform.position.y > 6f)
-        {
-            Destroy(gameObject);
-        }
+        
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
