@@ -1,0 +1,4446 @@
+fileFormatVersion: 2
+guid: b6b694c2d8d34fc4e88813ac4b7484aa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4944806971006099331
+    second: "ta\u0309i xu\xF4\u0301ng_0"
+  - first:
+      213: 4055877914864408592
+    second: "ta\u0309i xu\xF4\u0301ng_1"
+  - first:
+      213: 5452391377979308408
+    second: "ta\u0309i xu\xF4\u0301ng_2"
+  - first:
+      213: 6462242682206257600
+    second: "ta\u0309i xu\xF4\u0301ng_3"
+  - first:
+      213: 3194595370428170178
+    second: "ta\u0309i xu\xF4\u0301ng_4"
+  - first:
+      213: -1670653000343595769
+    second: "ta\u0309i xu\xF4\u0301ng_5"
+  - first:
+      213: 111362737811745899
+    second: "ta\u0309i xu\xF4\u0301ng_6"
+  - first:
+      213: 627970096692529966
+    second: "ta\u0309i xu\xF4\u0301ng_7"
+  - first:
+      213: -8883778651993646164
+    second: "ta\u0309i xu\xF4\u0301ng_8"
+  - first:
+      213: 2422061434739923676
+    second: "ta\u0309i xu\xF4\u0301ng_9"
+  - first:
+      213: 8513753631222372333
+    second: "ta\u0309i xu\xF4\u0301ng_10"
+  - first:
+      213: -4157718295748594607
+    second: "ta\u0309i xu\xF4\u0301ng_11"
+  - first:
+      213: 30845144468672181
+    second: "ta\u0309i xu\xF4\u0301ng_12"
+  - first:
+      213: 861193022986525247
+    second: "ta\u0309i xu\xF4\u0301ng_13"
+  - first:
+      213: 6059493148446165426
+    second: "ta\u0309i xu\xF4\u0301ng_14"
+  - first:
+      213: 2471889799952005113
+    second: "ta\u0309i xu\xF4\u0301ng_15"
+  - first:
+      213: -8982448517596321146
+    second: "ta\u0309i xu\xF4\u0301ng_16"
+  - first:
+      213: -8493926254273242864
+    second: "ta\u0309i xu\xF4\u0301ng_17"
+  - first:
+      213: -4142081731107925673
+    second: "ta\u0309i xu\xF4\u0301ng_18"
+  - first:
+      213: 7156839325587047903
+    second: "ta\u0309i xu\xF4\u0301ng_19"
+  - first:
+      213: -2472555869101088191
+    second: "ta\u0309i xu\xF4\u0301ng_20"
+  - first:
+      213: 1267254935047657808
+    second: "ta\u0309i xu\xF4\u0301ng_21"
+  - first:
+      213: -7495923537305636180
+    second: "ta\u0309i xu\xF4\u0301ng_22"
+  - first:
+      213: -3021797901618675901
+    second: "ta\u0309i xu\xF4\u0301ng_23"
+  - first:
+      213: 6220856558159739135
+    second: "ta\u0309i xu\xF4\u0301ng_24"
+  - first:
+      213: 997613994517546559
+    second: "ta\u0309i xu\xF4\u0301ng_25"
+  - first:
+      213: 4438746380002919543
+    second: "ta\u0309i xu\xF4\u0301ng_26"
+  - first:
+      213: 829262094923969317
+    second: "ta\u0309i xu\xF4\u0301ng_27"
+  - first:
+      213: 4801005028513281470
+    second: "ta\u0309i xu\xF4\u0301ng_28"
+  - first:
+      213: 6426221018360659180
+    second: "ta\u0309i xu\xF4\u0301ng_29"
+  - first:
+      213: -2820405293196138395
+    second: "ta\u0309i xu\xF4\u0301ng_30"
+  - first:
+      213: 7164856965066815574
+    second: "ta\u0309i xu\xF4\u0301ng_31"
+  - first:
+      213: -3443443247446898167
+    second: "ta\u0309i xu\xF4\u0301ng_32"
+  - first:
+      213: 7713607232643280193
+    second: "ta\u0309i xu\xF4\u0301ng_33"
+  - first:
+      213: -4503146283037533767
+    second: "ta\u0309i xu\xF4\u0301ng_34"
+  - first:
+      213: 7761035658865673654
+    second: "ta\u0309i xu\xF4\u0301ng_35"
+  - first:
+      213: 4899695145329576432
+    second: "ta\u0309i xu\xF4\u0301ng_36"
+  - first:
+      213: 3727149430393795078
+    second: "ta\u0309i xu\xF4\u0301ng_37"
+  - first:
+      213: -7268990883234293965
+    second: "ta\u0309i xu\xF4\u0301ng_38"
+  - first:
+      213: -6929808860748430297
+    second: "ta\u0309i xu\xF4\u0301ng_39"
+  - first:
+      213: 2526245876700340127
+    second: "ta\u0309i xu\xF4\u0301ng_40"
+  - first:
+      213: 7507941590625816221
+    second: "ta\u0309i xu\xF4\u0301ng_41"
+  - first:
+      213: 1021910017535090153
+    second: "ta\u0309i xu\xF4\u0301ng_42"
+  - first:
+      213: 9136622535322404645
+    second: "ta\u0309i xu\xF4\u0301ng_43"
+  - first:
+      213: -125696127309646647
+    second: "ta\u0309i xu\xF4\u0301ng_44"
+  - first:
+      213: -4951147064217237546
+    second: "ta\u0309i xu\xF4\u0301ng_45"
+  - first:
+      213: -5299217731143565654
+    second: "ta\u0309i xu\xF4\u0301ng_46"
+  - first:
+      213: -4503354891442763989
+    second: "ta\u0309i xu\xF4\u0301ng_47"
+  - first:
+      213: -6880927029451346383
+    second: "ta\u0309i xu\xF4\u0301ng_48"
+  - first:
+      213: -1223108764447943229
+    second: "ta\u0309i xu\xF4\u0301ng_49"
+  - first:
+      213: 2259518366555524398
+    second: "ta\u0309i xu\xF4\u0301ng_50"
+  - first:
+      213: -2806927759518935162
+    second: "ta\u0309i xu\xF4\u0301ng_51"
+  - first:
+      213: -2736309581627979187
+    second: "ta\u0309i xu\xF4\u0301ng_52"
+  - first:
+      213: 8649175544313100181
+    second: "ta\u0309i xu\xF4\u0301ng_53"
+  - first:
+      213: -5928538061638013584
+    second: "ta\u0309i xu\xF4\u0301ng_54"
+  - first:
+      213: -5209734132698607924
+    second: "ta\u0309i xu\xF4\u0301ng_55"
+  - first:
+      213: -7263249384700095492
+    second: "ta\u0309i xu\xF4\u0301ng_56"
+  - first:
+      213: -2689601251070589934
+    second: "ta\u0309i xu\xF4\u0301ng_57"
+  - first:
+      213: -6050885714273171774
+    second: "ta\u0309i xu\xF4\u0301ng_58"
+  - first:
+      213: 3259541357894084135
+    second: "ta\u0309i xu\xF4\u0301ng_59"
+  - first:
+      213: 6943549822487928858
+    second: "ta\u0309i xu\xF4\u0301ng_60"
+  - first:
+      213: -4523737462902234481
+    second: "ta\u0309i xu\xF4\u0301ng_61"
+  - first:
+      213: -5521368046853665283
+    second: "ta\u0309i xu\xF4\u0301ng_62"
+  - first:
+      213: 6020325890528776133
+    second: "ta\u0309i xu\xF4\u0301ng_63"
+  - first:
+      213: -1147036612024866343
+    second: "ta\u0309i xu\xF4\u0301ng_64"
+  - first:
+      213: 1169216294732198288
+    second: "ta\u0309i xu\xF4\u0301ng_65"
+  - first:
+      213: 7858397079796317208
+    second: "ta\u0309i xu\xF4\u0301ng_66"
+  - first:
+      213: 6159913731858169586
+    second: "ta\u0309i xu\xF4\u0301ng_67"
+  - first:
+      213: 1652283897339505895
+    second: "ta\u0309i xu\xF4\u0301ng_68"
+  - first:
+      213: 4814097979505909221
+    second: "ta\u0309i xu\xF4\u0301ng_69"
+  - first:
+      213: 8005913925475171990
+    second: "ta\u0309i xu\xF4\u0301ng_70"
+  - first:
+      213: 4284735883857786408
+    second: "ta\u0309i xu\xF4\u0301ng_71"
+  - first:
+      213: -1662805376250192295
+    second: "ta\u0309i xu\xF4\u0301ng_72"
+  - first:
+      213: -3835004106575705380
+    second: "ta\u0309i xu\xF4\u0301ng_73"
+  - first:
+      213: -4567796081655626626
+    second: "ta\u0309i xu\xF4\u0301ng_74"
+  - first:
+      213: -1954159834358122809
+    second: "ta\u0309i xu\xF4\u0301ng_75"
+  - first:
+      213: 3120593022302329035
+    second: "ta\u0309i xu\xF4\u0301ng_76"
+  - first:
+      213: -3913880350486454659
+    second: "ta\u0309i xu\xF4\u0301ng_77"
+  - first:
+      213: 8678816364563465615
+    second: "ta\u0309i xu\xF4\u0301ng_78"
+  - first:
+      213: -1899876072508966736
+    second: "ta\u0309i xu\xF4\u0301ng_79"
+  - first:
+      213: -5494718998494998536
+    second: "ta\u0309i xu\xF4\u0301ng_80"
+  - first:
+      213: -1455316072810358938
+    second: "ta\u0309i xu\xF4\u0301ng_81"
+  - first:
+      213: 8644791812053836681
+    second: "ta\u0309i xu\xF4\u0301ng_82"
+  - first:
+      213: 5863118865872350333
+    second: "ta\u0309i xu\xF4\u0301ng_83"
+  - first:
+      213: -2616126570864763550
+    second: "ta\u0309i xu\xF4\u0301ng_84"
+  - first:
+      213: 5973752859525138438
+    second: "ta\u0309i xu\xF4\u0301ng_85"
+  - first:
+      213: 7644227519771755948
+    second: "ta\u0309i xu\xF4\u0301ng_86"
+  - first:
+      213: 1562009486813794943
+    second: "ta\u0309i xu\xF4\u0301ng_87"
+  - first:
+      213: 6729064141121759327
+    second: "ta\u0309i xu\xF4\u0301ng_88"
+  - first:
+      213: -571122425720784873
+    second: "ta\u0309i xu\xF4\u0301ng_89"
+  - first:
+      213: 3078164141459963697
+    second: "ta\u0309i xu\xF4\u0301ng_90"
+  - first:
+      213: -687583875396801614
+    second: "ta\u0309i xu\xF4\u0301ng_91"
+  - first:
+      213: -8192966350889749470
+    second: "ta\u0309i xu\xF4\u0301ng_92"
+  - first:
+      213: -8969981578680549019
+    second: "ta\u0309i xu\xF4\u0301ng_93"
+  - first:
+      213: 2100556325064531640
+    second: "ta\u0309i xu\xF4\u0301ng_94"
+  - first:
+      213: 6325821785344005081
+    second: "ta\u0309i xu\xF4\u0301ng_95"
+  - first:
+      213: -2258312848082272579
+    second: "ta\u0309i xu\xF4\u0301ng_96"
+  - first:
+      213: 7890129005763128121
+    second: "ta\u0309i xu\xF4\u0301ng_97"
+  - first:
+      213: -8405374067885842113
+    second: "ta\u0309i xu\xF4\u0301ng_98"
+  - first:
+      213: -7381519353379390349
+    second: "ta\u0309i xu\xF4\u0301ng_99"
+  - first:
+      213: 1480068073622970006
+    second: "ta\u0309i xu\xF4\u0301ng_100"
+  - first:
+      213: 4409391547670863332
+    second: "ta\u0309i xu\xF4\u0301ng_101"
+  - first:
+      213: -5958676384808105441
+    second: "ta\u0309i xu\xF4\u0301ng_102"
+  - first:
+      213: 1956866244613985104
+    second: "ta\u0309i xu\xF4\u0301ng_103"
+  - first:
+      213: 4927478909689058851
+    second: "ta\u0309i xu\xF4\u0301ng_104"
+  - first:
+      213: 7579612208528916972
+    second: "ta\u0309i xu\xF4\u0301ng_105"
+  - first:
+      213: 5664273487344938108
+    second: "ta\u0309i xu\xF4\u0301ng_106"
+  - first:
+      213: -8302199177832933404
+    second: "ta\u0309i xu\xF4\u0301ng_107"
+  - first:
+      213: -4430809956074400097
+    second: "ta\u0309i xu\xF4\u0301ng_108"
+  - first:
+      213: -4673894154107467182
+    second: "ta\u0309i xu\xF4\u0301ng_109"
+  - first:
+      213: 7034716391533683082
+    second: "ta\u0309i xu\xF4\u0301ng_110"
+  - first:
+      213: -5761776266827877187
+    second: "ta\u0309i xu\xF4\u0301ng_111"
+  - first:
+      213: 5582749649305906102
+    second: "ta\u0309i xu\xF4\u0301ng_112"
+  - first:
+      213: 5726893816292824667
+    second: "ta\u0309i xu\xF4\u0301ng_113"
+  - first:
+      213: 200714753093459523
+    second: "ta\u0309i xu\xF4\u0301ng_114"
+  - first:
+      213: 6108366026874366428
+    second: "ta\u0309i xu\xF4\u0301ng_115"
+  - first:
+      213: 2328100116034703293
+    second: "ta\u0309i xu\xF4\u0301ng_116"
+  - first:
+      213: -6277180333657286251
+    second: "ta\u0309i xu\xF4\u0301ng_117"
+  - first:
+      213: 1681059581011031072
+    second: "ta\u0309i xu\xF4\u0301ng_118"
+  - first:
+      213: -4082764624373273672
+    second: "ta\u0309i xu\xF4\u0301ng_119"
+  - first:
+      213: 3235490858496806585
+    second: "ta\u0309i xu\xF4\u0301ng_120"
+  - first:
+      213: -91648708074751960
+    second: "ta\u0309i xu\xF4\u0301ng_121"
+  - first:
+      213: 6855337712431374245
+    second: "ta\u0309i xu\xF4\u0301ng_122"
+  - first:
+      213: -5762033590675040868
+    second: "ta\u0309i xu\xF4\u0301ng_123"
+  - first:
+      213: 4091384069989824392
+    second: "ta\u0309i xu\xF4\u0301ng_124"
+  - first:
+      213: -4247600585580150372
+    second: "ta\u0309i xu\xF4\u0301ng_125"
+  - first:
+      213: 5766794435611802976
+    second: "ta\u0309i xu\xF4\u0301ng_126"
+  - first:
+      213: 4839069378666172987
+    second: "ta\u0309i xu\xF4\u0301ng_127"
+  - first:
+      213: -2087144700988499597
+    second: "ta\u0309i xu\xF4\u0301ng_128"
+  - first:
+      213: 916695945888972503
+    second: "ta\u0309i xu\xF4\u0301ng_129"
+  - first:
+      213: 4163933300748237956
+    second: "ta\u0309i xu\xF4\u0301ng_130"
+  - first:
+      213: 773836187287654362
+    second: "ta\u0309i xu\xF4\u0301ng_131"
+  - first:
+      213: 7870012135885065724
+    second: "ta\u0309i xu\xF4\u0301ng_132"
+  - first:
+      213: -7718278107315690485
+    second: "ta\u0309i xu\xF4\u0301ng_133"
+  - first:
+      213: 1096763178666729773
+    second: "ta\u0309i xu\xF4\u0301ng_134"
+  - first:
+      213: -1022895008249322045
+    second: "ta\u0309i xu\xF4\u0301ng_135"
+  - first:
+      213: 7246432845984899483
+    second: "ta\u0309i xu\xF4\u0301ng_136"
+  - first:
+      213: -6545617375123480499
+    second: "ta\u0309i xu\xF4\u0301ng_137"
+  - first:
+      213: -2314322000305531534
+    second: "ta\u0309i xu\xF4\u0301ng_138"
+  - first:
+      213: 7800635564761692601
+    second: "ta\u0309i xu\xF4\u0301ng_139"
+  - first:
+      213: -1048918110020063126
+    second: "ta\u0309i xu\xF4\u0301ng_140"
+  - first:
+      213: 784981910178032842
+    second: "ta\u0309i xu\xF4\u0301ng_141"
+  - first:
+      213: 8538485675212262269
+    second: "ta\u0309i xu\xF4\u0301ng_142"
+  - first:
+      213: 5502829904766790326
+    second: "ta\u0309i xu\xF4\u0301ng_143"
+  - first:
+      213: 357435773895422173
+    second: "ta\u0309i xu\xF4\u0301ng_144"
+  - first:
+      213: 7325147111508519418
+    second: "ta\u0309i xu\xF4\u0301ng_145"
+  - first:
+      213: -5968993095132107385
+    second: "ta\u0309i xu\xF4\u0301ng_146"
+  - first:
+      213: 462159689169909277
+    second: "ta\u0309i xu\xF4\u0301ng_147"
+  - first:
+      213: 7181528322733550037
+    second: "ta\u0309i xu\xF4\u0301ng_148"
+  - first:
+      213: 1264568970785100689
+    second: "ta\u0309i xu\xF4\u0301ng_149"
+  - first:
+      213: 9220322540580362447
+    second: "ta\u0309i xu\xF4\u0301ng_150"
+  - first:
+      213: 9077629758487708585
+    second: "ta\u0309i xu\xF4\u0301ng_151"
+  - first:
+      213: 4487729392376677418
+    second: "ta\u0309i xu\xF4\u0301ng_152"
+  - first:
+      213: 6538314854407165588
+    second: "ta\u0309i xu\xF4\u0301ng_153"
+  - first:
+      213: -3086065255521447698
+    second: "ta\u0309i xu\xF4\u0301ng_154"
+  - first:
+      213: 2136704953774776745
+    second: "ta\u0309i xu\xF4\u0301ng_155"
+  - first:
+      213: 862104974264035352
+    second: "ta\u0309i xu\xF4\u0301ng_156"
+  - first:
+      213: 1199228244832640369
+    second: "ta\u0309i xu\xF4\u0301ng_157"
+  - first:
+      213: -1848174662208629404
+    second: "ta\u0309i xu\xF4\u0301ng_158"
+  - first:
+      213: -924727910524367729
+    second: "ta\u0309i xu\xF4\u0301ng_159"
+  - first:
+      213: -127188456208963829
+    second: "ta\u0309i xu\xF4\u0301ng_160"
+  - first:
+      213: 2684127348670796132
+    second: "ta\u0309i xu\xF4\u0301ng_161"
+  - first:
+      213: 9046419329092058093
+    second: "ta\u0309i xu\xF4\u0301ng_162"
+  - first:
+      213: -2387356679992404236
+    second: "ta\u0309i xu\xF4\u0301ng_163"
+  - first:
+      213: -1572051849260230026
+    second: "ta\u0309i xu\xF4\u0301ng_164"
+  - first:
+      213: -5875310193734083362
+    second: "ta\u0309i xu\xF4\u0301ng_165"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_0"
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 411
+        width: 93
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d706e423244806bb0800000000000000
+      internalID: -4944806971006099331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_1"
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 411
+        width: 94
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01858df797f594830800000000000000
+      internalID: 4055877914864408592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_2"
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 411
+        width: 92
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 879fbdcf119caab40800000000000000
+      internalID: 5452391377979308408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_3"
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 338
+        width: 87
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c185452b7f7ea950800000000000000
+      internalID: 6462242682206257600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_4"
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 323
+        width: 93
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf7a7f409b755c20800000000000000
+      internalID: 3194595370428170178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_5"
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 380
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705549b92f5a0d8e0800000000000000
+      internalID: -1670653000343595769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_6"
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 383
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6ceb7ce1d3ab8100800000000000000
+      internalID: 111362737811745899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_7"
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 397
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b0deec97ff6b800800000000000000
+      internalID: 627970096692529966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_8"
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 331
+        width: 45
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cab58b0626a76b480800000000000000
+      internalID: -8883778651993646164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_9"
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 353
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cda98d1da04ec9120800000000000000
+      internalID: 2422061434739923676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_10"
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 375
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de7933ed1dde62670800000000000000
+      internalID: 8513753631222372333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_11"
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 371
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15433c11d31dc46c0800000000000000
+      internalID: -4157718295748594607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_12"
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 373
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bec917de759d6000800000000000000
+      internalID: 30845144468672181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_13"
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 360
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a182add7293fb00800000000000000
+      internalID: 861193022986525247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_14"
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 378
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b90c08f9e4a71450800000000000000
+      internalID: 6059493148446165426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_15"
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 356
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f7fc0a2daaed4220800000000000000
+      internalID: 2471889799952005113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_16"
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 273
+        width: 33
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68aef6f0aaee75380800000000000000
+      internalID: -8982448517596321146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_17"
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 351
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019dda113138f1a80800000000000000
+      internalID: -8493926254273242864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_18"
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 336
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7515daa7c9e5486c0800000000000000
+      internalID: -4142081731107925673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_19"
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 339
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd58924b273325360800000000000000
+      internalID: 7156839325587047903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_20"
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 342
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1422ce68987bfadd0800000000000000
+      internalID: -2472555869101088191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_21"
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 326
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 059506336a1369110800000000000000
+      internalID: 1267254935047657808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_22"
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 253
+        width: 37
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca27867024129f790800000000000000
+      internalID: -7495923537305636180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_23"
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 320
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f7ff291da6016d0800000000000000
+      internalID: -3021797901618675901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_24"
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 324
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff835c3841ce45650800000000000000
+      internalID: 6220856558159739135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_25"
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 321
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f364d2674ac38dd00800000000000000
+      internalID: 997613994517546559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_26"
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 329
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774002ca058999d30800000000000000
+      internalID: 4438746380002919543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_27"
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 323
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 523b3a15b71228b00800000000000000
+      internalID: 829262094923969317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_28"
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 329
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb5f569f2a890a240800000000000000
+      internalID: 4801005028513281470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_29"
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 314
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cec3987f7f58e2950800000000000000
+      internalID: 6426221018360659180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_30"
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 323
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 568a9683458ebd8d0800000000000000
+      internalID: -2820405293196138395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_31"
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 323
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6587a4dd27fae6360800000000000000
+      internalID: 7164856965066815574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_32"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 294
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ac5bf4c9e6630d0800000000000000
+      internalID: -3443443247446898167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_33"
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 312
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14d269ed8ec3c0b60800000000000000
+      internalID: 7713607232643280193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_34"
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 291
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b95de3705c9181c0800000000000000
+      internalID: -4503146283037533767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_35"
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 307
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b504dfdfccb4bb60800000000000000
+      internalID: 7761035658865673654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_36"
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 298
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f9431566c63ff340800000000000000
+      internalID: 4899695145329576432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_37"
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 309
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 602fb6fd8ae79b330800000000000000
+      internalID: 3727149430393795078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_38"
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 304
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3375441fd4b5f1b90800000000000000
+      internalID: -7268990883234293965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_39"
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 297
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7244cbd8e8f54df90800000000000000
+      internalID: -6929808860748430297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_40"
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 310
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9fd4008d370f0320800000000000000
+      internalID: 2526245876700340127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_41"
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 287
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e02af0911913860800000000000000
+      internalID: 7507941590625816221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_42"
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 306
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed97932fbd8e2e00800000000000000
+      internalID: 1021910017535090153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_43"
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 282
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52788b8b9cdcbce70800000000000000
+      internalID: 9136622535322404645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_44"
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 298
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c4f016c900714ef0800000000000000
+      internalID: -125696127309646647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_45"
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 294
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d70d963afdf94bb0800000000000000
+      internalID: -4951147064217237546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_46"
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 304
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae7cbbcc856576b0800000000000000
+      internalID: -5299217731143565654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_47"
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 295
+        width: 23
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b274906069ed081c0800000000000000
+      internalID: -4503354891442763989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_48"
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 302
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e2b2cc2590280a0800000000000000
+      internalID: -6880927029451346383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_49"
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 289
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c5d96d1f05a60fe0800000000000000
+      internalID: -1223108764447943229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_50"
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 315
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d4302abfb6b5f10800000000000000
+      internalID: 2259518366555524398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_51"
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 302
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687d0bf031acb09d0800000000000000
+      internalID: -2806927759518935162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_52"
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 301
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a019fdeeca60ad0800000000000000
+      internalID: -2736309581627979187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_53"
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 298
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59737ce055b080870800000000000000
+      internalID: 8649175544313100181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_54"
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 310
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07deeae2b0a99bda0800000000000000
+      internalID: -5928538061638013584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_55"
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 296
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce854e986e43b7b0800000000000000
+      internalID: -5209734132698607924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_56"
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 306
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf350edba21c33b90800000000000000
+      internalID: -7263249384700095492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_57"
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 313
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 214cd7a89ed9caad0800000000000000
+      internalID: -2689601251070589934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_58"
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 306
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c60348708fe60ca0800000000000000
+      internalID: -6050885714273171774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_59"
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 309
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726a8ff58973c3d20800000000000000
+      internalID: 3259541357894084135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_60"
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 284
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a10ae9966c17c5060800000000000000
+      internalID: 6943549822487928858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_61"
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 252
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f82e59aceb47831c0800000000000000
+      internalID: -4523737462902234481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_62"
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 291
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd481dc3092063b0800000000000000
+      internalID: -5521368046853665283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_63"
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 286
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf0e09108e7c8350800000000000000
+      internalID: 6020325890528776133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_64"
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 282
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d9e3e35748e410f0800000000000000
+      internalID: -1147036612024866343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_65"
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 288
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0917c197604e93010800000000000000
+      internalID: 1169216294732198288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_66"
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 286
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81cf93d2282ae0d60800000000000000
+      internalID: 7858397079796317208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_67"
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 253
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fef47a07e86c7550800000000000000
+      internalID: 6159913731858169586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_68"
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 282
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ece40153771ee610800000000000000
+      internalID: 1652283897339505895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_69"
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 276
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed106e2b9c1fc240800000000000000
+      internalID: 4814097979505909221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_70"
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 239
+        width: 18
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69efc4e4c48ba1f60800000000000000
+      internalID: 8005913925475171990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_71"
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 273
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82676b9b590767b30800000000000000
+      internalID: 4284735883857786408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_72"
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 266
+        width: 8
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95e5ff9f1578ce8e0800000000000000
+      internalID: -1662805376250192295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_73"
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 273
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cda0463751457cac0800000000000000
+      internalID: -3835004106575705380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_74"
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 265
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e74ce7a3aadeb90c0800000000000000
+      internalID: -4567796081655626626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_75"
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 266
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c67fb6fbfd61e4e0800000000000000
+      internalID: -1954159834358122809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_76"
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 268
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc894e6f1d29e4b20800000000000000
+      internalID: 3120593022302329035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_77"
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 264
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7e9fdfce8a1fa9c0800000000000000
+      internalID: -3913880350486454659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_78"
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 265
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8507a05089517870800000000000000
+      internalID: 8678816364563465615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_79"
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 263
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b8b6dc27c842a5e0800000000000000
+      internalID: -1899876072508966736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_80"
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 267
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ff8d12ee26deb3b0800000000000000
+      internalID: -5494718998494998536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_81"
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 263
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 667d83c0ebdadcbe0800000000000000
+      internalID: -1455316072810358938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_82"
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 268
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 983acaad95878f770800000000000000
+      internalID: 8644791812053836681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_83"
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 265
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7c663c5b8bfd5150800000000000000
+      internalID: 5863118865872350333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_84"
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 239
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26d1520aeb6a1bbd0800000000000000
+      internalID: -2616126570864763550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_85"
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 236
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60848ff439807e250800000000000000
+      internalID: 5973752859525138438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_86"
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 230
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca5c24aad60c51a60800000000000000
+      internalID: 7644227519771755948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_87"
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 248
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7293553a5f5da510800000000000000
+      internalID: 1562009486813794943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_88"
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 241
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f58a16a2f20726d50800000000000000
+      internalID: 6729064141121759327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_89"
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 244
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71837a30e27f218f0800000000000000
+      internalID: -571122425720784873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_90"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 245
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ff0145af5d7ba20800000000000000
+      internalID: 3078164141459963697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_91"
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 239
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bbefa9bb163576f0800000000000000
+      internalID: -687583875396801614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_92"
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 208
+        width: 51
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224fc76138cbc4e80800000000000000
+      internalID: -8192966350889749470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_93"
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 206
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 561c2f87749348380800000000000000
+      internalID: -8969981578680549019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_94"
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 109
+        width: 72
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bedb2239dca62d10800000000000000
+      internalID: 2100556325064531640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_95"
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 230
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d35bdbe565d9c750800000000000000
+      internalID: 6325821785344005081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_96"
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 224
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbefa520e6cd8a0e0800000000000000
+      internalID: -2258312848082272579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_97"
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 233
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b648ce68e5f7d60800000000000000
+      internalID: 7890129005763128121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_98"
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 228
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f31626f91dc1a5b80800000000000000
+      internalID: -8405374067885842113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_99"
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 232
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c762fc1439f8990800000000000000
+      internalID: -7381519353379390349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_100"
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 213
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e91bb32124a8410800000000000000
+      internalID: 1480068073622970006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_101"
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 219
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ed188a204e413d30800000000000000
+      internalID: 4409391547670863332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_102"
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 210
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a010006678e4da0800000000000000
+      internalID: -5958676384808105441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_103"
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 111
+        width: 51
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0535b274b7f282b10800000000000000
+      internalID: 1956866244613985104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_104"
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 224
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 326de3226fbe16440800000000000000
+      internalID: 4927478909689058851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_105"
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 201
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce184982521303960800000000000000
+      internalID: 7579612208528916972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_106"
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 207
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7cabd3e9ba8b9e40800000000000000
+      internalID: 5664273487344938108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_107"
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 206
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e75abea5d9a8cc80800000000000000
+      internalID: -8302199177832933404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_108"
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 211
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f96dbe402d99282c0800000000000000
+      internalID: -4430809956074400097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_109"
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 194
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a46aab70ef22fb0800000000000000
+      internalID: -4673894154107467182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_110"
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 190
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81abfc594550a160800000000000000
+      internalID: 7034716391533683082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_111"
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 92
+        width: 46
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db4b274330f0a00b0800000000000000
+      internalID: -5761776266827877187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_112"
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 196
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bba0d43a39e97d40800000000000000
+      internalID: 5582749649305906102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_113"
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 41
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b56d38265930a7f40800000000000000
+      internalID: 5726893816292824667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_114"
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 19
+        width: 6
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34ed057210519c200800000000000000
+      internalID: 200714753093459523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_115"
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 35
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd929e5b98645c450800000000000000
+      internalID: 6108366026874366428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_116"
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 26
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf4bc188b21f4020800000000000000
+      internalID: 2328100116034703293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_117"
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 32
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5991a459eb9f2e8a0800000000000000
+      internalID: -6277180333657286251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_118"
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 32
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 024fd6448c2545710800000000000000
+      internalID: 1681059581011031072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_119"
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 38
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bb23be943b1757c0800000000000000
+      internalID: -4082764624373273672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_120"
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 36
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bec9be1bc5c6ec20800000000000000
+      internalID: 3235490858496806585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_121"
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 35
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828b41f4cf56abef0800000000000000
+      internalID: -91648708074751960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_122"
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 31
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5af9fcc045d032f50800000000000000
+      internalID: 6855337712431374245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_123"
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 33
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9512f35af42900b0800000000000000
+      internalID: -5762033590675040868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_124"
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 32
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8877f63722487c830800000000000000
+      internalID: 4091384069989824392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_125"
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 41
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9101cca5cd7d05c0800000000000000
+      internalID: -4247600585580150372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_126"
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 38
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06d37534cf4c70050800000000000000
+      internalID: 5766794435611802976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_127"
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 38
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b321ede16f3d72340800000000000000
+      internalID: 4839069378666172987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_128"
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 37
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 379ddbed3f8f803e0800000000000000
+      internalID: -2087144700988499597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_129"
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 29
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7deb0cd1b12c8bc00800000000000000
+      internalID: 916695945888972503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_130"
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 22
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48cb48b864349c930800000000000000
+      internalID: 4163933300748237956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_131"
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 29
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf8f9199e73dba00800000000000000
+      internalID: 773836187287654362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_132"
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 29
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfd41792756e73d60800000000000000
+      internalID: 7870012135885065724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_133"
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0426cf54fa23e490800000000000000
+      internalID: -7718278107315690485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_134"
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 30
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d21a823dc4c783f00800000000000000
+      internalID: 1096763178666729773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_135"
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 24
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c567c6d862fdc1f0800000000000000
+      internalID: -1022895008249322045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_136"
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 23
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9127a9b740809460800000000000000
+      internalID: 7246432845984899483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_137"
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 22
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d40e3207dab4925a0800000000000000
+      internalID: -6545617375123480499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_138"
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 30
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 275daeb0760e1efd0800000000000000
+      internalID: -2314322000305531534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_139"
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 11
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b936e377bc614c60800000000000000
+      internalID: 7800635564761692601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_140"
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 13
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a60b7cd498e7171f0800000000000000
+      internalID: -1048918110020063126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_141"
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 21
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acce44763e0d4ea00800000000000000
+      internalID: 784981910178032842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_142"
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 18
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7bc9c69b7bce7670800000000000000
+      internalID: 8538485675212262269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_143"
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 19
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba6505a4aafd5c40800000000000000
+      internalID: 5502829904766790326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_144"
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd0bd0d41fdd5f400800000000000000
+      internalID: 357435773895422173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_145"
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 12
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9a1f4dc7628a560800000000000000
+      internalID: 7325147111508519418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_146"
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d24e1b760e92da0800000000000000
+      internalID: -5968993095132107385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_147"
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d163a76e9cbe96600800000000000000
+      internalID: 462159689169909277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_148"
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 8
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d9a0fcc5f9e9a360800000000000000
+      internalID: 7181528322733550037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_149"
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 12
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19390a967c6ac8110800000000000000
+      internalID: 1264568970785100689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_150"
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 4
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc8d1d1df7a25ff70800000000000000
+      internalID: 9220322540580362447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_151"
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 12
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3cc258b283afd70800000000000000
+      internalID: 9077629758487708585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_152"
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 10
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2401b8fa1e974e30800000000000000
+      internalID: 4487729392376677418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_153"
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 7
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4965996f7b2ccba50800000000000000
+      internalID: 6538314854407165588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_154"
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 11
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee018f230081c25d0800000000000000
+      internalID: -3086065255521447698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_155"
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 13
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a1209fa5d917ad10800000000000000
+      internalID: 2136704953774776745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_156"
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 7
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 818ea1e08efc6fb00800000000000000
+      internalID: 862104974264035352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_157"
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 2
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17d5dd12cb384a010800000000000000
+      internalID: 1199228244832640369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_158"
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 0
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4655d20dfe6f956e0800000000000000
+      internalID: -1848174662208629404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_159"
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 0
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c4e436dd4ba23f0800000000000000
+      internalID: -924727910524367729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_160"
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b076220e5c22c3ef0800000000000000
+      internalID: -127188456208963829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_161"
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 4
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4611f6d3a9fef3520800000000000000
+      internalID: 2684127348670796132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_162"
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 0
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb72c723765b8d70800000000000000
+      internalID: 9046419329092058093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_163"
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 0
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f695e09fb76eded0800000000000000
+      internalID: -2387356679992404236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_164"
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67a19541c23fe2ae0800000000000000
+      internalID: -1572051849260230026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "ta\u0309i xu\xF4\u0301ng_165"
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 0
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc9f3de184b67ea0800000000000000
+      internalID: -5875310193734083362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "ta\u0309i xu\xF4\u0301ng_0": -4944806971006099331
+      "ta\u0309i xu\xF4\u0301ng_1": 4055877914864408592
+      "ta\u0309i xu\xF4\u0301ng_10": 8513753631222372333
+      "ta\u0309i xu\xF4\u0301ng_100": 1480068073622970006
+      "ta\u0309i xu\xF4\u0301ng_101": 4409391547670863332
+      "ta\u0309i xu\xF4\u0301ng_102": -5958676384808105441
+      "ta\u0309i xu\xF4\u0301ng_103": 1956866244613985104
+      "ta\u0309i xu\xF4\u0301ng_104": 4927478909689058851
+      "ta\u0309i xu\xF4\u0301ng_105": 7579612208528916972
+      "ta\u0309i xu\xF4\u0301ng_106": 5664273487344938108
+      "ta\u0309i xu\xF4\u0301ng_107": -8302199177832933404
+      "ta\u0309i xu\xF4\u0301ng_108": -4430809956074400097
+      "ta\u0309i xu\xF4\u0301ng_109": -4673894154107467182
+      "ta\u0309i xu\xF4\u0301ng_11": -4157718295748594607
+      "ta\u0309i xu\xF4\u0301ng_110": 7034716391533683082
+      "ta\u0309i xu\xF4\u0301ng_111": -5761776266827877187
+      "ta\u0309i xu\xF4\u0301ng_112": 5582749649305906102
+      "ta\u0309i xu\xF4\u0301ng_113": 5726893816292824667
+      "ta\u0309i xu\xF4\u0301ng_114": 200714753093459523
+      "ta\u0309i xu\xF4\u0301ng_115": 6108366026874366428
+      "ta\u0309i xu\xF4\u0301ng_116": 2328100116034703293
+      "ta\u0309i xu\xF4\u0301ng_117": -6277180333657286251
+      "ta\u0309i xu\xF4\u0301ng_118": 1681059581011031072
+      "ta\u0309i xu\xF4\u0301ng_119": -4082764624373273672
+      "ta\u0309i xu\xF4\u0301ng_12": 30845144468672181
+      "ta\u0309i xu\xF4\u0301ng_120": 3235490858496806585
+      "ta\u0309i xu\xF4\u0301ng_121": -91648708074751960
+      "ta\u0309i xu\xF4\u0301ng_122": 6855337712431374245
+      "ta\u0309i xu\xF4\u0301ng_123": -5762033590675040868
+      "ta\u0309i xu\xF4\u0301ng_124": 4091384069989824392
+      "ta\u0309i xu\xF4\u0301ng_125": -4247600585580150372
+      "ta\u0309i xu\xF4\u0301ng_126": 5766794435611802976
+      "ta\u0309i xu\xF4\u0301ng_127": 4839069378666172987
+      "ta\u0309i xu\xF4\u0301ng_128": -2087144700988499597
+      "ta\u0309i xu\xF4\u0301ng_129": 916695945888972503
+      "ta\u0309i xu\xF4\u0301ng_13": 861193022986525247
+      "ta\u0309i xu\xF4\u0301ng_130": 4163933300748237956
+      "ta\u0309i xu\xF4\u0301ng_131": 773836187287654362
+      "ta\u0309i xu\xF4\u0301ng_132": 7870012135885065724
+      "ta\u0309i xu\xF4\u0301ng_133": -7718278107315690485
+      "ta\u0309i xu\xF4\u0301ng_134": 1096763178666729773
+      "ta\u0309i xu\xF4\u0301ng_135": -1022895008249322045
+      "ta\u0309i xu\xF4\u0301ng_136": 7246432845984899483
+      "ta\u0309i xu\xF4\u0301ng_137": -6545617375123480499
+      "ta\u0309i xu\xF4\u0301ng_138": -2314322000305531534
+      "ta\u0309i xu\xF4\u0301ng_139": 7800635564761692601
+      "ta\u0309i xu\xF4\u0301ng_14": 6059493148446165426
+      "ta\u0309i xu\xF4\u0301ng_140": -1048918110020063126
+      "ta\u0309i xu\xF4\u0301ng_141": 784981910178032842
+      "ta\u0309i xu\xF4\u0301ng_142": 8538485675212262269
+      "ta\u0309i xu\xF4\u0301ng_143": 5502829904766790326
+      "ta\u0309i xu\xF4\u0301ng_144": 357435773895422173
+      "ta\u0309i xu\xF4\u0301ng_145": 7325147111508519418
+      "ta\u0309i xu\xF4\u0301ng_146": -5968993095132107385
+      "ta\u0309i xu\xF4\u0301ng_147": 462159689169909277
+      "ta\u0309i xu\xF4\u0301ng_148": 7181528322733550037
+      "ta\u0309i xu\xF4\u0301ng_149": 1264568970785100689
+      "ta\u0309i xu\xF4\u0301ng_15": 2471889799952005113
+      "ta\u0309i xu\xF4\u0301ng_150": 9220322540580362447
+      "ta\u0309i xu\xF4\u0301ng_151": 9077629758487708585
+      "ta\u0309i xu\xF4\u0301ng_152": 4487729392376677418
+      "ta\u0309i xu\xF4\u0301ng_153": 6538314854407165588
+      "ta\u0309i xu\xF4\u0301ng_154": -3086065255521447698
+      "ta\u0309i xu\xF4\u0301ng_155": 2136704953774776745
+      "ta\u0309i xu\xF4\u0301ng_156": 862104974264035352
+      "ta\u0309i xu\xF4\u0301ng_157": 1199228244832640369
+      "ta\u0309i xu\xF4\u0301ng_158": -1848174662208629404
+      "ta\u0309i xu\xF4\u0301ng_159": -924727910524367729
+      "ta\u0309i xu\xF4\u0301ng_16": -8982448517596321146
+      "ta\u0309i xu\xF4\u0301ng_160": -127188456208963829
+      "ta\u0309i xu\xF4\u0301ng_161": 2684127348670796132
+      "ta\u0309i xu\xF4\u0301ng_162": 9046419329092058093
+      "ta\u0309i xu\xF4\u0301ng_163": -2387356679992404236
+      "ta\u0309i xu\xF4\u0301ng_164": -1572051849260230026
+      "ta\u0309i xu\xF4\u0301ng_165": -5875310193734083362
+      "ta\u0309i xu\xF4\u0301ng_17": -8493926254273242864
+      "ta\u0309i xu\xF4\u0301ng_18": -4142081731107925673
+      "ta\u0309i xu\xF4\u0301ng_19": 7156839325587047903
+      "ta\u0309i xu\xF4\u0301ng_2": 5452391377979308408
+      "ta\u0309i xu\xF4\u0301ng_20": -2472555869101088191
+      "ta\u0309i xu\xF4\u0301ng_21": 1267254935047657808
+      "ta\u0309i xu\xF4\u0301ng_22": -7495923537305636180
+      "ta\u0309i xu\xF4\u0301ng_23": -3021797901618675901
+      "ta\u0309i xu\xF4\u0301ng_24": 6220856558159739135
+      "ta\u0309i xu\xF4\u0301ng_25": 997613994517546559
+      "ta\u0309i xu\xF4\u0301ng_26": 4438746380002919543
+      "ta\u0309i xu\xF4\u0301ng_27": 829262094923969317
+      "ta\u0309i xu\xF4\u0301ng_28": 4801005028513281470
+      "ta\u0309i xu\xF4\u0301ng_29": 6426221018360659180
+      "ta\u0309i xu\xF4\u0301ng_3": 6462242682206257600
+      "ta\u0309i xu\xF4\u0301ng_30": -2820405293196138395
+      "ta\u0309i xu\xF4\u0301ng_31": 7164856965066815574
+      "ta\u0309i xu\xF4\u0301ng_32": -3443443247446898167
+      "ta\u0309i xu\xF4\u0301ng_33": 7713607232643280193
+      "ta\u0309i xu\xF4\u0301ng_34": -4503146283037533767
+      "ta\u0309i xu\xF4\u0301ng_35": 7761035658865673654
+      "ta\u0309i xu\xF4\u0301ng_36": 4899695145329576432
+      "ta\u0309i xu\xF4\u0301ng_37": 3727149430393795078
+      "ta\u0309i xu\xF4\u0301ng_38": -7268990883234293965
+      "ta\u0309i xu\xF4\u0301ng_39": -6929808860748430297
+      "ta\u0309i xu\xF4\u0301ng_4": 3194595370428170178
+      "ta\u0309i xu\xF4\u0301ng_40": 2526245876700340127
+      "ta\u0309i xu\xF4\u0301ng_41": 7507941590625816221
+      "ta\u0309i xu\xF4\u0301ng_42": 1021910017535090153
+      "ta\u0309i xu\xF4\u0301ng_43": 9136622535322404645
+      "ta\u0309i xu\xF4\u0301ng_44": -125696127309646647
+      "ta\u0309i xu\xF4\u0301ng_45": -4951147064217237546
+      "ta\u0309i xu\xF4\u0301ng_46": -5299217731143565654
+      "ta\u0309i xu\xF4\u0301ng_47": -4503354891442763989
+      "ta\u0309i xu\xF4\u0301ng_48": -6880927029451346383
+      "ta\u0309i xu\xF4\u0301ng_49": -1223108764447943229
+      "ta\u0309i xu\xF4\u0301ng_5": -1670653000343595769
+      "ta\u0309i xu\xF4\u0301ng_50": 2259518366555524398
+      "ta\u0309i xu\xF4\u0301ng_51": -2806927759518935162
+      "ta\u0309i xu\xF4\u0301ng_52": -2736309581627979187
+      "ta\u0309i xu\xF4\u0301ng_53": 8649175544313100181
+      "ta\u0309i xu\xF4\u0301ng_54": -5928538061638013584
+      "ta\u0309i xu\xF4\u0301ng_55": -5209734132698607924
+      "ta\u0309i xu\xF4\u0301ng_56": -7263249384700095492
+      "ta\u0309i xu\xF4\u0301ng_57": -2689601251070589934
+      "ta\u0309i xu\xF4\u0301ng_58": -6050885714273171774
+      "ta\u0309i xu\xF4\u0301ng_59": 3259541357894084135
+      "ta\u0309i xu\xF4\u0301ng_6": 111362737811745899
+      "ta\u0309i xu\xF4\u0301ng_60": 6943549822487928858
+      "ta\u0309i xu\xF4\u0301ng_61": -4523737462902234481
+      "ta\u0309i xu\xF4\u0301ng_62": -5521368046853665283
+      "ta\u0309i xu\xF4\u0301ng_63": 6020325890528776133
+      "ta\u0309i xu\xF4\u0301ng_64": -1147036612024866343
+      "ta\u0309i xu\xF4\u0301ng_65": 1169216294732198288
+      "ta\u0309i xu\xF4\u0301ng_66": 7858397079796317208
+      "ta\u0309i xu\xF4\u0301ng_67": 6159913731858169586
+      "ta\u0309i xu\xF4\u0301ng_68": 1652283897339505895
+      "ta\u0309i xu\xF4\u0301ng_69": 4814097979505909221
+      "ta\u0309i xu\xF4\u0301ng_7": 627970096692529966
+      "ta\u0309i xu\xF4\u0301ng_70": 8005913925475171990
+      "ta\u0309i xu\xF4\u0301ng_71": 4284735883857786408
+      "ta\u0309i xu\xF4\u0301ng_72": -1662805376250192295
+      "ta\u0309i xu\xF4\u0301ng_73": -3835004106575705380
+      "ta\u0309i xu\xF4\u0301ng_74": -4567796081655626626
+      "ta\u0309i xu\xF4\u0301ng_75": -1954159834358122809
+      "ta\u0309i xu\xF4\u0301ng_76": 3120593022302329035
+      "ta\u0309i xu\xF4\u0301ng_77": -3913880350486454659
+      "ta\u0309i xu\xF4\u0301ng_78": 8678816364563465615
+      "ta\u0309i xu\xF4\u0301ng_79": -1899876072508966736
+      "ta\u0309i xu\xF4\u0301ng_8": -8883778651993646164
+      "ta\u0309i xu\xF4\u0301ng_80": -5494718998494998536
+      "ta\u0309i xu\xF4\u0301ng_81": -1455316072810358938
+      "ta\u0309i xu\xF4\u0301ng_82": 8644791812053836681
+      "ta\u0309i xu\xF4\u0301ng_83": 5863118865872350333
+      "ta\u0309i xu\xF4\u0301ng_84": -2616126570864763550
+      "ta\u0309i xu\xF4\u0301ng_85": 5973752859525138438
+      "ta\u0309i xu\xF4\u0301ng_86": 7644227519771755948
+      "ta\u0309i xu\xF4\u0301ng_87": 1562009486813794943
+      "ta\u0309i xu\xF4\u0301ng_88": 6729064141121759327
+      "ta\u0309i xu\xF4\u0301ng_89": -571122425720784873
+      "ta\u0309i xu\xF4\u0301ng_9": 2422061434739923676
+      "ta\u0309i xu\xF4\u0301ng_90": 3078164141459963697
+      "ta\u0309i xu\xF4\u0301ng_91": -687583875396801614
+      "ta\u0309i xu\xF4\u0301ng_92": -8192966350889749470
+      "ta\u0309i xu\xF4\u0301ng_93": -8969981578680549019
+      "ta\u0309i xu\xF4\u0301ng_94": 2100556325064531640
+      "ta\u0309i xu\xF4\u0301ng_95": 6325821785344005081
+      "ta\u0309i xu\xF4\u0301ng_96": -2258312848082272579
+      "ta\u0309i xu\xF4\u0301ng_97": 7890129005763128121
+      "ta\u0309i xu\xF4\u0301ng_98": -8405374067885842113
+      "ta\u0309i xu\xF4\u0301ng_99": -7381519353379390349
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

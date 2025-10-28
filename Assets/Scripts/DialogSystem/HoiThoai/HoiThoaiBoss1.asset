@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a870c553808a7a345ad99b7b8f95d653, type: 3}
+  m_Name: HoiThoaiBoss1
+  m_EditorClassIdentifier: Assembly-CSharp::Conversation
+  lines:
+  - speaker: {fileID: 11400000, guid: 302b9e844a4ef4945b2a20473596179b, type: 2}
+    text: ..........
+  - speaker: {fileID: 11400000, guid: 25073ee04e50ec144bcde9b1f0679640, type: 2}
+    text: "H\u1EC7 th\u1ED1ng? C\xF4 v\u1EABn \u1EDF \u0111\xF3 ch\u1EE9?"
+  - speaker: {fileID: 11400000, guid: 302b9e844a4ef4945b2a20473596179b, type: 2}
+    text: "[...!] C\u1EA2NH B\xC1O! M\u1ED9t 'L\u1ED7i D\u1EEF Li\u1EC7u'  l\u1EDBn
+      \u0111ang ti\u1EBFp c\u1EADn! K\xFD ch\u1EE7... c\u1EA9n th\u1EADn! N\xF3...
+      n\xF3 kh\xF4ng gi\u1ED1ng qu\xE1i v\u1EADt b\xECnh th\u01B0\u1EDDng!"
+  - speaker: {fileID: 11400000, guid: ec1a20c5321e3b447a781e81071721b7, type: 2}
+    text: "TR\u1EACT T\u1EF0 \u0110\xC3 B\u1ECA VI PH\u1EA0M. PH\xC1T HI\u1EC6N NGU\u1ED2N
+      L\xC2Y NHI\u1EC4M. TI\u1EBEN H\xC0NH TI\xCAU DI\u1EC6T NGU\u1ED2N L\xC2Y NHI\u1EC4M"

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35ac61a93405765479dc403f16c04673, type: 3}
   m_Name: PlayerHoangLoan
   m_EditorClassIdentifier: Assembly-CSharp::SpeakerData
-  speakerName: 
-  speakerPortrait: {fileID: 0}
+  speakerName: Player
+  speakerPortrait: {fileID: -8595167824585309107, guid: 3f4a23b84e4fc4b4899356f72bad4e44, type: 3}

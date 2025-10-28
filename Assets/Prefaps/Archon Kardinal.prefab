@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 3972082743980554159}
   - component: {fileID: 159160429246728067}
   m_Layer: 0
-  m_Name: Boss1
+  m_Name: Archon Kardinal
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

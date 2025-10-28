@@ -2,9 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System; // Bắt buộc phải có để dùng 'Action'
 
 public class SpawnMonster : MonoBehaviour
 {
+    // --- KHAI BÁO EVENT ---
+    public event Action<int> OnBossSpawned; // Gửi đi ID (index) của boss
+    public event Action<int> OnBossDefeated; // Gửi đi ID (index) của boss
+    // -----------------------
+
     [System.Serializable]
     public struct MonsterPrefap
     {
@@ -39,7 +45,6 @@ public class SpawnMonster : MonoBehaviour
 
     [Tooltip("Kéo đối tượng AudioManagement vào đây")]
     public AudioManagement audio;
-    // --- ĐÃ BỎ BIẾN 'objspawnthienthach' ---
 
     [Header("Game Timers")]
     public float gameTimer = 0f;
@@ -50,6 +55,7 @@ public class SpawnMonster : MonoBehaviour
     private float tanSuatQuai;
     private bool isBossActive = false;
     private GameObject currentBossInstance = null;
+    private int currentBossIndex = -1;
 
     void Start()
     {
@@ -60,7 +66,6 @@ public class SpawnMonster : MonoBehaviour
             if (audioobj != null)
                 audio = audioobj.GetComponent<AudioManagement>();
         }
-        // --- ĐÃ BỎ LOGIC TÌM 'thienthachxuathien' ---
     }
 
     void Update()
@@ -74,7 +79,13 @@ public class SpawnMonster : MonoBehaviour
                 isBossActive = false;
                 spawnTimer = tanSuatQuai;
 
-                // --- ĐÃ BỎ LOGIC KÍCH HOẠT LẠI THIÊN THẠCH ---
+                // --- KÍCH HOẠT EVENT BOSS BỊ TIÊU DIỆT ---
+                if (currentBossIndex != -1)
+                {
+                    OnBossDefeated?.Invoke(currentBossIndex); // Gửi tín hiệu
+                    currentBossIndex = -1; // Reset
+                }
+                // ----------------------------------------
             }
             else
             {
@@ -138,12 +149,12 @@ public class SpawnMonster : MonoBehaviour
         if (monstersToSpawn.Count == 0) return;
         for (int j = 0; j < soQuai; j++)
         {
-            int randomIndex = Random.Range(0, monstersToSpawn.Count);
+            // --- SỬA LỖI Ở ĐÂY ---
+            int randomIndex = UnityEngine.Random.Range(0, monstersToSpawn.Count);
             SpawnSingleMonster(monstersToSpawn[randomIndex].monster);
         }
     }
 
-    // --- HÀM spawnBoss ĐÃ SỬA ĐỔI ---
     // --- HÀM spawnBoss ĐÃ SỬA ĐỔI ---
     public void spawnBoss()
     {
@@ -163,17 +174,19 @@ public class SpawnMonster : MonoBehaviour
 
                 // Spawn boss tại VỊ TRÍ CỐ ĐỊNH
                 currentBossInstance = SpawnTheBossAtFixedPoint(bossesToSpawn[i].boss);
-
                 isBossActive = true;
+                currentBossIndex = i; // <-- LƯU LẠI INDEX CỦA BOSS VỪA SPAWN
 
-                // --- ✨ LOGIC MỚI ĐƯỢC THÊM VÀO ✨ ---
+                // --- KÍCH HOẠT EVENT BOSS XUẤT HIỆN ---
+                OnBossSpawned?.Invoke(currentBossIndex); // Gửi tín hiệu
+                // ------------------------------------
+
                 // Tìm tất cả quái (RatMonster) đang hoạt động và tiêu diệt chúng
                 RatMonster[] allMonsters = FindObjectsOfType<RatMonster>();
                 foreach (RatMonster monster in allMonsters)
                 {
                     monster.DieFromBoss(); // Gọi hàm mới để quái chết không cộng EXP
                 }
-                // --- KẾT THÚC LOGIC MỚI ---
 
                 var clone = bossesToSpawn[i];
                 clone.hasSpawned = true;
@@ -199,7 +212,8 @@ public class SpawnMonster : MonoBehaviour
     // Hàm spawn quái nhỏ (random)
     public GameObject SpawnSingleMonster(GameObject monsterPrefab)
     {
-        Vector2 spawnDirection = Random.insideUnitCircle.normalized;
+        // --- SỬA LỖI Ở ĐÂY ---
+        Vector2 spawnDirection = UnityEngine.Random.insideUnitCircle.normalized;
         Vector3 spawnPosition = transform.position + new Vector3(spawnDirection.x, spawnDirection.y, 0) * 10f;
         return Instantiate(monsterPrefab, spawnPosition, Quaternion.identity);
     }
