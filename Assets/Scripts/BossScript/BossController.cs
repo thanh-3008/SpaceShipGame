@@ -130,7 +130,7 @@ public class BossController : MonoBehaviour
         Debug.Log("AI: Bắn đạn tỏa (nhẹ)");
         for (int i = 0; i < 6; i++)
         {
-            StartCoroutine(DanVomCung(8f, 150f));
+            StartCoroutine(DanVomCung(12f, 170f));
             yield return GetSlowedWait(1.5f);
         }
     }
