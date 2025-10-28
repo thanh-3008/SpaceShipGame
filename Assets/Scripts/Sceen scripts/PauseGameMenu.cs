@@ -1,19 +1,18 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PauseGameMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public bool isPaused = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         pauseMenuUI.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
             {
@@ -25,38 +24,46 @@ public class PauseGameMenu : MonoBehaviour
             }
         }
     }
+
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
+        TimeScaleManager.ReleasePause(); // SỬ DỤNG BỘ QUẢN LÝ
         isPaused = false;
     }
+
     void Pause()
     {
         pauseMenuUI.SetActive(true);
-        Time.timeScale = 0f;
-        Time.fixedDeltaTime = 0.02f * Time.timeScale;
+        TimeScaleManager.RequestPause(); // SỬ DỤNG BỘ QUẢN LÝ
+        // Dòng 'fixedDeltaTime' đã bị xóa vì nó không cần thiết khi timescale = 0
         isPaused = true;
     }
+
     public void QuitGame()
     {
         Application.Quit();
     }
+
+    // Các hàm reset/chuyển scene nên dùng TimeScaleManager.Reset()
+    // để đảm bảo timeScale trở về 1 và bộ đếm về 0.
     public void ResetGame()
     {
-        Time.timeScale = 1f;
+        TimeScaleManager.Reset(); // RESET BỘ QUẢN LÝ
         isPaused = false;
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
+
     public void BackMenu()
     {
-        Time.timeScale = 1f;
+        TimeScaleManager.Reset(); // RESET BỘ QUẢN LÝ
         isPaused = false;
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
+
     public void Huongdan()
     {
-        Time.timeScale = 1f;
+        TimeScaleManager.Reset(); // RESET BỘ QUẢN LÝ
         isPaused = false;
         UnityEngine.SceneManagement.SceneManager.LoadScene(2);
     }

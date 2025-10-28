@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35ac61a93405765479dc403f16c04673, type: 3}
-  m_Name: PlayerLoLang
+  m_Name: Boss1
   m_EditorClassIdentifier: Assembly-CSharp::SpeakerData
-  speakerName: Player
-  speakerPortrait: {fileID: 6594054085868779624, guid: 364537d6a44b1c94496136e6fe376779, type: 3}
+  speakerName: Archon Kardinal
+  speakerPortrait: {fileID: -4385829030376429306, guid: de0f9cc490d3a09459009e13ac8f2aeb, type: 3}

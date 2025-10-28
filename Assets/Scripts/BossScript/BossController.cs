@@ -324,17 +324,5 @@ public class BossController : MonoBehaviour
             playerController.TakeDame(100f);
         }
     }
-    public void OnDestroy()
-    {
-        Spawn = GameObject.Find("Spawn");
-        if (Spawn != null)
-        {
-            Transform spawnthienthach = Spawn.transform.Find("thienthachxuathien");
-            if(spawnthienthach != null)
-            {
-                GameObject obj = spawnthienthach.gameObject;
-                obj.SetActive(true);
-            }
-        }
-    }
+    
 }
