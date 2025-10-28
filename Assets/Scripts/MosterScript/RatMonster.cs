@@ -8,13 +8,16 @@ public class RatMonster : MonoBehaviour
     private PlayerLevel playerLevel;
     private Animator animator;
 
-    private float currentHealth;   // Máu hiện tại của mỗi con quái, không sửa trực tiếp MonsterData
-    private bool canAttack = true; // Cờ kiểm tra xem quái có thể tấn công không (cooldown)
-    private bool playerInRange = false; // Cờ kiểm tra xem người chơi có trong tầm tấn công không
+    private float currentHealth;   // Máu hiện tại của mỗi con quái
+    private bool canAttack = true;
+    private bool playerInRange = false;
     public ThanhMauThienThach monster;
+
+    // --- BIẾN MỚI ---
+    private bool isDying = false; // Cờ để tránh gọi Die() nhiều lần
+
     void Start()
     {
-        // Lấy các component cần thiết
         animator = GetComponent<Animator>();
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
@@ -22,50 +25,48 @@ public class RatMonster : MonoBehaviour
             playerController = playerObject.GetComponent<PlayerController>();
             playerLevel = playerObject.GetComponent<PlayerLevel>();
         }
-
-        // Khởi tạo máu cho từng con quái
         currentHealth = monsterData.thanhMauToiDa;
         monster.capnhatthanhmau(currentHealth, monsterData.thanhMauToiDa);
-
-
     }
 
     void Update()
     {
-        // Nếu không tìm thấy người chơi thì không làm gì cả
-        if (playerController == null) return;
+        // Nếu không tìm thấy người chơi hoặc quái đang chết, thì không làm gì
+        if (playerController == null || isDying) return;
 
-        // Nếu người chơi không ở trong tầm tấn công, quái sẽ di chuyển tới
         if (!playerInRange)
         {
             MonsterMove(playerController.transform.position);
         }
-        else // Nếu người chơi trong tầm, quái sẽ ngừng di chuyển và cố gắng tấn công
+        else
         {
-            animator.SetBool("IsRunning", false); // Dừng animation chạy
-            // Cố gắng tấn công nếu có thể
+            animator.SetBool("IsRunning", false);
             AttemptAttack();
         }
     }
 
     // --- LOGIC VA CHẠM ---
-
-    // Khi người chơi BẮT ĐẦU đi vào vùng trigger
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isDying) return; // Nếu đang chết, bỏ qua va chạm
+
         if (collision.CompareTag("Player"))
         {
             playerInRange = true;
         }
         if (collision.CompareTag("TauMe"))
         {
-            Die();
+            // Gọi Die(true) vì va chạm tàu mẹ vẫn nên cho XP? 
+            // Hoặc Die(false) nếu không muốn cho XP.
+            // Ở đây tôi mặc định là cho XP.
+            Die(true);
         }
     }
 
-    // Khi người chơi THOÁT KHỎI vùng trigger
     void OnTriggerExit2D(Collider2D collision)
     {
+        if (isDying) return;
+
         if (collision.CompareTag("Player"))
         {
             playerInRange = false;
@@ -73,78 +74,90 @@ public class RatMonster : MonoBehaviour
     }
 
     // --- LOGIC TẤN CÔNG ---
-
     void AttemptAttack()
     {
-        if (canAttack)
+        if (canAttack && !isDying)
         {
-            canAttack = false; // Chặn các lần tấn công tiếp theo ngay lập tức
-            animator.SetTrigger("Attack"); // Chỉ kích hoạt animation           
-            // Việc trừ máu sẽ được gọi bởi Animation Event
+            canAttack = false;
+            animator.SetTrigger("Attack");
         }
     }
 
-    // *** HÀM NÀY SẼ ĐƯỢC GỌI TỪ ANIMATION EVENT ***
-    // Đây là hàm thực sự gây sát thương
     public void DealDamageEvent()
     {
-        // Kiểm tra lại lần nữa để chắc chắn người chơi vẫn còn trong tầm
-        if (playerInRange && playerController != null)
+        if (playerInRange && playerController != null && !isDying)
         {
             Debug.Log("Quái vật gây sát thương!");
             playerController.TakeDame(monsterData.satThuong);
         }
-        // Bắt đầu coroutine hồi chiêu sau khi đã gây sát thương
         StartCoroutine(AttackCooldown());
     }
 
     IEnumerator AttackCooldown()
     {
-        // Đợi theo thời gian nghỉ
-        yield return new WaitForSeconds(monsterData.tgianNghiTanCong);       
-        // Cho phép tấn công trở lại
+        yield return new WaitForSeconds(monsterData.tgianNghiTanCong);
         canAttack = true;
     }
-
 
     // --- LOGIC NHẬN SÁT THƯƠNG VÀ CHẾT ---
 
     public void TakeDame(float dame)
     {
+        if (isDying) return; // Không nhận thêm sát thương nếu đã chết
+
         currentHealth -= dame;
         monster.capnhatthanhmau(currentHealth, monsterData.thanhMauToiDa);
         if (currentHealth <= 0)
         {
             animator.SetBool("IsRunning", false);
             animator.SetTrigger("Die");
-            Die();
+            Die(true); // Chết do nhận sát thương -> có cộng EXP
         }
     }
 
-    void Die()
+    // --- HÀM DIE ĐÃ ĐƯỢC SỬA ĐỔI ---
+    // Thêm tham số 'giveXP' (mặc định là true)
+    void Die(bool giveXP = true)
     {
-        if (playerLevel != null)
+        // Kiểm tra cờ isDying để đảm bảo hàm này chỉ chạy 1 lần
+        if (isDying) return;
+        isDying = true;
+
+        // Chỉ cộng EXP nếu 'giveXP' là true
+        if (giveXP && playerLevel != null)
         {
             playerLevel.AddXP(monsterData.diemKinhNghiem);
-        }       
+        }
 
-        // Vô hiệu hóa script và collider để nó không thể di chuyển hay tấn công nữa
         this.enabled = false;
         GetComponent<Collider2D>().enabled = false;
 
-        // Hủy GameObject sau 2 giây để animation chết kịp chạy
         Destroy(gameObject, 0.5f);
     }
 
-    // --- LOGIC DI CHUYỂN ---
+    // --- HÀM MỚI ĐỂ BOSS GỌI ---
+    /// <summary>
+    /// Hàm này được gọi bởi SpawnMonster khi boss xuất hiện.
+    /// Quái sẽ chết ngay lập tức và KHÔNG cho EXP.
+    /// </summary>
+    public void DieFromBoss()
+    {
+        if (isDying) return; // Đã chết rồi thì thôi
 
+        animator.SetBool("IsRunning", false);
+        animator.SetTrigger("Die");
+        Die(false); // Gọi hàm Die và truyền 'false' để không cộng EXP
+    }
+
+    // --- LOGIC DI CHUYỂN ---
     public void MonsterMove(Vector3 playerTransform)
     {
-        animator.SetBool("IsRunning", true); // Dùng SetBool cho trạng thái chạy
+        if (isDying) return;
+
+        animator.SetBool("IsRunning", true);
         Vector3 direction = (playerTransform - transform.position).normalized;
         transform.position += direction * monsterData.tocDoDiChuyen * Time.deltaTime;
 
-        // Lật sprite
         if (direction.x > 0)
         {
             transform.localScale = new Vector3(2, 2, 1);

@@ -1688,7 +1688,7 @@ MonoBehaviour:
   firePoint: {fileID: 5167751994811376795}
   launchForce: 5
   soThienThach: 1
-  gocToaToiDa: 45
+  gocToaToiDa: 60
   gocTangMoiVienDan: 5
   soDem: 0
   cooldown: 5

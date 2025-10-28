@@ -1634,52 +1634,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 377696334}
   m_CullTransparentMesh: 1
---- !u!1 &387576683
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 387576684}
-  - component: {fileID: 387576685}
-  m_Layer: 0
-  m_Name: BossSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &387576684
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387576683}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.51661, y: 8.86415, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 998406103}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &387576685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387576683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8949710bd33d15d4fbccbde67d9da664, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpawnBoss
-  bossPrefap: {fileID: 4215093629566889110, guid: 9da9f465dff6f504e910953597ab2871, type: 3}
-  audio: {fileID: 0}
 --- !u!1 &387829045
 GameObject:
   m_ObjectHideFlags: 0
@@ -2716,6 +2670,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562058630}
   m_CullTransparentMesh: 1
+--- !u!1 &582746477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 582746478}
+  m_Layer: 0
+  m_Name: SpawnBossTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &582746478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582746477}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.02, y: 8.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1777824047}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &603508874
 GameObject:
   m_ObjectHideFlags: 0
@@ -5041,7 +5026,6 @@ Transform:
   m_Children:
   - {fileID: 1446141052}
   - {fileID: 724047635}
-  - {fileID: 387576684}
   - {fileID: 974001144}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5192,6 +5176,7 @@ GameObject:
   - component: {fileID: 1005704205}
   - component: {fileID: 1005704207}
   - component: {fileID: 1005704206}
+  - component: {fileID: 1005704208}
   m_Layer: 5
   m_Name: BoDemThoiGian
   m_TagString: Untagged
@@ -5317,6 +5302,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005704204}
   m_CullTransparentMesh: 1
+--- !u!114 &1005704208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005704204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11775a0c22408a64193d6f8309171b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
+  timerText: {fileID: 1005704206}
+  spawnMonster: {fileID: 1777824048}
 --- !u!1 &1008408373
 GameObject:
   m_ObjectHideFlags: 0
@@ -7316,7 +7315,7 @@ MonoBehaviour:
   spawnInterval: 1
   thienthachsieubu: {fileID: 5802402177142667955, guid: bc81270abdc19d74caf3502451da1d31, type: 3}
   thoigiantangdokho: 30
-  spawnBoss: {fileID: 387576685}
+  spawnBoss: {fileID: 0}
 --- !u!4 &1446141052
 Transform:
   m_ObjectHideFlags: 0
@@ -8900,6 +8899,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 728907255}
+  - {fileID: 582746478}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1777824048
@@ -8922,12 +8922,17 @@ MonoBehaviour:
   - monster: {fileID: 284318887771507899, guid: 19f9328e690786f4b9bfe390d46ae0a3, type: 3}
     timeSpawn: 60
     timeOut: 1900
-  bossesToSpawn: []
   cooldownSpawnMin: 0.5
   cooldownSpawnStart: 5
   soQuaiBanDau: 5
   soQuaiCuoiTran: 20
-  gameTimer: 0
+  bossesToSpawn:
+  - boss: {fileID: 6632228316909592661, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
+    timeSpawn: 300
+    hasSpawned: 0
+  bossSpawnPoint: {fileID: 582746478}
+  audio: {fileID: 1302982575}
+  gameTimer: 290
   spawnTimer: 5
   thoiGianTroChoi: 1800
 --- !u!1 &1794260688
@@ -9818,7 +9823,7 @@ MonoBehaviour:
   StarPro1: {fileID: 13122545}
   StarPro2: {fileID: 1361473642}
   StarPro3: {fileID: 425979969}
-  ownedSkillBiasChance: 0.652
+  ownedSkillBiasChance: 0.6
 --- !u!4 &2034306854
 Transform:
   m_ObjectHideFlags: 0
@@ -10219,6 +10224,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 849781308102650860, guid: 0ae1f1a7af0949a4ba5bdea90437c9f9, type: 3}
+      propertyPath: gocToaToiDa
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 1200145790100732981, guid: 0ae1f1a7af0949a4ba5bdea90437c9f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.08
