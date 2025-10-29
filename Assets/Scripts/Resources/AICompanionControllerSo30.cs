@@ -4,7 +4,7 @@ using UnityEngine;
 public class AICompanionControllerSo30 : MonoBehaviour
 {
     private Transform player;
-    private TextMeshPro companionText;             // UI để hiển thị lời nói
+    private TextMeshPro companionText;
     private GameObject shieldPrefab;
     [SerializeField]
     private float followDistance = 2.5f;
@@ -25,7 +25,7 @@ public class AICompanionControllerSo30 : MonoBehaviour
 
         shieldTimer += Time.deltaTime;
 
-        // Giả lập máu player thấp để demo (sau này bạn có thể lấy từ PlayerHealth)
+        
         float fakePlayerHealth = Mathf.PingPong(Time.time * 10, 100);
 
         if (fakePlayerHealth < 30 && !shieldActive && shieldTimer >= shieldCooldown)
@@ -33,7 +33,7 @@ public class AICompanionControllerSo30 : MonoBehaviour
             ActivateShield();
         }
 
-        // Thỉnh thoảng nói ngẫu nhiên
+        
         if (Random.Range(0, 1000) < 2)
         {
             RandomTalk();
