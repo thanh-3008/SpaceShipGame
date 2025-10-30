@@ -57,6 +57,9 @@ public class PlayerController : MonoBehaviour
 
     private TroThuController controller1;
     private TroThuController controller2;
+
+    private float originalMoveSpeed; // Biến lưu tốc độ gốc
+    private bool isPermanentlySlowed = false; // Cờ đánh dấu bị làm chậm
     // -------------------------------
 
 
@@ -66,6 +69,7 @@ public class PlayerController : MonoBehaviour
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        originalMoveSpeed = speed; // Lưu tốc độ gốc
 
         #region Auto-Find Components
         // --- Tìm ThanhMau ---
@@ -384,22 +388,32 @@ public class PlayerController : MonoBehaviour
     }
     public void StartFlashRed()
     {
-        StopCoroutine("FlashRed"); // Dừng coroutine cũ nếu đang chạy
+        StopCoroutine("FlashRedCoroutine"); // Dừng coroutine cũ nếu đang chạy
         StartCoroutine(FlashRedCoroutine(timeFlash));
     }
 
+    // --- HÀM NÀY ĐÃ ĐƯỢC CẬP NHẬT ---
     private IEnumerator FlashRedCoroutine(float thoigianduytri)
     {
         float elapsedTime = 0f;
+
+        // 1. Xác định màu gốc (base color) dựa trên trạng thái bị làm chậm
+        Color baseColor = isPermanentlySlowed ? Color.green : Color.white;
+
         while (elapsedTime < thoigianduytri)
         {
             spriteRenderer.color = Color.red;
             yield return new WaitForSeconds(0.1f);
-            spriteRenderer.color = Color.white;
+
+            // 2. Quay trở lại màu gốc (thay vì luôn là màu trắng)
+            spriteRenderer.color = baseColor;
+
             yield return new WaitForSeconds(0.1f);
             elapsedTime += 0.2f;
         }
-        spriteRenderer.color = Color.white; // Đảm bảo màu trở lại bình thường
+
+        // 3. Đảm bảo khi kết thúc, màu sắc trở lại đúng trạng thái
+        spriteRenderer.color = baseColor;
     }
 
     void LateUpdate()
@@ -443,6 +457,47 @@ public class PlayerController : MonoBehaviour
             // Copy level của con 1 cho con 2
             controller2.SetLevel(controller1.GetCurrentLevel());
         }
+    }
+
+    // --- HÀM NÀY ĐÃ ĐƯỢC CẬP NHẬT ---
+    public void ApplySlow(float slowFactor)
+    {
+        // Nếu đã bị chậm rồi, không cần chạy lại
+        if (isPermanentlySlowed) return;
+
+        isPermanentlySlowed = true;
+        // Tốc độ gốc đã được lưu ở Start()
+        speed = originalMoveSpeed * slowFactor;
+        Debug.Log("Player bị LÀM CHẬM vĩnh viễn!");
+
+        // --- CODE MỚI ---
+        if (spriteRenderer != null)
+        {
+            // Dừng mọi hiệu ứng nháy đỏ (nếu có) và chuyển sang màu xanh
+            StopCoroutine("FlashRedCoroutine");
+            spriteRenderer.color = Color.green;
+        }
+        // ---------------
+    }
+
+    // --- HÀM NÀY ĐÃ ĐƯỢC CẬP NHẬT ---
+    public void RemoveSlow()
+    {
+        // Chỉ hồi phục nếu đang bị chậm
+        if (!isPermanentlySlowed) return;
+
+        Debug.Log("Player hồi phục tốc độ.");
+        speed = originalMoveSpeed;
+        isPermanentlySlowed = false;
+
+        // --- CODE MỚI ---
+        if (spriteRenderer != null)
+        {
+            // Dừng mọi hiệu ứng nháy đỏ (nếu có) và trở về màu trắng
+            StopCoroutine("FlashRedCoroutine");
+            spriteRenderer.color = Color.white;
+        }
+        // ---------------
     }
     // ---------------------------------------------------
 
