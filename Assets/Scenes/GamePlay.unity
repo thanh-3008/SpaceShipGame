@@ -1501,83 +1501,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338227561}
   m_CullTransparentMesh: 1
---- !u!1001 &344871748
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2256541051329776744, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256541051329776744, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256541051329776744, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256541051329776744, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256541051329776744, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256541051329776744, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256541051329776744, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256541051329776744, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256541051329776744, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2256541051329776744, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2738513557496553384, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2738513557496553384, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6042700634102332097, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: homingBulletSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6042700634102332097, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: spreadBulletSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6042700634102332097, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: predictiveBulletSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6632228316909592661, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
-      propertyPath: m_Name
-      value: Archon Kardinal(Boss1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
 --- !u!1 &377696334
 GameObject:
   m_ObjectHideFlags: 0
@@ -9647,7 +9570,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1777824047
 Transform:
   m_ObjectHideFlags: 0
@@ -9687,8 +9610,8 @@ MonoBehaviour:
     timeOut: 1900
   cooldownSpawnMin: 0.5
   cooldownSpawnStart: 5
-  soQuaiBanDau: 5
-  soQuaiCuoiTran: 20
+  soQuaiBanDau: 8
+  soQuaiCuoiTran: 50
   bossesToSpawn:
   - boss: {fileID: 6632228316909592661, guid: a8c8aa73db8231741be672a7223fbe56, type: 3}
     timeSpawn: 180
@@ -9698,7 +9621,7 @@ MonoBehaviour:
     hasSpawned: 0
   bossSpawnPoint: {fileID: 582746478}
   audio: {fileID: 1302982575}
-  gameTimer: 290
+  gameTimer: 0
   spawnTimer: 5
   thoiGianTroChoi: 1800
 --- !u!1 &1794260688
@@ -10642,7 +10565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1, y: -9.999924}
+  m_AnchoredPosition: {x: 1, y: -9.999939}
   m_SizeDelta: {x: 23.7289, y: -351.4254}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2074963939
@@ -11203,4 +11126,3 @@ SceneRoots:
   - {fileID: 439300271}
   - {fileID: 3489917528096753933}
   - {fileID: 783392504}
-  - {fileID: 344871748}

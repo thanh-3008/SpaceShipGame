@@ -477,8 +477,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7445131885035009065, guid: 1efe3ef49b721574ebee79b7051aa78b, type: 3}
   firePoint: {fileID: 8159151845202985130}
   predictiveBulletSpeed: 20
-  homingBulletSpeed: 10
-  spreadBulletSpeed: 10
+  homingBulletSpeed: 20
+  spreadBulletSpeed: 5
   slowDownFactor: 5
   dashSpeed: 20
   dashWarningTime: 1
