@@ -86,7 +86,7 @@ public class HoiThoaiManagement : MonoBehaviour
         {
             textTalk.text += a;
             // Dùng WaitForSecondsRealtime là chính xác vì nó không bị ảnh hưởng bởi Time.timeScale
-            yield return new WaitForSecondsRealtime(0.1f);
+            yield return new WaitForSecondsRealtime(0.05f);
         }
         isTyping = false;
     }
@@ -94,5 +94,21 @@ public class HoiThoaiManagement : MonoBehaviour
     public void EndDialogue()
     {
         dialoguePanel.SetActive(false);
+    }
+
+    public void Skip()
+    {
+        // 1. Dừng mọi coroutine (dừng gõ chữ)
+        StopAllCoroutines();
+        isTyping = false;
+
+        // 2. Xóa hàng đợi
+        cauHoiThoai.Clear();
+
+        // 3. Gọi EndDialogue để ẩn panel
+        EndDialogue();
+
+        // 4. Yêu cầu chạy lại game ngay lập tức
+        TimeScaleManager.ReleasePause();
     }
 }

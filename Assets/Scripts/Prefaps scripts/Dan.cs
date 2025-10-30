@@ -35,6 +35,7 @@ public class Dan : MonoBehaviour
             DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage + damex, damageResult.isCrit);
             
         }
+
         if (other.CompareTag("Monster"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();
