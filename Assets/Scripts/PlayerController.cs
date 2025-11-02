@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour
 
     private float originalMoveSpeed; // Biến lưu tốc độ gốc
     private bool isPermanentlySlowed = false; // Cờ đánh dấu bị làm chậm
+                                              // (Bên dưới các biến public/private khác)
+    private bool daNhanSatThuongDocFrameNay = false;
     // -------------------------------
 
 
@@ -422,6 +424,7 @@ public class PlayerController : MonoBehaviour
         float clampedX = Mathf.Clamp(currentPosition.x, -7.5f, 7.5f);
         float clampedY = Mathf.Clamp(currentPosition.y, -4.5f, 4.5f);
         transform.position = new Vector3(clampedX, clampedY, currentPosition.z);
+        daNhanSatThuongDocFrameNay = false;
     }
 
     // --- ADDED: BA HAM MOI DE UPGRADEMANAGEMENT GOI ---
@@ -498,6 +501,26 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.color = Color.white;
         }
         // ---------------
+    }
+
+    /// <summary>
+    /// Hàm này được gọi bởi các vũng độc (VenomTrail).
+    /// Nó kiểm tra để đảm bảo Player chỉ nhận sát thương độc 1 lần/frame.
+    /// </summary>
+    public void TakePoisonDamage(float damage)
+    {
+        // Nếu frame này đã nhận sát thương độc rồi, thì BỎ QUA
+        if (daNhanSatThuongDocFrameNay)
+        {
+            return;
+        }
+
+        // Nếu chưa, thì nhận sát thương (và phát âm thanh 1 LẦN)
+        TakeDame(damage); // Gọi hàm TakeDame gốc của bạn
+
+        // Và đặt cờ, để các vũng độc khác không thể gây sát thương
+        // trong frame này nữa
+        daNhanSatThuongDocFrameNay = true;
     }
     // ---------------------------------------------------
 
