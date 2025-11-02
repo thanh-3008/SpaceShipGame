@@ -728,6 +728,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BackGround2
   scrollSpeed: 0.5
   backgroundHeight: 0
+--- !u!1 &126213620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 126213621}
+  m_Layer: 0
+  m_Name: transformMinion3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &126213621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126213620}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.21, y: -3.11, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 958511857}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &132478667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,6 +2135,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445993376}
   m_CullTransparentMesh: 1
+--- !u!1 &454835488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 454835489}
+  m_Layer: 0
+  m_Name: transformMinion1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &454835489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454835488}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.36, y: -2.67, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 958511857}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &466272426
 GameObject:
   m_ObjectHideFlags: 0
@@ -4602,6 +4664,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942847278}
   m_CullTransparentMesh: 1
+--- !u!1 &958511856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 958511857}
+  m_Layer: 0
+  m_Name: positionMinionLoLung
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &958511857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958511856}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.7031894, y: 3.4422998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 454835489}
+  - {fileID: 1959198078}
+  - {fileID: 126213621}
+  - {fileID: 1076033267}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &959633709
 GameObject:
   m_ObjectHideFlags: 0
@@ -6201,6 +6298,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1302982574}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1076033266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1076033267}
+  m_Layer: 0
+  m_Name: transformMinion4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1076033267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076033266}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.67, y: -2.73, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 958511857}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1148731143
 GameObject:
@@ -9619,6 +9747,9 @@ MonoBehaviour:
   - boss: {fileID: 1173465449842017515, guid: fefeed635c070834d83d1404a160038f, type: 3}
     timeSpawn: 360
     hasSpawned: 0
+  - boss: {fileID: 6708472761234321985, guid: b1f4858eeede71441ab5ca3790503941, type: 3}
+    timeSpawn: 540
+    hasSpawned: 0
   bossSpawnPoint: {fileID: 582746478}
   audio: {fileID: 1302982575}
   gameTimer: 0
@@ -10439,6 +10570,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946679239}
   m_CullTransparentMesh: 1
+--- !u!1 &1959198077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1959198078}
+  m_Layer: 0
+  m_Name: transformMinion2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1959198078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959198077}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.24, y: -3.02, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 958511857}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2029181778 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1357593704814630091, guid: ea257f2132d86f34e94ad1be3c481167, type: 3}
@@ -10512,7 +10674,7 @@ MonoBehaviour:
   StarPro1: {fileID: 13122545}
   StarPro2: {fileID: 1361473642}
   StarPro3: {fileID: 425979969}
-  ownedSkillBiasChance: 0.6
+  ownedSkillBiasChance: 0.404
 --- !u!4 &2034306854
 Transform:
   m_ObjectHideFlags: 0
@@ -10565,7 +10727,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1, y: -9.999939}
+  m_AnchoredPosition: {x: 1, y: -9.999908}
   m_SizeDelta: {x: 23.7289, y: -351.4254}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2074963939
@@ -11036,6 +11198,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Seraph III
       objectReference: {fileID: 0}
+    - target: {fileID: 4865838827915281887, guid: 0ae1f1a7af0949a4ba5bdea90437c9f9, type: 3}
+      propertyPath: xpToNextLevel
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5029265865495637784, guid: 0ae1f1a7af0949a4ba5bdea90437c9f9, type: 3}
+      propertyPath: damegoc
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11126,3 +11296,4 @@ SceneRoots:
   - {fileID: 439300271}
   - {fileID: 3489917528096753933}
   - {fileID: 783392504}
+  - {fileID: 958511857}
