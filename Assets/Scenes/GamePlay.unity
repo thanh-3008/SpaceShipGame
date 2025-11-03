@@ -7153,10 +7153,10 @@ MonoBehaviour:
   vachamfireball: {fileID: 8300000, guid: b1fbd34b9d275b9448773e675bab410d, type: 3}
   amthanhmattroi: {fileID: 8300000, guid: 356a239020e2a6249b255662049d2117, type: 3}
   amthanhdanez: {fileID: 8300000, guid: b99fd14a4d07d5143a46cf7feae36877, type: 3}
-  bossSpawn: {fileID: 8300000, guid: 56ae3ed3b435c574a9490abcae467380, type: 3}
+  bossSpawn: {fileID: 8300000, guid: d1050a791fdb98d408d7ef023131d2db, type: 3}
   bossDashskill: {fileID: 8300000, guid: f8398b14236507f4a9e95573bae30092, type: 3}
   musicBoss: {fileID: 0}
-  blockShield: {fileID: 0}
+  blockShield: {fileID: 8300000, guid: 087eb91b8055d3541906c338e8f50ca5, type: 3}
 --- !u!1 &1323318915
 GameObject:
   m_ObjectHideFlags: 0
