@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6584275334679088186}
   - component: {fileID: 8548099752554368499}
   - component: {fileID: 4394658655263286650}
+  - component: {fileID: 876598264068431117}
   m_Layer: 0
   m_Name: DanIon_0
   m_TagString: Untagged
@@ -169,3 +170,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DanIon
   speed: 10
+--- !u!114 &876598264068431117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6321979865517477719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733d193b069ff824e9da67d9edab1909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnHitShield

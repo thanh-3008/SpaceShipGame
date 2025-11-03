@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7393875680784247655}
   - component: {fileID: -4725892505105114364}
   - component: {fileID: 6561457920341555098}
+  - component: {fileID: 4965232098544988783}
   m_Layer: 0
   m_Name: TenLua
   m_TagString: Untagged
@@ -180,3 +181,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossBulletController
   normalSpeed: 0
   slowDownFactor: 10
+  failsafeLifetime: 5
+--- !u!114 &4965232098544988783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8269528422913370273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733d193b069ff824e9da67d9edab1909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnHitShield

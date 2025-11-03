@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3861876404143215545}
   - component: {fileID: 5896806901627936186}
   - component: {fileID: 3621726413587346696}
+  - component: {fileID: 2093161327399519749}
   m_Layer: 0
   m_Name: dantaume
   m_TagString: Untagged
@@ -158,6 +159,7 @@ MonoBehaviour:
   speed: 5
   damex: 100
   anim: {fileID: 7099437546187023160}
+  player: {fileID: 0}
 --- !u!61 &3621726413587346696
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -204,3 +206,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.45412606, y: 0.0799173}
   m_EdgeRadius: 0
+--- !u!114 &2093161327399519749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914126663893973412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733d193b069ff824e9da67d9edab1909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOnHitShield
