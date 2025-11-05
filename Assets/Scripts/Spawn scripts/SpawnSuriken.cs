@@ -5,6 +5,8 @@ public class SpawnSuriken : MonoBehaviour
 {
     [Header("Cài đặt Prefab và Container")]
     public GameObject surikenPrefab;
+
+    public GameObject surikenPro;
     // Kéo đối tượng rỗng 'ShurikenContainer' bạn vừa tạo vào đây
     public Transform shurikenContainer;
 
@@ -18,10 +20,6 @@ public class SpawnSuriken : MonoBehaviour
     private int soSurikenHienTai = 0;   
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.V))
-        {
-            ThemSuriken();           
-        }
 
     }
 
@@ -72,10 +70,30 @@ public class SpawnSuriken : MonoBehaviour
     {
         if(soSurikenHienTai == maxSuriken)
         {
+
             for(int i = 0; i < surikens.Count; i++)
+            {
+                GameObject OldShuriken = surikens[i];
+                Vector3 position = OldShuriken.transform.localPosition;
+                Quaternion rotation = OldShuriken.transform.localRotation;
+
+                GameObject newShuriken = Instantiate(surikenPro, shurikenContainer);
+                newShuriken.transform.localPosition = position;
+                newShuriken.transform.localRotation = rotation;
+
+                surikens[i] = newShuriken;
+                Destroy(OldShuriken);
+
+            }
+
+
+            for (int i = 0; i < surikens.Count; i++)
             {
                 surikens[i].transform.localScale = new Vector3(1f, 1f, 1f);
             }
+
+           
+
             tocDoQuay = 500f;
             banKinh = 8f;
         }

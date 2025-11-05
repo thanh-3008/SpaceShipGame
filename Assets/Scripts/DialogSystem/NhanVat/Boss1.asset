@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35ac61a93405765479dc403f16c04673, type: 3}
+  m_Name: Boss1
+  m_EditorClassIdentifier: Assembly-CSharp::SpeakerData
+  speakerName: Archon Kardinal
+  speakerPortrait: {fileID: -4385829030376429306, guid: de0f9cc490d3a09459009e13ac8f2aeb, type: 3}

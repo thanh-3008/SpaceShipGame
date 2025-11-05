@@ -27,6 +27,7 @@ public class AudioManagement : MonoBehaviour
     public AudioClip bossSpawn;
     public AudioClip bossDashskill;
     public AudioClip musicBoss;
+    public AudioClip blockShield;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

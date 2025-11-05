@@ -6,6 +6,11 @@ public class BossBulletController : MonoBehaviour
     public float normalSpeed;
     public float slowDownFactor = 5f; // Đặt hệ số làm chậm ở đây cho nhất quán
 
+    // --- SỬA ĐỔI: THÊM BIẾN MỚI ---
+    [Tooltip("Thời gian tự hủy tối đa (giây), đề phòng đạn kẹt hoặc sinh ra ngoài màn hình")]
+    public float failsafeLifetime = 5f;
+    // -------------------------------
+
     private Rigidbody2D rb;
     private SeraphMKII skillMKII;
     private PlayerController player;
@@ -15,10 +20,19 @@ public class BossBulletController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         // Tìm đối tượng Player và lấy script skill của nó
-        // FindObjectOfType an toàn hơn trong trường hợp chỉ có 1 Player
         skillMKII = FindObjectOfType<SeraphMKII>();
         GameObject playerobj = GameObject.FindGameObjectWithTag("Player");
-        player = playerobj.GetComponent<PlayerController>();
+
+        if (playerobj != null)
+        {
+            player = playerobj.GetComponent<PlayerController>();
+        }
+
+        // --- SỬA ĐỔI: THÊM TỰ HỦY DỰ PHÒNG ---
+        // Đảm bảo đạn sẽ bị phá hủy sau một khoảng thời gian
+        // ngay cả khi nó không bao giờ va chạm hoặc bay ra khỏi màn hình
+        Destroy(gameObject, failsafeLifetime);
+        // ---------------------------------------
     }
 
     void Update()
@@ -31,20 +45,36 @@ public class BossBulletController : MonoBehaviour
         }
 
         // 2. Cập nhật lại vận tốc của viên đạn
-        // Luôn giữ hướng bay cũ (rb.velocity.normalized) và chỉ thay đổi độ lớn (tốc độ)
-        rb.linearVelocity = rb.linearVelocity.normalized * currentSpeed;
+        if (rb.linearVelocity.sqrMagnitude > 0.01f)
+        {
+            rb.linearVelocity = rb.linearVelocity.normalized * currentSpeed;
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            player.TakeDame(20f);          
+            if (player != null)
+            {
+                player.TakeDame(10f);
+            }
             Destroy(gameObject);
         }
-        if(collision.CompareTag("TauMe"))
+        if (collision.CompareTag("TauMe"))
         {
             Destroy(gameObject);
         }
+    }
+
+    /// <summary>
+    /// Hàm này tự động được gọi bởi Unity khi
+    /// Renderer (ví dụ SpriteRenderer) không còn
+    /// hiển thị trên bất kỳ camera nào.
+    /// </summary>
+    void OnBecameInvisible()
+    {
+        // Đây là cách phá hủy nhanh và hiệu quả nhất
+        Destroy(gameObject);
     }
 }

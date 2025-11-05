@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9307797919b514db9bfeeb6c9bc14d, type: 3}
+  m_Name: Pro TauTuanTra
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
+  upgradeName: "\u0110\u1ED9i H\xECnh Song H\xE0nh"
+  description: "K\xEDch ho\u1EA1t s\u1EE9c m\u1EA1nh cu\u1ED1i c\xF9ng cho t\xE0u
+    tu\u1EA7n tra"
+  icon: {fileID: 8280013833489041343, guid: 79eaeb78f2ee105478af090da616238f, type: 3}
+  type: 1
+  maxChosse: 1
+  color: {r: 0.7396116, g: 0.227451, b: 0.8509804, a: 1}
+  upgradePro: {fileID: 0}

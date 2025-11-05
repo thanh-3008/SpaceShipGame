@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a870c553808a7a345ad99b7b8f95d653, type: 3}
+  m_Name: HoiThoaiMoDau
+  m_EditorClassIdentifier: Assembly-CSharp::Conversation
+  lines:
+  - speaker: {fileID: 11400000, guid: 569a1227faccf9f41bf172f3d96ed6de, type: 2}
+    text: "\u01AF... \u0111\u1EA7u m\xECnh \u0111au qu\xE1... \u0110\xE2y l\xE0 \u0111\xE2u?
+      T\u1ED1i... t\u1ED1i qu\xE1!"
+  - speaker: {fileID: 11400000, guid: 626ca18bf79183b4281ede2153dbe43c, type: 2}
+    text: "Khoan \u0111\xE3... m\xECnh nh\u1EDB l\xE0 m\xECnh b\u1ECB xe t\u1EA3i...\xD4i
+      v\xE3i... m\xECnh xuy\xEAn kh\xF4ng r\u1ED3i sao?!"
+  - speaker: {fileID: 11400000, guid: 302b9e844a4ef4945b2a20473596179b, type: 2}
+    text: "[...Ph\xE1t hi\u1EC7n v\u1EADt ch\u1EE7... \u0110ang \u0111\u1ED3ng b\u1ED9
+      h\xF3a linh h\u1ED3n... 10%... 50%... 100%]"
+  - speaker: {fileID: 11400000, guid: 302b9e844a4ef4945b2a20473596179b, type: 2}
+    text: "[\u0110\u1ED3ng b\u1ED9 h\xF3a ho\xE0n t\u1EA5t. Ch\xE0o m\u1EEBng K\xFD
+      ch\u1EE7 \u0111\u1EBFn v\u1EDBi H\u1EC7 Th\u1ED1ng Sinh T\u1ED3n.]"
+  - speaker: {fileID: 11400000, guid: 569a1227faccf9f41bf172f3d96ed6de, type: 2}
+    text: "C-C\xE1i g\xEC? Gi\u1ECDng n\xF3i g\xEC trong \u0111\u1EA7u m\xECnh v\u1EADy?
+      H\u1EC7 th\u1ED1ng?! Th\u1EADt \xE0?!"
+  - speaker: {fileID: 11400000, guid: 302b9e844a4ef4945b2a20473596179b, type: 2}
+    text: "[T\xF4i l\xE0 AI d\u1EABn \u0111\u01B0\u1EDDng c\u1EE7a K\xFD ch\u1EE7.
+      Ph\xE2n t\xEDch m\xF4i tr\u01B0\u1EDDng... K\xFD ch\u1EE7 \u0111ang \u1EDF
+      trong t\xECnh tr\u1EA1ng c\u1EF1c k\u1EF3 nguy hi\u1EC3m. Nhi\u1EC7m v\u1EE5
+      ch\xEDnh: S\u1ED0NG S\xD3T.]"
+  - speaker: {fileID: 11400000, guid: 569a1227faccf9f41bf172f3d96ed6de, type: 2}
+    text: "S\u1ED1ng s\xF3t? Nguy hi\u1EC3m? \xDD c\xF4 l\xE0 sao? T\xF4i ph\u1EA3i
+      l\xE0m g\xEC \u0111\xE2y??"
+  - speaker: {fileID: 11400000, guid: 302b9e844a4ef4945b2a20473596179b, type: 2}
+    text: "[H\xE3y b\xECnh t\u0129nh v\xE0 ch\xFA \xFD v\xE0o c\xE1c ch\u1EC9 s\u1ED1
+      c\u1EE7a K\xFD ch\u1EE7. B\u1EA1n c\xF3 th\u1EC3 th\u1EA5y ch\xFAng tr\xEAn
+      m\xE0n h\xECnh.]"
+  - speaker: {fileID: 11400000, guid: 302b9e844a4ef4945b2a20473596179b, type: 2}
+    text: "[G\xF3c tr\xEAn b\xEAn tr\xE1i l\xE0 Thanh M\xE1u  v\xE0 Thanh N\u1ED9,K\xFD
+      ch\u1EE7 c\xF3 th\u1EC3 s\u1EED d\u1EE5ng skill \u0111\u1EB7c bi\u1EC7t c\u1EE7a
+      t\xE0u khi \u0111\u1EE7 n\u1ED9 . N\u1EBFu M\xE1u v\u1EC1 0, K\xFD ch\u1EE7
+      s\u1EBD ch\u1EBFt.]"
+  - speaker: {fileID: 11400000, guid: 302b9e844a4ef4945b2a20473596179b, type: 2}
+    text: "[B\xEAn d\u01B0\u1EDBi l\xE0 Thanh Kinh Nghi\u1EC7m . Ti\xEAu di\u1EC7t
+      qu\xE1i v\u1EADt s\u1EBD gi\xFAp K\xFD ch\u1EE7 t\xEDch l\u0169y kinh nghi\u1EC7m.]"
+  - speaker: {fileID: 11400000, guid: 302b9e844a4ef4945b2a20473596179b, type: 2}
+    text: "[M\u1EE5c ti\xEAu ch\xEDnh: Khi ThanhXP \u0111\u1EA7y, K\xFD ch\u1EE7
+      s\u1EBD l\xEAn c\u1EA5p. M\u1ED7i l\u1EA7n l\xEAn c\u1EA5p, K\xFD ch\u1EE7
+      s\u1EBD nh\u1EADn \u0111\u01B0\u1EE3c m\u1ED9t N\xE2ng C\u1EA5p ng\u1EABu nhi\xEAn.]"
+  - speaker: {fileID: 11400000, guid: 302b9e844a4ef4945b2a20473596179b, type: 2}
+    text: "[C\xE1c k\u1EF9 n\u0103ng s\u1EBD t\u1EF1 \u0111\u1ED9ng s\u1EED d\u1EE5ng.
+      H\xE3y t\u1EADp trung di chuy\u1EC3n v\xE0 l\u1EF1a ch\u1ECDn n\xE2ng c\u1EA5p
+      m\u1ED9t c\xE1ch kh\xF4n ngoan \u0111\u1EC3 tr\u1EDF n\xEAn m\u1EA1nh m\u1EBD
+      h\u01A1n.]"
+  - speaker: {fileID: 11400000, guid: 25073ee04e50ec144bcde9b1f0679640, type: 2}
+    text: "Di chuy\u1EC3n... ti\xEAu di\u1EC7t qu\xE1i... l\xEAn c\u1EA5p v\xE0 ch\u1ECDn
+      n\xE2ng c\u1EA5p... M\xECnh hi\u1EC3u r\u1ED3i!"
+  - speaker: {fileID: 11400000, guid: 302b9e844a4ef4945b2a20473596179b, type: 2}
+    text: "[Ph\xE1t hi\u1EC7n \u0111\u1EE3t qu\xE1i v\u1EADt \u0111\u1EA7u ti\xEAn
+      \u0111ang \u0111\u1EBFn g\u1EA7n. Ch\xFAc K\xFD ch\u1EE7 may m\u1EAFn.]"

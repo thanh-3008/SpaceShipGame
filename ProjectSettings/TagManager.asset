@@ -19,6 +19,9 @@ TagManager:
   - DongBang
   - Boss
   - Monster
+  - AuraManagement
+  - SpawnThienThachManagement
+  - tenLuaRuot
   layers:
   - Default
   - TransparentFX

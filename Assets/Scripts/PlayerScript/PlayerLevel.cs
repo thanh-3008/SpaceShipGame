@@ -31,7 +31,7 @@ public class PlayerLevel : MonoBehaviour
     {
         currentLevel++;
         currentXP -= xpToNextLevel;
-        xpToNextLevel = Mathf.RoundToInt(xpToNextLevel * 1.5f); // Increase XP needed for next level
+        xpToNextLevel = Mathf.RoundToInt(xpToNextLevel * 1.2f); // Increase XP needed for next level
         Debug.Log("Leveled Up! New Level: " + currentLevel);
         onLevelUp.Invoke();
     }

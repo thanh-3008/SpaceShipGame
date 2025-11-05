@@ -3,6 +3,9 @@
 public class Shuriken : MonoBehaviour
 {
     public PlayerController player;
+    public float tocDoQuay =720f;
+    public float dameGayRa;
+    public bool isThienThach;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,7 +17,7 @@ public class Shuriken : MonoBehaviour
     void LateUpdate()
     {
        
-        transform.Rotate(Vector3.forward, 720*Time.deltaTime);
+        transform.Rotate(Vector3.forward, tocDoQuay*Time.deltaTime);
 
     }
 
@@ -23,22 +26,45 @@ public class Shuriken : MonoBehaviour
         if(collision.CompareTag("Enemy"))
         {
             var damageResult = player.CalculateDamage();
-            collision.GetComponent<thienthachdichuyen>().TakeDame(damageResult.damage);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage, damageResult.isCrit);
+            if(!isThienThach)
+            {
+                dameGayRa = damageResult.damage/2;
+            }else
+            {
+                dameGayRa = damageResult.damage * 3;
+            }
+            collision.GetComponent<thienthachdichuyen>().TakeDame(dameGayRa);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, dameGayRa, damageResult.isCrit);
           
         }
         if (collision.CompareTag("Boss"))
         {
             var damageResult = player.CalculateDamage();
-            collision.GetComponent<BossController>().TakeDame(damageResult.damage);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage, damageResult.isCrit);
+            if (!isThienThach)
+            {
+                dameGayRa = damageResult.damage / 2;
+            }
+            else
+            {
+                dameGayRa = damageResult.damage * 3;
+            }
+            collision.GetComponent<BossController>().TakeDame(dameGayRa);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, dameGayRa, damageResult.isCrit);
             
         }
         if (collision.CompareTag("Monster"))
         {
             var damageResult = player.CalculateDamage();
-            collision.GetComponent<RatMonster>().TakeDame(damageResult.damage);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage, damageResult.isCrit);
+            if (isThienThach==false)
+            {
+                dameGayRa = damageResult.damage / 2;
+            }
+            else
+            {
+                dameGayRa = damageResult.damage * 3;
+            }
+            collision.GetComponent<RatMonster>().TakeDame(dameGayRa);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, dameGayRa, damageResult.isCrit);
             
         }
     }

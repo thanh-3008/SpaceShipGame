@@ -2,15 +2,27 @@
 
 public class DroneFusionControllerSo25 : MonoBehaviour
 {
-    private GameObject dronePrefab;           // Drone gốc
-    private GameObject fusedDronePrefab;      // Drone sau khi hợp thể
-    private float fusionRange = 2f;           // Khoảng cách tối đa giữa 2 drone để hợp thể
+    private GameObject dronePrefab;
+    private GameObject fusedDronePrefab;
+    [SerializeField]
+    private float fusionRange = 2f;
+
+    [Header("Fusion Effects")]
+    private GameObject fusionEffectPrefab;     // Hiệu ứng ánh sáng xoáy
+    private AudioClip fusionSound;             // Âm thanh Fusion!
+    private AudioSource audioSource;
+
     private GameObject[] activeDrones;
     private bool isFused = false;
 
+    void Start()
+    {
+        audioSource = gameObject.AddComponent<AudioSource>();
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) // Nhấn F để hợp thể
+        if (Input.GetKeyDown(KeyCode.F))
         {
             TryFusion();
         }
@@ -29,11 +41,21 @@ public class DroneFusionControllerSo25 : MonoBehaviour
             if (distance <= fusionRange)
             {
                 Vector3 fusionPos = (droneA.transform.position + droneB.transform.position) / 2;
+
+                // Hiệu ứng hợp thể
+                if (fusionEffectPrefab != null)
+                    Instantiate(fusionEffectPrefab, fusionPos, Quaternion.identity);
+
+                // Âm thanh hợp thể
+                if (fusionSound != null)
+                    audioSource.PlayOneShot(fusionSound);
+
                 Destroy(droneA);
                 Destroy(droneB);
                 GameObject fusedDrone = Instantiate(fusedDronePrefab, fusionPos, Quaternion.identity);
                 fusedDrone.tag = "Drone";
                 isFused = true;
+
                 Debug.Log("⚡ Drone Fusion Success!");
             }
             else
