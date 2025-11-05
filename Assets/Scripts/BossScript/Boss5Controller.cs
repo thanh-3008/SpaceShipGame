@@ -31,18 +31,13 @@ public class Boss5Controller : MonoBehaviour, IBossAI
 
     [Header("Nội tại: Pod (Đứng yên)")]
     public Transform podContainer;
-    #endregion
 
-    // --- (SỬA ĐỔI HEADER NÀY) ---
     [Header("Phase 2: Phân Thân (Clone)")]
     public SpriteRenderer bossSpriteRenderer;
     public GameObject clonePrefab;
-    // (Đã xóa public Transform[] phase2Positions)
-    private Transform[] phase2Positions = new Transform[2]; // Biến riêng tư, sẽ được gán tự động
+    private Transform[] phase2Positions = new Transform[2];
     private Boss5_Illusion myCloneInstance;
-    // ----------------------------
 
-    #region // --- BIẾN SKILL (GIỮ NGUYÊN) ---
     [Header("Skill 1: Random Burst (Bắn ngẫu nhiên)")]
     public GameObject skill1_BulletPrefab;
     public Transform[] podFirePoints;
@@ -86,7 +81,7 @@ public class Boss5Controller : MonoBehaviour, IBossAI
         }
     }
 
-    // (Hàm ActivateEnrage giữ nguyên)
+    // --- (HÀM NÀY ĐÃ SỬA) ---
     public void ActivateEnrage()
     {
         if (isEnraged) return;
@@ -98,10 +93,9 @@ public class Boss5Controller : MonoBehaviour, IBossAI
             bossSpriteRenderer.color = Color.yellow;
         }
 
-        // (Kiểm tra xem 2 vị trí đã được tìm thấy chưa)
         if (clonePrefab != null && phase2Positions[0] != null && phase2Positions[1] != null)
         {
-            StartCoroutine(EnrageSequence());
+            StartCoroutine(EnrageSequence()); // Gọi Coroutine mới
         }
         else
         {
@@ -109,25 +103,29 @@ public class Boss5Controller : MonoBehaviour, IBossAI
         }
     }
 
-    // (Hàm EnrageSequence giữ nguyên)
+    // --- (HÀM NÀY ĐÃ SỬA) ---
+    // (Sửa lỗi Boss thật không di chuyển)
     private IEnumerator EnrageSequence()
     {
         this.moveSpeed = 0;
-        isDashing = true;
+        isDashing = true; // Cấm dùng skill trong khi đang bay
 
+        // 1. Bay đến vị trí Phase 2 (góc trái)
         yield return StartCoroutine(MoveToPosition(phase2Positions[0].position));
 
+        // 2. (SAU KHI BAY XONG) Spawn Clone
         GameObject cloneGO = Instantiate(clonePrefab, transform.position, Quaternion.identity);
         myCloneInstance = cloneGO.GetComponent<Boss5_Illusion>();
 
-        // (SỬA LỖI RACE CONDITION)
         // Đợi 1 frame để Start() của BossController trên Clone chạy xong
         yield return null;
 
         if (myCloneInstance != null)
         {
+            // 3. Ra lệnh cho Clone bay đến góc phải
             myCloneInstance.Activate(playerTarget, phase2Positions[1], skillMKII);
 
+            // 4. Sao chép máu
             BossController mainHealth = this.GetComponent<BossController>();
             BossController cloneHealth = cloneGO.GetComponent<BossController>();
 
@@ -137,9 +135,7 @@ public class Boss5Controller : MonoBehaviour, IBossAI
                 cloneHealth.currentHealth = mainHealth.currentHealth;
                 cloneHealth.maxHealth = mainHealth.maxHealth;
 
-                // (SỬA LỖI NULL REFERENCE)
-                // Phải kiểm tra xem Clone có thanh máu không
-                if (cloneHealth.thanhMau != null)
+                if (cloneHealth.thanhMau != null) // (Kiểm tra null)
                 {
                     cloneHealth.thanhMau.capnhatthanhmau(cloneHealth.currentHealth, cloneHealth.maxHealth);
                 }
@@ -150,10 +146,10 @@ public class Boss5Controller : MonoBehaviour, IBossAI
             }
         }
 
-        isDashing = false;
+        isDashing = false; // Cho phép dùng skill lại
     }
 
-    // --- (HÀM START ĐÃ SỬA ĐỔI) ---
+    // --- (HÀM START ĐÃ SỬA) ---
     void Start()
     {
         mainCamera = Camera.main;
@@ -165,27 +161,13 @@ public class Boss5Controller : MonoBehaviour, IBossAI
             skillMKII = playerObject.GetComponent<SeraphMKII>();
         }
 
-        // --- (THÊM MỚI: TỰ ĐỘNG TÌM VỊ TRÍ) ---
+        // --- (TỰ ĐỘNG TÌM VỊ TRÍ) ---
         GameObject viTri1 = GameObject.Find("ViTri");
         GameObject viTri2 = GameObject.Find("ViTri2");
-
-        if (viTri1 != null)
-        {
-            phase2Positions[0] = viTri1.transform;
-        }
-        else
-        {
-            Debug.LogError("Boss 6: Không tìm thấy GameObject tên 'ViTri'!");
-        }
-
-        if (viTri2 != null)
-        {
-            phase2Positions[1] = viTri2.transform;
-        }
-        else
-        {
-            Debug.LogError("Boss 6: Không tìm thấy GameObject tên 'ViTri2'!");
-        }
+        if (viTri1 != null) { phase2Positions[0] = viTri1.transform; }
+        else { Debug.LogError("Boss 6: Không tìm thấy GameObject tên 'ViTri'!"); }
+        if (viTri2 != null) { phase2Positions[1] = viTri2.transform; }
+        else { Debug.LogError("Boss 6: Không tìm thấy GameObject tên 'ViTri2'!"); }
         // ------------------------------------
 
         skillList = new List<System.Func<IEnumerator>>()
@@ -199,7 +181,7 @@ public class Boss5Controller : MonoBehaviour, IBossAI
         StartCoroutine(BossAI_Pattern());
     }
 
-    // (Các hàm còn lại giữ nguyên)
+    // (Hàm Update/BossAI_Pattern/LookAtPlayer giữ nguyên)
     #region // --- HÀM CƠ BẢN (GIỮ NGUYÊN) ---
     void Update()
     {
@@ -239,7 +221,9 @@ public class Boss5Controller : MonoBehaviour, IBossAI
     }
     #endregion
 
-    #region // --- SKILLS (GIỮ NGUYÊN) ---
+    #region // --- SKILLS (SỬA LỖI SKILL 4) ---
+
+    // --- (SKILL 4 ĐÃ SỬA LỖI VỊ TRÍ + TĂNG TỐC ĐỘ) ---
     private IEnumerator Skill_VoidDash()
     {
         Debug.Log("Boss 6: Dùng Skill Void Dash (X Shape)");
@@ -247,7 +231,14 @@ public class Boss5Controller : MonoBehaviour, IBossAI
 
         isDashing = true;
 
-        float currentMoveSpeed = (moveSpeed > 0) ? moveSpeed * 1.5f : 5f;
+        // Tốc độ di chuyển khi không Dash (dùng để bay tới góc)
+        // (SỬA 2) Tăng tốc độ bay (5f -> 8f)
+        float currentMoveSpeed = (moveSpeed > 0) ? moveSpeed * 1.5f : 8f;
+
+        // --- (SỬA 1: LỖI VỊ TRÍ QUAY VỀ) ---
+        // Lưu vị trí Y của P1 *trước khi* lao
+        float phase1ReturnY = transform.position.y;
+        // ------------------------------------
 
         float z = Mathf.Abs(mainCamera.transform.position.z - playerTarget.position.z);
         Vector2 topLeft = mainCamera.ViewportToWorldPoint(new Vector3(0, 1, z));
@@ -264,6 +255,7 @@ public class Boss5Controller : MonoBehaviour, IBossAI
             myCloneInstance.Start_Skill_VoidDash(startPos1, endPos1, startPos2, endPos2, currentMoveSpeed, dashSpeed, distancePerTrail, skill4_TrailPrefab);
         }
 
+        // --- (Code bay đã được tăng tốc lên currentMoveSpeed) ---
         while (Vector2.Distance(transform.position, startPos1) > 0.1f) { float step = currentMoveSpeed * Time.deltaTime; transform.position = Vector2.MoveTowards(transform.position, startPos1, step); yield return null; }
         yield return GetSlowedWait(0.5f);
         Vector2 lastTrailPos = transform.position;
@@ -274,17 +266,21 @@ public class Boss5Controller : MonoBehaviour, IBossAI
         while (Vector2.Distance(transform.position, endPos2) > 0.1f) { float step = dashSpeed * Time.deltaTime; transform.position = Vector2.MoveTowards(transform.position, endPos2, step); if (Vector2.Distance(transform.position, lastTrailPos) >= distancePerTrail) { Instantiate(skill4_TrailPrefab, transform.position, Quaternion.identity); lastTrailPos = transform.position; } yield return null; }
         yield return GetSlowedWait(1.0f);
 
+        // --- (SỬA LỖI 1: KIỂM TRA LẠI VỊ TRÍ QUAY VỀ) ---
         Vector2 returnPosition;
-        if (isEnraged && phase2Positions.Length > 0 && phase2Positions[0] != null)
+        if (isEnraged && phase2Positions[0] != null)
         {
+            // P2: Quay về vị trí "đậu" P2 (Góc trên)
             returnPosition = phase2Positions[0].position;
         }
         else
         {
-            // (Sửa lỗi: Nếu Phase 1, quay về giữa trục X, giữ nguyên trục Y)
-            returnPosition = new Vector2((leftPoint + rightPoint) / 2, transform.position.y);
+            // P1: Quay về vị trí giữa-trên (dùng Y đã lưu)
+            returnPosition = new Vector2((leftPoint + rightPoint) / 2, phase1ReturnY);
         }
+        // ---------------------------------------------
 
+        // (Code bay trở về cũng đã được tăng tốc)
         while (Vector2.Distance(transform.position, returnPosition) > 0.1f)
         {
             float step = currentMoveSpeed * Time.deltaTime;
@@ -415,7 +411,8 @@ public class Boss5Controller : MonoBehaviour, IBossAI
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")){
+        if (collision.CompareTag("Player"))
+        {
             collision.GetComponent<PlayerController>().TakeDame(80f);
         }
     }
