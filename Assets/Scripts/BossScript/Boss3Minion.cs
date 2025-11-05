@@ -141,7 +141,7 @@ public class Boss3_Minion : MonoBehaviour
     {
         currentState = MinionState.Attacking; // Dừng Update
         assignedOrbitPoint = null;
-
+        Destroy(gameObject);
         // (BossController sẽ tự gọi Destroy)
     }
 }

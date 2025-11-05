@@ -25,6 +25,11 @@ public class BossController : MonoBehaviour
             // Debug.Log("GameObject " + name + " không có IBossAI (Có thể là Minion).");
         }
 
+        if (thanhMau == null)
+        {
+            thanhMau = GetComponentInChildren<ThanhMauThienThach>();
+        }
+
         if (thanhMau != null)
         {
             thanhMau.capnhatthanhmau(currentHealth, maxHealth);
@@ -61,6 +66,21 @@ public class BossController : MonoBehaviour
             {
                 boss3AI.ActivateEnrage();
             }
+            Boss4Controller boss4AI = GetComponent<Boss4Controller>();
+            if (boss4AI != null)
+            {
+                boss4AI.ActivateEnrage();
+            }
+            Boss5Controller boss5AI = GetComponent<Boss5Controller>();
+            if (boss5AI != null)
+            {
+                boss5AI.ActivateEnrage();
+            }
+            Boss6Controller boss6AI = GetComponent<Boss6Controller>();
+            if (boss6AI != null)
+            {
+                boss6AI.ActivateEnrage();
+            }
             // --- (KẾT THÚC SỬA LỖI) ---
         }
 
@@ -73,19 +93,7 @@ public class BossController : MonoBehaviour
                 // Nếu là BOSS (vì có IBossAI)
                 aiScript.Die();
             }
-            else
-            {
-                // Nếu là ONG CON (vì không có IBossAI)
-                // Thử tìm script AI của ong con
-                Boss3_Minion minionAI = GetComponent<Boss3_Minion>();
-                if (minionAI != null)
-                {
-                    minionAI.Die(); // Ra lệnh cho ong con chết
-                }
-            }
-            // --- (KẾT THÚC CẬP NHẬT) ---
-
-            // (Logic dọn dẹp của Boss 2 - Sẽ không chạy trên Ong Con)
+           
             if (gameObject.GetComponent<BossWardenGoliath2D>() != null)
             {
                 PlayerController player = FindObjectOfType<PlayerController>();

@@ -465,5 +465,12 @@ public class Boss3Controller : MonoBehaviour, IBossAI
         }
     }
 
+    private void OnDestroy()
+    {
+        foreach( Boss3_Minion a in activeMinions)
+        {
+            a.Die();
+        }
+    }
     #endregion
 }

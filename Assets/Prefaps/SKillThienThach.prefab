@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3185570121546856665}
   - component: {fileID: 3976663969361047199}
   - component: {fileID: -1195840259408687943}
+  - component: {fileID: 5875638524404643699}
   m_Layer: 0
   m_Name: SKillThienThach
   m_TagString: Untagged
@@ -185,3 +186,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733d193b069ff824e9da67d9edab1909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyOnHitShield
+--- !u!114 &5875638524404643699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6974103489544337277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eed27f7573bcc024fb0679bcde11d139, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TuHuy
