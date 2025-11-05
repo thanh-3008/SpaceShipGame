@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 
 public enum SpawnFormation
 {
@@ -20,7 +19,7 @@ public class EnemyGroup
     public GameObject enemyPrefab;
 
     [Tooltip("Số lượng kẻ địch trong nhóm này")]
-    [Range(1, 50)]
+    [Range(1, 100)] // Tăng giới hạn lên 100
     public int count;
 
     [Tooltip("Đội hình xuất hiện")]
