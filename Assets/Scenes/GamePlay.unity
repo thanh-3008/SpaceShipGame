@@ -10173,6 +10173,9 @@ MonoBehaviour:
   - boss: {fileID: 629947884572454956, guid: a1b15c7213e1e7041a2092983143b75f, type: 3}
     timeSpawn: 720
     hasSpawned: 0
+  - boss: {fileID: 774937481384674190, guid: 54bf7cdc6b080d943a64b3e5e957a25d, type: 3}
+    timeSpawn: 10
+    hasSpawned: 0
   bossSpawnPoint: {fileID: 582746478}
   audio: {fileID: 1302982575}
   gameTimer: 0
@@ -10466,7 +10469,7 @@ GameObject:
   - component: {fileID: 1885635880}
   m_Layer: 0
   m_Name: Metatron, the Architect(Boss6)
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10515,21 +10518,25 @@ MonoBehaviour:
   skill1_OrbCount_P1: 6
   skill1_OrbCount_P2: 10
   skill1_SpawnDelay: 0.3
+  skill1_FireDelay: 0.5
+  skill1_OrbitRadius: 2
+  skill1_OrbitSpeed: 90
+  skill1_OrbitDuration: 2
   skill2_GroundPrefab: {fileID: 7259805419773763777, guid: ba2c7880f90de44408c69a0415a7ff8b, type: 3}
   skill2_ZoneCount_P1: 3
   skill2_ZoneCount_P2: 5
   skill2_SpawnDelay: 1
-  skill3_RainBulletPrefab: {fileID: 0}
+  skill3_RainBulletPrefab: {fileID: 1754559607116450887, guid: 37733f7dd5b9e2842817727c9c480007, type: 3}
   skill3_Duration_P1: 4
   skill3_Duration_P2: 6
-  skill3_BulletsPerWave: 10
+  skill3_BulletsPerWave: 2
   skill3_WaveDelay: 0.2
-  skill4_DeathWavePrefab: {fileID: 0}
-  skill4_SafeZonePrefab: {fileID: 0}
-  skill4_SafeZoneCount_P1: 4
-  skill4_SafeZoneCount_P2: 2
-  skill4_ChargeTime: 3
-  skill4_WaveDuration: 7
+  skill4_BombardmentPrefab: {fileID: 1092383655543850036, guid: 18fa9fa4b84c1a949a296120b97f6bfe, type: 3}
+  skill4_BombCount_P1: 3
+  skill4_BombCount_P2: 5
+  skill4_BombDelay: 1
+  skill4_FollowTime_P1: 2
+  skill4_FollowTime_P2: 1
 --- !u!60 &1885635882
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -11590,7 +11597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1, y: -9.999863}
+  m_AnchoredPosition: {x: 1, y: -9.999908}
   m_SizeDelta: {x: 23.7289, y: -351.4254}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2074963939
