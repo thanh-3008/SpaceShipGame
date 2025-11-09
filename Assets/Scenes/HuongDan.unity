@@ -264,8 +264,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -449,8 +449,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -7099251487099088143, guid: 58b28d12965b0ce4087504b4f87a44f9, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -501,7 +501,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -146, y: -99}
+  m_AnchoredPosition: {x: -147, y: -75}
   m_SizeDelta: {x: 305.81, y: 139.6696}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997954933
@@ -524,51 +524,37 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "H\u01AF\u1EDANG D\u1EAAN CH\u01A0I GAME\nM\u1EE5c Ti\xEAu: S\u1ED1ng s\xF3t
-    l\xE2u nh\u1EA5t, ti\xEAu di\u1EC7t k\u1EBB th\xF9 v\xE0 ph\xE1 h\u1EE7y thi\xEAn
-    th\u1EA1ch \u0111\u1EC3 \u0111\u1EA1t \u0111\u01B0\u1EE3c \u0111i\u1EC3m s\u1ED1
-    cao k\u1EF7 l\u1EE5c!\n1. \u0110I\u1EC0U KHI\u1EC2N C\u01A0 B\u1EA2N\nW, A, S,
-    D: S\u1EED d\u1EE5ng \u0111\u1EC3 di chuy\u1EC3n t\xE0u c\u1EE7a b\u1EA1n l\xEAn,
-    tr\xE1i, xu\u1ED1ng, v\xE0 ph\u1EA3i.\nE: Ph\xF3ng t\xEAn l\u1EEDa \u0111\xE3
-    thu th\u1EADp.\nSpace (Ph\xEDm c\xE1ch): K\xEDch ho\u1EA1t K\u1EF9 N\u0103ng
-    \u0110\u1EB7c Bi\u1EC7t khi thanh N\u1ED9 \u0111\xE3 \u0111\u1EA7y.\n2. V\u1EACT
-    PH\u1EA8M V\xC0 T\xCDNH N\u0102NG\n\u0102n \"Sao\" \u0111\u1EC3 n\xE2ng c\u1EA5p
-    s\u1EE9c m\u1EA1nh:\n Sao V\xE0ng: T\u0103ng \u0110i\u1EC3m s\u1ED1 v\xE0 n\xE2ng
-    c\u1EA5p S\xE1t th\u01B0\u01A1ng c\u01A1 b\u1EA3n cho m\u1ED7i vi\xEAn \u0111\u1EA1n.\n
-    Sao Xanh: T\u0103ng th\xEAm m\u1ED9t \u0110\u01B0\u1EDDng \u0111\u1EA1n, gi\xFAp
-    b\u1EA1n b\u1EAFn ra nhi\u1EC1u \u0111\u1EA1n h\u01A1n c\xF9ng l\xFAc.\nSao \u0110\u1ECF:
-    C\u1ED9ng th\xEAm 1 T\xEAn l\u1EEDa v\xE0o kho v\u0169 kh\xED c\u1EE7a b\u1EA1n.\nPh\xE1
-    h\u1EE7y Thi\xEAn th\u1EA1ch v\xE0 Thanh N\u1ED9:\nM\u1ED7i khi b\u1EA1n ph\xE1
-    h\u1EE7y m\u1ED9t Thi\xEAn th\u1EA1ch, Thanh N\u1ED9 c\u1EE7a b\u1EA1n s\u1EBD
-    \u0111\u01B0\u1EE3c t\u0103ng l\xEAn.\nKhi Thanh N\u1ED9 \u0111\u1EA7y, n\xF3
-    s\u1EBD ph\xE1t s\xE1ng \u0111\u1EC3 b\xE1o hi\u1EC7u b\u1EA1n \u0111\xE3 s\u1EB5n
-    s\xE0ng s\u1EED d\u1EE5ng k\u1EF9 n\u0103ng \u0111\u1EB7c bi\u1EC7t.\nK\u1EF9
-    N\u0103ng \u0110\u1EB7c Bi\u1EC7t (S\u1EED d\u1EE5ng ph\xEDm Space):\nK\xEDch
-    ho\u1EA1t k\u1EF9 n\u0103ng \u0111\u1ED9c quy\u1EC1n c\u1EE7a b\u1EA1n \u0111\u1EC3
-    gi\u1EA3i ph\xF3ng m\u1ED9t s\u1EE9c m\u1EA1nh h\u1EE7y di\u1EC7t, d\u1ECDn d\u1EB9p
-    k\u1EBB th\xF9 tr\xEAn m\xE0n h\xECnh v\xE0 gi\xFAp b\u1EA1n tho\xE1t kh\u1ECFi
-    nh\u1EEFng t\xECnh hu\u1ED1ng nguy hi\u1EC3m.\n3. CHI\u1EBEN L\u01AF\u1EE2C \u0110\u1EC2
-    \u0110\u1EA0T \u0110I\u1EC2M CAO\n\u01AFu ti\xEAn c\xE1c ng\xF4i sao: H\xE3y
-    lu\xF4n c\u1ED1 g\u1EAFng thu th\u1EADp c\xE0ng nhi\u1EC1u sao c\xE0ng t\u1ED1t.
-    \u0110\u1EB7c bi\u1EC7t \u01B0u ti\xEAn Sao Xanh \u0111\u1EC3 t\u0103ng kh\u1EA3
-    n\u0103ng t\u1EA5n c\xF4ng v\xE0 Sao \u0110\u1ECF \u0111\u1EC3 t\xEDch tr\u1EEF
-    v\u0169 kh\xED m\u1EA1nh.\nCh\u1EE7 \u0111\u1ED9ng ph\xE1 thi\xEAn th\u1EA1ch:
-    \u0110\u1EEBng ch\u1EC9 n\xE9 tr\xE1nh, h\xE3y t\xEDch c\u1EF1c ph\xE1 h\u1EE7y
-    thi\xEAn th\u1EA1ch \u0111\u1EC3 l\xE0m \u0111\u1EA7y Thanh N\u1ED9 nhanh nh\u1EA5t
-    c\xF3 th\u1EC3. K\u1EF9 n\u0103ng \u0111\u1EB7c bi\u1EC7t l\xE0 ch\xECa kh\xF3a
-    \u0111\u1EC3 sinh t\u1ED3n v\xE0 b\xF9ng n\u1ED5 \u0111i\u1EC3m s\u1ED1.\nS\u1EED
-    d\u1EE5ng t\xEAn l\u1EEDa h\u1EE3p l\xFD: T\xEAn l\u1EEDa r\u1EA5t m\u1EA1nh
-    nh\u01B0ng c\xF3 gi\u1EDBi h\u1EA1n. H\xE3y d\xF9ng ch\xFAng \u0111\u1EC3 ti\xEAu
-    di\u1EC7t nh\u1EEFng k\u1EBB th\xF9 kh\xF3 ch\u1ECBu ho\u1EB7c c\xE1c nh\xF3m
-    \u0111\xF4ng k\u1EBB \u0111\u1ECBch.\nDi chuy\u1EC3n l\xE0 sinh t\u1ED3n: Th\xE0nh
-    th\u1EA1o vi\u1EC7c di chuy\u1EC3n b\u1EB1ng WASD \u0111\u1EC3 n\xE9 \u0111\u1EA1n
-    c\u1EE7a k\u1EBB th\xF9 v\xE0 c\xE1c ch\u01B0\u1EDBng ng\u1EA1i v\u1EADt trong
-    khi v\u1EABn thu th\u1EADp v\u1EADt ph\u1EA9m hi\u1EC7u qu\u1EA3.\nC\xE0ng nhi\u1EC1u
-    \u0111i\u1EC3m c\xE0ng t\u1ED1t: M\u1EE5c ti\xEAu cu\u1ED1i c\xF9ng l\xE0 t\xEDch
-    l\u0169y \u0111\u01B0\u1EE3c s\u1ED1 \u0111i\u1EC3m cao nh\u1EA5t c\xF3 th\u1EC3.
-    H\xE3y t\u1EADn d\u1EE5ng m\u1ECDi c\u01A1 h\u1ED9i \u0111\u1EC3 t\u0103ng \u0111i\u1EC3m!\nCh\xFAc
-    b\u1EA1n c\xF3 nh\u1EEFng gi\u1EDD ph\xFAt ch\u01A1i game vui v\u1EBB v\xE0 chinh
-    ph\u1EE5c \u0111\u01B0\u1EE3c nh\u1EEFng k\u1EF7 l\u1EE5c m\u1EDBi!"
+  m_text: "\U0001F3AE H\u01AF\u1EDANG D\u1EAAN THAO T\xC1C\n1. Thao T\xE1c C\u01A1
+    B\u1EA3n (Di chuy\u1EC3n & T\u1EA5n c\xF4ng)\nDi chuy\u1EC3n: S\u1EED d\u1EE5ng
+    W, A, S, D \u0111\u1EC3 \u0111i\u1EC1u khi\u1EC3n t\xE0u bay l\xEAn, tr\xE1i,
+    xu\u1ED1ng, v\xE0 ph\u1EA3i.\nB\u1EAFn C\u01A1 B\u1EA3n: S\u1EED d\u1EE5ng [Chu\u1ED9t
+    Tr\xE1i] \u0111\u1EC3 b\u1EAFn \u0111\u1EA1n. (B\u1EA1n c\xF3 th\u1EC3 thay \u0111\u1ED5i
+    n\u1EBFu n\xFAt b\u1EAFn c\u1EE7a b\u1EA1n l\xE0 n\xFAt kh\xE1c).\nPh\xF3ng T\xEAn
+    L\u1EEDa: Nh\u1EA5n ph\xEDm E \u0111\u1EC3 ph\xF3ng m\u1ED9t qu\u1EA3 t\xEAn
+    l\u1EEDa (C\u1EA7n thu th\u1EADp Sao \u0110\u1ECF).\n2. Thao T\xE1c K\u1EF9 N\u0103ng
+    (S\u1EED d\u1EE5ng Thanh N\u1ED9)\nPh\xE1 h\u1EE7y Thi\xEAn Th\u1EA1ch s\u1EBD
+    gi\xFAp b\u1EA1n t\xEDch l\u0169y N\u1ED9. B\u1EA1n c\xF3 th\u1EC3 t\xEDch tr\u1EEF
+    t\u1ED1i \u0111a 3 v\u1EA1ch N\u1ED9.\nK\u1EF9 N\u0103ng Th\u01B0\u1EDDng (Chi\u1EBFn
+    Thu\u1EADt)\nPh\xEDm: Nh\u1EA5n F\nTi\xEAu hao: 1 v\u1EA1ch N\u1ED9\nC\xF4ng
+    d\u1EE5ng: (M\xF4 t\u1EA3 k\u1EF9 n\u0103ng F c\u1EE7a b\u1EA1n \u1EDF \u0111\xE2y,
+    v\xED d\u1EE5: \"B\u1EAFn m\u1ED9t ph\xE1t ph\xE1o n\u0103ng l\u01B0\u1EE3ng\",
+    \"L\u01B0\u1EDBt nhanh m\u1ED9t \u0111o\u1EA1n\" ho\u1EB7c \"T\u1EA1o khi\xEAn
+    ch\u1EAFn \u0111\u1EA1n\")\nK\u1EF9 N\u0103ng \u0110\u1EB7c Bi\u1EC7t (T\u1ED1i
+    Th\u01B0\u1EE3ng)\nPh\xEDm: Nh\u1EA5n Space (Ph\xEDm c\xE1ch)\nTi\xEAu hao: TO\xC0N
+    B\u1ED8 (3 v\u1EA1ch) N\u1ED9\nC\xF4ng d\u1EE5ng: Gi\u1EA3i ph\xF3ng m\u1ED9t
+    s\u1EE9c m\u1EA1nh h\u1EE7y di\u1EC7t, d\u1ECDn d\u1EB9p to\xE0n b\u1ED9 k\u1EBB
+    th\xF9 tr\xEAn m\xE0n h\xECnh v\xE0 gi\xFAp b\u1EA1n tho\xE1t kh\u1ECFi t\xECnh
+    hu\u1ED1ng nguy hi\u1EC3m.\n3. Thao T\xE1c N\xE2ng C\u1EA5p (Thu th\u1EADp)\nBay
+    t\xE0u c\u1EE7a b\u1EA1n (d\xF9ng WASD) v\xE0o c\xE1c v\u1EADt ph\u1EA9m \u0111\u1EC3
+    nh\u1EB7t ch\xFAng:\nSao V\xE0ng: T\u0103ng S\xE1t th\u01B0\u01A1ng \u0111\u1EA1n
+    v\xE0 t\u0103ng \u0111i\u1EC3m.\nSao \u0110\u1ECF: Th\xEAm 1 T\xEAn L\u1EEDa
+    (cho ph\xEDm E).\n\U0001F3C6 M\u1EE5c Ti\xEAu C\u1EE7a B\u1EA1n\nD\xF9ng WASD
+    \u0111\u1EC3 n\xE9 \u0111\u1EA1n.\nD\xF9ng [Chu\u1ED9t Tr\xE1i] v\xE0 E \u0111\u1EC3
+    t\u1EA5n c\xF4ng.\nS\u1EED d\u1EE5ng F (1 N\u1ED9) m\u1ED9t c\xE1ch h\u1EE3p
+    l\xFD \u0111\u1EC3 x\u1EED l\xFD t\xECnh hu\u1ED1ng kh\xF3.\nS\u1EED d\u1EE5ng
+    Space (3 N\u1ED9) khi b\u1ECB bao v\xE2y ho\u1EB7c c\u1EA7n d\u1ECDn d\u1EB9p
+    m\xE0n h\xECnh.\nS\u1ED1ng s\xF3t v\xE0 \u0111\u1EA1t \u0111i\u1EC3m s\u1ED1
+    cao nh\u1EA5t!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -595,8 +581,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -74,11 +74,15 @@ public class Boss6Controller : MonoBehaviour, IBossAI
     // ----------------------------
     #endregion
 
+    // Biến nội bộ để theo dõi skill 1
+    private List<GameObject> activeOrbs = new List<GameObject>();
+
     // --- HÀM TỪ INTERFACE ---
     public void Die()
     {
         StopAllCoroutines();
         this.enabled = false;
+        ClearActiveOrbs(); // <<< THÊM DÒNG NÀY ĐỂ HỦY CÁC MẶT TRỜI
         Debug.Log("SIÊU BOSS AI ĐÃ DỪNG");
     }
 
@@ -161,13 +165,16 @@ public class Boss6Controller : MonoBehaviour, IBossAI
 
     // --- CÁC SKILL ---
 
-    // (Skill 1: Celestial Orbs - Giữ nguyên)
+    // (Skill 1: Celestial Orbs - ĐÃ CẬP NHẬT)
     private IEnumerator Skill_CelestialOrbs()
     {
         Debug.Log("Boss Cuối: Dùng Skill Celestial Orbs (Quay quanh boss)");
         if (skill1_OrbPrefab == null) yield break;
+
+        // THAY ĐỔI: Dọn dẹp danh sách cũ trước khi bắt đầu
+        ClearActiveOrbs();
+
         int orbCount = isEnraged ? skill1_OrbCount_P2 : skill1_OrbCount_P1;
-        List<GameObject> spawnedOrbs = new List<GameObject>();
         List<float> initialAngles = new List<float>();
 
         for (int i = 0; i < orbCount; i++)
@@ -177,7 +184,10 @@ public class Boss6Controller : MonoBehaviour, IBossAI
             Vector2 offset = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * skill1_OrbitRadius;
             Vector2 spawnPos = (Vector2)transform.position + offset;
             GameObject orbGO = Instantiate(skill1_OrbPrefab, spawnPos, Quaternion.identity);
-            spawnedOrbs.Add(orbGO);
+
+            // THAY ĐỔI: Thêm vào danh sách theo dõi (activeOrbs)
+            activeOrbs.Add(orbGO);
+
             yield return GetSlowedWait(skill1_SpawnDelay);
         }
 
@@ -185,13 +195,14 @@ public class Boss6Controller : MonoBehaviour, IBossAI
         float orbitTime = 0f;
         while (orbitTime < skill1_OrbitDuration)
         {
-            for (int i = 0; i < spawnedOrbs.Count; i++)
+            // THAY ĐỔI: Dùng 'activeOrbs'
+            for (int i = 0; i < activeOrbs.Count; i++)
             {
-                if (spawnedOrbs[i] != null)
+                if (activeOrbs[i] != null)
                 {
                     float currentAngle = initialAngles[i] + (skill1_OrbitSpeed * orbitTime);
                     Vector2 offset = new Vector2(Mathf.Cos(currentAngle * Mathf.Deg2Rad), Mathf.Sin(currentAngle * Mathf.Deg2Rad)) * skill1_OrbitRadius;
-                    spawnedOrbs[i].transform.position = (Vector2)transform.position + offset;
+                    activeOrbs[i].transform.position = (Vector2)transform.position + offset;
                 }
             }
             orbitTime += Time.deltaTime; // (SỬA LỖI: Dùng Time.deltaTime)
@@ -199,8 +210,18 @@ public class Boss6Controller : MonoBehaviour, IBossAI
         }
 
         Debug.Log("Bắt đầu bắn!");
-        if (playerTarget == null) yield break;
-        foreach (GameObject orbGO in spawnedOrbs)
+        if (playerTarget == null)
+        {
+            ClearActiveOrbs(); // THAY ĐỔI: Dọn dẹp nếu không có mục tiêu
+            yield break;
+        }
+
+        // THAY ĐỔI: Tạo danh sách tạm để bắn,
+        // vì sau khi bắn, boss không cần theo dõi chúng nữa
+        List<GameObject> orbsToLaunch = new List<GameObject>(activeOrbs);
+        activeOrbs.Clear(); // Xóa danh sách theo dõi
+
+        foreach (GameObject orbGO in orbsToLaunch)
         {
             if (orbGO != null)
             {
@@ -287,6 +308,23 @@ public class Boss6Controller : MonoBehaviour, IBossAI
     }
 
     #region // --- HÀM HỖ TRỢ (GIỮ NGUYÊN) ---
+
+    // HÀM MỚI ĐỂ DỌN DẸP SKILL 1
+    private void ClearActiveOrbs()
+    {
+        if (activeOrbs == null || activeOrbs.Count == 0) return;
+
+        Debug.Log($"Boss Die: Hủy {activeOrbs.Count} quả cầu (mặt trời) đang tồn tại.");
+        foreach (GameObject orb in activeOrbs)
+        {
+            if (orb != null)
+            {
+                Destroy(orb);
+            }
+        }
+        activeOrbs.Clear();
+    }
+
     Vector2 GetRandomScreenPos()
     {
         if (mainCamera == null) return Vector2.zero;
@@ -329,6 +367,13 @@ public class Boss6Controller : MonoBehaviour, IBossAI
         {
             transform.Translate(Vector2.left * currentMoveSpeed * Time.deltaTime);
             if (transform.position.x <= leftPoint) { movingRight = true; }
+        }
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.GetComponent<PlayerController>().TakeDame(80f);
         }
     }
     #endregion

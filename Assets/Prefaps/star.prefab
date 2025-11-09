@@ -169,5 +169,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::star
   coinObject: {fileID: 6791282851479454792}
-  speed: 5
+  speed: 2
   skillMKII: {fileID: 0}

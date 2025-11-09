@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AudioManagement : MonoBehaviour
 {
@@ -6,7 +6,7 @@ public class AudioManagement : MonoBehaviour
     public AudioSource soundEffect;
     public AudioSource sfxto;
     public AudioSource sfxmove;
-    public AudioClip newBackgroundMusic;
+    public AudioClip newBackgroundMusic; // Nhạc nền mặc định
     public AudioClip thienthachno;
     public AudioClip tiengdan;
     public AudioClip tiengtenlua;
@@ -26,13 +26,48 @@ public class AudioManagement : MonoBehaviour
     public AudioClip amthanhdanez;
     public AudioClip bossSpawn;
     public AudioClip bossDashskill;
-    public AudioClip musicBoss;
+    public AudioClip musicBoss; // Nhạc boss
     public AudioClip blockShield;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
-        backgroundMusic.clip = newBackgroundMusic;
-        backgroundMusic.Play();
+        // Chạy nhạc nền mặc định lúc bắt đầu
+        if (newBackgroundMusic != null)
+        {
+            backgroundMusic.clip = newBackgroundMusic;
+            backgroundMusic.loop = true; // <--- MỚI: Đảm bảo nhạc nền lặp lại
+            backgroundMusic.Play();
+        }
+    }
+
+    // --- HÀM MỚI ĐỂ CHUYỂN NHẠC BOSS ---
+    public void PlayBossMusic()
+    {
+        if (musicBoss == null) return; // Không có nhạc boss thì thôi
+
+        // Chỉ chuyển nhạc nếu nhạc đang phát KHÔNG phải là nhạc boss
+        if (backgroundMusic.clip != musicBoss)
+        {
+            backgroundMusic.Stop();
+            backgroundMusic.clip = musicBoss;
+            backgroundMusic.loop = true;
+            backgroundMusic.Play();
+        }
+    }
+
+    // --- HÀM MỚI ĐỂ QUAY LẠI NHẠC CŨ ---
+    public void PlayDefaultMusic()
+    {
+        if (newBackgroundMusic == null) return; // Không có nhạc nền thì thôi
+
+        // Chỉ chuyển nhạc nếu nhạc đang phát KHÔNG phải là nhạc nền
+        if (backgroundMusic.clip != newBackgroundMusic)
+        {
+            backgroundMusic.Stop();
+            backgroundMusic.clip = newBackgroundMusic;
+            backgroundMusic.loop = true;
+            backgroundMusic.Play();
+        }
     }
 
     public void PlaySfx(AudioClip sfxClip)
@@ -50,6 +85,4 @@ public class AudioManagement : MonoBehaviour
         sfxmove.clip = sfxClip;
         sfxmove.PlayOneShot(sfxClip);
     }
-
-
 }
