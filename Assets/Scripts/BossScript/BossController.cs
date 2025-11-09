@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 // GẮN SCRIPT NÀY LÊN CẢ BOSS VÀ PREFAB ONG CON
 public class BossController : MonoBehaviour
@@ -13,6 +14,9 @@ public class BossController : MonoBehaviour
     // Tham chiếu đến script AI (skill) của chính boss này
     private IBossAI aiScript;
 
+    [Header("Sự kiện (Event)")]
+    [Tooltip("Phát tín hiệu khi boss này chết")]
+    public UnityEvent OnBossDieEvent;
     void Start()
     {
         currentHealth = maxHealth;
@@ -87,6 +91,7 @@ public class BossController : MonoBehaviour
         // *** KIỂM TRA CHẾT ***
         if (currentHealth <= 0)
         {
+            OnBossDieEvent.Invoke();
             // --- (CẬP NHẬT LOGIC CHẾT) ---
             if (aiScript != null)
             {

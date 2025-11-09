@@ -13,7 +13,7 @@ public class DanIon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Destroy(gameObject, 8f);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,15 +21,15 @@ public class DanIon : MonoBehaviour
         {
             PlayerController player = FindObjectOfType<PlayerController>();
             var damageResult = player.CalculateDamage();
-                other.GetComponent<thienthachdichuyen>().TakeDame(damageResult.damage * 320);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage * 320,damageResult.isCrit);
+                other.GetComponent<thienthachdichuyen>().TakeDame(damageResult.damage * 20);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage * 20,damageResult.isCrit);
         }
         if (other.CompareTag("Boss"))
         {
             PlayerController player = FindObjectOfType<PlayerController>();
             var damageResult = player.CalculateDamage();
-            other.GetComponent<BossController>().TakeDame(damageResult.damage * 320);
-            DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage * 320, damageResult.isCrit);
+            other.GetComponent<BossController>().TakeDame(damageResult.damage * 20);
+            DamePopUpGenerator.Instance.CreatePopUp(transform.position, damageResult.damage * 20, damageResult.isCrit);
 
         }
     }

@@ -322,7 +322,25 @@ public class PlayerController : MonoBehaviour
 
         if (thanhmauhientai <= 0)
         {
-            FindObjectOfType<GameOverMenu>().showGameOverScreen(int.Parse(textScore.text));
+            if (thanhmauhientai <= 0)
+            {
+                // --- THÊM MỚI: LƯU TỔNG TIỀN ---
+                int finalScore = score; // Lấy điểm của lần chơi này
+
+                // Lấy tổng tiền đã lưu
+                int totalCurrency = PlayerPrefs.GetInt("TotalCurrency", 0);
+
+                // Cộng dồn điểm vừa chơi vào
+                totalCurrency += finalScore;
+
+                // Lưu tổng tiền mới lại
+                PlayerPrefs.SetInt("TotalCurrency", totalCurrency);
+                PlayerPrefs.Save(); // Lưu ngay lập tức
+                                    // ---------------------------------
+
+                // Gọi màn hình Game Over
+                FindObjectOfType<GameOverMenu>().showGameOverScreen(finalScore);
+            }
         }
     }
 

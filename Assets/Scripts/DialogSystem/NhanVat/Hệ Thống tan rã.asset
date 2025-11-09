@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35ac61a93405765479dc403f16c04673, type: 3}
+  m_Name: "H\u1EC7 Th\u1ED1ng tan r\xE3"
+  m_EditorClassIdentifier: Assembly-CSharp::SpeakerData
+  speakerName: "H\u039E\u0337\u1EC7\u0360 \u0337T\u0337h\u0362\u1ED1\u0360n\u035Eg\u035F"
+  speakerPortrait: {fileID: 2018071532138561652, guid: 039b143ca743b49429b2f68a138900a2, type: 3}

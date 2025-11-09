@@ -106,7 +106,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::bufftienlua
   bufftenlua: {fileID: 4096885662708627092}
-  speed: 5
+  speed: 2
+  skillMKII: {fileID: 0}
 --- !u!58 &4384589233363199259
 CircleCollider2D:
   m_ObjectHideFlags: 0

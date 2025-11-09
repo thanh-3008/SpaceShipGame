@@ -26,4 +26,5 @@ public class ThongTinTau
     public float coinnangcapmau = 20;
     public float coinnangcapdame = 30;
 
+    public int cost;
 }

@@ -73,7 +73,7 @@ public class SpawnMonster : MonoBehaviour
         // --- LOGIC KIỂM TRA BOSS ---
         if (isBossActive)
         {
-            if (currentBossInstance == null)
+            if (currentBossInstance == null) // <-- BOSS CHẾT
             {
                 Debug.Log("Boss đã bị tiêu diệt! Tiếp tục spawn quái.");
                 isBossActive = false;
@@ -84,6 +84,12 @@ public class SpawnMonster : MonoBehaviour
                 {
                     OnBossDefeated?.Invoke(currentBossIndex); // Gửi tín hiệu
                     currentBossIndex = -1; // Reset
+                }
+
+                // --- THAY ĐỔI ÂM THANH KHI BOSS CHẾT ---
+                if (audio != null)
+                {
+                    audio.PlayDefaultMusic(); // Quay lại nhạc cũ
                 }
                 // ----------------------------------------
             }
@@ -149,7 +155,6 @@ public class SpawnMonster : MonoBehaviour
         if (monstersToSpawn.Count == 0) return;
         for (int j = 0; j < soQuai; j++)
         {
-            // --- SỬA LỖI Ở ĐÂY ---
             int randomIndex = UnityEngine.Random.Range(0, monstersToSpawn.Count);
             SpawnSingleMonster(monstersToSpawn[randomIndex].monster);
         }
@@ -169,7 +174,8 @@ public class SpawnMonster : MonoBehaviour
                 // Phát âm thanh
                 if (audio != null)
                 {
-                    audio.PlaySfxto(audio.bossSpawn);
+                    audio.PlaySfxto(audio.bossSpawn); // SFX
+                    audio.PlayBossMusic(); // Chuyển sang nhạc Boss
                 }
 
                 // Spawn boss tại VỊ TRÍ CỐ ĐỊNH
@@ -212,7 +218,6 @@ public class SpawnMonster : MonoBehaviour
     // Hàm spawn quái nhỏ (random)
     public GameObject SpawnSingleMonster(GameObject monsterPrefab)
     {
-        // --- SỬA LỖI Ở ĐÂY ---
         Vector2 spawnDirection = UnityEngine.Random.insideUnitCircle.normalized;
         Vector3 spawnPosition = transform.position + new Vector3(spawnDirection.x, spawnDirection.y, 0) * 10f;
         return Instantiate(monsterPrefab, spawnPosition, Quaternion.identity);

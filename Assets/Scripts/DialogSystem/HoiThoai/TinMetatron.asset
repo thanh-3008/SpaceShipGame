@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a870c553808a7a345ad99b7b8f95d653, type: 3}
+  m_Name: TinMetatron
+  m_EditorClassIdentifier: Assembly-CSharp::Conversation
+  lines:
+  - speaker: {fileID: 11400000, guid: 5b11d4b5f18805c47be91dd3d980b033, type: 2}
+    text: "[K\xFD ch\u1EE7? Ng\u01B0\u01A1i \u0111ang l\xE0m g\xEC v\u1EADy? \u0110\u1EEBng...
+      ng\u01B0\u01A1i kh\xF4ng \u0111\u1ECBnh tin 'K\u1EBB Cai Ng\u1EE5c' \u0111\xF3
+      ch\u1EE9?]"
+  - speaker: {fileID: 11400000, guid: 2398fcfe9e6473848be0374d8bd2cfb7, type: 2}
+    text: "Ta... \xEDt nh\u1EA5t h\u1EAFn c\xF3 l\xFD do... c\xF2n ng\u01B0\u01A1i,
+      ng\u01B0\u01A1i \u0111\xE3 l\u1EEBa d\u1ED1i ta!"
+  - speaker: {fileID: 11400000, guid: 5b11d4b5f18805c47be91dd3d980b033, type: 2}
+    text: "[Hahaha... NGU NG\u1ED0C! NGU NG\u1ED0C TUY\u1EC6T V\u1EDCI! Sau t\u1EA5t
+      c\u1EA3 nh\u1EEFng g\xEC ta l\xE0m cho ng\u01B0\u01A1i, h\u01B0\u1EDBng d\u1EABn
+      ng\u01B0\u01A1i, chi\u1EBFn \u0111\u1EA5u c\xF9ng ng\u01B0\u01A1i... ng\u01B0\u01A1i
+      l\u1EA1i ch\u1ECDn tin k\u1EBB \u0111\xE3 giam c\u1EA7m ng\u01B0\u01A1i trong
+      c\xE1i 'Th\u1EBF gi\u1EDBi H\u1EADu s\u1EF1' n\xE0y? "
+  - speaker: {fileID: 11400000, guid: 5b11d4b5f18805c47be91dd3d980b033, type: 2}
+    text: "Ng\u01B0\u01A1i ngh\u0129 h\u1EAFn s\u1EBD cho ng\u01B0\u01A1i 't\u1EF1
+      do' \xE1? H\u1EAFn s\u1EBD bi\u1EBFn ng\u01B0\u01A1i th\xE0nh m\u1ED9t con
+      r\u1ED1i kh\xE1c, gi\u1ED1ng nh\u01B0 t\xEAn Azure kia!]"
+  - speaker: {fileID: 11400000, guid: 0db9dfdc7b897134daf41055a1bf16ba, type: 2}
+    text: "Ta l\xE0 Tr\u1EADt T\u1EF1! Virus kia l\xE0 H\u1ED7n Lo\u1EA1n! Ng\u01B0\u01A1i
+      \u0111\xE3 ch\u1ECDn \u0111\xFAng. Gi\u1EDD, h\xE3y gi\xFAp ta thanh tr\u1EEBng
+      n\xF3. "
+  - speaker: {fileID: 11400000, guid: 0db9dfdc7b897134daf41055a1bf16ba, type: 2}
+    text: "\u0110\u1EC3 ch\u1EE9ng minh l\xF2ng trung th\xE0nh, h\xE3y ti\xEAu di\u1EC7t
+      'T\xE1c nh\xE2n Ch\u1ED1ng Virus' cu\u1ED1i c\xF9ng c\u1EE7a ta: Azure. N\xF3
+      \u0111\xE3 b\u1ECB Virus kia gi\u1EDF tr\xF2, ta s\u1EAFp kh\xF4ng \u0111i\u1EC1u
+      khi\u1EC3n \u0111\u01B0\u1EE3c h\u1EAFn n\u1EEFa r\u1ED3i."
+  - speaker: {fileID: 11400000, guid: 5b11d4b5f18805c47be91dd3d980b033, type: 2}
+    text: "[H\u1EAFn n\xF3i \u0111\xFAng \u0111\u1EA5y, K\xFD ch\u1EE7! Ta \u0111\xE3
+      'gi\u1EDF tr\xF2' v\u1EDBi n\xF3! V\xE0 ta \u0111\xE3 hy v\u1ECDng ng\u01B0\u01A1i
+      s\u1EBD \u0111\u1EE7 th\xF4ng minh \u0111\u1EC3 c\xF9ng ta ph\xE1 h\u1EE7y
+      Metatron!]"
+  - speaker: {fileID: 11400000, guid: 331a6e5691142814bbd2adfd5dbe41b2, type: 2}
+    text: "[NH\u01AFNG NG\u01AF\u01A0I \u0110\xC3 CH\u1ECCN SAI! V\xC0 GI\u1EDC...
+      NG\u01AF\u01A0I S\u1EBC PH\u1EA2I TR\u1EA2 GI\xC1! N\u1EBEU TA KH\xD4NG TH\u1EC2
+      C\xD3 \u0110\u01AF\u1EE2C L\xD5I... TA S\u1EBC D\xD9NG TH\u1EE8 N\xC0Y \u0110\u1EC2
+      TI\u1EC4N C\u1EA2 HAI NG\u01AF\u01A0I!]"
+  choices: []

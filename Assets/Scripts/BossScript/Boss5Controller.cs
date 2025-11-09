@@ -5,7 +5,7 @@ using UnityEngine;
 // GẮN SCRIPT NÀY VÀO BOSS 6 (Cùng với BossController)
 public class Boss5Controller : MonoBehaviour, IBossAI
 {
-    #region // --- BIẾN (GIỮ NGUYÊN) ---
+    #region // --- BIẾN ---
     [Header("Movement")]
     public float moveSpeed = 1.5f;
     public float leftPoint = -3f;
@@ -27,6 +27,7 @@ public class Boss5Controller : MonoBehaviour, IBossAI
     public float skillRestTimePhase1 = 3.0f;
     public float skillRestTimePhase2 = 2.0f;
     private bool isEnraged = false;
+    private bool isEnrageTriggered = false; // Cờ để tránh trigger nhiều lần
     private List<System.Func<IEnumerator>> skillList;
 
     [Header("Nội tại: Pod (Đứng yên)")]
@@ -69,7 +70,6 @@ public class Boss5Controller : MonoBehaviour, IBossAI
     public Transform bossEye;
     #endregion
 
-    // (Hàm Die giữ nguyên)
     public void Die()
     {
         StopAllCoroutines();
@@ -81,44 +81,54 @@ public class Boss5Controller : MonoBehaviour, IBossAI
         }
     }
 
-    // --- (HÀM NÀY ĐÃ SỬA) ---
+    // --- HÀM NÀY ĐƯỢC GỌI TỪ BossController KHI HP <= 50% ---
     public void ActivateEnrage()
     {
-        if (isEnraged) return;
-        isEnraged = true;
-        Debug.Log("Boss 6 ENRAGED! Phân thân!");
-        skillRestTimePhase1 = skillRestTimePhase2;
+        if (isEnrageTriggered) return;
+        isEnrageTriggered = true; // Đánh dấu đã trigger
+
+        Debug.Log("Boss 6 ENRAGED! Dừng tất cả skill và bay đến vị trí phân thân!");
+
+        // DỪNG TẤT CẢ COROUTINE (Skill đang chạy)
+        StopAllCoroutines();
+
+        // Bắt đầu sequence phân thân
+        StartCoroutine(EnrageSequence());
+    }
+
+    private IEnumerator EnrageSequence()
+    {
+        // Đánh dấu đang trong trạng thái đặc biệt
+        isDashing = true;
+
+        // Kiểm tra vị trí Phase 2
+        if (clonePrefab == null || phase2Positions[0] == null || phase2Positions[1] == null)
+        {
+            Debug.LogError("Boss 6: Không tìm thấy 'ViTri' hoặc 'ViTri2'. Không thể bắt đầu Phase 2!");
+            isDashing = false;
+            yield break;
+        }
+
+        // Đổi màu vàng
         if (bossSpriteRenderer != null)
         {
             bossSpriteRenderer.color = Color.yellow;
         }
 
-        if (clonePrefab != null && phase2Positions[0] != null && phase2Positions[1] != null)
+        // 1. Bay nhanh đến vị trí Phase 2 (góc trái)
+        float fastMoveSpeed = 8f; // Tốc độ bay nhanh
+        while (Vector2.Distance(transform.position, phase2Positions[0].position) > 0.1f)
         {
-            StartCoroutine(EnrageSequence()); // Gọi Coroutine mới
+            float step = fastMoveSpeed * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, phase2Positions[0].position, step);
+            yield return null;
         }
-        else
-        {
-            Debug.LogError("Boss 6: Không tìm thấy 'ViTri' hoặc 'ViTri2'. Không thể bắt đầu Phase 2!");
-        }
-    }
 
-    // --- (HÀM NÀY ĐÃ SỬA) ---
-    // (Sửa lỗi Boss thật không di chuyển)
-    private IEnumerator EnrageSequence()
-    {
-        this.moveSpeed = 0;
-        isDashing = true; // Cấm dùng skill trong khi đang bay
-
-        // 1. Bay đến vị trí Phase 2 (góc trái)
-        yield return StartCoroutine(MoveToPosition(phase2Positions[0].position));
-
-        // 2. (SAU KHI BAY XONG) Spawn Clone
+        // 2. Spawn Clone
         GameObject cloneGO = Instantiate(clonePrefab, transform.position, Quaternion.identity);
         myCloneInstance = cloneGO.GetComponent<Boss5_Illusion>();
 
-        // Đợi 1 frame để Start() của BossController trên Clone chạy xong
-        yield return null;
+        yield return null; // Đợi 1 frame
 
         if (myCloneInstance != null)
         {
@@ -135,21 +145,27 @@ public class Boss5Controller : MonoBehaviour, IBossAI
                 cloneHealth.currentHealth = mainHealth.currentHealth;
                 cloneHealth.maxHealth = mainHealth.maxHealth;
 
-                if (cloneHealth.thanhMau != null) // (Kiểm tra null)
+                if (cloneHealth.thanhMau != null)
                 {
                     cloneHealth.thanhMau.capnhatthanhmau(cloneHealth.currentHealth, cloneHealth.maxHealth);
                 }
             }
-            else
-            {
-                Debug.Log("Boss 6: Không thể sao chép máu (Thiếu BossController trên Boss hoặc Clone)");
-            }
         }
 
-        isDashing = false; // Cho phép dùng skill lại
+        // 5. Đợi Clone bay đến vị trí (khoảng 1-2 giây)
+        yield return new WaitForSeconds(1.5f);
+
+        // 6. HOÀN TẤT PHASE 2 - Cập nhật trạng thái
+        isEnraged = true;
+        skillRestTimePhase1 = skillRestTimePhase2;
+        isDashing = false;
+
+        Debug.Log("Boss 6: Phân thân hoàn tất! Tiếp tục dùng skill Phase 2!");
+
+        // 7. KHỞI ĐỘNG LẠI AI PATTERN (Bắt đầu dùng skill Phase 2)
+        StartCoroutine(BossAI_Pattern());
     }
 
-    // --- (HÀM START ĐÃ SỬA) ---
     void Start()
     {
         mainCamera = Camera.main;
@@ -161,14 +177,13 @@ public class Boss5Controller : MonoBehaviour, IBossAI
             skillMKII = playerObject.GetComponent<SeraphMKII>();
         }
 
-        // --- (TỰ ĐỘNG TÌM VỊ TRÍ) ---
+        // Tự động tìm vị trí
         GameObject viTri1 = GameObject.Find("ViTri");
         GameObject viTri2 = GameObject.Find("ViTri2");
         if (viTri1 != null) { phase2Positions[0] = viTri1.transform; }
         else { Debug.LogError("Boss 6: Không tìm thấy GameObject tên 'ViTri'!"); }
         if (viTri2 != null) { phase2Positions[1] = viTri2.transform; }
         else { Debug.LogError("Boss 6: Không tìm thấy GameObject tên 'ViTri2'!"); }
-        // ------------------------------------
 
         skillList = new List<System.Func<IEnumerator>>()
         {
@@ -181,8 +196,7 @@ public class Boss5Controller : MonoBehaviour, IBossAI
         StartCoroutine(BossAI_Pattern());
     }
 
-    // (Hàm Update/BossAI_Pattern/LookAtPlayer giữ nguyên)
-    #region // --- HÀM CƠ BẢN (GIỮ NGUYÊN) ---
+    #region // --- HÀM CƠ BẢN ---
     void Update()
     {
         if (playerTarget == null) { return; }
@@ -194,8 +208,16 @@ public class Boss5Controller : MonoBehaviour, IBossAI
     {
         yield return GetSlowedWait(3.0f);
         int lastSkillIndex = -1;
+
         while (true)
         {
+            // Kiểm tra nếu đang trong quá trình Enrage thì dừng AI tạm thời
+            if (isEnrageTriggered && !isEnraged)
+            {
+                yield return new WaitForSeconds(0.5f);
+                continue;
+            }
+
             int currentSkillIndex;
             do
             {
@@ -205,6 +227,7 @@ public class Boss5Controller : MonoBehaviour, IBossAI
             lastSkillIndex = currentSkillIndex;
 
             yield return StartCoroutine(skillList[currentSkillIndex].Invoke());
+
             float restTime = isEnraged ? skillRestTimePhase2 : skillRestTimePhase1;
             yield return GetSlowedWait(restTime);
         }
@@ -221,24 +244,15 @@ public class Boss5Controller : MonoBehaviour, IBossAI
     }
     #endregion
 
-    #region // --- SKILLS (SỬA LỖI SKILL 4) ---
-
-    // --- (SKILL 4 ĐÃ SỬA LỖI VỊ TRÍ + TĂNG TỐC ĐỘ) ---
+    #region // --- SKILLS ---
     private IEnumerator Skill_VoidDash()
     {
         Debug.Log("Boss 6: Dùng Skill Void Dash (X Shape)");
         if (skill4_TrailPrefab == null || mainCamera == null || playerTarget == null) yield break;
 
         isDashing = true;
-
-        // Tốc độ di chuyển khi không Dash (dùng để bay tới góc)
-        // (SỬA 2) Tăng tốc độ bay (5f -> 8f)
-        float currentMoveSpeed = (moveSpeed > 0) ? moveSpeed * 1.5f : 8f;
-
-        // --- (SỬA 1: LỖI VỊ TRÍ QUAY VỀ) ---
-        // Lưu vị trí Y của P1 *trước khi* lao
+        float currentMoveSpeed = 15f; // Tăng tốc độ bay giữa các điểm (8f -> 15f)
         float phase1ReturnY = transform.position.y;
-        // ------------------------------------
 
         float z = Mathf.Abs(mainCamera.transform.position.z - playerTarget.position.z);
         Vector2 topLeft = mainCamera.ViewportToWorldPoint(new Vector3(0, 1, z));
@@ -255,7 +269,6 @@ public class Boss5Controller : MonoBehaviour, IBossAI
             myCloneInstance.Start_Skill_VoidDash(startPos1, endPos1, startPos2, endPos2, currentMoveSpeed, dashSpeed, distancePerTrail, skill4_TrailPrefab);
         }
 
-        // --- (Code bay đã được tăng tốc lên currentMoveSpeed) ---
         while (Vector2.Distance(transform.position, startPos1) > 0.1f) { float step = currentMoveSpeed * Time.deltaTime; transform.position = Vector2.MoveTowards(transform.position, startPos1, step); yield return null; }
         yield return GetSlowedWait(0.5f);
         Vector2 lastTrailPos = transform.position;
@@ -266,21 +279,16 @@ public class Boss5Controller : MonoBehaviour, IBossAI
         while (Vector2.Distance(transform.position, endPos2) > 0.1f) { float step = dashSpeed * Time.deltaTime; transform.position = Vector2.MoveTowards(transform.position, endPos2, step); if (Vector2.Distance(transform.position, lastTrailPos) >= distancePerTrail) { Instantiate(skill4_TrailPrefab, transform.position, Quaternion.identity); lastTrailPos = transform.position; } yield return null; }
         yield return GetSlowedWait(1.0f);
 
-        // --- (SỬA LỖI 1: KIỂM TRA LẠI VỊ TRÍ QUAY VỀ) ---
         Vector2 returnPosition;
         if (isEnraged && phase2Positions[0] != null)
         {
-            // P2: Quay về vị trí "đậu" P2 (Góc trên)
             returnPosition = phase2Positions[0].position;
         }
         else
         {
-            // P1: Quay về vị trí giữa-trên (dùng Y đã lưu)
             returnPosition = new Vector2((leftPoint + rightPoint) / 2, phase1ReturnY);
         }
-        // ---------------------------------------------
 
-        // (Code bay trở về cũng đã được tăng tốc)
         while (Vector2.Distance(transform.position, returnPosition) > 0.1f)
         {
             float step = currentMoveSpeed * Time.deltaTime;
@@ -304,6 +312,7 @@ public class Boss5Controller : MonoBehaviour, IBossAI
             yield return GetSlowedWait(skill1_BurstDelay);
         }
     }
+
     private IEnumerator Skill_SpiralBarrage()
     {
         Debug.Log("Boss 6: Dùng Skill Random Barrage");
@@ -317,6 +326,7 @@ public class Boss5Controller : MonoBehaviour, IBossAI
             yield return GetSlowedWait(skill3_SpinDelay);
         }
     }
+
     private IEnumerator Skill_DarkMatterEruption()
     {
         Debug.Log("Boss 6: Dùng Skill Dark Matter Eruption");
@@ -341,7 +351,7 @@ public class Boss5Controller : MonoBehaviour, IBossAI
     }
     #endregion
 
-    #region // --- HÀM HỖ TRỢ (GIỮ NGUYÊN) ---
+    #region // --- HÀM HỖ TRỢ ---
     IEnumerator MoveToPosition(Vector2 targetPos)
     {
         float currentMoveSpeed = (moveSpeed == 0) ? 3f : moveSpeed * 2f;

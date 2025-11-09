@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChonTau.unity
     guid: 9d45c391173052f47835eb5898a9569b
+  - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: 6cdd95963016ceb42af9390df57066ab
   - enabled: 0
     path: Assets/Scenes/Jumscare.unity
     guid: 8cfa63c79bb758d4eaa0a75fd1ab8b0f

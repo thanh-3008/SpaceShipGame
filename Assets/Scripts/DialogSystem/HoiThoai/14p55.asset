@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a870c553808a7a345ad99b7b8f95d653, type: 3}
+  m_Name: 14p55
+  m_EditorClassIdentifier: Assembly-CSharp::Conversation
+  lines:
+  - speaker: {fileID: 11400000, guid: 7e8901dc815af5249acf1bb94b239905, type: 2}
+    text: "H\u1EBFt r\u1ED3i... Ch\xFAng ta s\u1EAFp \u0111\u1EBFn r\u1ED3i! T\xF4i
+      s\u1EAFp tho\xE1t ra kh\u1ECFi n\u01A1i n\xE0y r\u1ED3i ph\u1EA3i kh\xF4ng"
+  - speaker: {fileID: 11400000, guid: 787cfde1e717fb7429b396f5ee7061ac, type: 2}
+    text: "[...V\xE2ng, K\xFD ch\u1EE7... K\xFD ch\u1EE7 \u0111\xE3... th\u1EAFng.
+      K\xFD ch\u1EE7... th\u1EADt m\u1EA1nh m\u1EBD...]"
+  - speaker: {fileID: 11400000, guid: 7e8901dc815af5249acf1bb94b239905, type: 2}
+    text: "Gi\u1ECDng c\xF4 l\u1EA1 qu\xE1. C\xF4 \u1ED5n ch\u1EE9?"
+  - speaker: {fileID: 11400000, guid: 787cfde1e717fb7429b396f5ee7061ac, type: 2}
+    text: "[T\xF4i... t\xF4i \u1ED5n. Ch\u1EC9 l\xE0... K\xFD ch\u1EE7 th\u1EA5y
+      con tr\xF9m cu\u1ED1i c\xF9ng kia ch\u1EE9? Con tr\xF9m m\xE0u xanh \u0111\xF3
+      ]"
+  - speaker: {fileID: 11400000, guid: 787cfde1e717fb7429b396f5ee7061ac, type: 2}
+    text: "N\xF3 l\xE0 k\u1EBB cu\u1ED1i c\xF9ng. H\xE3y ti\xEAu di\u1EC7t n\xF3.
+      \u0110\u1EBFn \u0111\u01B0\u1EE3c l\xF5i v\xE0 K\xFD ch\u1EE7 s\u1EBD \u0111\u01B0\u1EE3c
+      't\u1EF1 do'."
+  choices: []

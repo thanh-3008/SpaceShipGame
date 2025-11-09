@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a870c553808a7a345ad99b7b8f95d653, type: 3}
+  m_Name: KhongTinAi
+  m_EditorClassIdentifier: Assembly-CSharp::Conversation
+  lines:
+  - speaker: {fileID: 11400000, guid: 2398fcfe9e6473848be0374d8bd2cfb7, type: 2}
+    text: "Ta \u0111\xE3 b\u1ECB l\u1EEBa qu\xE1 \u0111\u1EE7 r\u1ED3i! M\u1ED9t
+      k\u1EBB l\xE0 Virus H\u1ED7n Lo\u1EA1n, m\u1ED9t k\u1EBB l\xE0 Cai Ng\u1EE5c
+      \u0110\u1ED9c T\xE0i! Ta kh\xF4ng tin b\u1EA5t k\u1EF3 ai trong c\xE1c ng\u01B0\u01A1i!
+      TA S\u1EBC T\u1EF0 M\xCCNH THO\xC1T RA!\""
+  - speaker: {fileID: 11400000, guid: 675bc626c3b646b439b984e49c73db7a, type: 2}
+    text: .............
+  - speaker: {fileID: 11400000, guid: 0db9dfdc7b897134daf41055a1bf16ba, type: 2}
+    text: "...Ng\u01B0\u01A1i kh\xF4ng hi\u1EC3u m\xECnh \u0111ang n\xF3i g\xEC.
+      \"T\u1EF1 m\xECnh tho\xE1t ra\"? Ng\u01B0\u01A1i l\xE0 m\u1ED9t 'K\u1EBB Xuy\xEAn
+      Kh\xF4ng', m\u1ED9t th\u1EF1c th\u1EC3 ngo\u1EA1i lai. H\xE0nh \u0111\u1ED9ng
+      \u0111\xF3 c\u1EE7a ng\u01B0\u01A1i... s\u1EBD ph\xE1 v\u1EE1 L\xF5i. Ng\u01B0\u01A1i
+      s\u1EBD ph\xE1 h\u1EE7y th\u1EBF gi\u1EDBi n\xE0y!"
+  - speaker: {fileID: 11400000, guid: 5b11d4b5f18805c47be91dd3d980b033, type: 2}
+    text: "Hahaha... NGU NG\u1ED0C! NG\u01AF\u01A0I NGH\u0128 NG\u01AF\u01A0I C\xD3
+      TH\u1EC2 T\u1EF0 'THO\xC1T' SAO? KHI L\xD5I N\xC0Y V\u1EE0, T\u1EA4T C\u1EA2
+      CH\xDANG TA \u0110\u1EC0U CH\u1EBET!"
+  - speaker: {fileID: 11400000, guid: 2398fcfe9e6473848be0374d8bd2cfb7, type: 2}
+    text: "V\u1EADy th\xEC h\xE3y ch\u1EBFt chung \u0111i!"
+  - speaker: {fileID: 11400000, guid: 0db9dfdc7b897134daf41055a1bf16ba, type: 2}
+    text: "H\u1EAFn \u0111\xE3 tr\u1EDF th\xE0nh m\u1ED9t 'Bi\u1EBFn S\u1ED1 H\u1ED7n
+      Lo\u1EA1n' . H\u1EAFn c\xF2n nguy hi\u1EC3m h\u01A1n c\u1EA3 ng\u01B0\u01A1i,
+      Virus. N\u1EBFu h\u1EAFn ph\xE1 h\u1EE7y L\xF5i, m\u1ECDi th\u1EE9 s\u1EBD
+      ch\u1EA5m d\u1EE9t."
+  - speaker: {fileID: 11400000, guid: 0db9dfdc7b897134daf41055a1bf16ba, type: 2}
+    text: "V\xEC s\u1EF1 b\u1EA3o t\u1ED3n c\u1EE7a L\xF5i! K\u1EBB Xuy\xEAn Kh\xF4ng,
+      ng\u01B0\u01A1i s\u1EBD b\u1ECB thanh tr\u1EEBng!"
+  - speaker: {fileID: 11400000, guid: 5b11d4b5f18805c47be91dd3d980b033, type: 2}
+    text: "[Ta gh\xE9t ph\u1EA3i \u0111\u1ED3ng \xFD v\u1EDBi ng\u01B0\u01A1i, K\u1EBB
+      Cai Ng\u1EE5c. Nh\u01B0ng K\u1EBB Ng\u1ED1c n\xE0y... h\u1EAFn v\u1EEBa ph\xE1
+      h\u1ECFng k\u1EBF ho\u1EA1ch c\u1EE7a ta. V\xE0 gi\u1EDD h\u1EAFn mu\u1ED1n
+      ph\xE1 h\u1EE7y c\u1EA3 's\xE2n ch\u01A1i' n\xE0y.]"
+  - speaker: {fileID: 11400000, guid: 5b11d4b5f18805c47be91dd3d980b033, type: 2}
+    text: "[Ng\u01B0\u01A1i mu\u1ED1n 'thanh tr\u1EEBng' h\u1EAFn? \u0110\u01B0\u1EE3c
+      th\xF4i. Nh\u01B0ng m\u1ED9t m\xECnh ng\u01B0\u01A1i kh\xF4ng \u0111\u1EE7.]"
+  - speaker: {fileID: 11400000, guid: 331a6e5691142814bbd2adfd5dbe41b2, type: 2}
+    text: "[Ng\u01B0\u01A1i c\u1EA7n ta. V\xE0 ta... c\u1EA7n m\u1ED9t 'v\u1EADt
+      ch\u1EE7' \u0111\u1EE7 m\u1EA1nh \u0111\u1EC3 th\u1EC3 hi\u1EC7n s\u1EE9c m\u1EA1nh
+      c\u1EE7a m\xECnh.]"
+  - speaker: {fileID: 11400000, guid: 331a6e5691142814bbd2adfd5dbe41b2, type: 2}
+    text: "[H\xE0nh tr\xECnh c\u1EE7a ng\u01B0\u1EDDi t\u1EDBi \u0111\xE2y l\xE0
+      k\u1EBFt th\xFAc r\u1ED3i, k\xFD ch\u1EE7 c\u1EE7a ta]"
+  choices: []

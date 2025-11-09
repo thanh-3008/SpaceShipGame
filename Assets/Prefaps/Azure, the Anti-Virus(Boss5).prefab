@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 2705244975139217927}
   - component: {fileID: 4146626303225586585}
   - component: {fileID: 6798877245620986435}
+  - component: {fileID: 1062051037486705340}
   m_Layer: 0
   m_Name: Azure, the Anti-Virus(Boss5)
   m_TagString: Boss
@@ -536,8 +537,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossController
   thanhMau: {fileID: 8768531817400552700}
-  maxHealth: 500
+  maxHealth: 150000
   currentHealth: 0
+  OnBossDieEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1062051037486705340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774937481384674190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b2a69f3855f9b4ea719b6dfb31d3e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossDismissable
 --- !u!1 &816026346542777771
 GameObject:
   m_ObjectHideFlags: 0

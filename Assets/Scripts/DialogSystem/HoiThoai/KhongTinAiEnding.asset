@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a870c553808a7a345ad99b7b8f95d653, type: 3}
+  m_Name: KhongTinAiEnding
+  m_EditorClassIdentifier: Assembly-CSharp::Conversation
+  lines:
+  - speaker: {fileID: 11400000, guid: e8adc2bb0b0481248b8492fdaeb0ddb1, type: 2}
+    text: "[KH\xD4NG! K\u1EBE HO\u1EA0CH C\u1EE6A TA! TA KH\xD4NG TH\u1EC2 CH\u1EBET
+      \u1EDE \u0110\xC2Y!]"
+  - speaker: {fileID: 11400000, guid: 2f1132f119013ce458f3e6ea230d4cd5, type: 2}
+    text: "Kh\xF4ng... L\xF5i... tan v\u1EE1... Ng\u01B0\u01A1i... Ng\u01B0\u01A1i
+      \u0111\xE3 l\xE0m g\xEC..."
+  - speaker: {fileID: 11400000, guid: 2f1132f119013ce458f3e6ea230d4cd5, type: 2}
+    text: "Ng\u01B0\u01A1i \u0111\xE3... ph\xE1 h\u1EE7y m\u1ECDi th\u1EE9... ch\u1EC9
+      v\xEC 't\u1EF1 do'... Ng\u01B0\u01A1i \u0111\xE3... gi\u1EBFt ch\u1EBFt...
+      t\u1EA5t c\u1EA3 ch\xFAng ta..."
+  choices: []
