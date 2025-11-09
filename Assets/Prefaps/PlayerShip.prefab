@@ -409,7 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLevel
   currentLevel: 1
   currentXP: 0
-  xpToNextLevel: 80
+  xpToNextLevel: 5
   xpBar: {fileID: 0}
   onLevelUp:
     m_PersistentCalls:
@@ -767,7 +767,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnSuriken
   surikenPrefab: {fileID: 8552735586181264078, guid: f54a3c911cf55ca4dafd01b6b3af46f9, type: 3}
-  surikenPro: {fileID: 0}
+  surikenPro: {fileID: 1506124626295827543, guid: 7f4aea68905d10a4892bc441fd42fa42, type: 3}
   shurikenContainer: {fileID: 4949358645196963615}
   maxSuriken: 5
   banKinh: 5
