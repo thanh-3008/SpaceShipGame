@@ -409,7 +409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerLevel
   currentLevel: 1
   currentXP: 0
-  xpToNextLevel: 1
+  xpToNextLevel: 80
   xpBar: {fileID: 0}
   onLevelUp:
     m_PersistentCalls:
@@ -986,6 +986,7 @@ MonoBehaviour:
   tenluaprefap: {fileID: 5068811228720846133, guid: 9d66b58c40074c24aa3a78ff21de11fd, type: 3}
   soTenLuaText: {fileID: 0}
   Audio: {fileID: 0}
+  projectileSpeed: 15
 --- !u!1 &5753814130321271084
 GameObject:
   m_ObjectHideFlags: 0
