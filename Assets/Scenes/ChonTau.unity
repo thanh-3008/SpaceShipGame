@@ -1389,7 +1389,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2068888365}
   m_HandleRect: {fileID: 2068888364}
   m_Direction: 2
-  m_Value: 1.0000002
+  m_Value: 1.0000004
   m_Size: 0.20286399
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2528,13 +2528,29 @@ MonoBehaviour:
   - Tau: {fileID: 5438266588634195348, guid: 8dca6e469cd58ae4db0d29669688ffb9, type: 3}
     Sprite: {fileID: -3448297516148707748, guid: 88990fbba6fe10d498f32bde44dbbd57, type: 3}
     Name: Seraph MK-I
-    Description: 
-    spiteskill1: {fileID: 0}
-    spiteskill2: {fileID: 0}
-    NameSkill1: 
-    NameSkill2: 
-    DescriptionSkill1: 
-    DescriptionSkill2: 
+    Description: "V\u1EDBi thi\u1EBFt k\u1EBF hai l\xE1 ch\u1EAFn n\u0103ng l\u01B0\u1EE3ng
+      th\u1EB3ng \u0111\u1EE9ng, con t\xE0u n\xE0y l\xE0 m\u1ED9t ph\xE1o \u0111\xE0i
+      ph\xF2ng th\u1EE7 di \u0111\u1ED9ng. L\u1EDBp gi\xE1p d\xE0y v\xE0 h\u1EC7
+      th\u1ED1ng khi\xEAn ti\xEAn ti\u1EBFn cho ph\xE9p n\xF3 ch\u1ECBu \u0111\u1EF1ng
+      h\u1ECFa l\u1EF1c d\xE0y \u0111\u1EB7c c\u1EE7a k\u1EBB th\xF9 \u0111\u1EC3
+      b\u1EA3o v\u1EC7 \u0111\u1ED3ng \u0111\u1ED9i"
+    spiteskill1: {fileID: 21300000, guid: f0828c27602ef1c42bee4744fff3f1b5, type: 3}
+    spiteskill2: {fileID: 4703181949675062724, guid: 2ea2e687ea2f85643a1bc66a809642d5, type: 3}
+    NameSkill1: "Kim Cang B\u1EA5t Ho\u1EA1i"
+    NameSkill2: "Qu\xE1 T\u1EA3i N\u0103ng L\u01B0\u1EE3ng"
+    DescriptionSkill1: "K\xEDch ho\u1EA1t h\u1EC7 th\u1ED1ng ph\xF2ng th\u1EE7 t\u1ED1i
+      th\u01B0\u1EE3ng. Th\xE2n t\xE0u \u0111\u01B0\u1EE3c gia c\u1ED1 t\u1EE9c th\xEC
+      b\u1EB1ng m\u1ED9t tr\u01B0\u1EDDng n\u0103ng l\u01B0\u1EE3ng \u0111\u1EB7c
+      bi\u1EC7t, l\xE0m ch\u1EC7ch h\u01B0\u1EDBng v\xE0 h\u1EA5p th\u1EE5 70% to\xE0n
+      b\u1ED9 s\xE1t th\u01B0\u01A1ng g\xE1nh ch\u1ECBu trong m\u1ED9t th\u1EDDi
+      gian ng\u1EAFn."
+    DescriptionSkill2: "T\xE0u c\u1EE7a b\u1EA1n chuy\u1EC3n sang tr\u1EA1ng th\xE1i
+      ph\xF2ng th\u1EE7 tuy\u1EC7t \u0111\u1ED1i, t\u1EA1o ra m\u1ED9t l\xE1 ch\u1EAFn
+      n\u0103ng l\u01B0\u1EE3ng d\xE0y \u0111\u1EB7c gi\u1EA3m 90% s\xE1t th\u01B0\u01A1ng
+      nh\u1EADn v\xE0o. Ngay khi k\xEDch ho\u1EA1t, t\xE0u b\u1EAFt \u0111\u1EA7u
+      t\u1EE5 m\u1ED9t l\u01B0\u1EE3ng n\u0103ng l\u01B0\u1EE3ng kh\u1ED5ng l\u1ED3
+      v\xE0 sau 1 gi\xE2y, gi\u1EA3i ph\xF3ng m\u1ED9t Tia Laser H\u1EE7y Di\u1EC7t
+      g\xE2y s\xE1t th\u01B0\u01A1ng c\u1EF1c l\u1EDBn v\u1EC1 ph\xEDa tr\u01B0\u1EDBc."
     damecoban: 10
     maucoban: 120
     damenangcap: 0
@@ -2545,13 +2561,26 @@ MonoBehaviour:
   - Tau: {fileID: 3034535743428535646, guid: b586cdac787ee2f4fb145b94590e11a4, type: 3}
     Sprite: {fileID: 6181945978334474012, guid: dd55e81d1ed48e74bbc573be6ae9e4b4, type: 3}
     Name: Seraph MK-II
-    Description: 
-    spiteskill1: {fileID: 0}
-    spiteskill2: {fileID: 0}
-    NameSkill1: 
-    NameSkill2: 
-    DescriptionSkill1: 
-    DescriptionSkill2: 
+    Description: "M\u1ED9t chi\u1EBFn h\u1EA1m \u0111\xE1nh ch\u1EB7n si\xEAu t\u1ED1c
+      v\u1EDBi thi\u1EBFt k\u1EBF kh\xED \u0111\u1ED9ng h\u1ECDc h\xECnh tam gi\xE1c.
+      \u0110\u01B0\u1EE3c trang b\u1ECB \u0111\u1ED9ng c\u01A1 t\u1ED1i t\xE2n, n\xF3
+      chuy\xEAn th\u1EF1c hi\u1EC7n c\xE1c \u0111\xF2n t\u1EA5n c\xF4ng ch\u1EDBp
+      nho\xE1ng, \xE1p s\xE1t v\xE0 ti\xEAu di\u1EC7t m\u1EE5c ti\xEAu ch\u1EDBp
+      nho\xE1ng tr\u01B0\u1EDBc khi \u0111\u1ECBch k\u1ECBp ph\u1EA3n \u1EE9ng."
+    spiteskill1: {fileID: 21300000, guid: 23b6d8d085faa8f4e8bc680e16ee2a57, type: 3}
+    spiteskill2: {fileID: 21300000, guid: f094f2e100cb9f145b2973ac0ee234b2, type: 3}
+    NameSkill1: "Ph\xE1o H\u1EAFc \xC1m"
+    NameSkill2: "B\u1EBB Cong Th\u1EDDi Gian"
+    DescriptionSkill1: "B\u1EAFn m\u1ED9t lu\u1ED3ng laser h\u1EAFc \xE1m t\u1EE5-n\u0103ng-l\u01B0\u1EE3ng-cao
+      th\u1EB3ng v\u1EC1 ph\xEDa tr\u01B0\u1EDBc. Tia laser n\xE0y xuy\xEAn th\u1EA5u
+      m\u1ECDi m\u1EE5c ti\xEAu tr\xEAn \u0111\u01B0\u1EDDng bay, g\xE2y s\xE1t th\u01B0\u01A1ng
+      li\xEAn t\u1EE5c v\xE0 b\u1ECF qua m\u1ED9t ph\u1EA7n gi\xE1p c\u1EE7a k\u1EBB
+      \u0111\u1ECBch"
+    DescriptionSkill2: "Gi\u1EA3i ph\xF3ng m\u1ED9t xung n\u0103ng l\u01B0\u1EE3ng
+      l\xE0m cong m\xF4i tr\u01B0\u1EDDng kh\xF4ng-th\u1EDDi gian trong m\u1ED9t
+      khu v\u1EF1c r\u1ED9ng l\u1EDBn. To\xE0n b\u1ED9 t\xE0u \u0111\u1ECBch, \u0111\u1EA1n
+      \u0111\u1EA1o v\xE0 v\u1EADt th\u1EC3 trong v\xF9ng \u1EA3nh h\u01B0\u1EDFng
+      b\u1ECB l\xE0m ch\u1EADm g\u1EA5p 5 l\u1EA7n"
     damecoban: 10
     maucoban: 120
     damenangcap: 0
@@ -2562,13 +2591,27 @@ MonoBehaviour:
   - Tau: {fileID: 3175878105493373125, guid: 0ae1f1a7af0949a4ba5bdea90437c9f9, type: 3}
     Sprite: {fileID: -4878985281297243967, guid: ed0bd76b49eab90459c8e0130d3dc35a, type: 3}
     Name: Seraph MK-III
-    Description: 
-    spiteskill1: {fileID: 0}
-    spiteskill2: {fileID: 0}
-    NameSkill1: 
-    NameSkill2: 
-    DescriptionSkill1: 
-    DescriptionSkill2: 
+    Description: "Con t\xE0u h\u1EA1ng n\u1EB7ng n\xE0y c\xF3 th\xE2n h\xECnh b\xE8
+      r\u1ED9ng, ch\u1EE9a \u0111\u1EA7y c\xE1c b\u1EC7 ph\xF3ng t\xEAn l\u1EEDa
+      v\xE0 ph\xE1o n\u0103ng l\u01B0\u1EE3ng ch\xF9m. Tuy ch\u1EADm ch\u1EA1p, n\xF3
+      c\xF3 kh\u1EA3 n\u0103ng gi\u1EA3i ph\xF3ng h\u1ECFa l\u1EF1c \xE1p \u0111\u1EA3o,
+      c\xE0n qu\xE9t to\xE0n b\u1ED9 \u0111\u1ED9i h\xECnh \u0111\u1ECBch b\u1EB1ng
+      c\xE1c \u0111\xF2n t\u1EA5n c\xF4ng di\u1EC7n r\u1ED9ng."
+    spiteskill1: {fileID: 21300000, guid: a7dd4cd9a4c809e49b0e4aabc0b0d4a0, type: 3}
+    spiteskill2: {fileID: 21300000, guid: ac7bfecd816b76e4a9ad53729e809df0, type: 3}
+    NameSkill1: "M\u01B0a Thi\xEAn Th\u1EA1ch"
+    NameSkill2: "L\xF5i M\u1EB7t Tr\u1EDDi"
+    DescriptionSkill1: "M\u1EDF m\u1ED9t c\u1ED5ng kh\xF4ng gian ngay ph\xEDa tr\u01B0\u1EDBc,
+      tri\u1EC7u h\u1ED3i m\u1ED9t \u0111\u1EE3t thi\xEAn th\u1EA1ch r\u1EF1c l\u1EEDa
+      lao nhanh v\u1EC1 ph\xEDa k\u1EBB \u0111\u1ECBch. M\u1ED7i thi\xEAn th\u1EA1ch
+      khi va ch\u1EA1m s\u1EBD n\u1ED5, g\xE2y s\xE1t th\u01B0\u01A1ng di\u1EC7n
+      r\u1ED9ng."
+    DescriptionSkill2: "T\u1EA1o ra m\u1ED9t qu\u1EA3 c\u1EA7u plasma m\xF4 ph\u1ECFng
+      l\xF5i c\u1EE7a m\u1ED9t ng\xF4i sao. Qu\u1EA3 c\u1EA7u n\xE0y t\u1EEB t\u1EEB
+      di chuy\u1EC3n v\u1EC1 ph\xEDa tr\u01B0\u1EDBc, thi\xEAu \u0111\u1ED1t d\u1EEF
+      d\u1ED9i v\xE0 g\xE2y s\xE1t th\u01B0\u01A1ng c\u1EF1c l\u1EDBn theo th\u1EDDi
+      gian cho b\u1EA5t k\u1EF3 k\u1EBB \u0111\u1ECBch n\xE0o n\xF3 \u0111i qua ho\u1EB7c
+      \u0111\u1EBFn g\u1EA7n"
     damecoban: 10
     maucoban: 120
     damenangcap: 0
@@ -4978,7 +5021,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1917172938}
   m_Direction: 0
   m_Value: 1
-  m_Size: 0.9999999
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

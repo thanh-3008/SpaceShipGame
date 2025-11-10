@@ -675,11 +675,11 @@ MonoBehaviour:
   speed: 5
   khoadichuyen: 0
   thanhmau: {fileID: 0}
-  thanhmauhientai: 110
-  thanhmauToiDa: 110
+  thanhmauhientai: 300
+  thanhmauToiDa: 300
   textScore: {fileID: 0}
   danprefap: {fileID: 0}
-  damegoc: 5
+  damegoc: 7
   damecongthem: 1
   damebonus: 1.2
   soTenLuaText: {fileID: 0}

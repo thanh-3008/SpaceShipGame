@@ -507,8 +507,8 @@ MonoBehaviour:
   speed: 6
   khoadichuyen: 0
   thanhmau: {fileID: 0}
-  thanhmauhientai: 100
-  thanhmauToiDa: 100
+  thanhmauhientai: 220
+  thanhmauToiDa: 220
   textScore: {fileID: 0}
   danprefap: {fileID: 0}
   damegoc: 6
